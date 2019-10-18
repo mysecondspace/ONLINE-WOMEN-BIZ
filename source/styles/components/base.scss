@@ -1,0 +1,40 @@
+// global variables
+$browser-context: 16;
+$spacing: .5px;
+
+// time
+$time-fast: .15s;
+$time-slow: 2s;
+
+// indent
+$indent-normal: 45px;
+$indent-phone: $indent-normal / 3;
+$indent-biggest: $indent-normal * 2;
+
+// padding
+$padding-phone: calc(#{$indent-phone} + var(--logotype-width));
+$padding-normal: calc(#{$indent-normal} + var(--logotype-width));
+$padding-biggest: calc(#{$indent-biggest} + var(--logotype-width));
+
+// colors
+$light: #fff;
+$dark: #022329;
+$primary: #fd959e;
+$secondary: #022329;
+$highlight: rgba(0, 0, 0, 0);
+$primary-lighten: lighten($primary, 5%);
+
+// media queries
+$phone: 768px;
+$tablet: 1024px;
+$laptop: 1440px;
+$desktop: 1920px;
+$smallest: 400px;
+$container: 100%;
+
+// font
+$bold: 'harmonia bold';
+$normal: 'harmonia normal';
+$cond-bold: 'harmonia cond bold';
+$cond-light: 'harmonia cond light';
+$cond-normal: 'harmonia cond normal';

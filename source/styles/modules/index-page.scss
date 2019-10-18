@@ -1,0 +1,852 @@
+#index-1 {
+  background-color: $primary-lighten;
+
+  &.animate {
+    .circle,
+    .slogan {
+      animation: fade-in $time-slow forwards;
+    }
+
+    .circle {
+      animation-delay: 3.5s;
+    }
+
+    .slogan {
+      animation-delay: 2.5s;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+
+    @include media(phone) {
+      bottom: $indent-phone;
+      right: 23vw;
+    }
+
+    @include media(smallest) {
+      right: 21vw;
+    }
+
+    @include media(tablet) {
+      bottom: $indent-normal;
+      left: $padding-normal;
+    }
+
+    @include media(biggest) {
+      left: $indent-normal;
+    }
+
+    p {
+      @include border-radius(50%);
+      animation: spin 20s linear infinite;
+      font-family: $cond-normal;
+      text-align: center;
+      font-weight: bold;
+      margin: 0 auto;
+      color: $light;
+
+      @include media(phone) {
+        height: 85px;
+        width: 85px;
+      }
+
+      @include media(tablet) {
+        height: 125px;
+        width: 125px;
+      }
+
+      span {
+        @include inline-block;
+        transition: all .5s cubic-bezier(0, 0, 0, 1);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+
+        @include media(phone) {
+          font-size: em(10);
+        }
+      }
+    }
+
+    a {
+      background: url('/../images/mouse.svg') center no-repeat;
+      animation: bounce $time-slow linear infinite;
+      background-size: 30%;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+    }
+  }
+
+  .letter {
+    background: url('/../images/letter.png') no-repeat;
+    background-position: 100% 0;
+    background-size: 1190px;
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    left: 0;
+
+    @include media(phone) {
+      animation: fade-in $time-slow forwards;
+      background-position: 45% 20vh;
+      background-size: 190vw;
+      height: 100%;
+    }
+
+    @include media(smallest) {
+      background-position: 43.5% 26vh;
+    }
+
+    @include media(tablet) {
+      animation: fade-in-right-big $time-slow forwards;
+    }
+
+    @include media(biggest) {
+      background-size: 1400px;
+    }
+  }
+
+  .slogan {
+    position: absolute;
+    font-size: em(20);
+    color: $light;
+    opacity: 0;
+    z-index: 2;
+
+    @include media(phone) {
+      left: $indent-phone;
+      width: 75%;
+      top: 240px;
+    }
+
+    @include media(smallest) {
+      top: 235px;
+    }
+
+    @include media(tablet) {
+      right: 95px;
+      top: 490px;
+    }
+
+    @include media(biggest) {
+      font-size: em(24);
+      right: 110px;
+      top: 565px;
+    }
+
+    span {
+      color: $dark;
+      line-height: 0;
+
+      @include media(tablet) {
+        padding: 0 7px;
+      }
+
+      @include media(biggest) {
+        padding: 0 8px;
+      }
+    }
+  }
+}
+
+#index-2 {
+  background-color: $secondary;
+
+  &.animate {
+    .title span {
+      span {
+        transition: transform 1s cubic-bezier(0, 0, .2, 1), opacity 1s cubic-bezier(0, 0, .2, 1);
+        transform: translateZ(0);
+        opacity: 1;
+      }
+
+      &:nth-of-type(2) span {
+        transition-delay: .2s;
+      }
+
+      &:nth-of-type(3) span {
+        transition-delay: .4s;
+      }
+
+      &:nth-of-type(4) span {
+        transition-delay: .6s;
+      }
+    }
+
+    .paragraph {
+      > * {
+        animation: fade-in-up $time-slow forwards;
+      }
+
+      p {
+        animation-delay: .8s;
+      }
+
+      a {
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  .title {
+    line-height: 1;
+    color: $primary;
+    font-family: $cond-bold;
+
+    @include media(phone) {
+      font-size: em(55);
+    }
+
+    @include media(smallest) {
+      font-size: em(50);
+    }
+
+    @include media(tablet) {
+      font-size: em(125);
+      width: 60%;
+    }
+
+    @include media(biggest) {
+      font-size: em(195);
+    }
+
+    span {
+      display: inline-flex;
+      overflow: hidden;
+
+      span {
+        transition: transform .2s cubic-bezier(.4, 0, 1, 1), opacity .2s cubic-bezier(.4, 0, 1, 1);
+        transform: translate3d(0, 100%, 0);
+        display: block;
+        opacity: 0;
+      }
+    }
+  }
+
+  .paragraph {
+    right: $indent-normal;
+    bottom: $indent-normal;
+
+    @include media(tablet) {
+      position: absolute;
+      width: 47.5%;
+    }
+
+    @include media(biggest) {
+      bottom: $indent-biggest;
+      right: $indent-biggest;
+    }
+
+    > * {
+      opacity: 0;
+    }
+
+    p {
+      color: $primary;
+      line-height: 1.48;
+
+      @include media(phone) {
+        margin-top: 2.5vh;
+        font-size: em(18);
+      }
+
+      @include media(smallest) {
+        font-size: em(16);
+      }
+
+      @include media(tablet) {
+        font-size: em(24);
+      }
+    }
+
+    a {
+      margin-right: 2.5vw;
+      float: right;
+
+      @include media(phone) {
+        font-size: em(18);
+        margin-top: 5vh;
+      }
+
+      @include media(tablet) {
+        font-size: em(24);
+        margin-top: 10vh;
+        color: $primary;
+      }
+    }
+  }
+}
+
+#index-3 {
+  background-color: $light;
+
+  &.animate {
+    .absolute {
+      canvas,
+      div {
+        animation: fade-in-up $time-slow forwards;
+      }
+
+      div {
+        animation-delay: 1s;
+      }
+    }
+
+    .paragraph {
+      > * {
+        animation: fade-in-up $time-slow forwards;
+      }
+
+      p:first-of-type {
+        animation-delay: .1s;
+
+        + p {
+          animation-delay: .2s;
+        }
+      }
+
+      a {
+        animation-delay: .3s;
+      }
+    }
+  }
+
+  .absolute {
+    position: relative;
+    display: block;
+
+    @include media(phone) {
+      left: -$indent-phone;
+      padding-top: 16vh;
+      height: 265px;
+      width: 340px;
+    }
+
+    @include media(smallest) {
+      height: 195px;
+      width: 250px;
+    }
+
+    @include media(tablet) {
+      padding-top: 15vh;
+      height: 390px;
+      width: 500px;
+    }
+
+    @include media(biggest) {
+      margin-left: $padding-biggest;
+      padding-top: 20vh;
+      height: 550px;
+      width: 705px;
+    }
+
+    > * {
+      opacity: 0;
+    }
+
+    div {
+      background-color: $primary;
+      position: absolute;
+      z-index: 0;
+
+      @include media(phone) {
+        left: -$indent-phone;
+        height: 50%;
+        width: 90vw;
+        top: 24%;
+      }
+
+      @include media(smallest) {
+        width: 110%;
+        top: 27.5%;
+      }
+
+      @include media(tablet) {
+        height: 75%;
+        width: 90%;
+        left: 40%;
+        top: 50%;
+      }
+
+      @include media(biggest) {
+        height: 55%;
+        top: 60%;
+      }
+    }
+  }
+
+  .paragraph {
+    @include media(phone) {
+      padding-bottom: 5vh;
+      margin-top: 2vh;
+    }
+
+    @include media(tablet) {
+      width: calc(45% - #{$indent-biggest});
+      right: $indent-biggest;
+      position: absolute;
+      top: 17.5vh;
+    }
+
+    @include media(biggest) {
+      width: calc(42.5% - #{$indent-biggest});
+      top: 25vh;
+    }
+
+    > * {
+      opacity: 0;
+      color: $dark;
+    }
+
+    p:first-of-type {
+      font-family: $cond-normal;
+
+      @include media(phone) {
+        font-size: em(28);
+      }
+
+      @include media(tablet) {
+        font-size: em(65);
+      }
+
+      @include media(biggest) {
+        font-size: em(90);
+      }
+
+      + p {
+        line-height: 1.48;
+
+        @include media(phone) {
+          margin-top: 2.5vh;
+          font-size: em(14);
+        }
+
+        @include media(smallest) {
+          font-size: em(11);
+        }
+
+        @include media(tablet) {
+          font-size: em(16);
+          margin-left: 25%;
+          margin-top: 5vh;
+        }
+
+        @include media(biggest) {
+          margin-left: 15%;
+        }
+      }
+    }
+
+    a {
+      @include transition($time-fast);
+      font-size: em(18);
+
+      @include media(phone) {
+        margin-top: 2.5vh;
+        float: right;
+      }
+
+      @include media(tablet) {
+        margin-left: 25%;
+        margin-top: 10vh;
+        float: left;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      @include media(biggest) {
+        margin-left: 15%;
+      }
+    }
+  }
+}
+
+#index-4 {
+  background-color: $primary;
+
+  @include media(phone) {
+    padding: 0;
+  }
+
+  &.animate {
+    table tr,
+    .title-above-table, {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    table tr {
+      animation-delay: .1s;
+
+      &:nth-of-type(2) {
+        animation-delay: .2s;
+      }
+    }
+  }
+
+  table tr {
+    border-top: 1px solid $dark;
+
+    &:last-of-type {
+      border-bottom: 1px solid $dark;
+    }
+
+    td:last-of-type a {
+      color: $dark;
+
+      @include media(phone) {
+        background-color: $secondary;
+        color: $primary;
+      }
+    }
+  }
+}
+
+#index-5 {
+  background-color: $secondary;
+
+  @include media(phone) {
+    padding-top: 12.5vh;
+  }
+
+  @include media(tablet) {
+    padding-top: 15vh;
+  }
+
+  &.animate {
+    .title,
+    .paragraph > * {
+      animation: fade-in $time-slow forwards;
+    }
+
+    .absolute {
+      > * {
+        animation: fade-in-up $time-slow forwards;
+      }
+
+      &--1 {
+        img {
+          animation-delay: .1s;
+        }
+
+        div {
+          animation-delay: 1s;
+        }
+      }
+
+      &--2 {
+        img {
+          animation-delay: .4s;
+        }
+
+        div {
+          animation-delay: 1.1s;
+        }
+      }
+
+      &--3 {
+        img {
+          animation-delay: .7s;
+        }
+
+        div {
+          animation-delay: 1.2s;
+        }
+      }
+    }
+
+    .paragraph {
+      &--1 {
+        p {
+          animation-delay: .2s;
+        }
+
+        a {
+          animation-delay: .3s;
+        }
+      }
+
+      &--2 {
+        p {
+          animation-delay: .5s;
+        }
+
+        a {
+          animation-delay: .6s;
+        }
+      }
+
+      &--3 {
+        p {
+          animation-delay: .8s;
+        }
+
+        a {
+          animation-delay: .9s;
+        }
+      }
+    }
+  }
+
+  .title {
+    opacity: 0;
+    color: $primary;
+    font-family: $cond-light;
+
+    @include media(phone) {
+      margin-left: $indent-phone;
+      font-size: em(60);
+    }
+
+    @include media(tablet) {
+      font-size: em(168);
+    }
+  }
+
+  .block {
+    position: relative;
+
+    @include media(phone) {
+      padding-bottom: calc(5vh + 10px);
+    }
+
+    @include media(tablet) {
+      display: flex;
+    }
+
+    .absolute {
+      position: relative;
+      display: block;
+
+      @include media(phone) {
+        padding-top: 2.5vh;
+      }
+
+      @include media(biggest) {
+        width: 19vw;
+      }
+
+      > * {
+        opacity: 0;
+      }
+
+      div {
+        background-color: $primary;
+        position: absolute;
+        z-index: 0;
+      }
+
+      &--1 {
+        @include media(phone) {
+          padding-bottom: 2.5vh;
+          height: 375px;
+          width: 330px;
+        }
+
+        @include media(smallest) {
+          height: 290px;
+          width: 255px;
+        }
+
+        @include media(tablet) {
+          margin-left: $indent-biggest;
+          height: 455px;
+          width: 400px;
+        }
+
+        @include media(biggest) {
+          height: 545px;
+          width: 480px;
+        }
+
+        div {
+          left: 30%;
+          width: 80%;
+          height: 40%;
+
+          @include media(phone) {
+            top: 0;
+          }
+
+          @include media(tablet) {
+            top: 75%;
+          }
+        }
+      }
+
+      &--2 {
+        @include media(phone) {
+          padding-bottom: 5vh;
+          height: 332px;
+          width: 330px;
+        }
+
+        @include media(smallest) {
+          height: 292px;
+          width: 290px;
+        }
+
+        @include media(tablet) {
+          margin-right: $indent-normal;
+          margin-left: auto;
+          height: 510px;
+          width: 506px;
+        }
+
+        @include media(biggest) {
+          height: 570px;
+          width: 566px;
+        }
+
+        @include media(biggest) {
+          margin-right: $indent-biggest;
+        }
+
+        div {
+          @include media(phone) {
+            height: 15%;
+            bottom: 5%;
+            right: 10%;
+            width: 50%;
+          }
+
+          @include media(tablet) {
+            height: 50%;
+            width: 80%;
+            right: 30%;
+            top: 65%;
+          }
+        }
+      }
+
+      &--3 {
+        @include media(phone) {
+          padding-bottom: 2.5vh;
+          height: 332px;
+          width: 325px;
+        }
+
+        @include media(smallest) {
+          height: 290px;
+          width: 284px;
+        }
+
+        @include media(tablet) {
+          margin-top: 10vh;
+          height: 460px;
+          width: 450px;
+        }
+
+        @include media(biggest) {
+          height: 526px;
+          width: 515px;
+        }
+
+        div {
+          left: 35%;
+          width: 80%;
+
+          @include media(phone) {
+            bottom: 50%;
+            height: 70%;
+          }
+
+          @include media(tablet) {
+            height: 50%;
+            bottom: 65%;
+          }
+        }
+      }
+    }
+
+    .paragraph {
+      @include media(tablet) {
+        width: calc(40% - #{$indent-normal});
+        position: absolute;
+      }
+
+      > * {
+        opacity: 0;
+      }
+
+      p {
+        color: $primary;
+        font-family: $cond-light;
+
+        @include media(phone) {
+          font-size: em(25);
+          width: 255px;
+        }
+
+        @include media(tablet) {
+          font-size: em(40);
+        }
+
+        @include media(biggest) {
+          font-size: em(60);
+        }
+      }
+
+      a {
+        @include transition($time-fast);
+        font-family: $cond-bold;
+        font-size: em(18);
+
+        @include media(phone) {
+          @include inline-block;
+          margin-top: 2.5vh;
+        }
+
+        @include media(tablet) {
+          margin-top: 5vh;
+          color: $primary;
+          float: left;
+        }
+      }
+
+      &--1 {
+        @include media(tablet) {
+          right: 12.5vw;
+          top: 5vh;
+        }
+
+        @include media(biggest) {
+          right: 30vw;
+        }
+      }
+
+      &--2 {
+        @include media(tablet) {
+          left: 10vw;
+          top: 30vh;
+        }
+
+        @include media(biggest) {
+          left: 32.5vw;
+          top: 20vh;
+        }
+      }
+
+      &--3 {
+        @include media(tablet) {
+          left: 40vw;
+          top: 20vh;
+        }
+
+        @include media(biggest) {
+          left: 25vw;
+        }
+      }
+    }
+  }
+}

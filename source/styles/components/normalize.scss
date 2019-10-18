@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+
+  body {
+    margin: 0;
+    opacity: 0;
+    height: 100%;
+    color: $dark;
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: $normal;
+    letter-spacing: $spacing;
+    background-color: $light;
+    animation: fade-in $time-slow forwards;
+    -webkit-tap-highlight-color: $highlight;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  > * {
+    @include media(tablet) {
+      cursor: none;
+    }
+  }
+
+  p,
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  input,
+  button {
+    outline: none;
+  }
+}
