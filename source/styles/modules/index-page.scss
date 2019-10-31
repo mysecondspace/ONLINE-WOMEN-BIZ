@@ -4,23 +4,11 @@
   &.animate {
     .circle,
     .slogan {
-      animation: fade-in $time-slow forwards;
-    }
-
-    .circle {
-      animation-delay: 3.5s;
-    }
-
-    .slogan {
-      animation-delay: 2.5s;
+      animation: fade-in $time-slow 2s forwards;
     }
   }
 
   .circle {
-    position: absolute;
-    z-index: 99;
-    opacity: 0;
-
     @include media(phone) {
       bottom: $indent-phone;
       right: 23vw;
@@ -40,47 +28,12 @@
     }
 
     p {
-      @include border-radius(50%);
-      animation: spin 20s linear infinite;
-      font-family: $cond-normal;
-      text-align: center;
-      font-weight: bold;
-      margin: 0 auto;
       color: $light;
-
-      @include media(phone) {
-        height: 85px;
-        width: 85px;
-      }
-
-      @include media(tablet) {
-        height: 125px;
-        width: 125px;
-      }
-
-      span {
-        @include inline-block;
-        transition: all .5s cubic-bezier(0, 0, 0, 1);
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        top: 0;
-
-        @include media(phone) {
-          font-size: em(10);
-        }
-      }
     }
 
     a {
-      background: url('/../images/mouse.svg') center no-repeat;
-      animation: bounce $time-slow linear infinite;
+      background: url('/../images/mouse-light.svg') center no-repeat;
       background-size: 30%;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
     }
   }
 

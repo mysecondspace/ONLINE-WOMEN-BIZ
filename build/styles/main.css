@@ -1,3 +1,7 @@
+:root {
+  --menu-height: 280px;
+}
+
 @font-face {
   font-family: 'harmonia cond bold';
   src: url("../fonts/harmonia-cond-bold.ttf");
@@ -184,7 +188,6 @@ html button {
 
 * {
   --logotype-width: 175px;
-  --menu-height: 240px;
 }
 
 #logo {
@@ -214,7 +217,7 @@ html button {
   animation: fade-out 0.15s forwards;
 }
 #logo.big.primary {
-  background-image: url(/../images/logo-big-primary.png);
+  background-image: url(../images/logo-big-primary.png);
   height: 368px;
   width: 302px;
   background-repeat: no-repeat;
@@ -222,11 +225,11 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.big.primary {
     background-size: 151px 184px;
-    background-image: url(/../images/logo-big-primary-2x.png);
+    background-image: url(../images/logo-big-primary-2x.png);
   }
 }
 #logo.big.light {
-  background-image: url(/../images/logo-big-light.png);
+  background-image: url(../images/logo-big-light.png);
   height: 368px;
   width: 302px;
   background-repeat: no-repeat;
@@ -234,11 +237,11 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.big.light {
     background-size: 151px 184px;
-    background-image: url(/../images/logo-big-light-2x.png);
+    background-image: url(../images/logo-big-light-2x.png);
   }
 }
 #logo.small.light {
-  background-image: url(/../images/logo-small-light.png);
+  background-image: url(../images/logo-small-light.png);
   height: 66px;
   width: 77px;
   background-repeat: no-repeat;
@@ -246,11 +249,11 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.small.light {
     background-size: 65.5px 56px;
-    background-image: url(/../images/logo-small-light-2x.png);
+    background-image: url(../images/logo-small-light-2x.png);
   }
 }
 #logo.small.dark {
-  background-image: url(/../images/logo-small-dark.png);
+  background-image: url(../images/logo-small-dark.png);
   height: 66px;
   width: 77px;
   background-repeat: no-repeat;
@@ -258,7 +261,7 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.small.dark {
     background-size: 65.5px 56px;
-    background-image: url(/../images/logo-small-dark-2x.png);
+    background-image: url(../images/logo-small-dark-2x.png);
   }
 }
 
@@ -538,6 +541,59 @@ html button {
   z-index: 12000;
 }
 
+.circle {
+  position: absolute;
+  z-index: 99;
+  opacity: 0;
+}
+.circle p {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+  font-family: "harmonia cond normal";
+  text-align: center;
+  font-weight: bold;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  .circle p {
+    height: 85px;
+    width: 85px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .circle p {
+    height: 125px;
+    width: 125px;
+  }
+}
+.circle p span {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+@media only screen and (max-width: 767px) {
+  .circle p span {
+    font-size: 0.625em;
+  }
+}
+.circle a {
+  animation: bounce 2s linear infinite;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
 .hover img {
   display: none;
 }
@@ -725,18 +781,7 @@ section.auto, section.auto > div {
 }
 #index-1.animate .circle,
 #index-1.animate .slogan {
-  animation: fade-in 2s forwards;
-}
-#index-1.animate .circle {
-  animation-delay: 3.5s;
-}
-#index-1.animate .slogan {
-  animation-delay: 2.5s;
-}
-#index-1 .circle {
-  position: absolute;
-  z-index: 99;
-  opacity: 0;
+  animation: fade-in 2s 2s forwards;
 }
 @media only screen and (max-width: 767px) {
   #index-1 .circle {
@@ -761,57 +806,14 @@ section.auto, section.auto > div {
   }
 }
 #index-1 .circle p {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  animation: spin 20s linear infinite;
-  font-family: "harmonia cond normal";
-  text-align: center;
-  font-weight: bold;
-  margin: 0 auto;
   color: #fff;
 }
-@media only screen and (max-width: 767px) {
-  #index-1 .circle p {
-    height: 85px;
-    width: 85px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #index-1 .circle p {
-    height: 125px;
-    width: 125px;
-  }
-}
-#index-1 .circle p span {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  transition: all 0.5s cubic-bezier(0, 0, 0, 1);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0;
-}
-@media only screen and (max-width: 767px) {
-  #index-1 .circle p span {
-    font-size: 0.625em;
-  }
-}
 #index-1 .circle a {
-  background: url("/../images/mouse.svg") center no-repeat;
-  animation: bounce 2s linear infinite;
+  background: url("../images/mouse-light.svg") center no-repeat;
   background-size: 30%;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
 }
 #index-1 .letter {
-  background: url("/../images/letter.png") no-repeat;
+  background: url("../images/letter.png") no-repeat;
   background-position: 100% 0;
   background-size: 1190px;
   position: absolute;
@@ -1562,6 +1564,27 @@ section.auto, section.auto > div {
 #about-1 {
   background-color: #fff;
 }
+#about-1 .circle {
+  animation: fade-in 2s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #about-1 .circle {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #about-1 .circle {
+    bottom: 45px;
+    left: 45px;
+  }
+}
+#about-1 .circle p {
+  color: #fd959e;
+}
+#about-1 .circle a {
+  background: url("../images/mouse-primary.svg") center no-repeat;
+  background-size: 30%;
+}
 #about-1 .photo {
   position: absolute;
   z-index: 1;
@@ -1571,7 +1594,7 @@ section.auto, section.auto > div {
 @media only screen and (max-width: 767px) {
   #about-1 .photo {
     animation: fade-in 2s forwards;
-    background: url("/../images/about-phone-1.jpg") no-repeat;
+    background: url("../images/about-phone-1.jpg") no-repeat;
     background-position: 40%;
     background-size: cover;
     height: 100%;
@@ -1581,7 +1604,7 @@ section.auto, section.auto > div {
 @media only screen and (min-width: 768px) {
   #about-1 .photo {
     animation: fade-in-up 2s forwards;
-    background: url("/../images/about-1.jpg") no-repeat;
+    background: url("../images/about-1.jpg") no-repeat;
     background-size: calc(100% - calc(45px + var(--logotype-width)));
     background-position: 100% 0;
     height: 110%;
@@ -2011,7 +2034,7 @@ section.auto, section.auto > div {
 }
 #about-3 .circle > span::after {
   content: '';
-  background: url("/../images/arrow.png") center no-repeat;
+  background: url("../images/arrow.png") center no-repeat;
   background-size: cover;
   position: absolute;
   right: 0;

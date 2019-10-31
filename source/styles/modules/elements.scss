@@ -1,6 +1,5 @@
 * {
   --logotype-width: 175px;
-  --menu-height: 240px;
 }
 
 #logo {
@@ -357,6 +356,74 @@
     width: 100vw;
     height: 100vh;
     z-index: 12000;
+  }
+}
+
+.circle {
+  position: absolute;
+  z-index: 99;
+  opacity: 0;
+
+  // @include media(phone) {
+  //   bottom: $indent-phone;
+  //   right: 23vw;
+  // }
+
+  // @include media(smallest) {
+  //   right: 21vw;
+  // }
+
+  // @include media(tablet) {
+  //   bottom: $indent-normal;
+  //   left: $padding-normal;
+  // }
+
+  // @include media(biggest) {
+  //   left: $indent-normal;
+  // }
+
+  p {
+    @include border-radius(50%);
+    animation: spin 20s linear infinite;
+    font-family: $cond-normal;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+    // color: $light;
+
+    @include media(phone) {
+      height: 85px;
+      width: 85px;
+    }
+
+    @include media(tablet) {
+      height: 125px;
+      width: 125px;
+    }
+
+    span {
+      @include inline-block;
+      transition: all .5s cubic-bezier(0, 0, 0, 1);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+
+      @include media(phone) {
+        font-size: em(10);
+      }
+    }
+  }
+
+  a {
+    // background: url('/../images/mouse.svg') center no-repeat;
+    animation: bounce $time-slow linear infinite;
+    // background-size: 30%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
   }
 }
 

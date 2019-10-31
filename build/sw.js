@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about.html",
-    "revision": "9c32397ce773b8fc88d913a861bba0a7"
+    "revision": "866d06cb147248aee8317e9a83820577"
   },
   {
     "url": "fonts/harmonia-bold.otf",
@@ -210,6 +210,14 @@ self.__precacheManifest = [
     "revision": "06d9803b5d30acf2fcd56deb4bcda386"
   },
   {
+    "url": "images/mouse-light.svg",
+    "revision": "06d9803b5d30acf2fcd56deb4bcda386"
+  },
+  {
+    "url": "images/mouse-primary.svg",
+    "revision": "07d1b38b7a6f9c8cd919f0b9052f5a5a"
+  },
+  {
     "url": "images/mouse.svg",
     "revision": "06d9803b5d30acf2fcd56deb4bcda386"
   },
@@ -235,7 +243,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "98fb50ae9297666824c8b525f9ecd46e"
+    "revision": "e634fddf9166e8d1bf81404a493b4a0e"
   },
   {
     "url": "scripts/hover.min.js",
@@ -247,7 +255,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "201ccbe1b14c18bd613011ae356443ef"
+    "revision": "408c0348ec22db3dece58b5c423aeb5d"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -259,11 +267,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "fa9abf69e0942b313e2602120c69749e"
+    "revision": "4e747f55b387e9d582834574e983b718"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "20b46413d30bf4d7f391263e4061f214"
+    "revision": "50b1e9b5c11d06f437897a79a28f25c4"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

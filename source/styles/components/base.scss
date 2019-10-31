@@ -6,6 +6,10 @@ $spacing: .5px;
 $time-fast: .15s;
 $time-slow: 2s;
 
+:root {
+  --menu-height: 280px;
+}
+
 // indent
 $indent-normal: 45px;
 $indent-phone: $indent-normal / 3;
