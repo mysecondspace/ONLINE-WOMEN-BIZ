@@ -70,18 +70,6 @@ self.__precacheManifest = [
     "revision": "6d43f7f4e40151bd1b6acab26d7bcc20"
   },
   {
-    "url": "images/about-hover-2.jpg",
-    "revision": "b3c9009cde0b51db7ade8ee26ed8a6ba"
-  },
-  {
-    "url": "images/about-hover-4.jpg",
-    "revision": "e7e157c786dd69b7c23721aa98db403f"
-  },
-  {
-    "url": "images/about-phone-1 2.jpg",
-    "revision": "9517a2b482ceaf95df79083d521265c0"
-  },
-  {
     "url": "images/about-phone-1.jpg",
     "revision": "9517a2b482ceaf95df79083d521265c0"
   },
@@ -122,7 +110,7 @@ self.__precacheManifest = [
     "revision": "e7e157c786dd69b7c23721aa98db403f"
   },
   {
-    "url": "images/displacement 3.png",
+    "url": "images/displacement 2.png",
     "revision": "3408054e5f083993c59b1b92204fbc12"
   },
   {
@@ -150,24 +138,12 @@ self.__precacheManifest = [
     "revision": "820da0ee790921dcf3ea852346f2f26b"
   },
   {
-    "url": "images/index-hover-2 3.jpg",
-    "revision": "611086be881a338a90679777661f68c5"
-  },
-  {
     "url": "images/index-hover-2.jpg",
     "revision": "611086be881a338a90679777661f68c5"
   },
   {
-    "url": "images/index-hover-3 3.jpg",
-    "revision": "3848c94c22277f531b594928e0c722fa"
-  },
-  {
     "url": "images/index-hover-3.jpg",
     "revision": "3848c94c22277f531b594928e0c722fa"
-  },
-  {
-    "url": "images/index-hover-4 3.jpg",
-    "revision": "866077db7d60405ffd926ded7f4c6663"
   },
   {
     "url": "images/index-hover-4.jpg",
@@ -178,15 +154,15 @@ self.__precacheManifest = [
     "revision": "590e2a296bf8534ec01670f0ef01ed3f"
   },
   {
-    "url": "images/logo 3.svg",
+    "url": "images/logo 2.svg",
     "revision": "4e299a7be4f4422989e243ce7192aab6"
   },
   {
-    "url": "images/logo-big-light 3.png",
+    "url": "images/logo-big-light 2.png",
     "revision": "3ec2c2421f01c2b712f28cb9e87f3621"
   },
   {
-    "url": "images/logo-big-light-2x 3.png",
+    "url": "images/logo-big-light-2x 2.png",
     "revision": "3ec2c2421f01c2b712f28cb9e87f3621"
   },
   {
@@ -198,11 +174,11 @@ self.__precacheManifest = [
     "revision": "3ec2c2421f01c2b712f28cb9e87f3621"
   },
   {
-    "url": "images/logo-big-primary 3.png",
+    "url": "images/logo-big-primary 2.png",
     "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
-    "url": "images/logo-big-primary-2x 3.png",
+    "url": "images/logo-big-primary-2x 2.png",
     "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
@@ -214,12 +190,8 @@ self.__precacheManifest = [
     "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
-    "url": "images/logo-small-dark 3.png",
+    "url": "images/logo-small-dark 2.png",
     "revision": "f96596dd2835a1166fc3f786a8d7632b"
-  },
-  {
-    "url": "images/logo-small-dark-2x 3.png",
-    "revision": "4cf3f969c08e5d1794a9af3186718142"
   },
   {
     "url": "images/logo-small-dark-2x.png",
@@ -230,11 +202,11 @@ self.__precacheManifest = [
     "revision": "f96596dd2835a1166fc3f786a8d7632b"
   },
   {
-    "url": "images/logo-small-light 3.png",
+    "url": "images/logo-small-light 2.png",
     "revision": "1038c5865dacc71684e5faee1d0c1934"
   },
   {
-    "url": "images/logo-small-light-2x 3.png",
+    "url": "images/logo-small-light-2x 2.png",
     "revision": "87bab3a410a6e244406ef1a9baaf919d"
   },
   {
@@ -250,7 +222,7 @@ self.__precacheManifest = [
     "revision": "4e299a7be4f4422989e243ce7192aab6"
   },
   {
-    "url": "images/mouse 3.svg",
+    "url": "images/mouse-light 2.svg",
     "revision": "06d9803b5d30acf2fcd56deb4bcda386"
   },
   {
@@ -258,12 +230,12 @@ self.__precacheManifest = [
     "revision": "06d9803b5d30acf2fcd56deb4bcda386"
   },
   {
-    "url": "images/mouse-primary.svg",
+    "url": "images/mouse-primary 2.svg",
     "revision": "07d1b38b7a6f9c8cd919f0b9052f5a5a"
   },
   {
-    "url": "images/mouse.svg",
-    "revision": "06d9803b5d30acf2fcd56deb4bcda386"
+    "url": "images/mouse-primary.svg",
+    "revision": "07d1b38b7a6f9c8cd919f0b9052f5a5a"
   },
   {
     "url": "images/slide-1.png",
