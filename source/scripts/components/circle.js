@@ -22,5 +22,3 @@ var Emblem = {
     }
   }
 };
-
-Emblem.init('#circle p');

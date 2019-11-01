@@ -45,6 +45,7 @@ $(document).ready(function() {
     $('#logo').attr('href', '#first');
     $('#menu li:nth-child(1)').remove();
     document.documentElement.style.setProperty("--menu-height", "240px");
+    Emblem.init('#scroll p');
 
     // initialize scroll on the index page
     $('#main').fullpage({
@@ -137,6 +138,8 @@ $(document).ready(function() {
     });
   } else if (about.length > 0) {
     $('#menu a[href*="about"]').addClass('active');
+    Emblem.init('#scroll p');
+    Emblem.init('#circle p');
 
     // initialize scroll on the about page
     $('#main').fullpage({

@@ -543,8 +543,12 @@ html button {
 
 .circle {
   position: absolute;
-  z-index: 99;
   opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  .circle {
+    z-index: 99;
+  }
 }
 .circle p {
   -moz-border-radius: 50%;

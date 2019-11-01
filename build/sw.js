@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about.html",
-    "revision": "866d06cb147248aee8317e9a83820577"
+    "revision": "07c0b5a7ac7b2f1dd2eb0c8978c5275a"
   },
   {
     "url": "fonts/harmonia-bold.otf",
@@ -243,7 +243,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e634fddf9166e8d1bf81404a493b4a0e"
+    "revision": "5daeb2a71bf2d71e8a3e84d31fa4da1f"
   },
   {
     "url": "scripts/hover.min.js",
@@ -255,7 +255,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "408c0348ec22db3dece58b5c423aeb5d"
+    "revision": "17fb38c17449cc658d00f0daf36c4547"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -267,11 +267,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "4e747f55b387e9d582834574e983b718"
+    "revision": "9207459fefb2880e6a9282423dd1a24a"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "50b1e9b5c11d06f437897a79a28f25c4"
+    "revision": "8bfc70c423e22a96af0969f62ca18f9d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
