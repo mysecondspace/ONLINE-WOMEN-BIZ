@@ -363,10 +363,6 @@
   position: absolute;
   opacity: 0;
 
-  @include media(phone) {
-    z-index: 99;
-  }
-
   p {
     @include border-radius(50%);
     animation: spin 20s linear infinite;
@@ -406,6 +402,20 @@
     height: 100%;
     width: 100%;
     top: 0;
+  }
+
+  &#scroll {
+    animation: fade-in $time-slow forwards;
+    z-index: 99;
+
+    @include media(phone) {
+      display: none;
+    }
+
+    @include media(tablet) {
+      top: calc(100vh - 125px - #{$indent-normal});
+      right: $indent-normal;
+    }
   }
 }
 
@@ -543,21 +553,6 @@ table {
   }
 }
 
-#about {
-  main {
-    overflow-x: hidden;
-  }
-
-  #footer {
-    margin: 0;
-    width: calc(100% - 60px);
-
-    @include media(phone) {
-      width: calc(100% - 30px);
-    }
-  }
-}
-
 section {
   position: relative;
 
@@ -587,5 +582,20 @@ section {
   &.auto,
   &.auto > div {
     height: auto !important;
+  }
+}
+
+body:not(#index) {
+  main {
+    overflow-x: hidden;
+  }
+
+  #footer {
+    margin: 0;
+    width: calc(100% - 60px);
+
+    @include media(phone) {
+      width: calc(100% - 30px);
+    }
   }
 }

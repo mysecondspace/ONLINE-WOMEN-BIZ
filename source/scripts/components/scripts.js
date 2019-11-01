@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var index = $('#index'),
-      about = $('#about');
+      about = $('#about'),
+      blog = $('#blog');
 
   // initialize lazy load
   var myLazyLoad = new LazyLoad({
@@ -52,6 +53,7 @@ $(document).ready(function() {
 
       // options here
       scrollOverflow: true,
+      scrollingSpeed: 1000,
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
       onLeave: function(origin, destination, direction) {
@@ -66,7 +68,7 @@ $(document).ready(function() {
             break;
         }
       },
-      afterRender: function(){
+      afterRender: function() {
         $('#index-1').addClass('animate');
       },
       afterLoad: function(origin, destination, direction) {
@@ -148,8 +150,8 @@ $(document).ready(function() {
       fitToSection: false,
       autoScrolling: false,
       scrollingSpeed: 1000,
-      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       anchors: ['first', 'second', 'third', 'fourth'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
 
@@ -186,6 +188,61 @@ $(document).ready(function() {
             break;
           case 3:
             $('#about-4').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
+  } else if (blog.length > 0) {
+    $('#menu a[href*="blog"]').addClass('active');
+    Emblem.init('#scroll p');
+
+    // initialize scroll on the about page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      autoScrolling: false,
+      scrollingSpeed: 1000,
+      anchors: ['first', 'second', 'third', 'fourth'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#blog-1').addClass('animate');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            // only for desktop version
+            if (window.innerWidth > 768) {
+              $('#logo').addClass('big light');
+            } else {
+              $('#logo').addClass('small light');
+            };
+
+            break;
+          case 1:
+            $('#blog-2').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 2:
+            $('#blog-3').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 3:
+            $('#blog-4').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('secondary');
             $('#nav').addClass('light');

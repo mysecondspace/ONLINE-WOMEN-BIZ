@@ -19,8 +19,9 @@
     }
 
     @include media(tablet) {
-      bottom: $indent-normal;
+      top: calc(100vh - 125px - #{$indent-normal});
       left: $padding-normal;
+      right: initial;
     }
 
     @include media(biggest) {
@@ -483,69 +484,37 @@
     }
 
     .absolute {
+      $absolute: 3;
+
       > * {
         animation: fade-in-up $time-slow forwards;
       }
 
-      &--1 {
-        img {
-          animation-delay: .1s;
-        }
+      @for $i from 1 through $absolute {
+        &--#{$i} {
+          img {
+            animation-delay: .5s * $i;
+          }
 
-        div {
-          animation-delay: 1s;
-        }
-      }
-
-      &--2 {
-        img {
-          animation-delay: .4s;
-        }
-
-        div {
-          animation-delay: 1.1s;
-        }
-      }
-
-      &--3 {
-        img {
-          animation-delay: .7s;
-        }
-
-        div {
-          animation-delay: 1.2s;
+          div {
+            animation-delay: 1s * $i;
+          }
         }
       }
     }
 
     .paragraph {
-      &--1 {
-        p {
-          animation-delay: .2s;
-        }
+      $paragraph: 3;
 
-        a {
-          animation-delay: .3s;
-        }
-      }
+      @for $i from 1 through $paragraph {
+        &--#{$i} {
+          p {
+            animation-delay: .6s * $i;
+          }
 
-      &--2 {
-        p {
-          animation-delay: .5s;
-        }
-
-        a {
-          animation-delay: .6s;
-        }
-      }
-
-      &--3 {
-        p {
-          animation-delay: .8s;
-        }
-
-        a {
-          animation-delay: .9s;
+          a {
+            animation-delay: .7s * $i;
+          }
         }
       }
     }
@@ -583,10 +552,6 @@
 
       @include media(phone) {
         padding-top: 2.5vh;
-      }
-
-      @include media(biggest) {
-        width: 19vw;
       }
 
       > * {
@@ -780,7 +745,7 @@
 
       &--2 {
         @include media(tablet) {
-          left: 10vw;
+          left: 5vw;
           top: 30vh;
         }
 

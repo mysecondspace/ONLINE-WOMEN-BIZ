@@ -2,17 +2,6 @@
   background-color: $light;
 
   .circle {
-    animation: fade-in $time-slow forwards;
-
-    @include media(phone) {
-      display: none;
-    }
-
-    @include media(tablet) {
-      bottom: $indent-normal;
-      left: $indent-normal;
-    }
-
     p {
       color: $primary;
     }
