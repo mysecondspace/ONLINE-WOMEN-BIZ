@@ -52,7 +52,7 @@ let group, stuckX, stuckY, fillOuterCursor;
 const initCanvas = () => {
   const canvas = document.querySelector(".cursor--canvas");
   const shapeBounds = {
-    width: 105
+    width: 110
   };
 
   paper.setup(canvas);

@@ -423,6 +423,79 @@
   }
 }
 
+.text {
+  @include media(phone) {
+    padding: 5vh 0;
+  }
+
+  @include media(tablet) {
+    width: calc(100% - #{$indent-normal});
+    padding: 15vh 0;
+  }
+
+  @include media(biggest) {
+    width: calc(100% - #{$indent-biggest} - #{$padding-biggest});
+    margin-left: $padding-biggest;
+  }
+
+  > p {
+    opacity: 0;
+    color: $dark;
+
+    &.title {
+      position: relative;
+      font-family: $cond-bold;
+      text-transform: uppercase;
+
+      @include media(phone) {
+        font-size: em(26);
+      }
+
+      @include media(smallest) {
+        font-size: em(20);
+      }
+
+      @include media(tablet) {
+        font-size: em(60);
+      }
+
+      @include media(biggest) {
+        font-size: em(80);
+      }
+
+      &:not(:first-of-type) {
+        padding-top: 10vh;
+
+        @include media(phone) {
+          padding-top: 5vh;
+        }
+      }
+
+      + p {
+        line-height: 1.48;
+
+        @include media(phone) {
+          margin-top: 2.5vh;
+        }
+
+        @include media(smallest) {
+          font-size: em(14);
+        }
+
+        @include media(tablet) {
+          font-size: em(20);
+          margin-top: 5vh;
+        }
+
+        @include media(biggest) {
+          margin-top: 2.5vh;
+          font-size: em(24);
+        }
+      }
+    }
+  }
+}
+
 .link {
   @include media(phone) {
     background-color: $primary;
@@ -703,8 +776,10 @@ body {
     }
   }
 
-  &#faq {
+  &#faq,
+  &#post {
     #footer {
+      border-top: 0;
       background-color: $light;
 
       p {

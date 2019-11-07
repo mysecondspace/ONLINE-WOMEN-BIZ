@@ -2,6 +2,7 @@ $(document).ready(function() {
   var index = $('#index'),
       about = $('#about'),
       blog = $('#blog'),
+      post = $('#post'),
       faq = $('#faq');
 
   // initialize lazy load
@@ -41,7 +42,12 @@ $(document).ready(function() {
     } else if (about.length > 0) {
       $('.block .absolute img').addClass('swiper-slide').wrapAll('<div class="swiper-container">').wrapAll('<div class="swiper-wrapper">');
       $('.swiper-container').append('<div class="swiper-pagination"></div>');
-    }
+
+    // create swiper on the post page
+    } else if (post.length > 0) {
+      $('.block').addClass('swiper-slide').wrapAll('<div class="swiper-container">').wrapAll('<div class="swiper-wrapper">');
+      $('.swiper-container').append('<div class="swiper-pagination"></div>');
+    };
 
     // initialize swiper
     var sOne = new Swiper (".swiper-container", {
@@ -82,9 +88,6 @@ $(document).ready(function() {
 
             break;
         }
-      },
-      afterRender: function() {
-        $('#index-1').addClass('animate');
       },
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
@@ -333,6 +336,82 @@ $(document).ready(function() {
             $('#faq-7').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
+  } else if (post.length > 0) {
+    Emblem.init('#scroll p');
+
+    // initialize scroll on the about page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      autoScrolling: false,
+      scrollingSpeed: 1000,
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#post-1').addClass('animate');
+            $('#logo').addClass('big dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 1:
+            $('#post-2').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 2:
+            $('#post-3').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 3:
+            $('#post-4').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 4:
+            $('#post-5').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 5:
+            $('#post-6').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 6:
+            $('#post-7').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 7:
+            $('#post-8').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
             $('#nav').addClass('light');
 
             break;

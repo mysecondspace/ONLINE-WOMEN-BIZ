@@ -4,5 +4,6 @@
 |-- REVIEWS<br>
 |-- COURSES<br>
 |-- EVENTS<br>
-|-- BLOG<br>
-|-- FAQ
+|-- [BLOG](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/blog.html)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [POST](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/post.html)
+|-- [FAQ](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/faq.html)

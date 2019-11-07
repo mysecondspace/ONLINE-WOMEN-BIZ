@@ -1,14 +1,9 @@
 #index-1 {
   background-color: $primary-lighten;
 
-  &.animate {
-    .circle,
-    .slogan {
-      animation: fade-in $time-slow 2s forwards;
-    }
-  }
-
   .circle {
+    animation-delay: 2s;
+
     @include media(phone) {
       bottom: $indent-phone;
       right: 23vw;
@@ -70,6 +65,7 @@
   }
 
   .slogan {
+    animation: fade-in $time-slow 2s forwards;
     position: absolute;
     font-size: em(20);
     color: $light;

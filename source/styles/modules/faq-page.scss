@@ -207,7 +207,7 @@
     }
 
     @include media(biggest) {
-      width: calc(70% - #{$indent-normal});
+      width: calc(70% - #{$indent-biggest});
     }
 
     p {
@@ -243,14 +243,14 @@
 
       &:last-of-type {
         line-height: 1.48;
-        margin-top: 5%;
-
-        @include media(tablet) {
-          font-size: em(20);
-        }
+        margin-top: 5vh;
 
         @include media(smallest) {
           font-size: em(14);
+        }
+
+        @include media(tablet) {
+          font-size: em(20);
         }
 
         @include media(biggest) {

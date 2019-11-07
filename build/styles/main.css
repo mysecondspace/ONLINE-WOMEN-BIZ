@@ -621,6 +621,86 @@ html button {
 }
 
 @media only screen and (max-width: 767px) {
+  .text {
+    padding: 5vh 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .text {
+    width: calc(100% - 45px);
+    padding: 15vh 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .text {
+    width: calc(100% - 90px - calc(90px + var(--logotype-width)));
+    margin-left: calc(90px + var(--logotype-width));
+  }
+}
+.text > p {
+  opacity: 0;
+  color: #022329;
+}
+.text > p.title {
+  position: relative;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .text > p.title {
+    font-size: 1.625em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  .text > p.title {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .text > p.title {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .text > p.title {
+    font-size: 5em;
+  }
+}
+.text > p.title:not(:first-of-type) {
+  padding-top: 10vh;
+}
+@media only screen and (max-width: 767px) {
+  .text > p.title:not(:first-of-type) {
+    padding-top: 5vh;
+  }
+}
+.text > p.title + p {
+  line-height: 1.48;
+}
+@media only screen and (max-width: 767px) {
+  .text > p.title + p {
+    margin-top: 2.5vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  .text > p.title + p {
+    font-size: 0.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .text > p.title + p {
+    font-size: 1.25em;
+    margin-top: 5vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .text > p.title + p {
+    margin-top: 2.5vh;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
   .link {
     background-color: #fd959e;
     padding: 4px 12px 2px;
@@ -905,25 +985,25 @@ body:not(#index) #footer {
     width: calc(100% - 30px);
   }
 }
-body#faq #footer {
+body#faq #footer, body#post #footer {
+  border-top: 0;
   background-color: #fff;
 }
-body#faq #footer p {
+body#faq #footer p, body#post #footer p {
   color: #022329;
 }
-body#faq #footer p a {
+body#faq #footer p a, body#post #footer p a {
   color: #022329;
 }
-body#faq #footer > div div {
+body#faq #footer > div div, body#post #footer > div div {
   background: url("../images/logo-dark.svg") no-repeat;
 }
 
 #index-1 {
   background-color: #fdaeb5;
 }
-#index-1.animate .circle,
-#index-1.animate .slogan {
-  animation: fade-in 2s 2s forwards;
+#index-1 .circle {
+  animation-delay: 2s;
 }
 @media only screen and (max-width: 767px) {
   #index-1 .circle {
@@ -990,6 +1070,7 @@ body#faq #footer > div div {
   }
 }
 #index-1 .slogan {
+  animation: fade-in 2s 2s forwards;
   position: absolute;
   font-size: 1.25em;
   color: #fff;
@@ -3051,6 +3132,805 @@ body#faq #footer > div div {
   }
 }
 
+#post-1 {
+  background-color: #fff;
+}
+#post-1 .circle p {
+  color: #022329;
+}
+#post-1 .circle a {
+  background: url("../images/mouse-dark.svg") center no-repeat;
+  background-size: 30%;
+}
+#post-1 .photo {
+  background: url("../images/post-1.jpg") no-repeat;
+  animation: fade-in-up 2s forwards;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-1 .photo {
+    background-position: -45% 45%;
+    background-size: 130%;
+    height: 100%;
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-1 .photo {
+    background-position: -45% 67%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-1 .photo {
+    background-position: 100% 0;
+    background-size: contain;
+    right: 45px;
+    top: 45px;
+    height: 70%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-1 .photo {
+    right: 45px;
+    top: 45px;
+    height: 65%;
+  }
+}
+#post-1 .photo + div {
+  animation: fade-in-up 2s 1s forwards;
+  background-color: #fd959e;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-1 .photo + div {
+    height: 62.5%;
+    width: 65%;
+    right: 0;
+    top: 25%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-1 .photo + div {
+    height: 61%;
+    width: 63%;
+    top: 28%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-1 .photo + div {
+    width: 27.5%;
+    height: 65%;
+    right: 15%;
+    top: 20%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-1 .photo + div {
+    height: 65%;
+    right: 7.5%;
+    width: 25%;
+    top: 10%;
+  }
+}
+#post-1 .paragraph {
+  z-index: 1;
+  position: absolute;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #post-1 .paragraph {
+    left: 15px;
+    bottom: 3vh;
+    width: 75vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-1 .paragraph {
+    right: 25vw;
+    width: 50vw;
+    top: 17.5vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-1 .paragraph {
+    right: 22.5vw;
+    width: 45vw;
+  }
+}
+#post-1 .paragraph > * {
+  animation: fade-in-left 2s forwards;
+  line-height: 1;
+  opacity: 0;
+}
+#post-1 .paragraph p {
+  color: #022329;
+  margin-bottom: 1%;
+  animation-delay: .1s;
+  font-family: "harmonia cond bold";
+}
+@media only screen and (max-width: 767px) {
+  #post-1 .paragraph p {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-1 .paragraph p {
+    font-size: 1.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-1 .paragraph p {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-1 .paragraph p {
+    font-size: 6.25em;
+  }
+}
+#post-1 .paragraph p + span {
+  font-size: 1.625em;
+  margin-bottom: 1vh;
+  animation-delay: .2s;
+}
+@media only screen and (max-width: 767px) {
+  #post-1 .paragraph p + span {
+    text-align: right;
+    margin-top: 2vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-1 .paragraph p + span {
+    font-size: 1.25em;
+  }
+}
+#post-1 .paragraph p + span + span {
+  color: #fd959e;
+  font-size: 1.25em;
+  animation-delay: .3s;
+}
+@media only screen and (max-width: 767px) {
+  #post-1 .paragraph p + span + span {
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-1 .paragraph p + span + span {
+    font-size: 0.9375em;
+  }
+}
+#post-1 .paragraph span {
+  display: block;
+  font-family: "harmonia cond light";
+  text-transform: uppercase;
+}
+
+#post-2.animate .text p {
+  animation: fade-in-up 2s forwards;
+}
+#post-2.animate .text p:last-of-type {
+  animation-delay: .1s;
+}
+
+#post-3 {
+  background-color: #022329;
+}
+@media only screen and (max-width: 767px) {
+  #post-3 {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-3 {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+}
+#post-3.animate .title,
+#post-3.animate .paragraph > * {
+  animation: fade-in 2s forwards;
+}
+#post-3.animate .absolute > * {
+  animation: fade-in-up 2s forwards;
+}
+#post-3.animate .absolute--1 img {
+  animation-delay: 0.5s;
+}
+#post-3.animate .absolute--1 div {
+  animation-delay: 0.75s;
+}
+#post-3.animate .absolute--2 img {
+  animation-delay: 1s;
+}
+#post-3.animate .absolute--2 div {
+  animation-delay: 1.5s;
+}
+#post-3.animate .absolute--3 img {
+  animation-delay: 1.5s;
+}
+#post-3.animate .absolute--3 div {
+  animation-delay: 2.25s;
+}
+#post-3.animate .paragraph--1 p {
+  animation-delay: 0.6s;
+}
+#post-3.animate .paragraph--1 a {
+  animation-delay: 0.7s;
+}
+#post-3.animate .paragraph--2 p {
+  animation-delay: 1.2s;
+}
+#post-3.animate .paragraph--2 a {
+  animation-delay: 1.4s;
+}
+#post-3.animate .paragraph--3 p {
+  animation-delay: 1.8s;
+}
+#post-3.animate .paragraph--3 a {
+  animation-delay: 2.1s;
+}
+#post-3 .title {
+  opacity: 0;
+  color: #fff;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #post-3 .title {
+    font-size: 1.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-3 .title {
+    margin-bottom: 5vh;
+    font-size: 3.75em;
+  }
+}
+#post-3 .block {
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  #post-3 .block {
+    padding: 6vh 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-3 .block {
+    width: 33.33%;
+    float: left;
+  }
+}
+#post-3 .block .absolute {
+  position: relative;
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  #post-3 .block .absolute {
+    height: 330px;
+    width: 330px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-3 .block .absolute {
+    height: 255px;
+    width: 255px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-3 .block .absolute {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-3 .block .absolute {
+    height: 480px;
+    width: 480px;
+  }
+}
+#post-3 .block .absolute > * {
+  opacity: 0;
+}
+#post-3 .block .absolute div {
+  background-color: #fd959e;
+  position: absolute;
+  z-index: 0;
+}
+#post-3 .block .absolute--1 div {
+  top: -5%;
+  left: 30%;
+  width: 80%;
+  height: 40%;
+}
+#post-3 .block .absolute--2 div {
+  width: 80%;
+  top: -12.5%;
+  height: 50%;
+  right: -7.5%;
+}
+#post-3 .block .absolute--3 div {
+  top: -10%;
+  width: 70%;
+  right: -10%;
+  height: 70%;
+}
+#post-3 .block .paragraph {
+  margin-top: 2vh;
+}
+@media only screen and (max-width: 767px) {
+  #post-3 .block .paragraph {
+    margin-left: auto;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-3 .block .paragraph {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-3 .block .paragraph {
+    width: 60%;
+  }
+}
+#post-3 .block .paragraph > * {
+  opacity: 0;
+}
+#post-3 .block .paragraph p {
+  color: #fd959e;
+  font-family: "harmonia cond light";
+}
+@media only screen and (max-width: 767px) {
+  #post-3 .block .paragraph p {
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-3 .block .paragraph p {
+    font-size: 1.875em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-3 .block .paragraph p {
+    font-size: 2.5em;
+  }
+}
+#post-3 .block .paragraph a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  font-family: "harmonia cond bold";
+  font-size: 1.125em;
+}
+@media only screen and (max-width: 767px) {
+  #post-3 .block .paragraph a {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    margin-top: 2.5vh;
+    float: right;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-3 .block .paragraph a {
+    margin-top: 5vh;
+    color: #fd959e;
+    float: right;
+  }
+}
+
+#post-4.animate .text p:nth-of-type(1) {
+  animation: fade-in-up 2s 0.1s forwards;
+}
+#post-4.animate .text p:nth-of-type(2) {
+  animation: fade-in-up 2s 0.2s forwards;
+}
+#post-4.animate .text p:nth-of-type(3) {
+  animation: fade-in-up 2s 0.3s forwards;
+}
+#post-4.animate .text p:nth-of-type(4) {
+  animation: fade-in-up 2s 0.4s forwards;
+}
+#post-4.animate .text p:nth-of-type(5) {
+  animation: fade-in-up 2s 0.5s forwards;
+}
+#post-4.animate .text p:nth-of-type(6) {
+  animation: fade-in-up 2s 0.6s forwards;
+}
+
+#post-5 {
+  background-color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #post-5 {
+    padding: 0;
+  }
+}
+#post-5.animate table tr,
+#post-5.animate .title-above-table {
+  animation: fade-in-up 2s forwards;
+}
+#post-5.animate table tr {
+  animation-delay: .1s;
+}
+#post-5.animate table tr:nth-of-type(2) {
+  animation-delay: .2s;
+}
+#post-5 table tr {
+  border-top: 1px solid #022329;
+}
+#post-5 table tr:last-of-type {
+  border-bottom: 1px solid #022329;
+}
+#post-5 table tr td:last-of-type a {
+  color: #022329;
+}
+@media only screen and (max-width: 767px) {
+  #post-5 table tr td:last-of-type a {
+    background-color: #022329;
+    color: #fd959e;
+  }
+}
+
+#post-6.animate .text p:nth-of-type(1) {
+  animation: fade-in-up 2s 0.1s forwards;
+}
+#post-6.animate .text p:nth-of-type(2) {
+  animation: fade-in-up 2s 0.2s forwards;
+}
+#post-6.animate .text p:nth-of-type(3) {
+  animation: fade-in-up 2s 0.3s forwards;
+}
+#post-6.animate .text p:nth-of-type(4) {
+  animation: fade-in-up 2s 0.4s forwards;
+}
+
+@media only screen and (min-width: 1920px) {
+  #post-7 {
+    margin-left: calc(90px + var(--logotype-width));
+  }
+}
+#post-7.animate .share,
+#post-7.animate .hashtags,
+#post-7.animate .breadcrumbs {
+  animation: fade-in-up 2s forwards;
+}
+#post-7.animate .share {
+  animation-delay: .1s;
+}
+#post-7.animate .breadcrumbs {
+  animation-delay: .2s;
+}
+#post-7 .hashtags {
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .hashtags {
+    display: grid;
+    margin: 5vh 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-7 .hashtags {
+    margin: 10vh 0;
+    display: flex;
+  }
+}
+#post-7 .hashtags p {
+  color: #fff;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .hashtags p {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-7 .hashtags p {
+    font-size: 3.125em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-7 .hashtags p {
+    font-size: 3.75em;
+    width: 33.33%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-7 .hashtags p {
+    font-size: 5em;
+  }
+}
+#post-7 .hashtags p:not(.selected) {
+  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
+}
+#post-7 .hashtags p.selected {
+  color: #fd959e;
+}
+#post-7 .share {
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .share {
+    margin: 5vh auto;
+    width: intrinsic;
+    display: grid;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-7 .share {
+    display: inline-table;
+    margin: 10vh 0;
+  }
+}
+#post-7 .share p,
+#post-7 .share a {
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+#post-7 .share p {
+  color: #022329;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .share p {
+    font-size: 5em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-7 .share p {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-7 .share p {
+    font-size: 8.75em;
+    width: 33.33%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-7 .share p {
+    font-size: 10em;
+  }
+}
+#post-7 .share a {
+  color: #1970c8;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .share a {
+    font-size: 3.125em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-7 .share a {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-7 .share a {
+    font-size: 5em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-7 .share a {
+    font-size: 6.25em;
+  }
+}
+#post-7 .share a:not(:last-of-type) {
+  margin-right: 5vw;
+}
+#post-7 .breadcrumbs {
+  margin: 5vh 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .breadcrumbs {
+    margin: 5vh auto;
+    width: intrinsic;
+    display: grid;
+  }
+}
+#post-7 .breadcrumbs a {
+  color: #fff;
+  font-size: 1.5625em;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 399px) {
+  #post-7 .breadcrumbs a {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-7 .breadcrumbs a {
+    font-size: 1.875em;
+  }
+}
+#post-7 .breadcrumbs a:not(.current) {
+  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
+}
+#post-7 .breadcrumbs a.current {
+  color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .breadcrumbs a.current {
+    margin-left: 10vw;
+    width: 75vw;
+  }
+}
+#post-7 .breadcrumbs span {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-image: url(../images/arrow-small.png);
+  height: 11px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 10px 7.5px;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  #post-7 .breadcrumbs span {
+    background-size: 25px 10.5px;
+    background-image: url(../images/arrow-small-2x.png);
+  }
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .breadcrumbs span {
+    display: none;
+  }
+}
+
+#post-8 {
+  background-color: #022329;
+}
+#post-8.animate span,
+#post-8.animate form,
+#post-8.animate .title {
+  animation: fade-in-up 2s forwards;
+}
+#post-8.animate span {
+  animation-delay: .1s;
+}
+#post-8.animate form {
+  animation-delay: .2s;
+}
+#post-8 form {
+  opacity: 0;
+  display: grid;
+  margin-top: 10vh;
+}
+@media only screen and (max-width: 767px) {
+  #post-8 form {
+    margin-right: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-8 form {
+    margin-right: 45px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-8 form {
+    margin-right: 90px;
+  }
+}
+#post-8 form input {
+  border: 0;
+  width: 100%;
+  color: #fff;
+  outline: none;
+  border-radius: 0;
+  margin-bottom: 10vh;
+  font-family: "harmonia cond light";
+  background-color: transparent;
+  border-bottom: 1px solid #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #post-8 form input {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-8 form input {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-8 form input {
+    font-size: 1.5625em;
+  }
+}
+#post-8 form button {
+  background-color: #fd959e;
+  text-transform: uppercase;
+  font-family: "harmonia cond bold";
+  padding: 10px 20px 6px;
+  font-family: "harmonia bold";
+  color: #022329;
+  font-size: 1.5625em;
+  outline: none;
+  width: 200px;
+  border: 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-8 form button {
+    margin-left: auto;
+    font-size: 1.25em;
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-8 form button {
+    margin: 0 auto;
+  }
+}
+#post-8 span {
+  opacity: 0;
+  color: #fff;
+  display: block;
+  font-family: "harmonia cond light";
+}
+@media only screen and (max-width: 767px) {
+  #post-8 span {
+    font-size: 1.375em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-8 span {
+    font-size: 1.125em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-8 span {
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-8 span {
+    font-size: 1.875em;
+  }
+}
+#post-8 .title {
+  text-transform: uppercase;
+  font-family: "harmonia cond light";
+  color: #fd959e;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-8 .title {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-8 .title {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-8 .title {
+    font-size: 7.5em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-8 .title {
+    font-size: 8.75em;
+  }
+}
+
 #faq-1 {
   background-color: #fff;
 }
@@ -3257,7 +4137,7 @@ body#faq #footer > div div {
 }
 @media only screen and (min-width: 1920px) {
   #faq-2 .paragraph {
-    width: calc(70% - 45px);
+    width: calc(70% - 90px);
   }
 }
 #faq-2 .paragraph p {
@@ -3295,16 +4175,16 @@ body#faq #footer > div div {
 }
 #faq-2 .paragraph p:last-of-type {
   line-height: 1.48;
-  margin-top: 5%;
-}
-@media only screen and (min-width: 768px) {
-  #faq-2 .paragraph p:last-of-type {
-    font-size: 1.25em;
-  }
+  margin-top: 5vh;
 }
 @media only screen and (max-width: 399px) {
   #faq-2 .paragraph p:last-of-type {
     font-size: 0.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-2 .paragraph p:last-of-type {
+    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 1920px) {
