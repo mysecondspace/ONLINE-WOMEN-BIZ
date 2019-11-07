@@ -24,7 +24,7 @@ $padding-biggest: calc(#{$indent-biggest} + var(--logotype-width));
 $light: #fff;
 $dark: #022329;
 $primary: #fd959e;
-$secondary: #022329;
+$secondary: $dark;
 $highlight: rgba(0, 0, 0, 0);
 $primary-lighten: lighten($primary, 5%);
 

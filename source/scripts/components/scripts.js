@@ -1,12 +1,27 @@
 $(document).ready(function() {
   var index = $('#index'),
       about = $('#about'),
-      blog = $('#blog');
+      blog = $('#blog'),
+      faq = $('#faq');
 
   // initialize lazy load
   var myLazyLoad = new LazyLoad({
     elements_selector: '.lazy'
   });
+
+  // toggle list
+  var elem = $(".item p"),
+      item = $(".item span");
+
+  item.hide();
+  elem.click(function(e) {
+    var span = $(this).parent().find("span");
+
+    span.toggle();
+    item.not(span).hide();
+    $(this).toggleClass("selected")
+    elem.not(this).removeClass("selected");
+});
 
   // only for mobile version
   if (window.innerWidth < 768) {
@@ -245,6 +260,79 @@ $(document).ready(function() {
             $('#blog-4').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
+  } else if (faq.length > 0) {
+    $('#menu a[href*="faq"]').addClass('active');
+    Emblem.init('#scroll p');
+
+    // initialize scroll on the about page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      autoScrolling: false,
+      scrollingSpeed: 1000,
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterRender: function() {
+        $('#faq-1').addClass('animate');
+      },
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#faq-1').addClass('animate');
+            $('#logo').addClass('big dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 1:
+            $('#faq-2').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('light');
+
+            break;
+          case 2:
+            $('#faq-3').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('light');
+
+            break;
+          case 3:
+            $('#faq-4').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 4:
+            $('#faq-5').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 5:
+            $('#faq-6').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 6:
+            $('#faq-7').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
             $('#nav').addClass('light');
 
             break;

@@ -37,6 +37,10 @@
     &.light {
       @include image-retina('/../images/logo-big-light.png', '/../images/logo-big-light-2x.png');
     }
+
+    &.dark {
+      @include image-retina('/../images/logo-big-dark.png', '/../images/logo-big-dark-2x.png');
+    }
   }
 
   &.small {
@@ -308,15 +312,113 @@
     }
   }
 
-  div {
+  > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    object {
+    div {
+      background: url('../images/logo-light.svg') no-repeat;
       display: flex;
       width: 100px;
       height: 43px;
+    }
+  }
+}
+
+.item {
+  opacity: 0;
+  overflow: hidden;
+  text-align: left;
+
+  @include media(phone) {
+    width: 100%;
+    padding: $indent-phone;
+    margin-left: -$indent-phone;
+  }
+
+  @include media(tablet) {
+    margin-right: $padding-normal;
+    padding: 30px 0;
+  }
+
+  @include media(biggest) {
+    margin-right: $padding-biggest;
+  }
+
+  &:first-of-type {
+    padding-top: 10vh;
+
+    @include media(smallest) {
+      padding-top: 5vh;
+    }
+  }
+
+  &:last-of-type {
+    padding-bottom: 10vh;
+
+    @include media(smallest) {
+      padding-bottom: 5vh;
+    }
+  }
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid;
+  }
+
+  p {
+    @include transition($time-fast);
+    text-transform: uppercase;
+    font-family: $cond-bold;
+    position: relative;
+    cursor: pointer;
+
+    @include media(phone) {
+      font-size: em(30);
+    }
+
+    @include media(smallest) {
+      font-size: em(20);
+    }
+
+    @include media(tablet) {
+      font-size: em(37);
+    }
+
+    @include media(biggest) {
+      font-size: em(50);
+    }
+
+    &:focus,
+    &:hover,
+    &.selected {
+      color: $light;
+    }
+
+    &.small {
+      @include media(tablet) {
+        font-size: em(28);
+      }
+
+      @include media(biggest) {
+        font-size: em(50);
+      }
+    }
+  }
+
+  span {
+    display: block;
+    font-size: em(18);
+    padding: 1.5vh 0 3vh;
+    font-family: $cond-light;
+
+    @include media(smallest) {
+      font-size: em(16);
+    }
+
+    @include media(biggest) {
+      padding: 3vh 0 4vh;
+      font-size: em(22);
     }
   }
 }
@@ -585,17 +687,37 @@ section {
   }
 }
 
-body:not(#index) {
-  main {
-    overflow-x: hidden;
+body {
+  &:not(#index) {
+    main {
+      overflow-x: hidden;
+    }
+
+    #footer {
+      margin: 0;
+      width: calc(100% - 60px);
+
+      @include media(phone) {
+        width: calc(100% - 30px);
+      }
+    }
   }
 
-  #footer {
-    margin: 0;
-    width: calc(100% - 60px);
+  &#faq {
+    #footer {
+      background-color: $light;
 
-    @include media(phone) {
-      width: calc(100% - 30px);
+      p {
+        color: $dark;
+
+        a {
+          color: $dark;
+        }
+      }
+
+      > div div {
+        background: url('../images/logo-dark.svg') no-repeat;
+      }
     }
   }
 }

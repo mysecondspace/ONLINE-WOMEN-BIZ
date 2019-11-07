@@ -240,6 +240,18 @@ html button {
     background-image: url(../images/logo-big-light-2x.png);
   }
 }
+#logo.big.dark {
+  background-image: url(../images/logo-big-dark.png);
+  height: 368px;
+  width: 302px;
+  background-repeat: no-repeat;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  #logo.big.dark {
+    background-size: 151px 184px;
+    background-image: url(../images/logo-big-dark-2x.png);
+  }
+}
 #logo.small.light {
   background-image: url(../images/logo-small-light.png);
   height: 66px;
@@ -493,15 +505,119 @@ html button {
   color: #fd959e;
   font-family: "harmonia cond bold";
 }
-#footer div {
+#footer > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#footer div object {
+#footer > div div {
+  background: url("../images/logo-light.svg") no-repeat;
   display: flex;
   width: 100px;
   height: 43px;
+}
+
+.item {
+  opacity: 0;
+  overflow: hidden;
+  text-align: left;
+}
+@media only screen and (max-width: 767px) {
+  .item {
+    width: 100%;
+    padding: 15px;
+    margin-left: -15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .item {
+    margin-right: calc(45px + var(--logotype-width));
+    padding: 30px 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .item {
+    margin-right: calc(90px + var(--logotype-width));
+  }
+}
+.item:first-of-type {
+  padding-top: 10vh;
+}
+@media only screen and (max-width: 399px) {
+  .item:first-of-type {
+    padding-top: 5vh;
+  }
+}
+.item:last-of-type {
+  padding-bottom: 10vh;
+}
+@media only screen and (max-width: 399px) {
+  .item:last-of-type {
+    padding-bottom: 5vh;
+  }
+}
+.item:not(:last-of-type) {
+  border-bottom: 1px solid;
+}
+.item p {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  text-transform: uppercase;
+  font-family: "harmonia cond bold";
+  position: relative;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .item p {
+    font-size: 1.875em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  .item p {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .item p {
+    font-size: 2.3125em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .item p {
+    font-size: 3.125em;
+  }
+}
+.item p:focus, .item p:hover, .item p.selected {
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .item p.small {
+    font-size: 1.75em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .item p.small {
+    font-size: 3.125em;
+  }
+}
+.item span {
+  display: block;
+  font-size: 1.125em;
+  padding: 1.5vh 0 3vh;
+  font-family: "harmonia cond light";
+}
+@media only screen and (max-width: 399px) {
+  .item span {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .item span {
+    padding: 3vh 0 4vh;
+    font-size: 1.375em;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -788,6 +904,18 @@ body:not(#index) #footer {
   body:not(#index) #footer {
     width: calc(100% - 30px);
   }
+}
+body#faq #footer {
+  background-color: #fff;
+}
+body#faq #footer p {
+  color: #022329;
+}
+body#faq #footer p a {
+  color: #022329;
+}
+body#faq #footer > div div {
+  background: url("../images/logo-dark.svg") no-repeat;
 }
 
 #index-1 {
@@ -2920,5 +3048,584 @@ body:not(#index) #footer {
   #blog-4 .paragraph {
     left: 30vw;
     top: 12.5vh;
+  }
+}
+
+#faq-1 {
+  background-color: #fff;
+}
+#faq-1.animate .paragraph span span {
+  transition: transform 1s cubic-bezier(0, 0, 0.2, 1), opacity 1s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateZ(0);
+  opacity: 1;
+}
+#faq-1.animate .paragraph span:nth-of-type(2) span {
+  transition-delay: .2s;
+}
+#faq-1.animate .paragraph span:nth-of-type(3) span {
+  transition-delay: .4s;
+}
+#faq-1.animate .paragraph span:nth-of-type(4) span {
+  transition-delay: .6s;
+}
+#faq-1 .circle p {
+  color: #fff;
+}
+@media only screen and (min-width: 1920px) {
+  #faq-1 .circle p {
+    color: #022329;
+  }
+}
+#faq-1 .circle a {
+  background: url("../images/mouse-light.svg") center no-repeat;
+  background-size: 30%;
+}
+@media only screen and (min-width: 1920px) {
+  #faq-1 .circle a {
+    background: url("../images/mouse-dark.svg") center no-repeat;
+    background-size: 30%;
+  }
+}
+#faq-1 .photo {
+  animation: fade-in-up 2s forwards;
+  background: url("../images/faq-1.jpg") no-repeat;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  #faq-1 .photo {
+    background-position: -45% 65%;
+    background-size: 130%;
+    height: 100%;
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-1 .photo {
+    background-position: -45% 80%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-1 .photo {
+    background-position: 100% 0;
+    background-size: contain;
+    height: 115%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-1 .photo {
+    height: 85%;
+  }
+}
+#faq-1 .photo + div {
+  animation: fade-in-up 2s 1s forwards;
+  background-color: #fd959e;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+}
+@media only screen and (max-width: 767px) {
+  #faq-1 .photo + div {
+    height: 70%;
+    width: 65%;
+    right: 0;
+    top: 25%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-1 .photo + div {
+    top: 28%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-1 .photo + div {
+    height: 100%;
+    width: 30%;
+    right: 25%;
+    top: 20%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-1 .photo + div {
+    height: 80%;
+    right: 7.5%;
+    top: 10%;
+  }
+}
+#faq-1 .paragraph {
+  z-index: 1;
+  position: absolute;
+}
+@media only screen and (max-width: 767px) {
+  #faq-1 .paragraph {
+    left: 15px;
+    bottom: 30vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-1 .paragraph {
+    bottom: 20vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-1 .paragraph {
+    right: 45vw;
+    top: 17.5vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-1 .paragraph {
+    right: 30vw;
+  }
+}
+#faq-1 .paragraph > * {
+  font-family: "harmonia cond bold";
+  line-height: 1;
+}
+#faq-1 .paragraph p {
+  opacity: 0;
+  color: #022329;
+  margin-bottom: 1%;
+  animation: fade-in-up 2s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #faq-1 .paragraph p {
+    font-size: 6.25em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-1 .paragraph p {
+    font-size: 5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-1 .paragraph p {
+    font-size: 9.375em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-1 .paragraph p {
+    font-size: 12.5em;
+  }
+}
+#faq-1 .paragraph span {
+  color: #022329;
+  display: flex;
+  overflow: hidden;
+  margin-left: 1.5vw;
+}
+#faq-1 .paragraph span span {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transform: translate3d(0, 100%, 0);
+  display: block;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #faq-1 .paragraph span span {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-1 .paragraph span span {
+    font-size: 1.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-1 .paragraph span span {
+    font-size: 4.375em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-1 .paragraph span span {
+    font-size: 5.625em;
+  }
+}
+
+#faq-2.animate .paragraph p {
+  animation: fade-in-up 2s forwards;
+}
+#faq-2.animate .paragraph p:last-of-type {
+  animation-delay: .1s;
+}
+@media only screen and (min-width: 768px) {
+  #faq-2 .paragraph {
+    width: calc(100% - 45px);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-2 .paragraph {
+    width: calc(70% - 45px);
+  }
+}
+#faq-2 .paragraph p {
+  opacity: 0;
+  color: #022329;
+  font-family: "harmonia cond bold";
+}
+#faq-2 .paragraph p:first-of-type {
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  #faq-2 .paragraph p:first-of-type {
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-2 .paragraph p:first-of-type {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-2 .paragraph p:first-of-type {
+    font-size: 2.1875em;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-2 .paragraph p:first-of-type {
+    font-size: 3.75em;
+  }
+}
+#faq-2 .paragraph p:first-of-type span {
+  color: #fd959e;
+  text-transform: uppercase;
+}
+#faq-2 .paragraph p:last-of-type {
+  line-height: 1.48;
+  margin-top: 5%;
+}
+@media only screen and (min-width: 768px) {
+  #faq-2 .paragraph p:last-of-type {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-2 .paragraph p:last-of-type {
+    font-size: 0.875em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-2 .paragraph p:last-of-type {
+    font-size: 1.375em;
+  }
+}
+#faq-2 .paragraph p:last-of-type span {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-image: url(../images/arrow-small.png);
+  height: 11px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 5px;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  #faq-2 .paragraph p:last-of-type span {
+    background-size: 25px 10.5px;
+    background-image: url(../images/arrow-small-2x.png);
+  }
+}
+
+#faq-3.animate .paragraph p {
+  animation: fade-in-right 2s 0.1s forwards;
+}
+@media only screen and (min-width: 768px) {
+  #faq-3 .paragraph {
+    width: calc(70% - 45px);
+    margin-left: 30%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-3 .paragraph {
+    width: calc(50% - 45px);
+    margin-left: 50%;
+  }
+}
+#faq-3 .paragraph p {
+  opacity: 0;
+  color: #fd959e;
+  position: relative;
+  font-family: "harmonia cond bold";
+}
+@media only screen and (max-width: 767px) {
+  #faq-3 .paragraph p {
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-3 .paragraph p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-3 .paragraph p {
+    font-size: 2.1875em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-3 .paragraph p {
+    font-size: 3.75em;
+  }
+}
+#faq-3 .paragraph p span {
+  color: #022329;
+  text-transform: uppercase;
+}
+
+#faq-4 {
+  background-color: #fd959e;
+}
+#faq-4.animate .item:nth-of-type(1) {
+  animation: fade-in-up 2s 0.1s forwards;
+}
+#faq-4.animate .item:nth-of-type(2) {
+  animation: fade-in-up 2s 0.2s forwards;
+}
+#faq-4.animate .item:nth-of-type(3) {
+  animation: fade-in-up 2s 0.3s forwards;
+}
+#faq-4.animate .item:nth-of-type(4) {
+  animation: fade-in-up 2s 0.4s forwards;
+}
+#faq-4.animate .item:nth-of-type(5) {
+  animation: fade-in-up 2s 0.5s forwards;
+}
+#faq-4.animate .item:nth-of-type(6) {
+  animation: fade-in-up 2s 0.6s forwards;
+}
+#faq-4.animate .item:nth-of-type(7) {
+  animation: fade-in-up 2s 0.7s forwards;
+}
+#faq-4.animate .item:nth-of-type(8) {
+  animation: fade-in-up 2s 0.8s forwards;
+}
+#faq-4.animate .item:nth-of-type(9) {
+  animation: fade-in-up 2s 0.9s forwards;
+}
+#faq-4.animate .item:nth-of-type(10) {
+  animation: fade-in-up 2s 1s forwards;
+}
+#faq-4 .item:not(:last-of-type) {
+  border-bottom-color: #022329;
+}
+#faq-4 .item span {
+  color: #022329;
+}
+#faq-4 .item p {
+  color: #022329;
+}
+
+#faq-5 {
+  background-color: #022329;
+}
+#faq-5.animate .item:nth-of-type(1) {
+  animation: fade-in-up 2s 0.1s forwards;
+}
+#faq-5.animate .item:nth-of-type(2) {
+  animation: fade-in-up 2s 0.2s forwards;
+}
+#faq-5.animate .item:nth-of-type(3) {
+  animation: fade-in-up 2s 0.3s forwards;
+}
+#faq-5.animate .item:nth-of-type(4) {
+  animation: fade-in-up 2s 0.4s forwards;
+}
+#faq-5.animate .item:nth-of-type(5) {
+  animation: fade-in-up 2s 0.5s forwards;
+}
+#faq-5.animate .item:nth-of-type(6) {
+  animation: fade-in-up 2s 0.6s forwards;
+}
+#faq-5.animate .item:nth-of-type(7) {
+  animation: fade-in-up 2s 0.7s forwards;
+}
+#faq-5.animate .item:nth-of-type(8) {
+  animation: fade-in-up 2s 0.8s forwards;
+}
+#faq-5 .item:not(:last-of-type) {
+  border-bottom-color: #fd959e;
+}
+#faq-5 .item span {
+  color: #fff;
+}
+#faq-5 .item p {
+  color: #fd959e;
+}
+
+#faq-6.animate .title {
+  animation: fade-in-up 2s forwards;
+}
+#faq-6.animate .list:nth-of-type(1) {
+  animation: fade-in-up 2s 0.1s forwards;
+}
+#faq-6.animate .list:nth-of-type(2) {
+  animation: fade-in-up 2s 0.2s forwards;
+}
+#faq-6.animate .list:nth-of-type(3) {
+  animation: fade-in-up 2s 0.3s forwards;
+}
+#faq-6.animate .list:nth-of-type(4) {
+  animation: fade-in-up 2s 0.4s forwards;
+}
+#faq-6.animate .list:nth-of-type(5) {
+  animation: fade-in-up 2s 0.5s forwards;
+}
+#faq-6.animate .list:nth-of-type(6) {
+  animation: fade-in-up 2s 0.6s forwards;
+}
+#faq-6 .title {
+  opacity: 0;
+  padding-top: 5vh;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #faq-6 .title {
+    font-size: 1.875em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-6 .title {
+    font-size: 1.375em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-6 .title {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-6 .title {
+    font-size: 3.125em;
+  }
+}
+#faq-6 .list {
+  opacity: 0;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 399px) {
+  #faq-6 .list {
+    padding: 10px 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-6 .list {
+    margin-right: calc(45px + var(--logotype-width));
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-6 .list {
+    margin-right: calc(90px + var(--logotype-width));
+  }
+}
+#faq-6 .list:first-of-type {
+  padding-top: 5vh;
+}
+#faq-6 .list:last-of-type {
+  padding-bottom: 10vh;
+}
+@media only screen and (max-width: 399px) {
+  #faq-6 .list:last-of-type {
+    padding-bottom: 5vh;
+  }
+}
+#faq-6 .list p {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  text-transform: uppercase;
+  font-family: "harmonia cond bold";
+  position: relative;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  #faq-6 .list p {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-6 .list p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-6 .list p {
+    font-size: 1.75em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #faq-6 .list p {
+    font-size: 2.1875em;
+  }
+}
+#faq-6 .list span {
+  display: block;
+  font-family: "harmonia cond light";
+}
+@media only screen and (max-width: 767px) {
+  #faq-6 .list span {
+    font-size: 1.125em;
+    padding: .75vh 0;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #faq-6 .list span {
+    font-size: 0.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq-6 .list span {
+    font-size: 1.25em;
+    padding: .5vh 0;
+  }
+}
+#faq-6 .list span a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  color: #022329;
+}
+#faq-6 .list span a:focus, #faq-6 .list span a:hover {
+  color: #fd959e;
+}
+
+#faq-7 {
+  background-color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #faq-7 {
+    padding: 0;
+  }
+}
+#faq-7.animate table tr,
+#faq-7.animate .title-above-table {
+  animation: fade-in-up 2s forwards;
+}
+#faq-7.animate table tr {
+  animation-delay: .1s;
+}
+#faq-7.animate table tr:nth-of-type(2) {
+  animation-delay: .2s;
+}
+#faq-7 table tr {
+  border-top: 1px solid #022329;
+}
+#faq-7 table tr:last-of-type {
+  border-bottom: 1px solid #022329;
+}
+#faq-7 table tr td:last-of-type a {
+  color: #022329;
+}
+@media only screen and (max-width: 767px) {
+  #faq-7 table tr td:last-of-type a {
+    background-color: #022329;
+    color: #fd959e;
   }
 }
