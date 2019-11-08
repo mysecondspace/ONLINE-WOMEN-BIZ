@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var index = $('#index'),
       about = $('#about'),
+      courses = $('#courses'),
       blog = $('#blog'),
       post = $('#post'),
       faq = $('#faq');
@@ -9,6 +10,35 @@ $(document).ready(function() {
   var myLazyLoad = new LazyLoad({
     elements_selector: '.lazy'
   });
+
+  // video button
+  var players = document.querySelectorAll('.youtube-player')
+  var loadPlayer = function (event) {
+    var target = event.currentTarget
+    var iframe = document.createElement('iframe')
+
+    iframe.height = target.clientHeight
+    iframe.width = target.clientWidth
+    iframe.src = "https://www.youtube.com/embed/" + target.dataset.videoId + "?autoplay=1&amp;rel=0&amp;showinfo=0"
+    iframe.setAttribute("frameborder", 0)
+    iframe.setAttribute("frameborder", 0)
+
+    target.classList.remove("pristine")
+
+    if (target.children.length) {
+      target.replaceChild(iframe, target.firstElementChild)
+    } else {
+      target.appendChild(iframe)
+    }
+  }
+
+  var config = {
+    once: true
+  }
+
+  Array.from(players).forEach(function (player) {
+    player.addEventListener('click', loadPlayer, config)
+  })
 
   // toggle list
   var elem = $(".item p"),
@@ -22,7 +52,7 @@ $(document).ready(function() {
     item.not(span).hide();
     $(this).toggleClass("selected")
     elem.not(this).removeClass("selected");
-});
+  });
 
   // only for mobile version
   if (window.innerWidth < 768) {
@@ -214,6 +244,56 @@ $(document).ready(function() {
         }
       }
     });
+  } else if (courses.length > 0) {
+    $('#menu a[href*="courses"]').addClass('active');
+    Emblem.init('#scroll p');
+    Emblem.init('#circle p');
+
+    // initialize scroll on the courses page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      autoScrolling: false,
+      scrollingSpeed: 1000,
+      anchors: ['first', 'second', 'third', 'fourth'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#courses-1').addClass('animate');
+            $('#logo').addClass('big primary');
+            $('#menu').addClass('light');
+            $('#nav').addClass('primary');
+
+            break;
+          case 1:
+            $('#courses-2').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 2:
+            $('#courses-3').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 3:
+            $('#courses-4').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
   } else if (blog.length > 0) {
     $('#menu a[href*="blog"]').addClass('active');
     Emblem.init('#scroll p');
@@ -263,79 +343,6 @@ $(document).ready(function() {
             $('#blog-4').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('secondary');
-            $('#nav').addClass('light');
-
-            break;
-        }
-      }
-    });
-  } else if (faq.length > 0) {
-    $('#menu a[href*="faq"]').addClass('active');
-    Emblem.init('#scroll p');
-
-    // initialize scroll on the about page
-    $('#main').fullpage({
-
-      // options here
-      fitToSection: false,
-      autoScrolling: false,
-      scrollingSpeed: 1000,
-      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven'],
-      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
-      afterRender: function() {
-        $('#faq-1').addClass('animate');
-      },
-      afterLoad: function(origin, destination, direction) {
-        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
-
-        // sections
-        switch(destination.index) {
-          case 0:
-            $('#faq-1').addClass('animate');
-            $('#logo').addClass('big dark');
-            $('#menu').addClass('light');
-            $('#nav').addClass('dark');
-
-            break;
-          case 1:
-            $('#faq-2').addClass('animate');
-            $('#logo').addClass('small dark');
-            $('#menu').addClass('light');
-            $('#nav').addClass('light');
-
-            break;
-          case 2:
-            $('#faq-3').addClass('animate');
-            $('#logo').addClass('small dark');
-            $('#menu').addClass('light');
-            $('#nav').addClass('light');
-
-            break;
-          case 3:
-            $('#faq-4').addClass('animate');
-            $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
-            $('#nav').addClass('light');
-
-            break;
-          case 4:
-            $('#faq-5').addClass('animate');
-            $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
-            $('#nav').addClass('light');
-
-            break;
-          case 5:
-            $('#faq-6').addClass('animate');
-            $('#logo').addClass('small dark');
-            $('#menu').addClass('light');
-            $('#nav').addClass('dark');
-
-            break;
-          case 6:
-            $('#faq-7').addClass('animate');
-            $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
             $('#nav').addClass('light');
 
             break;
@@ -412,6 +419,79 @@ $(document).ready(function() {
             $('#post-8').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
+  } else if (faq.length > 0) {
+    $('#menu a[href*="faq"]').addClass('active');
+    Emblem.init('#scroll p');
+
+    // initialize scroll on the about page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      autoScrolling: false,
+      scrollingSpeed: 1000,
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterRender: function() {
+        $('#faq-1').addClass('animate');
+      },
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#faq-1').addClass('animate');
+            $('#logo').addClass('big dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 1:
+            $('#faq-2').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('light');
+
+            break;
+          case 2:
+            $('#faq-3').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('light');
+
+            break;
+          case 3:
+            $('#faq-4').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 4:
+            $('#faq-5').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 5:
+            $('#faq-6').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 6:
+            $('#faq-7').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
             $('#nav').addClass('light');
 
             break;

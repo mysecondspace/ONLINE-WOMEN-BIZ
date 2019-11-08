@@ -97,6 +97,16 @@
     }
   }
 
+  &.primary {
+    z-index: 3;
+
+    div,
+    &::after,
+    &::before {
+      background-color: $primary;
+    }
+  }
+
   &.click {
     div {
       transform: scale(0);
@@ -423,6 +433,63 @@
   }
 }
 
+.youtube-player {
+  position: relative;
+  opacity: 0;
+
+  @include media(tablet) {
+    width: calc(100% - #{$padding-normal});
+  }
+
+  @include media(biggest) {
+    width: calc(100% - #{$padding-biggest} * 2);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &.pristine {
+    &:hover:after {
+      opacity: 1;
+    }
+
+    &:before {
+      height: 0;
+      width: 0;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      content: '';
+      position: absolute;
+      border-left: 35px solid $light;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      transform: translate(-50%, -50%);
+    }
+
+    &:after {
+      @include border-radius(20px);
+      @include inline-block;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      border: 0;
+      outline: 0;
+      padding: 0;
+      width: 100px;
+      height: 65px;
+      box-shadow: none;
+      position: absolute;
+      background: rgba(0,0,0,.7);
+      transform: translate(-50%, -50%);
+      transition: opacity $time-fast ease;
+      text-decoration: none;
+      content: '';
+    }
+  }
+}
+
 .text {
   @include media(phone) {
     padding: 5vh 0;
@@ -456,7 +523,7 @@
       }
 
       @include media(tablet) {
-        font-size: em(60);
+        font-size: em(55);
       }
 
       @include media(biggest) {
@@ -492,6 +559,14 @@
           font-size: em(24);
         }
       }
+    }
+  }
+
+  &--light > p {
+    color: $light;
+
+    &.title {
+      color: $primary;
     }
   }
 }
@@ -776,6 +851,7 @@ body {
     }
   }
 
+  &#courses,
   &#faq,
   &#post {
     #footer {

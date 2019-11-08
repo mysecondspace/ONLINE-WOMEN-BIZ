@@ -27,15 +27,19 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about.html",
-    "revision": "6af485dce73d63b27fbdca8784bc3663"
+    "revision": "1e9f455b36c09cf49d9e43e38f22e811"
   },
   {
     "url": "blog.html",
-    "revision": "fb335288ca4711594c5616acc41a145a"
+    "revision": "1086cbb7f6b82ab159d0bd8b55691556"
+  },
+  {
+    "url": "courses.html",
+    "revision": "7013907f80cc661fa118c62af34892e5"
   },
   {
     "url": "faq.html",
-    "revision": "d8881aeed4184986c70d3a1abcab91be"
+    "revision": "afd507ddac4df39d30a24cc25eba9c7b"
   },
   {
     "url": "fonts/harmonia-bold.otf",
@@ -120,6 +124,22 @@ self.__precacheManifest = [
   {
     "url": "images/blog-hover-4.jpg",
     "revision": "e7e157c786dd69b7c23721aa98db403f"
+  },
+  {
+    "url": "images/courses-1.jpg",
+    "revision": "c9f44f945ac160868a297a13b2dee220"
+  },
+  {
+    "url": "images/courses-2.png",
+    "revision": "7a6f5427923bb35b0b85e8c182ef12e6"
+  },
+  {
+    "url": "images/courses-3.jpg",
+    "revision": "1e76c5057e3db0b2f4a67f9e6438cfd4"
+  },
+  {
+    "url": "images/courses-hover-3.jpg",
+    "revision": "a60da55ce0dae25433ed35a56e02e0e0"
   },
   {
     "url": "images/displacement.png",
@@ -251,11 +271,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "738019532c5761ebd79d5e775711fbbf"
+    "revision": "5f1f5bfee59dbd984b85edc114a121f9"
   },
   {
     "url": "post.html",
-    "revision": "37d08e6283396198c6cc6c2bcaf3f2e6"
+    "revision": "42b9259d5646f43f15ec648567cb65eb"
   },
   {
     "url": "scripts/hover.min.js",
@@ -267,7 +287,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "a78b8cc00246d39bc0caa7353e6c3ad8"
+    "revision": "ac6ccb8c156ad5a53a06cbabd57e0208"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -279,11 +299,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "a733493228a919950714dc2ae8345140"
+    "revision": "d298c6fb4776f1bdb747870ee0d845e4"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "0a79605fd8b01c3eb9bc04018a93c440"
+    "revision": "cf5c753e6fabc088f195b5059f83b92e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

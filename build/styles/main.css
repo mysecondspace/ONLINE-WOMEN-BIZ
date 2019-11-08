@@ -310,6 +310,12 @@ html button {
 #nav.dark div, #nav.dark::after, #nav.dark::before {
   background-color: #022329;
 }
+#nav.primary {
+  z-index: 3;
+}
+#nav.primary div, #nav.primary::after, #nav.primary::before {
+  background-color: #fd959e;
+}
 #nav.click div {
   transform: scale(0);
 }
@@ -620,6 +626,65 @@ html button {
   }
 }
 
+.youtube-player {
+  position: relative;
+  opacity: 0;
+}
+@media only screen and (min-width: 768px) {
+  .youtube-player {
+    width: calc(100% - calc(45px + var(--logotype-width)));
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .youtube-player {
+    width: calc(100% - calc(90px + var(--logotype-width)) * 2);
+  }
+}
+.youtube-player img {
+  width: 100%;
+}
+.youtube-player.pristine:hover:after {
+  opacity: 1;
+}
+.youtube-player.pristine:before {
+  height: 0;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  content: '';
+  position: absolute;
+  border-left: 35px solid #fff;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  transform: translate(-50%, -50%);
+}
+.youtube-player.pristine:after {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  width: 100px;
+  height: 65px;
+  box-shadow: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease;
+  text-decoration: none;
+  content: '';
+}
+
 @media only screen and (max-width: 767px) {
   .text {
     padding: 5vh 0;
@@ -658,7 +723,7 @@ html button {
 }
 @media only screen and (min-width: 768px) {
   .text > p.title {
-    font-size: 3.75em;
+    font-size: 3.4375em;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -698,6 +763,12 @@ html button {
     margin-top: 2.5vh;
     font-size: 1.5em;
   }
+}
+.text--light > p {
+  color: #fff;
+}
+.text--light > p.title {
+  color: #fd959e;
 }
 
 @media only screen and (max-width: 767px) {
@@ -985,17 +1056,17 @@ body:not(#index) #footer {
     width: calc(100% - 30px);
   }
 }
-body#faq #footer, body#post #footer {
+body#courses #footer, body#faq #footer, body#post #footer {
   border-top: 0;
   background-color: #fff;
 }
-body#faq #footer p, body#post #footer p {
+body#courses #footer p, body#faq #footer p, body#post #footer p {
   color: #022329;
 }
-body#faq #footer p a, body#post #footer p a {
+body#courses #footer p a, body#faq #footer p a, body#post #footer p a {
   color: #022329;
 }
-body#faq #footer > div div, body#post #footer > div div {
+body#courses #footer > div div, body#faq #footer > div div, body#post #footer > div div {
   background: url("../images/logo-dark.svg") no-repeat;
 }
 
@@ -2476,7 +2547,7 @@ body#faq #footer > div div, body#post #footer > div div {
     height: 300px;
     width: 300px;
     right: 30%;
-    top: 55vh;
+    top: 35vh;
   }
 }
 #about-3 .block .absolute img:nth-of-type(2) + div {
@@ -2503,7 +2574,7 @@ body#faq #footer > div div, body#post #footer > div div {
   #about-3 .block .absolute img:nth-of-type(3) {
     height: 340px;
     width: 395px;
-    top: 45vh;
+    top: 40vh;
   }
 }
 #about-3 .block .absolute img:nth-of-type(3) + div {
@@ -2592,6 +2663,579 @@ body#faq #footer > div div, body#post #footer > div div {
 @media only screen and (min-width: 768px) {
   #about-4 .sup {
     font-size: 4em;
+  }
+}
+
+#courses-1 {
+  background-color: #fff;
+}
+#courses-1 .circle p {
+  color: #fff;
+}
+@media only screen and (min-width: 1920px) {
+  #courses-1 .circle p {
+    color: #fd959e;
+  }
+}
+#courses-1 .circle a {
+  background: url("../images/mouse-light.svg") center no-repeat;
+  background-size: 30%;
+}
+@media only screen and (min-width: 1920px) {
+  #courses-1 .circle a {
+    background: url("../images/mouse-primary.svg") center no-repeat;
+    background-size: 30%;
+  }
+}
+#courses-1 .photo {
+  background: url("../images/courses-1.jpg") no-repeat;
+  width: calc(100% - calc(45px + var(--logotype-width)));
+  background-position: 100% 0;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  #courses-1 .photo {
+    animation: fade-in-up 2s forwards;
+    background-size: contain;
+    width: 100vw;
+    top: 30vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-1 .photo {
+    top: 37vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-1 .photo {
+    animation: fade-in-right 2s forwards;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-1 .photo {
+    background-size: contain;
+    max-width: 1650px;
+  }
+}
+#courses-1 .paragraph {
+  z-index: 1;
+  position: absolute;
+}
+@media only screen and (max-width: 767px) {
+  #courses-1 .paragraph {
+    bottom: 15px;
+    left: 15px;
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-1 .paragraph {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-1 .paragraph {
+    left: calc(calc(45px + var(--logotype-width)) + 45px);
+    width: calc(40% - 45px);
+    bottom: 30vh;
+  }
+}
+#courses-1 .paragraph p {
+  opacity: 0;
+  line-height: 1;
+  color: #fd959e;
+  animation-delay: .1s;
+  font-family: "harmonia cond bold";
+  animation: fade-in-right 2s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #courses-1 .paragraph p {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-1 .paragraph p {
+    font-size: 5.625em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-1 .paragraph p {
+    font-size: 10em;
+  }
+}
+
+#courses-2 {
+  background-color: #022329;
+}
+#courses-2.animate .text p,
+#courses-2.animate .info p,
+#courses-2.animate .youtube-player {
+  animation: fade-in-up 2s forwards;
+}
+#courses-2.animate .text .title + p {
+  animation-delay: .1s;
+}
+#courses-2.animate .youtube-player {
+  animation-delay: .2s;
+}
+#courses-2.animate .info .title {
+  animation-delay: .3s;
+}
+#courses-2.animate .info .title + p {
+  animation-delay: .4s;
+}
+#courses-2.animate .info img {
+  animation: fade-in-right 2s 0.5s forwards;
+}
+#courses-2.animate .info div p:nth-of-type(1) {
+  animation: fade-in-left 2s 0.5s forwards;
+}
+#courses-2.animate .info div p:nth-of-type(2) {
+  animation: fade-in-left 2s 1s forwards;
+}
+#courses-2.animate .info div p:nth-of-type(3) {
+  animation: fade-in-left 2s 1.5s forwards;
+}
+#courses-2.animate .info div p:nth-of-type(4) {
+  animation: fade-in-left 2s 2s forwards;
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .text {
+    width: calc(100% - calc(45px + var(--logotype-width)));
+    padding: 10vh 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-2 .text {
+    width: calc(100% - calc(90px + var(--logotype-width)) * 2);
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #courses-2 .info {
+    padding-top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .info {
+    padding-top: 20vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-2 .info {
+    margin-left: calc(90px + var(--logotype-width));
+  }
+}
+#courses-2 .info p {
+  opacity: 0;
+  font-family: "harmonia cond bold";
+}
+#courses-2 .info p.title {
+  text-transform: uppercase;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  #courses-2 .info p.title {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-2 .info p.title {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .info p.title {
+    font-size: 8.75em;
+  }
+}
+#courses-2 .info p.title + p {
+  line-height: 1;
+  color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #courses-2 .info p.title + p {
+    font-size: 1.875em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-2 .info p.title + p {
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .info p.title + p {
+    font-size: 3.75em;
+  }
+}
+#courses-2 .info div {
+  z-index: 0;
+  width: fit-content;
+  position: relative;
+  transform: rotate(-5deg);
+}
+@media only screen and (max-width: 767px) {
+  #courses-2 .info div {
+    padding: 5vh 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .info div {
+    padding: 5vh 0 10vh;
+  }
+}
+#courses-2 .info div + p {
+  font-family: "harmonia cond light";
+  padding-bottom: 10vh;
+  line-height: 1.48;
+  color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #courses-2 .info div + p {
+    padding-left: 5vw;
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-2 .info div + p {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .info div + p {
+    padding-left: 10vw;
+    font-size: 1.875em;
+    width: 50vw;
+  }
+}
+#courses-2 .info div p {
+  color: #fff;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #courses-2 .info div p {
+    font-size: 2.8125em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .info div p {
+    font-size: 6.25em;
+  }
+}
+#courses-2 .info div img {
+  z-index: -1;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #courses-2 .info div img {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-2 .info div img {
+    position: absolute;
+    right: -19vw;
+    top: -10vh;
+  }
+}
+
+#courses-3.animate .absolute canvas,
+#courses-3.animate .absolute div {
+  animation: fade-in-up 2s forwards;
+}
+#courses-3.animate .absolute div {
+  animation-delay: 1s;
+}
+#courses-3.animate .title span span {
+  transition: transform 1s cubic-bezier(0, 0, 0.2, 1), opacity 1s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateZ(0);
+  opacity: 1;
+}
+#courses-3.animate .title span:nth-of-type(2) span {
+  transition-delay: .2s;
+}
+#courses-3.animate .title span:nth-of-type(3) span {
+  transition-delay: .4s;
+}
+#courses-3.animate .title span:nth-of-type(4) span {
+  transition-delay: .6s;
+}
+#courses-3.animate .paragraph > * {
+  animation: fade-in-up 2s forwards;
+}
+#courses-3.animate .paragraph p {
+  animation-delay: .8s;
+}
+#courses-3 .absolute {
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+@media only screen and (max-width: 767px) {
+  #courses-3 .absolute {
+    right: 30px;
+    top: 30px;
+    height: 255px;
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-3 .absolute {
+    right: 15px;
+    top: 15px;
+    height: 170px;
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-3 .absolute {
+    height: 575px;
+    width: 405px;
+    right: 10vw;
+    top: 15vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-3 .absolute {
+    right: calc(90px + var(--logotype-width));
+    top: calc(90px + var(--logotype-width));
+    height: 766px;
+    width: 540px;
+  }
+}
+#courses-3 .absolute > * {
+  opacity: 0;
+}
+#courses-3 .title {
+  line-height: 1;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #courses-3 .title {
+    font-size: 3.4375em;
+    margin-top: 25vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-3 .title {
+    font-size: 2.8125em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-3 .title {
+    font-size: 7.8125em;
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-3 .title {
+    font-size: 12.1875em;
+    width: 50%;
+  }
+}
+#courses-3 .title span {
+  display: inline-flex;
+  overflow: hidden;
+}
+#courses-3 .title span:first-child span {
+  color: #fd959e;
+}
+#courses-3 .title span span {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transform: translate3d(0, 100%, 0);
+  display: block;
+  opacity: 0;
+}
+#courses-3 .paragraph {
+  right: 45px;
+  bottom: 45px;
+}
+@media only screen and (min-width: 768px) {
+  #courses-3 .paragraph {
+    width: 47.5%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-3 .paragraph {
+    bottom: 90px;
+    right: 90px;
+  }
+}
+#courses-3 .paragraph > * {
+  opacity: 0;
+}
+#courses-3 .paragraph p {
+  line-height: 1.48;
+}
+@media only screen and (max-width: 767px) {
+  #courses-3 .paragraph p {
+    margin-top: 2.5vh;
+    font-size: 1.125em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-3 .paragraph p {
+    font-size: 0.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-3 .paragraph p {
+    font-size: 1.5em;
+  }
+}
+
+#courses-4 {
+  background-color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #courses-4 {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-4 {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+}
+#courses-4.animate .circle {
+  animation: fade-in 2s forwards;
+}
+#courses-4.animate .circle span {
+  animation: fade-in 2s 0.1s forwards;
+}
+#courses-4.animate .circle span + span {
+  animation-delay: .2s;
+}
+#courses-4 .circle {
+  opacity: 0;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  #courses-4 .circle {
+    margin-left: calc(0px - calc(45px + var(--logotype-width)) / 2);
+  }
+}
+#courses-4 .circle p {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-weight: bold;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  font-family: "harmonia cond normal";
+  animation: spin 20s linear infinite;
+}
+@media only screen and (max-width: 767px) {
+  #courses-4 .circle p {
+    height: 40vh;
+    width: 40vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-4 .circle p {
+    height: 80vh;
+    width: 80vh;
+  }
+}
+#courses-4 .circle p span {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+}
+@media only screen and (max-width: 767px) {
+  #courses-4 .circle p span {
+    font-size: 3vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-4 .circle p span {
+    font-size: 5vh;
+  }
+}
+#courses-4 .circle > span {
+  opacity: 0;
+  color: #fff;
+  position: absolute;
+  width: fit-content;
+  text-transform: uppercase;
+  font-family: "harmonia cond bold";
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+}
+@media only screen and (max-width: 767px) {
+  #courses-4 .circle > span {
+    font-size: 2.5em;
+    top: 25%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-4 .circle > span {
+    font-size: 1.875em;
+    top: 24%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-4 .circle > span {
+    font-size: 5.3125em;
+    top: 30%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-4 .circle > span {
+    font-size: 6.875em;
+    top: 30%;
+  }
+}
+#courses-4 .circle > span + span {
+  text-transform: none;
+  font-family: "harmonia cond normal";
+}
+@media only screen and (max-width: 767px) {
+  #courses-4 .circle > span + span {
+    position: relative;
+    font-size: 1.125em;
+    margin-top: 10vh;
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #courses-4 .circle > span + span {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #courses-4 .circle > span + span {
+    font-size: 1.125em;
+    width: 27.5%;
+    top: 47.5%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-4 .circle > span + span {
+    font-size: 1.5625em;
+    width: 17.5%;
+    top: 50%;
   }
 }
 
