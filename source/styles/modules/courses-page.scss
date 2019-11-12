@@ -1071,7 +1071,7 @@
 
     @for $i from 1 through $paragraph {
       .info p:nth-of-type(#{$i}) {
-        animation: fade-in-down $time-slow .2s * $i forwards;
+        animation: fade-in-up $time-slow .2s * $i forwards;
       }
     }
   }

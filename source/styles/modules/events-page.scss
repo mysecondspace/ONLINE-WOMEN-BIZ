@@ -1,0 +1,706 @@
+#events-1 {
+  background-color: $light;
+
+  .circle {
+    p {
+      color: $dark;
+    }
+
+    a {
+      background: url('/../images/mouse-dark.svg') center no-repeat;
+      background-size: 30%;
+    }
+  }
+
+  .photo {
+    background: url('/../images/events-1.jpg') no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+
+    @include media(phone) {
+      animation: fade-in $time-slow forwards;
+      background-position: 55%;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    @include media(tablet) {
+      animation: fade-in-right $time-slow forwards;
+      width: calc(80% - #{$padding-normal});
+      left: $padding-normal;
+      height: 90%;
+      top: 5%;
+    }
+
+    @include media(biggest) {
+      background-size: contain;
+      left: $padding-biggest;
+      max-width: 1280px;
+    }
+  }
+
+  .paragraph {
+    z-index: 1;
+    position: absolute;
+
+    @include media(phone) {
+      left: $indent-phone;
+      bottom: 30vh;
+      width: 60%;
+    }
+
+    @include media(smallest) {
+      bottom: 20vh;
+    }
+
+    @include media(tablet) {
+      right: 12.5%;
+      top: 30vh;
+    }
+
+    @include media(biggest) {
+      right: 35%;
+      top: 25vh;
+    }
+
+    p {
+      opacity: 0;
+      line-height: 1;
+      animation-delay: .1s;
+      font-family: $cond-bold;
+      animation: fade-in-right $time-slow forwards;
+
+      @include media(phone) {
+        font-size: em(80);
+      }
+
+      @include media(tablet) {
+        font-size: em(120);
+      }
+
+      @include media(biggest) {
+        font-size: em(160);
+      }
+    }
+  }
+}
+
+#events-2 {
+  background-color: $primary;
+
+  @include media(tablet) {
+    padding-right: $indent-normal;
+  }
+
+  @include media(biggest) {
+    padding-right: $indent-biggest;
+  }
+
+  &.animate {
+    .slogan,
+    .paragraph > * {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .slogan {
+      animation-delay: .2s;
+    }
+
+    .paragraph {
+      p {
+        animation-delay: .3s;
+      }
+
+      span {
+        animation-delay: .4s;
+      }
+    }
+  }
+
+  .slogan {
+    opacity: 0;
+    z-index: 1;
+    line-height: 1;
+    font-family: $cond-bold;
+    text-transform: uppercase;
+
+    @include media(phone) {
+      font-size: em(34);
+      margin-top: 7.5vh;
+    }
+
+    @include media(smallest) {
+      font-size: em(24);
+      margin-top: 10vh;
+    }
+
+    @include media(tablet) {
+      font-size: em(100);
+      width: 50vw;
+    }
+
+    @include media(biggest) {
+      font-size: em(165);
+      width: 50vw;
+    }
+
+    span {
+      color: $light;
+    }
+  }
+
+  .paragraph {
+    width: 100%;
+
+    > * {
+      opacity: 0;
+    }
+
+    p {
+      margin-top: 2.5vh;
+      line-height: 1.48;
+
+      @include media(phone) {
+        font-size: em(16);
+        width: 90%;
+      }
+
+      @include media(smallest) {
+        font-size: em(14);
+      }
+
+      @include media(tablet) {
+        font-size: em(20);
+        width: 75%;
+      }
+
+      @include media(biggest) {
+        font-size: em(24);
+        width: 45%;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 10vh;
+      text-align: right;
+      font-family: $cond-bold;
+      text-transform: uppercase;
+
+      @include media(phone) {
+        padding-left: 20vw;
+        font-size: em(18);
+      }
+
+      @include media(smallest) {
+        font-size: em(14);
+      }
+
+      @include media(tablet) {
+        font-size: em(22);
+      }
+
+      @include media(biggest) {
+        font-size: em(30);
+      }
+
+      span {
+        color: $light;
+        display: initial;
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+#events-3 {
+  @extend %form;
+}
+
+#events-4 {
+  @include media(tablet) {
+    padding-right: $indent-normal;
+  }
+
+  @include media(biggest) {
+    padding-right: $indent-biggest;
+  }
+
+  &.animate {
+    .title,
+    .slogan,
+    .horizontal-list p {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .title {
+      animation-delay: .1s;
+    }
+
+    .horizontal-list p {
+      animation-delay: .2s;
+    }
+  }
+
+  .slogan {
+    opacity: 0;
+    z-index: 1;
+    line-height: 1;
+    font-family: $cond-bold;
+    text-transform: uppercase;
+
+    @include media(phone) {
+      font-size: em(34);
+    }
+
+    @include media(smallest) {
+      font-size: em(24);
+    }
+
+    @include media(tablet) {
+      font-size: em(100);
+      width: 70vw;
+    }
+
+    @include media(biggest) {
+      font-size: em(165);
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+
+  .title {
+    opacity: 0;
+    color: $primary;
+    margin-top: 7.5vh;
+    font-family: $cond-bold;
+    text-transform: uppercase;
+
+    @include media(phone) {
+      font-size: em(25);
+    }
+
+    @include media(smallest) {
+      font-size: em(22);
+    }
+
+    @include media(tablet) {
+      font-size: em(30);
+    }
+
+    @include media(biggest) {
+      font-size: em(40);
+    }
+  }
+}
+
+#events-5 {
+  background-color: $primary;
+
+  @include media(tablet) {
+    padding-right: $indent-normal;
+  }
+
+  @include media(biggest) {
+    padding-right: $indent-biggest;
+  }
+
+  > div > div {
+    position: relative;
+  }
+
+  &.animate {
+    .slogan,
+    .slogan + span,
+    .paragraph > p,
+    .absolute > * {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .slogan {
+      animation-delay: .1s;
+
+      + span {
+        animation-delay: .2s;
+      }
+    }
+
+    .paragraph p {
+      animation-delay: .3s;
+    }
+
+    .absolute div {
+      animation-delay: 1s;
+    }
+  }
+
+  .slogan {
+    opacity: 0;
+    z-index: 1;
+    line-height: 1;
+    position: relative;
+    font-family: $cond-bold;
+    text-transform: uppercase;
+
+    @include media(phone) {
+      font-size: em(30);
+      margin-top: 7.5vh;
+    }
+
+    @include media(smallest) {
+      font-size: em(24);
+      margin-top: 10vh;
+    }
+
+    @include media(tablet) {
+      font-size: em(80);
+      width: 50vw;
+    }
+
+    @include media(biggest) {
+      font-size: em(145);
+      width: 50vw;
+    }
+
+    + span {
+      opacity: 0;
+      color: $light;
+      display: block;
+      font-family: $cond-bold;
+      text-transform: uppercase;
+
+      @include media(phone) {
+        font-size: em(15);
+        margin-top: 1vh;
+      }
+
+      @include media(tablet) {
+        font-size: em(22);
+      }
+    }
+  }
+
+  .paragraph {
+    @include media(phone) {
+      width: 90%;
+    }
+
+    @include media(tablet) {
+      width: 40%;
+    }
+
+    p {
+      line-height: 1.48;
+      opacity: 0;
+
+      @include media(phone) {
+        margin-top: 2.5vh;
+        font-size: em(16);
+      }
+
+      @include media(smallest) {
+        font-size: em(14);
+      }
+
+      @include media(tablet) {
+        margin-top: 7.5vh;
+        font-size: em(20);
+      }
+
+      @include media(biggest) {
+        font-size: em(24);
+      }
+    }
+  }
+
+  .absolute {
+    display: flex;
+    z-index: 0;
+
+    @include media(phone) {
+      padding-bottom: 5vh;
+      position: relative;
+      padding-top: 5vh;
+      height: 216px;
+      width: 330px;
+    }
+
+    @include media(smallest) {
+      height: 190px;
+      width: 290px;
+    }
+
+    @include media(tablet) {
+      right: $indent-normal;
+      position: absolute;
+      height: 396px;
+      width: 605px;
+      top: 20vh;
+    }
+
+    @include media(biggest) {
+      right: $indent-biggest;
+      height: 604px;
+      width: 922px;
+      top: 15vh;
+    }
+
+    > * {
+      opacity: 0;
+    }
+
+    img {
+      z-index: 1;
+      width: 100%;
+    }
+
+    div {
+      background-color: $dark;
+      position: absolute;
+      height: 80%;
+      right: -5%;
+      width: 80%;
+
+      @include media(phone) {
+        bottom: 0;
+      }
+
+      @include media(smallest) {
+        right: -2.5%;
+        bottom: 5%;
+      }
+
+      @include media(tablet) {
+        top: -5%;
+      }
+    }
+  }
+}
+
+#events-6 {
+  background-color: $secondary;
+
+  &.animate {
+    $list: 4;
+    $arrow: 4;
+    $paragraph: 4;
+
+    .info p,
+    .horizontal-list p {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .horizontal-list p {
+      animation-delay: .5s;
+    }
+
+    @for $i from 1 through $arrow {
+      .arrow span:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .1s * $i forwards;
+      }
+    }
+
+    @for $i from 1 through $paragraph {
+      .info p:nth-of-type(#{$i}) {
+        animation: fade-in-up $time-slow .2s * $i forwards;
+      }
+    }
+
+    @for $i from 1 through $paragraph {
+      ul li:nth-of-type(#{$i}) {
+        animation: fade-in-up $time-slow .3s * $i forwards;
+      }
+    }
+  }
+
+  .info {
+    @include media(tablet) {
+      padding-right: $indent-normal;
+    }
+
+    @include media(biggest) {
+      padding-right: $indent-biggest;
+    }
+
+    > p {
+      opacity: 0;
+
+      &.title {
+        color: $light;
+        line-height: 1;
+        position: relative;
+
+        &:not(:first-of-type) {
+          padding-top: 5vh;
+
+          @include media(phone) {
+            padding-top: 2.5vh;
+          }
+        }
+
+        + p,
+        + ul li {
+          color: $primary;
+          line-height: 1.48;
+          font-family: $cond-normal;
+
+          @include media(tablet) {
+            font-size: em(26);
+            width: 30vw;
+          }
+
+          @include media(biggest) {
+            font-size: em(30);
+            width: 20vw;
+          }
+
+          span {
+            color: $light;
+          }
+        }
+
+        &--big {
+          font-family: $cond-bold;
+          text-transform: uppercase;
+
+          @include media(phone) {
+            font-size: em(55);
+          }
+
+          @include media(smallest) {
+            font-size: em(45);
+          }
+
+          @include media(tablet) {
+            font-size: em(80);
+          }
+
+          @include media(biggest) {
+            font-size: em(145);
+          }
+        }
+
+        &--small {
+          font-family: $cond-bold;
+
+          @include media(phone) {
+            font-size: em(20);
+          }
+
+          @include media(smallest) {
+            font-size: em(22);
+          }
+
+          @include media(tablet) {
+            font-size: em(32);
+          }
+
+          @include media(biggest) {
+            font-size: em(40);
+          }
+        }
+
+        &--medium {
+          text-transform: uppercase;
+
+          @include media(phone) {
+            font-size: em(40);
+          }
+
+          @include media(smallest) {
+            font-size: em(22);
+          }
+
+          @include media(tablet) {
+            margin-left: 30vw;
+            font-size: em(64);
+          }
+
+          @include media(biggest) {
+            margin-left: 40vw;
+            font-size: em(80);
+          }
+        }
+      }
+    }
+
+    ul li {
+      opacity: 0;
+    }
+  }
+
+  .arrow {
+    @include media(phone) {
+      margin-left: calc(50% - 217px / 2);
+      float: initial;
+    }
+
+    @include media(smallest) {
+      margin-left: calc(50% - 149px / 2);
+    }
+
+    @include media(tablet) {
+      position: absolute;
+      right: 20vw;
+      top: 25vh;
+    }
+
+    @include media(biggest) {
+      right: 5vw;
+      top: 40vh;
+    }
+  }
+
+  .horizontal-list {
+    padding-top: 5vh;
+    clear: both;
+    margin: 0;
+
+    p {
+      color: $light;
+    }
+  }
+}
+
+#events-7 {
+  @extend %form;
+
+  span {
+    text-transform: none;
+    font-family: $cond-normal;
+
+    @include media(phone) {
+      font-size: 18px;
+    }
+
+    @include media(tablet) {
+      font-size: 30px;
+    }
+
+    @include media(biggest) {
+      font-size: 28px;
+    }
+  }
+
+  .title {
+    color: $light;
+    align-items: baseline;
+    font-family: $cond-bold;
+
+    @include media(tablet) {
+      display: flex;
+
+      span {
+        margin-left: 1vw;
+      }
+    }
+  }
+}

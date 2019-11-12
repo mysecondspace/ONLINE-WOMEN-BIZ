@@ -2,6 +2,7 @@ $(document).ready(function() {
   var index = $('#index'),
       about = $('#about'),
       courses = $('#courses'),
+      events = $('#events'),
       blog = $('#blog'),
       post = $('#post'),
       faq = $('#faq');
@@ -256,7 +257,7 @@ $(document).ready(function() {
       fitToSection: false,
       autoScrolling: false,
       scrollingSpeed: 1000,
-      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven', 'eight'],
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'],
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
@@ -342,6 +343,76 @@ $(document).ready(function() {
             break;
           case 11:
             $('#courses-12').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
+  } else if (events.length > 0) {
+    $('#menu a[href*="events"]').addClass('active');
+    Emblem.init('#scroll p');
+
+    // initialize scroll on the about page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      autoScrolling: false,
+      scrollingSpeed: 1000,
+      anchors: ['first', 'second', 'third', 'fourth'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#events-1').addClass('animate');
+            $('#logo').addClass('big dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 1:
+            $('#events-2').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 2:
+            $('#events-3').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 3:
+            $('#events-4').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 4:
+            $('#events-5').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 5:
+            $('#events-6').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 6:
+            $('#events-7').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('secondary');
             $('#nav').addClass('light');
