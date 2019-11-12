@@ -383,6 +383,7 @@
 #post-4 {
   &.animate {
     $text: 6;
+
     @for $i from 1 through $text {
       .text p:nth-of-type(#{$i}) {
         animation: fade-in-up $time-slow .1s * $i forwards;
@@ -434,6 +435,7 @@
 #post-6 {
   &.animate {
     $text: 4;
+
     @for $i from 1 through $text {
       .text p:nth-of-type(#{$i}) {
         animation: fade-in-up $time-slow .1s * $i forwards;

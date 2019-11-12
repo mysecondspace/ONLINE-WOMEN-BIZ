@@ -256,7 +256,7 @@ $(document).ready(function() {
       fitToSection: false,
       autoScrolling: false,
       scrollingSpeed: 1000,
-      anchors: ['first', 'second', 'third', 'fourth'],
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven', 'eight'],
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
@@ -288,6 +288,62 @@ $(document).ready(function() {
             $('#courses-4').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 4:
+            $('#courses-5').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 5:
+            $('#courses-6').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 6:
+            $('#courses-7').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 7:
+            $('#courses-8').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 8:
+            $('#courses-9').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 9:
+            $('#courses-10').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 10:
+            $('#courses-11').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 11:
+            $('#courses-12').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
             $('#nav').addClass('light');
 
             break;

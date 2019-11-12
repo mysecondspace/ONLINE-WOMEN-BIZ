@@ -35,7 +35,7 @@ self.__precacheManifest = [
   },
   {
     "url": "courses.html",
-    "revision": "7013907f80cc661fa118c62af34892e5"
+    "revision": "d05c86ce3a5cf0e27d190b84537037ec"
   },
   {
     "url": "faq.html",
@@ -80,6 +80,22 @@ self.__precacheManifest = [
   {
     "url": "images/about-phone-1.jpg",
     "revision": "9517a2b482ceaf95df79083d521265c0"
+  },
+  {
+    "url": "images/arrow-dark-small-2x.png",
+    "revision": "cfdf5f80793c5141b8f09e384c60ac66"
+  },
+  {
+    "url": "images/arrow-dark-small.png",
+    "revision": "95854367eb5a7074df1b1e35c934206b"
+  },
+  {
+    "url": "images/arrow-dark.png",
+    "revision": "5fd114780e51c08fe001f7793efc51d9"
+  },
+  {
+    "url": "images/arrow-primary.png",
+    "revision": "265a004f076b384ad5f39254baa9ead3"
   },
   {
     "url": "images/arrow-small-2x.png",
@@ -136,6 +152,14 @@ self.__precacheManifest = [
   {
     "url": "images/courses-3.jpg",
     "revision": "1e76c5057e3db0b2f4a67f9e6438cfd4"
+  },
+  {
+    "url": "images/courses-4.jpg",
+    "revision": "7a5c920c342281f586ec3b89d332109d"
+  },
+  {
+    "url": "images/courses-5.jpg",
+    "revision": "a38b6be8c46ec1ca7d005af64d54afa7"
   },
   {
     "url": "images/courses-hover-3.jpg",
@@ -287,7 +311,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "ac6ccb8c156ad5a53a06cbabd57e0208"
+    "revision": "86dd310325d7d742b1339f4cfa704dd9"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -299,11 +323,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "d298c6fb4776f1bdb747870ee0d845e4"
+    "revision": "b6f2b44deb97e375668360c409fdf67b"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "cf5c753e6fabc088f195b5059f83b92e"
+    "revision": "1ceac109630e5e7866b65ea6f9beddba"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

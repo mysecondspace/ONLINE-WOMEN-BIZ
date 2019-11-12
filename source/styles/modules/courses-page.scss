@@ -33,14 +33,11 @@
     right: 0;
 
     @include media(phone) {
-      animation: fade-in-up $time-slow forwards;
-      background-size: contain;
-      width: 100vw;
-      top: 30vh;
-    }
-
-    @include media(smallest) {
-      top: 37vh;
+      animation: fade-in $time-slow forwards;
+      background-position: 55%;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
     }
 
     @include media(tablet) {
@@ -58,12 +55,13 @@
     position: absolute;
 
     @include media(phone) {
-      bottom: $indent-phone;
       left: $indent-phone;
+      bottom: 20vh;
       width: 60%;
     }
 
     @include media(smallest) {
+      bottom: $indent-phone;
       width: 80%;
     }
 
@@ -117,6 +115,8 @@
     }
 
     .info {
+      $paragraph: 4;
+
       .title {
         animation-delay: .3s;
 
@@ -129,7 +129,6 @@
         animation: fade-in-right $time-slow .5s forwards;
       }
 
-      $paragraph: 4;
       @for $i from 1 through $paragraph {
         div p:nth-of-type(#{$i}) {
           animation: fade-in-left $time-slow .5s * $i forwards;
@@ -204,16 +203,17 @@
 
     div {
       z-index: 0;
-      width: fit-content;
       position: relative;
       transform: rotate(-5deg);
 
       @include media(phone) {
-        padding: 5vh 0;
+        padding: 35vh 0 5vh;
+        width: 100%;
       }
 
       @include media(tablet) {
         padding: 5vh 0 10vh;
+        width: fit-content;
       }
 
       + p {
@@ -224,16 +224,20 @@
 
         @include media(phone) {
           padding-left: 5vw;
-          font-size: em(25);
+          font-size: em(16);
         }
 
         @include media(smallest) {
-          font-size: em(20);
+          font-size: em(14);
         }
 
         @include media(tablet) {
           padding-left: 10vw;
           font-size: em(30);
+          width: 60vw;
+        }
+
+        @include media(biggest) {
           width: 50vw;
         }
       }
@@ -243,7 +247,7 @@
         text-transform: uppercase;
 
         @include media(phone) {
-          font-size: em(45);
+          font-size: em(35);
         }
 
         @include media(tablet) {
@@ -252,15 +256,17 @@
       }
 
       img {
+        position: absolute;
         z-index: -1;
         opacity: 0;
 
         @include media(phone) {
-          width: 90%;
+          width: calc(100% + #{$indent-phone} * 4);
+          left: calc(-#{$indent-phone} * 2);
+          top: 0;
         }
 
         @include media(tablet) {
-          position: absolute;
           right: -19vw;
           top: -10vh;
         }
@@ -270,16 +276,24 @@
 }
 
 #courses-3 {
-  &.animate {
-    .absolute {
-      canvas,
-      div {
-        animation: fade-in-up $time-slow forwards;
-      }
+  @include media(phone) {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
 
-      div {
-        animation-delay: 1s;
-      }
+  @include media(tablet) {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+
+  > div > div {
+    position: relative;
+  }
+
+  &.animate {
+    .image,
+    .paragraph > * {
+      animation: fade-in-up $time-slow forwards;
     }
 
     .title span {
@@ -303,51 +317,39 @@
     }
 
     .paragraph {
-      > * {
-        animation: fade-in-up $time-slow forwards;
-      }
-
       p {
         animation-delay: .8s;
       }
     }
   }
 
-  .absolute {
+  .image {
     position: absolute;
     display: block;
     z-index: -1;
+    opacity: 0;
 
     @include media(phone) {
-      right: $indent-phone * 2;
-      top: $indent-phone * 2;
-      height: 255px;
-      width: 180px;
+      width: 75%;
+      right: 0;
+      top: 0;
     }
 
     @include media(smallest) {
       right: $indent-phone;
       top: $indent-phone;
-      height: 170px;
-      width: 120px;
     }
 
     @include media(tablet) {
-      height: 575px;
-      width: 405px;
       right: 10vw;
-      top: 15vh;
+      width: 35%;
+      top: 5vh;
     }
 
     @include media(biggest) {
       right: $padding-biggest;
-      top: $padding-biggest;
-      height: 766px;
-      width: 540px;
-    }
-
-    > * {
-      opacity: 0;
+      width: auto;
+      top: 0;
     }
   }
 
@@ -357,11 +359,12 @@
     text-transform: uppercase;
 
     @include media(phone) {
+      padding-top: 43vh;
       font-size: em(55);
-      margin-top: 25vh;
     }
 
     @include media(smallest) {
+      padding-top: 50vh;
       font-size: em(45);
     }
 
@@ -414,7 +417,7 @@
 
       @include media(phone) {
         margin-top: 2.5vh;
-        font-size: em(18);
+        font-size: em(16);
       }
 
       @include media(smallest) {
@@ -429,6 +432,965 @@
 }
 
 #courses-4 {
+  background-color: $primary;
+
+  @include media(phone) {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+
+  @include media(tablet) {
+    padding-right: $indent-normal;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+
+  @include media(biggest) {
+    padding-right: $padding-biggest;
+  }
+
+  &.animate {
+    .image,
+    .slogan,
+    .paragraph > * {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .slogan {
+      animation-delay: .2s;
+    }
+
+    .paragraph {
+      p {
+        animation-delay: .3s;
+      }
+
+      span {
+        animation-delay: .4s;
+      }
+    }
+  }
+
+  .image {
+    margin: 0 auto;
+    display: block;
+    opacity: 0;
+
+    @include media(phone) {
+      object-position: bottom;
+      margin-left: calc(-75% + #{$indent-phone});
+      object-fit: cover;
+      height: 500px;
+      width: 250%;
+    }
+
+    @include media(smallest) {
+      height: 400px;
+    }
+
+    @include media(tablet) {
+      width: 75%;
+    }
+
+    @include media(biggest) {
+      width: auto;
+    }
+  }
+
+  .slogan {
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+    line-height: 1;
+    margin: 5vh auto 0;
+    width: fit-content;
+    position: absolute;
+    text-align: center;
+    font-family: $cond-bold;
+    text-transform: uppercase;
+
+    @include media(phone) {
+      font-size: em(34);
+      margin-top: 7.5vh;
+    }
+
+    @include media(smallest) {
+      font-size: em(24);
+      margin-top: 10vh;
+    }
+
+    @include media(tablet) {
+      font-size: em(100);
+    }
+
+    @include media(biggest) {
+      font-size: em(195);
+    }
+  }
+
+  .paragraph {
+    width: 100%;
+    text-align: center;
+    right: $indent-normal;
+    bottom: $indent-normal;
+
+    @include media(biggest) {
+      bottom: $indent-biggest;
+      right: $indent-biggest;
+    }
+
+    > * {
+      opacity: 0;
+    }
+
+    p {
+      line-height: 1.48;
+      margin: 3vh auto 0;
+
+      @include media(phone) {
+        font-size: em(16);
+        width: 90%;
+      }
+
+      @include media(smallest) {
+        font-size: em(14);
+      }
+
+      @include media(tablet) {
+        font-size: em(20);
+        width: 75%;
+      }
+
+      @include media(biggest) {
+        font-size: em(24);
+        width: 45%;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 5vh;
+      text-align: right;
+      font-family: $cond-bold;
+      text-transform: uppercase;
+
+      @include media(phone) {
+        padding-left: 20vw;
+        font-size: em(18);
+      }
+
+      @include media(smallest) {
+        font-size: em(14);
+      }
+
+      @include media(tablet) {
+        font-size: em(22);
+      }
+
+      @include media(biggest) {
+        font-size: em(30);
+      }
+
+      span {
+        color: $light;
+        display: initial;
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+#courses-5 {
+  background-color: $secondary;
+
+  @include media(tablet) {
+    padding-right: $padding-normal;
+  }
+
+  @include media(biggest) {
+    padding-right: $padding-biggest;
+  }
+
+  &.animate {
+    $arrow: 4;
+
+    .slogan,
+    .component > p,
+    .component > span, {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .slogan {
+      animation-delay: .2s;
+    }
+
+    .component {
+      p {
+        animation-delay: .3s;
+      }
+
+      span {
+        animation-delay: .4s;
+      }
+    }
+
+    @for $i from 1 through $arrow {
+      .arrow span:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .2s * $i forwards;
+      }
+    }
+  }
+
+  .slogan {
+    opacity: 0;
+    z-index: 1;
+    color: $light;
+    line-height: 1;
+    margin-bottom: 5vh;
+    font-family: $cond-bold;
+    text-transform: uppercase;
+
+    @include media(phone) {
+      font-size: em(75);
+    }
+
+    @include media(smallest) {
+      font-size: em(45);
+    }
+
+    @include media(tablet) {
+      font-size: em(100);
+    }
+
+    @include media(biggest) {
+      font-size: em(195);
+    }
+  }
+
+  .component {
+    p {
+      color: $primary;
+    }
+
+    span {
+      color: $light;
+    }
+  }
+}
+
+#courses-6 {
+  @include media(phone) {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+
+  @include media(tablet) {
+    padding-right: $padding-normal;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+
+  @include media(biggest) {
+    padding-right: $padding-biggest;
+  }
+
+  > div > div {
+    display: inline-table;
+  }
+
+  &.animate {
+    $arrow: 3;
+
+    .component > p,
+    .component > span {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .slogan {
+      animation: fade-in-down $time-slow .2s forwards;
+    }
+
+    .component {
+      p {
+        animation-delay: .3s;
+      }
+
+      span {
+        animation-delay: .4s;
+      }
+    }
+
+    @for $i from 1 through $arrow {
+      .arrow span:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .2s * $i forwards;
+      }
+    }
+  }
+
+  .slogan {
+    opacity: 0;
+    z-index: 1;
+    line-height: 1;
+    font-family: $cond-bold;
+    text-transform: uppercase;
+    width: fit-content;
+    color: $primary;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+
+    @include media(phone) {
+      font-size: em(55);
+    }
+
+    @include media(smallest) {
+      font-size: em(45);
+    }
+
+    @include media(tablet) {
+      position: absolute;
+      font-size: em(100);
+      top: -40px;
+    }
+
+    @include media(biggest) {
+      font-size: em(195);
+      top: -80px;
+    }
+  }
+}
+
+#courses-7 {
+  background-color: $secondary;
+
+  @include media(phone) {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+
+  &.animate {
+    .title,
+    .paragraph > * {
+      animation: fade-in $time-slow forwards;
+    }
+
+    .title {
+      animation-delay: .5s;
+    }
+
+    .absolute {
+      $absolute: 2;
+
+      > * {
+        animation: fade-in-up $time-slow forwards;
+      }
+
+      @for $i from 1 through $absolute {
+        &--#{$i} {
+          img {
+            animation-delay: .5s * $i;
+          }
+
+          div {
+            animation-delay: 1s * $i;
+          }
+        }
+      }
+    }
+
+    .paragraph {
+      $paragraph: 2;
+      $list: 5;
+
+      @for $i from 1 through $paragraph {
+        &--#{$i} {
+          p {
+            animation-delay: .6s * $i;
+          }
+
+          span {
+            animation-delay: .7s * $i;
+          }
+        }
+      }
+
+      @for $i from 1 through $list {
+        ul li:nth-of-type(#{$i}) {
+          animation: fade-in-up $time-slow forwards;
+          animation-delay: .8s * $i;
+        }
+      }
+    }
+  }
+
+  .block {
+    position: relative;
+
+    @include media(phone) {
+      &:not(:last-of-type) {
+        padding-bottom: 5vh;
+      }
+    }
+
+    @include media(tablet) {
+      padding-bottom: 20vh;
+      display: flex;
+    }
+
+    @include media(biggest) {
+      padding-bottom: 20vh;
+    }
+
+    .absolute {
+      position: relative;
+      display: flex;
+
+      @include media(phone) {
+        padding-top: 2.5vh;
+        height: 353px;
+        width: 330px;
+      }
+
+      @include media(smallest) {
+        height: 310px;
+        width: 290px;
+      }
+
+      @include media(tablet) {
+        height: 508px;
+        width: 475px;
+      }
+
+      @include media(biggest) {
+        height: 590px;
+        width: 552px;
+      }
+
+      &--1 {
+        @include media(phone) {
+          padding-bottom: 5vh;
+        }
+
+        @include media(tablet) {
+          margin-right: $padding-normal;
+          margin-left: auto;
+        }
+
+        @include media(biggest) {
+          margin-right: $padding-biggest;
+        }
+      }
+
+      &--2 {
+        @include media(phone) {
+          padding-bottom: 2.5vh;
+        }
+
+        @include media(tablet) {
+          margin-top: 10vh;
+        }
+      }
+
+      > * {
+        opacity: 0;
+      }
+
+      img {
+        z-index: 1;
+        width: 100%;
+      }
+
+      div {
+        background-color: $primary;
+        position: absolute;
+        height: 50%;
+        right: -10%;
+        width: 80%;
+
+        @include media(phone) {
+          bottom: 0;
+        }
+
+        @include media(tablet) {
+          top: 60%;
+        }
+      }
+    }
+
+    .paragraph {
+      z-index: 2;
+
+      @include media(phone) {
+        margin-bottom: 2.5vh;
+      }
+
+      @include media(tablet) {
+        position: absolute;
+      }
+
+      > * {
+        opacity: 0;
+      }
+
+      > span {
+        color: $light;
+        font-family: $cond-light;
+
+        @include media(tablet) {
+          font-size: em(25);
+        }
+
+        @include media(biggest) {
+          font-size: em(40);
+        }
+      }
+
+      p {
+        color: $primary;
+        font-family: $cond-bold;
+        text-transform: uppercase;
+
+        @include media(phone) {
+          font-size: em(40);
+        }
+
+        @include media(tablet) {
+          font-size: em(80);
+        }
+
+        @include media(biggest) {
+          font-size: em(120);
+        }
+
+        span {
+          color: $light;
+          line-height: 1;
+
+          @include media(phone) {
+            font-size: em(35);
+          }
+
+          @include media(tablet) {
+            font-size: em(25);
+          }
+
+          @include media(biggest) {
+            font-size: em(28);
+          }
+        }
+      }
+
+      ul {
+        margin-top: 2.5vh;
+
+        li {
+          opacity: 0;
+          color: $primary;
+          font-family: $bold;
+
+          @include media(tablet) {
+            font-size: em(22);
+          }
+
+          @include media(biggest) {
+            font-size: em(28);
+          }
+
+          &:not(:last-of-type) {
+            margin-bottom: 1.5vh;
+          }
+        }
+      }
+
+      &--1 {
+        @include media(tablet) {
+          top: 10vh;
+          left: 0;
+        }
+
+        @include media(biggest) {
+          left: 5vw;
+          top: 5vh;
+        }
+      }
+
+      &--2 {
+        @include media(tablet) {
+          left: 10vw;
+          top: -5vh;
+        }
+
+        @include media(biggest) {
+          left: 15vw;
+        }
+
+        ul {
+          @include media(tablet) {
+            margin-left: 30vw;
+          }
+
+          @include media(biggest) {
+            margin-left: 20vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+#courses-8 {
+  @include media(phone) {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+
+  &.animate {
+    $arrow: 4;
+    $paragraph: 6;
+
+    .info p,
+    .horizontal-list p {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .horizontal-list p {
+      animation-delay: .5s;
+    }
+
+    @for $i from 1 through $arrow {
+      .arrow span:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .1s * $i forwards;
+      }
+    }
+
+    @for $i from 1 through $paragraph {
+      .info p:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .2s * $i forwards;
+      }
+    }
+  }
+
+  .info,
+  .horizontal-list {
+    @include media(tablet) {
+      width: calc(100% - #{$indent-normal});
+    }
+
+    @include media(biggest) {
+      width: calc(100% - #{$indent-biggest});
+      margin-left: 0;
+    }
+  }
+
+  .info {
+    > p {
+      opacity: 0;
+      color: $dark;
+
+      &.title {
+        line-height: 1;
+        position: relative;
+        font-family: $cond-bold;
+        text-transform: uppercase;
+
+        @include media(phone) {
+          font-size: em(55);
+        }
+
+        @include media(smallest) {
+          font-size: em(45);
+        }
+
+        @include media(tablet) {
+          font-size: em(100);
+        }
+
+        @include media(biggest) {
+          font-size: em(195);
+        }
+
+        &:not(:first-of-type) {
+          padding-top: 10vh;
+
+          @include media(phone) {
+            padding-top: 5vh;
+          }
+        }
+
+        + p {
+          line-height: 1.48;
+          font-family: $cond-light;
+          text-transform: uppercase;
+
+          @include media(smallest) {
+            font-size: em(18);
+          }
+
+          @include media(tablet) {
+            font-size: em(30);
+          }
+
+          @include media(biggest) {
+            font-size: em(35);
+          }
+        }
+
+        &--small,
+        &--color {
+          @include media(phone) {
+            font-size: em(35);
+          }
+
+          @include media(smallest) {
+            font-size: em(45);
+          }
+
+          @include media(tablet) {
+            font-size: em(60);
+          }
+
+          @include media(biggest) {
+            font-size: em(90);
+          }
+        }
+
+        &--small {
+          @include media(phone) {
+            margin-left: 10vw;
+          }
+
+          @include media(tablet) {
+            margin-left: $padding-normal;
+          }
+
+          @include media(biggest) {
+            margin-left: $padding-biggest;
+          }
+
+          + p {
+            @include media(phone) {
+              margin-left: 10vw;
+            }
+
+            @include media(tablet) {
+              margin-left: $padding-normal;
+            }
+
+            @include media(biggest) {
+              margin-left: $padding-biggest;
+            }
+          }
+        }
+
+        &--color {
+          color: $primary;
+
+          + p {
+            text-transform: none;
+
+            @include media(smallest) {
+              font-size: em(18);
+            }
+
+            @include media(tablet) {
+              font-size: em(20);
+              width: 30vw;
+            }
+
+            @include media(biggest) {
+              font-size: em(34);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    @include media(phone) {
+      margin-left: calc(50% - 217px / 2);
+      float: initial;
+    }
+
+    @include media(smallest) {
+      margin-left: calc(50% - 149px / 2);
+    }
+
+    @include media(tablet) {
+      position: absolute;
+      bottom: 30vh;
+      right: 0;
+    }
+
+    @include media(biggest) {
+      margin-right: $padding-biggest;
+    }
+  }
+}
+
+#courses-9 {
+  background-color: $secondary;
+
+  @include media(phone) {
+    padding-bottom: 22.5vh;
+    padding-top: 5vh;
+  }
+
+  @include media(smallest) {
+    padding-bottom: 15vh;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+
+  &.animate {
+    $arrow: 4;
+    $paragraph: 2;
+
+    .info p,
+    .horizontal-list p {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .horizontal-list p {
+      animation-delay: .5s;
+    }
+
+    @for $i from 1 through $arrow {
+      .arrow span:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .1s * $i forwards;
+      }
+    }
+
+    @for $i from 1 through $paragraph {
+      .info p:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .2s * $i forwards;
+      }
+    }
+  }
+
+  .info,
+  .horizontal-list {
+    @include media(tablet) {
+      width: calc(100% - #{$indent-normal});
+    }
+
+    @include media(biggest) {
+      width: calc(100% - #{$indent-biggest});
+      margin-left: 0;
+    }
+  }
+
+  .info {
+    @include media(phone) {
+      margin-bottom: 50vh;
+    }
+
+    @include media(smallest) {
+      margin-bottom: 20vh;
+    }
+
+    @include media(tablet) {
+      margin-bottom: 15vh;
+      width: 80vw;
+    }
+
+    > p {
+      opacity: 0;
+      color: $dark;
+
+      &.title {
+        line-height: 1;
+        position: relative;
+        font-family: $cond-bold;
+        text-transform: uppercase;
+        color: $primary;
+
+        @include media(phone) {
+          font-size: em(35);
+        }
+
+        @include media(smallest) {
+          font-size: em(45);
+        }
+
+        @include media(tablet) {
+          text-align: right;
+          font-size: em(60);
+        }
+
+        @include media(biggest) {
+          font-size: em(90);
+        }
+
+        &:not(:first-of-type) {
+          padding-top: 10vh;
+
+          @include media(phone) {
+            padding-top: 5vh;
+          }
+        }
+
+        + p {
+          color: $primary;
+          margin-top: 3.5vh;
+          line-height: 1.48;
+          font-family: $cond-light;
+
+            @include media(smallest) {
+              font-size: em(18);
+            }
+
+            @include media(tablet) {
+              font-size: em(20);
+              float: right;
+              width: 30vw;
+            }
+
+            @include media(biggest) {
+              font-size: em(34);
+            }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    @include media(phone) {
+      margin-left: calc(50% - 217px / 2);
+      float: initial;
+    }
+
+    @include media(smallest) {
+      margin-left: calc(50% - 149px / 2);
+    }
+
+    @include media(tablet) {
+      position: absolute;
+      top: 25vh;
+    }
+  }
+
+  .horizontal-list {
+    padding-top: 20vh;
+    clear: both;
+    margin: 0;
+
+    p {
+      color: $light;
+    }
+  }
+}
+
+#courses-10 {
   background-color: $primary;
 
   @include media(phone) {
@@ -560,6 +1522,401 @@
           font-size: em(25);
           width: 17.5%;
           top: 50%;
+        }
+      }
+    }
+  }
+}
+
+#courses-11 {
+  @include media(phone) {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+
+  &.animate {
+    $paragraph: 3;
+
+    .info p,
+    .info ul li {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    .round {
+      animation: fade-in $time-slow forwards;
+    }
+
+    .info ul {
+      $list: 5;
+
+      @for $i from 1 through $list {
+        li:nth-of-type(#{$i}) {
+          animation-delay: .5s * $i;
+        }
+      }
+    }
+
+    .round--1 {
+      animation-delay: .5s;
+    }
+
+    .round--2 {
+      animation-delay: 1s;
+    }
+
+    .round--3 {
+      animation-delay: 1.5s;
+    }
+
+    @for $i from 1 through $paragraph {
+      .paragraph p:nth-of-type(#{$i}) {
+        animation: fade-in-up $time-slow .5s * $i forwards;
+      }
+    }
+  }
+
+  .info {
+    p {
+      opacity: 0;
+      font-family: $cond-bold;
+      text-transform: uppercase;
+
+      @include media(phone) {
+        font-size: em(60);
+      }
+
+      @include media(tablet) {
+        font-size: em(100);
+      }
+    }
+
+    ul {
+      @include media(phone) {
+        margin-top: 2.5vh;
+      }
+
+      @include media(tablet) {
+        margin-top: 5vh;
+      }
+
+      li {
+        opacity: 0;
+        padding-left: 50px;
+        position: relative;
+        margin-bottom: 1vh;
+
+        @include media(tablet) {
+          font-size: em(22);
+        }
+
+        @include media(biggest) {
+          font-size: em(26);
+        }
+
+        &::before {
+          @include inline-block;
+          @include image-retina('/../images/arrow-small.png', '/../images/arrow-small-2x.png');
+          background-size: cover;
+          position: absolute;
+          margin: 0 5px;
+          content: '';
+          left: 0;
+
+          @include media(phone) {
+            display: none;
+          }
+
+          @include media(tablet) {
+            top: 6px;
+          }
+
+          @include media(biggest) {
+            top: 7.5px;
+          }
+        }
+      }
+    }
+  }
+
+  .round {
+    @include media(phone) {
+      &--1 {
+        right: 0;
+        right: -2.5vw;
+      }
+
+      &--2 {
+        margin-top: 26vh;
+        right: -5vw;
+
+        @include media(smallest) {
+          margin-top: 27.5vh;
+        }
+      }
+
+      &--3 {
+        margin-top: 20vh;
+
+        @include media(smallest) {
+          margin-left: 7.5vw;
+        }
+      }
+    }
+
+    @include media(tablet) {
+      &--1 {
+        right: 10vw;
+        top: 5vh;
+      }
+
+      &--2 {
+        top: 37.5vh;
+        right: 7.5vw;
+      }
+
+      &--3 {
+        right: 25vw;
+        top: 50vh;
+      }
+    }
+
+    @include media(biggest) {
+      margin-right: $padding-biggest;
+    }
+  }
+
+  .paragraph {
+    @include media(phone) {
+      margin-top: 50vh;
+    }
+
+    @include media(tablet) {
+      margin-top: 20vh;
+    }
+
+    > * {
+      opacity: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: $cond-bold;
+
+      &:nth-of-type(1) {
+        @include media(phone) {
+          margin-bottom: 2.5vh;
+          font-size: em(100);
+        }
+
+        @include media(smallest) {
+          font-size: em(60);
+        }
+
+        @include media(tablet) {
+          margin-bottom: 5vh;
+          font-size: em(140);
+        }
+
+        @include media(biggest) {
+          font-size: em(160);
+        }
+
+        ~ p {
+          color: $light;
+          margin-left: 5vw;
+          text-shadow: -1px 0 $dark, 0 1px $dark, 1px 0 $dark, 0 -1px $dark;
+
+          @include media(phone) {
+            font-size: em(80);
+            line-height: 1;
+          }
+
+          @include media(smallest) {
+            font-size: em(60);
+          }
+
+          @include media(tablet) {
+            font-size: em(80);
+          }
+
+          @include media(biggest) {
+            font-size: em(100);
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include media(phone) {
+          margin-bottom: 2.5vh;
+        }
+      }
+    }
+  }
+}
+
+#courses-12 {
+  background-color: $secondary;
+
+  &.animate {
+    $paragraph: 3;
+
+    @for $i from 1 through $paragraph {
+      .paragraph p:nth-of-type(#{$i}) {
+        animation: fade-in-up $time-slow .5s * $i forwards;
+      }
+    }
+
+    .purchase {
+      animation: fade-in-up $time-slow 1s forwards;
+    }
+  }
+
+  .paragraph {
+    @include media(tablet) {
+      width: calc(100% - #{$padding-normal});
+    }
+
+    @include media(biggest) {
+      width: calc(100% - #{$padding-biggest} * 2);
+    }
+
+    > * {
+      opacity: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-transform: uppercase;
+
+      &:nth-of-type(1) {
+        font-family: $cond-bold;
+        color: $primary;
+        line-height: 1;
+
+        @include media(phone) {
+          margin-bottom: 2.5vh;
+          font-size: em(60);
+        }
+
+        @include media(smallest) {
+          font-size: em(40);
+        }
+
+        @include media(tablet) {
+          font-size: em(100);
+          width: 60vw;
+        }
+
+        @include media(biggest) {
+          font-size: em(160);
+          width: 50vw;
+        }
+
+        ~ p {
+          margin-top: 5vh;
+
+          @include media(phone) {
+            font-size: em(26);
+          }
+
+          @include media(smallest) {
+            font-size: em(20);
+          }
+
+          @include media(tablet) {
+            font-size: em(35);
+          }
+
+          @include media(biggest) {
+            font-size: em(50);
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        color: $light;
+
+        @include media(phone) {
+          margin-bottom: 2.5vh;
+        }
+
+        @include media(tablet) {
+          margin-left: 7.5vw;
+          line-height: 1;
+        }
+
+        @include media(biggest) {
+          margin-left: 15vw;
+        }
+
+        span {
+          margin-left: 1vw;
+          font-size: em(25);
+          font-family: $cond-bold;
+        }
+      }
+
+      &:nth-of-type(3) {
+        color: $primary;
+        line-height: 1.48;
+
+        @include media(tablet) {
+          margin-left: 2.5vw;
+          width: 60vw;
+        }
+
+        @include media(biggest) {
+          margin-left: 10vw;
+          width: 55vw;
+        }
+      }
+    }
+
+    .purchase {
+      float: right;
+      font-size: em(22);
+      margin-right: 50px;
+      padding: 14px 20px 10px;
+      background-color: $primary;
+      text-transform: uppercase;
+      border-right: 1px solid $dark;
+      font-family: $cond-bold;
+      color: $dark;
+
+      @include media(phone) {
+        margin-top: 5vh;
+      }
+
+      @include media(tablet) {
+        margin-top: 2.5vh;
+      }
+
+      &::after {
+        @include inline-block;
+        @include image-retina('/../images/arrow-dark-small.png', '/../images/arrow-dark-small-2x.png');
+        background-repeat: no-repeat;
+        background-color: $primary;
+        background-position: center;
+        background-size: cover;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        right: -51px;
+        width: 50px;
+        content: '';
+        top: 0;
+
+        @include media(phone) {
+          height: 52px;
+        }
+
+        @include media(tablet) {
+          height: 50px;
         }
       }
     }

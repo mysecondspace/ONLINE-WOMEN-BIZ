@@ -211,12 +211,11 @@
     }
 
     p {
-      opacity: 0;
-      color: $dark;
-      font-family: $cond-bold;
-
       &:first-of-type {
+        font-family: $cond-bold;
         position: relative;
+        color: $dark;
+        opacity: 0;
 
         @include media(phone) {
           font-size: em(25);
@@ -242,27 +241,7 @@
       }
 
       &:last-of-type {
-        line-height: 1.48;
-        margin-top: 5vh;
-
-        @include media(smallest) {
-          font-size: em(14);
-        }
-
-        @include media(tablet) {
-          font-size: em(20);
-        }
-
-        @include media(biggest) {
-          font-size: em(22);
-        }
-
-        span {
-          @include inline-block;
-          @include image-retina('/../images/arrow-small.png', '/../images/arrow-small-2x.png');
-          background-size: cover;
-          margin: 0 5px;
-        }
+        @extend %horizontal-list;
       }
     }
   }
