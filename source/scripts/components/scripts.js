@@ -297,6 +297,12 @@ $(document).ready(function() {
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
 
+
+            // only for mobile version
+            if (window.innerWidth < 768) {
+              $('marquee').replaceWith('<p class="slogan">We help women to get balance</p>');
+            }
+
             break;
           case 4:
             $('#reviews-5').addClass('animate');

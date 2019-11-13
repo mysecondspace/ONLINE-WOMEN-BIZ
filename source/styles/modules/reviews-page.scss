@@ -516,13 +516,8 @@
   }
 
   @include media(tablet) {
-    padding-right: $indent-normal;
     padding-bottom: 10vh;
     padding-top: 10vh;
-  }
-
-  @include media(biggest) {
-    padding-right: $padding-biggest;
   }
 
   &.animate {

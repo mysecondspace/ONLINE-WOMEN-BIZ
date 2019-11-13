@@ -440,7 +440,7 @@
   }
 
   @include media(tablet) {
-    padding-right: $indent-normal;
+    padding-right: $padding-normal;
     padding-bottom: 10vh;
     padding-top: 10vh;
   }
@@ -521,7 +521,7 @@
     }
 
     @include media(tablet) {
-      font-size: em(100);
+      font-size: em(110);
     }
 
     @include media(biggest) {
@@ -559,7 +559,7 @@
 
       @include media(tablet) {
         font-size: em(20);
-        width: 75%;
+        width: 80%;
       }
 
       @include media(biggest) {

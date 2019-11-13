@@ -3660,14 +3660,8 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 @media only screen and (min-width: 768px) {
   #reviews-4 {
-    padding-right: 45px;
     padding-bottom: 10vh;
     padding-top: 10vh;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  #reviews-4 {
-    padding-right: calc(90px + var(--logotype-width));
   }
 }
 #reviews-4.animate .image,
@@ -4597,7 +4591,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 @media only screen and (min-width: 768px) {
   #courses-4 {
-    padding-right: 45px;
+    padding-right: calc(45px + var(--logotype-width));
     padding-bottom: 10vh;
     padding-top: 10vh;
   }
@@ -4677,7 +4671,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 @media only screen and (min-width: 768px) {
   #courses-4 .slogan {
-    font-size: 6.25em;
+    font-size: 6.875em;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -4718,7 +4712,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (min-width: 768px) {
   #courses-4 .paragraph p {
     font-size: 1.25em;
-    width: 75%;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 1920px) {

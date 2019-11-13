@@ -151,7 +151,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/courses-2.png",
-    "revision": "7a6f5427923bb35b0b85e8c182ef12e6"
+    "revision": "671a2c28e929fcc34ee9ae7ca8ac0dae"
   },
   {
     "url": "images/courses-3.jpg",
@@ -164,10 +164,6 @@ self.__precacheManifest = [
   {
     "url": "images/courses-5.jpg",
     "revision": "a38b6be8c46ec1ca7d005af64d54afa7"
-  },
-  {
-    "url": "images/courses-hover-3.jpg",
-    "revision": "a60da55ce0dae25433ed35a56e02e0e0"
   },
   {
     "url": "images/displacement.png",
@@ -219,7 +215,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/letter.png",
-    "revision": "590e2a296bf8534ec01670f0ef01ed3f"
+    "revision": "38711862aaf6bbb403466965fcb115aa"
   },
   {
     "url": "images/logo-big-dark-2x.png",
@@ -263,7 +259,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-light-2x.png",
-    "revision": "87bab3a410a6e244406ef1a9baaf919d"
+    "revision": "4584d0753b5908195e23787e74c4f978"
   },
   {
     "url": "images/logo-small-light.png",
@@ -283,7 +279,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/post-1.jpg",
-    "revision": "a2b0b254233c6b51890c2e7d70070d56"
+    "revision": "0f7f5986be37d3a3a61f5e7db6ceee58"
   },
   {
     "url": "images/reviews-1.jpg",
@@ -307,23 +303,103 @@ self.__precacheManifest = [
   },
   {
     "url": "images/slide-1.png",
-    "revision": "1e0ff9e8f561b2f19c2b4acad1ede23d"
+    "revision": "64633d15840745c99195edddd326fc0a"
   },
   {
     "url": "images/slide-2.png",
-    "revision": "78368fcc0335aea3397285a3a0909316"
+    "revision": "3c916fc97fc0134693cfb4dd70d997f8"
   },
   {
     "url": "images/slide-3.png",
-    "revision": "47e20ee7b5c9a26c7a5f63ed059b81b4"
+    "revision": "314927c360248169643dde83433e5455"
   },
   {
     "url": "images/slide-4.png",
-    "revision": "936d7402e8c82bc148fe8f402a851d13"
+    "revision": "2ff325dc9d76c99526c9dcc96c283d72"
   },
   {
     "url": "images/slide-5.png",
-    "revision": "799471c307db1a26fda497b0baa3ad95"
+    "revision": "80de979f3bb83cad5b7b7f58ccdcbf86"
+  },
+  {
+    "url": "images/social-2x/facebook-hover.png",
+    "revision": "e12dfc60bb61699629a0dbc23f6813ca"
+  },
+  {
+    "url": "images/social-2x/facebook.png",
+    "revision": "c7ea8b4d2ca04af2d532a086bf15bc73"
+  },
+  {
+    "url": "images/social-2x/github-hover.png",
+    "revision": "66958341920f1c6aebb25cf6186baf5d"
+  },
+  {
+    "url": "images/social-2x/github.png",
+    "revision": "42f2794093bda8226df39114bfc0ebe0"
+  },
+  {
+    "url": "images/social-2x/instagram-hover.png",
+    "revision": "3fb9bc62efbe95b701d6cf08998d2d79"
+  },
+  {
+    "url": "images/social-2x/instagram.png",
+    "revision": "362eb4519016b9b92a8be8b5a29e4045"
+  },
+  {
+    "url": "images/social-2x/linkedin-hover.png",
+    "revision": "5e979043442a2456ff280ee2aade8e3d"
+  },
+  {
+    "url": "images/social-2x/linkedin.png",
+    "revision": "280a06c06a0f0f588e3bd680bd5918dd"
+  },
+  {
+    "url": "images/social-2x/twitter-hover.png",
+    "revision": "44b10141af632a0b42ca28d2e56730c6"
+  },
+  {
+    "url": "images/social-2x/twitter.png",
+    "revision": "74bb618d54b8fe3642e5f6aab69eb740"
+  },
+  {
+    "url": "images/social/facebook-hover.png",
+    "revision": "91c6bfa4c3bf7854a8a99a3e59238a64"
+  },
+  {
+    "url": "images/social/facebook.png",
+    "revision": "73a57a53d9bbf8ffe14abb62a33fb318"
+  },
+  {
+    "url": "images/social/github-hover.png",
+    "revision": "8ede4e834e9aee82c8e333b86b2df634"
+  },
+  {
+    "url": "images/social/github.png",
+    "revision": "678ac37f09dc7255b2e572d5faa7fba4"
+  },
+  {
+    "url": "images/social/instagram-hover.png",
+    "revision": "486144bd4e1563ddca3c9dd829cc65ac"
+  },
+  {
+    "url": "images/social/instagram.png",
+    "revision": "2eb23588f944de0d5b8a9f220382eb5a"
+  },
+  {
+    "url": "images/social/linkedin-hover.png",
+    "revision": "48ede4a0e187c4c922cb5db045fbe18c"
+  },
+  {
+    "url": "images/social/linkedin.png",
+    "revision": "0c2f116f7070bc157188bae606312485"
+  },
+  {
+    "url": "images/social/twitter-hover.png",
+    "revision": "070007ef43fd9bfa1e90ba2458baa9d0"
+  },
+  {
+    "url": "images/social/twitter.png",
+    "revision": "6d25e816b5de4a3943b1225b87a2ac6e"
   },
   {
     "url": "index.html",
@@ -335,7 +411,7 @@ self.__precacheManifest = [
   },
   {
     "url": "reviews.html",
-    "revision": "66e2a328b855f273885082ce7348c853"
+    "revision": "15f3971ca9b3794e9e74b6de4cc96628"
   },
   {
     "url": "scripts/hover.min.js",
@@ -347,7 +423,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "d436f27591428de327c932489341e89b"
+    "revision": "6e0b72b8f8672cb49d8df9e0189f1874"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -359,11 +435,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "6135a5545cf38507944cff14300267db"
+    "revision": "d241b2f0b7e7d1ff30a969a902ace137"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "97dd446a05211223d7fc0da35b3ccb00"
+    "revision": "249873174509fca45cd78e7944d9f504"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
