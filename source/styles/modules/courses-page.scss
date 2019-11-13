@@ -1646,25 +1646,27 @@
   .round {
     @include media(phone) {
       &--1 {
-        right: 0;
         right: -2.5vw;
       }
 
       &--2 {
         margin-top: 26vh;
         right: -5vw;
-
-        @include media(smallest) {
-          margin-top: 27.5vh;
-        }
       }
 
       &--3 {
         margin-top: 20vh;
+      }
+    }
 
-        @include media(smallest) {
-          margin-left: 7.5vw;
-        }
+    @include media(smallest) {
+      &--2 {
+        margin-top: 27.5vh;
+        right: 5vw;
+      }
+
+      &--3 {
+        margin-left: 7.5vw;
       }
     }
 

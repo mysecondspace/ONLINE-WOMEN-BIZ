@@ -286,6 +286,26 @@ self.__precacheManifest = [
     "revision": "a2b0b254233c6b51890c2e7d70070d56"
   },
   {
+    "url": "images/reviews-1.jpg",
+    "revision": "d4c2de35561139fccebaba63430fe0ce"
+  },
+  {
+    "url": "images/reviews-2.jpg",
+    "revision": "07f11ca7ec307cf5913a1c131b58c37f"
+  },
+  {
+    "url": "images/reviews-3.jpg",
+    "revision": "f3b2e9d8caf47812e77a78413ef1458b"
+  },
+  {
+    "url": "images/reviews-4.jpg",
+    "revision": "636cb8c3dec04aa2a755eb4eaa3d9514"
+  },
+  {
+    "url": "images/reviews-5.jpg",
+    "revision": "77d80d62c9275f494f978a166ba77484"
+  },
+  {
     "url": "images/slide-1.png",
     "revision": "1e0ff9e8f561b2f19c2b4acad1ede23d"
   },
@@ -314,6 +334,10 @@ self.__precacheManifest = [
     "revision": "bd008441e08527be42a6784c85160b0a"
   },
   {
+    "url": "reviews.html",
+    "revision": "66e2a328b855f273885082ce7348c853"
+  },
+  {
     "url": "scripts/hover.min.js",
     "revision": "d1796c13983a50b5a52f320de7041a23"
   },
@@ -323,7 +347,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "c5be5488930458a1894f79c04b3b6206"
+    "revision": "d436f27591428de327c932489341e89b"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -335,11 +359,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "1b9fb952d99810e9ae15cb87c62efbf9"
+    "revision": "6135a5545cf38507944cff14300267db"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "e47bd80f1c4aecc907054cfe24b03377"
+    "revision": "97dd446a05211223d7fc0da35b3ccb00"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

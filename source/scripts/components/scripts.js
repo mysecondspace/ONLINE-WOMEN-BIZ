@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var index = $('#index'),
       about = $('#about'),
+      reviews = $('#reviews'),
       courses = $('#courses'),
       events = $('#events'),
       blog = $('#blog'),
@@ -245,6 +246,82 @@ $(document).ready(function() {
         }
       }
     });
+  } else if (reviews.length > 0) {
+    $('#menu a[href*="reviews"]').addClass('active');
+    Emblem.init('#scroll p');
+
+    // initialize scroll on the about page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      autoScrolling: false,
+      scrollingSpeed: 1000,
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven'],
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#reviews-1').addClass('animate');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            // only for desktop version
+            if (window.innerWidth > 768) {
+              $('#logo').addClass('big dark');
+            } else {
+              $('#logo').addClass('small dark');
+            };
+
+            break;
+          case 1:
+            $('#reviews-2').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 2:
+            $('#reviews-3').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 3:
+            $('#reviews-4').addClass('animate');
+            $('#logo').addClass('small dark');
+            $('#menu').addClass('light');
+            $('#nav').addClass('dark');
+
+            break;
+          case 4:
+            $('#reviews-5').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+          case 5:
+            $('#reviews-6').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('secondary');
+            $('#nav').addClass('light');
+
+            break;
+          case 6:
+            $('#reviews-7').addClass('animate');
+            $('#logo').addClass('small light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
   } else if (courses.length > 0) {
     $('#menu a[href*="courses"]').addClass('active');
     Emblem.init('#scroll p');
@@ -362,7 +439,7 @@ $(document).ready(function() {
       fitToSection: false,
       autoScrolling: false,
       scrollingSpeed: 1000,
-      anchors: ['first', 'second', 'third', 'fourth'],
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven'],
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
@@ -371,9 +448,15 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#events-1').addClass('animate');
-            $('#logo').addClass('big dark');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // only for desktop version
+            if (window.innerWidth > 768) {
+              $('#logo').addClass('big dark');
+            } else {
+              $('#logo').addClass('small dark');
+            };
 
             break;
           case 1:
@@ -565,9 +648,6 @@ $(document).ready(function() {
       scrollingSpeed: 1000,
       anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'six', 'seven'],
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
-      afterRender: function() {
-        $('#faq-1').addClass('animate');
-      },
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
 

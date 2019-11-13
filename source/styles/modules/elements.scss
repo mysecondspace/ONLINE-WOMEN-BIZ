@@ -792,11 +792,23 @@
       height: 65px;
       box-shadow: none;
       position: absolute;
-      background: rgba(0,0,0,.7);
+      background: rgba(0, 0, 0, .7);
       transform: translate(-50%, -50%);
       transition: opacity $time-fast ease;
       text-decoration: none;
       content: '';
+    }
+
+    &--rounded {
+      &:before {
+        border-left: 35px solid $dark;
+      }
+
+      &:after {
+        @include border-radius(100%);
+        background: rgba(253, 149, 158, .7);
+        height: 100px;
+      }
     }
   }
 }

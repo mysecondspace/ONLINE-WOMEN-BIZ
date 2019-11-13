@@ -1011,6 +1011,16 @@ html button {
   text-decoration: none;
   content: '';
 }
+.youtube-player.pristine--rounded:before {
+  border-left: 35px solid #022329;
+}
+.youtube-player.pristine--rounded:after {
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: rgba(253, 149, 158, 0.7);
+  height: 100px;
+}
 
 #faq-2 .paragraph p:last-of-type,
 .horizontal-list {
@@ -3110,6 +3120,1040 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   }
 }
 
+#reviews-1 {
+  background-color: #fff;
+}
+#reviews-1.animate .paragraph span span {
+  transition: transform 1s cubic-bezier(0, 0, 0.2, 1), opacity 1s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateZ(0);
+  opacity: 1;
+}
+#reviews-1.animate .paragraph span:nth-of-type(2) span {
+  transition-delay: .2s;
+}
+#reviews-1.animate .paragraph span:nth-of-type(3) span {
+  transition-delay: .4s;
+}
+#reviews-1.animate .paragraph span:nth-of-type(4) span {
+  transition-delay: .6s;
+}
+#reviews-1 .circle p {
+  color: #022329;
+}
+#reviews-1 .circle a {
+  background: url("../images/mouse-dark.svg") center no-repeat;
+  background-size: 30%;
+}
+#reviews-1 .photo {
+  background: url("../images/reviews-1.jpg") no-repeat;
+  width: calc(100% - calc(45px + var(--logotype-width)));
+  background-position: 100% 0;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-1 .photo {
+    animation: fade-in 2s forwards;
+    background-position: 50%;
+    background-size: cover;
+    width: 100%;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-1 .photo {
+    animation: fade-in-right 2s forwards;
+    background-position: left;
+    background-size: contain;
+    left: calc(45px + var(--logotype-width));
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-1 .photo {
+    left: calc(90px + var(--logotype-width));
+    max-width: 1280px;
+  }
+}
+#reviews-1 .paragraph {
+  z-index: 1;
+  position: absolute;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-1 .paragraph {
+    left: 15px;
+    bottom: 5vh;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-1 .paragraph {
+    padding-right: 45px;
+    width: 40vw;
+    top: 20vh;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-1 .paragraph {
+    padding-right: 90px;
+    width: 45vw;
+    right: 5%;
+    top: 15vh;
+  }
+}
+#reviews-1 .paragraph > * {
+  font-family: "harmonia cond bold";
+  line-height: 1;
+}
+#reviews-1 .paragraph span {
+  color: #022329;
+  display: flex;
+  overflow: hidden;
+}
+#reviews-1 .paragraph span span {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transform: translate3d(0, 100%, 0);
+  display: block;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-1 .paragraph span span {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-1 .paragraph span span {
+    font-size: 3.125em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-1 .paragraph span span {
+    font-size: 6.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-1 .paragraph span span {
+    font-size: 12.5em;
+  }
+}
+#reviews-1 .paragraph p {
+  opacity: 0;
+  display: block;
+  line-height: 1.48;
+  font-family: "harmonia cond light";
+  animation: fade-in-up 2s 0.8s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-1 .paragraph p {
+    font-size: 0.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-1 .paragraph p {
+    margin-left: 12.5vw;
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-1 .paragraph p {
+    margin-left: 15vw;
+    font-size: 1.875em;
+  }
+}
+
+#reviews-2 {
+  background-color: #fd959e;
+}
+@media only screen and (min-width: 768px) {
+  #reviews-2 {
+    padding-right: 45px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-2 {
+    padding-right: 90px;
+  }
+}
+#reviews-2 > div > div {
+  position: relative;
+}
+#reviews-2.animate .slogan,
+#reviews-2.animate .absolute > *,
+#reviews-2.animate .paragraph > p {
+  animation: fade-in-up 2s forwards;
+}
+#reviews-2.animate .slogan {
+  animation-delay: .1s;
+}
+#reviews-2.animate .paragraph p {
+  animation-delay: .3s;
+}
+#reviews-2.animate .absolute div {
+  animation-delay: 1s;
+}
+#reviews-2 .slogan {
+  opacity: 0;
+  z-index: 1;
+  line-height: 1;
+  position: relative;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-2 .slogan {
+    font-size: 1.875em;
+    margin-top: 7.5vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-2 .slogan {
+    font-size: 1.5em;
+    margin-top: 10vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-2 .slogan {
+    font-size: 8.75em;
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-2 .slogan {
+    font-size: 10.3125em;
+    width: 40vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-2 .paragraph {
+    width: 40%;
+  }
+}
+#reviews-2 .paragraph p {
+  line-height: 1.48;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-2 .paragraph p {
+    margin-top: 2.5vh;
+    font-size: 0.875em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-2 .paragraph p {
+    font-size: 0.75em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-2 .paragraph p {
+    margin-top: 2.5vh;
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-2 .paragraph p {
+    font-size: 1.5em;
+  }
+}
+#reviews-2 .absolute {
+  display: flex;
+  z-index: 0;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-2 .absolute {
+    padding-bottom: 5vh;
+    padding-top: 2.5vh;
+    position: relative;
+    height: 270px;
+    width: 256px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-2 .absolute {
+    height: 190px;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-2 .absolute {
+    right: 45px;
+    position: absolute;
+    height: 638px;
+    width: 605px;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-2 .absolute {
+    right: 90px;
+    height: 850px;
+    width: 806px;
+  }
+}
+#reviews-2 .absolute > * {
+  opacity: 0;
+}
+#reviews-2 .absolute img {
+  z-index: 1;
+  width: 100%;
+}
+#reviews-2 .absolute div {
+  background-color: #022329;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-2 .absolute div {
+    right: -15%;
+    bottom: 5%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-2 .absolute div {
+    right: -20%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-2 .absolute div {
+    right: -10%;
+    top: -5%;
+  }
+}
+
+#reviews-3.animate .slogan,
+#reviews-3.animate .paragraph > p {
+  animation: fade-in-up 2s forwards;
+}
+#reviews-3.animate .slogan {
+  animation-delay: .1s;
+}
+#reviews-3.animate .paragraph p {
+  animation-delay: .3s;
+}
+#reviews-3.animate .round {
+  animation: fade-in 2s forwards;
+}
+#reviews-3.animate .round--1 {
+  animation-delay: .5s;
+}
+#reviews-3.animate .round--2 {
+  animation-delay: 1s;
+}
+#reviews-3.animate .round--3 {
+  animation-delay: 1.5s;
+}
+#reviews-3.animate .paragraph p:nth-of-type(1) {
+  animation: fade-in-up 2s 0.5s forwards;
+}
+#reviews-3.animate .paragraph p:nth-of-type(2) {
+  animation: fade-in-up 2s 1s forwards;
+}
+#reviews-3.animate .paragraph p:nth-of-type(3) {
+  animation: fade-in-up 2s 1.5s forwards;
+}
+#reviews-3.animate .arrow span:nth-of-type(1) {
+  animation: fade-in-down 2s 0.2s forwards;
+}
+#reviews-3.animate .arrow span:nth-of-type(2) {
+  animation: fade-in-down 2s 0.4s forwards;
+}
+#reviews-3.animate .arrow span:nth-of-type(3) {
+  animation: fade-in-down 2s 0.6s forwards;
+}
+#reviews-3.animate .arrow span:nth-of-type(4) {
+  animation: fade-in-down 2s 0.8s forwards;
+}
+#reviews-3 .slogan {
+  opacity: 0;
+  z-index: 1;
+  line-height: 1;
+  position: relative;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-3 .slogan {
+    font-size: 1.875em;
+    margin-top: 7.5vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-3 .slogan {
+    font-size: 1.5em;
+    margin-top: 10vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-3 .slogan {
+    font-size: 6.25em;
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-3 .slogan {
+    font-size: 10.3125em;
+    width: 40vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-3 .paragraph {
+    margin-left: 5vw;
+    width: 55%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-3 .paragraph {
+    margin-left: 10vw;
+    width: 40%;
+  }
+}
+#reviews-3 .paragraph p {
+  line-height: 1.48;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-3 .paragraph p {
+    margin-top: 2.5vh;
+    font-size: 0.875em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-3 .paragraph p {
+    font-size: 0.75em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-3 .paragraph p {
+    margin-top: 2.5vh;
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-3 .paragraph p {
+    font-size: 1.5em;
+  }
+}
+#reviews-3 .round {
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-3 .round {
+    font-size: 1.625em;
+    height: 150px;
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-3 .round {
+    font-size: 1.125em;
+    height: 100px;
+    width: 100px;
+  }
+}
+#reviews-3 .round--1::after {
+  background-position: center;
+  margin: 0 auto;
+  content: '';
+}
+@media only screen and (max-width: 767px) {
+  #reviews-3 .round--1 {
+    left: 15px;
+    margin-top: 15px;
+  }
+  #reviews-3 .round--1::after {
+    background-image: url(../images/logo-small-light.png);
+    height: 66px;
+    width: 77px;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (max-width: 767px) and (min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  #reviews-3 .round--1::after {
+    background-size: 65.5px 56px;
+    background-image: url(../images/logo-small-light-2x.png);
+  }
+}
+@media only screen and (max-width: 767px) {
+  #reviews-3 .round--2 {
+    right: 15vw;
+    margin-top: 10vh;
+  }
+  #reviews-3 .round--3 {
+    margin-top: 22.5vh;
+    left: 45px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-3 .round--1 {
+    right: 10vw;
+    top: 5vh;
+  }
+  #reviews-3 .round--1::after {
+    background-image: url(../images/logo-small-light.png);
+    height: 66px;
+    width: 77px;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  #reviews-3 .round--1::after {
+    background-size: 65.5px 56px;
+    background-image: url(../images/logo-small-light-2x.png);
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-3 .round--2 {
+    top: 37.5vh;
+    right: 7.5vw;
+  }
+  #reviews-3 .round--3 {
+    right: 20vw;
+    top: 65vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-3 .round {
+    margin-right: calc(90px + var(--logotype-width));
+  }
+  #reviews-3 .round--1::after {
+    background-image: url(../images/logo-big-light.png);
+    height: 368px;
+    width: 302px;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 1920px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1920px) and (min-resolution: 2dppx) {
+  #reviews-3 .round--1::after {
+    background-size: 151px 184px;
+    background-image: url(../images/logo-big-light-2x.png);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #reviews-3 .arrow {
+    margin-top: 40vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-3 .arrow {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    float: initial;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-3 .arrow {
+    margin-left: 10vw;
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #reviews-4 {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-4 {
+    padding-right: 45px;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-4 {
+    padding-right: calc(90px + var(--logotype-width));
+  }
+}
+#reviews-4.animate .image,
+#reviews-4.animate .slogan,
+#reviews-4.animate .absolute > * {
+  animation: fade-in-up 2s forwards;
+}
+#reviews-4.animate .slogan {
+  animation-delay: .2s;
+}
+#reviews-4.animate .absolute div {
+  animation-delay: 1s;
+}
+#reviews-4 .absolute {
+  position: relative;
+  display: flex;
+  z-index: -1;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-4 .absolute {
+    padding-bottom: 5vh;
+    padding-top: 2.5vh;
+    position: relative;
+    height: 200px;
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-4 .absolute {
+    height: 170px;
+    width: 255px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-4 .absolute {
+    margin: 0 auto;
+    height: 540px;
+    width: 810px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-4 .absolute {
+    height: 718px;
+    width: 1077px;
+  }
+}
+#reviews-4 .absolute > * {
+  opacity: 0;
+}
+#reviews-4 .absolute img {
+  z-index: 1;
+  width: 100%;
+}
+#reviews-4 .absolute div {
+  background-color: #fd959e;
+  position: absolute;
+  height: 80%;
+  right: -15%;
+  width: 80%;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-4 .absolute div {
+    bottom: 5%;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-4 .absolute div {
+    right: -10%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-4 .absolute div {
+    top: -15%;
+  }
+}
+#reviews-4 .slogan {
+  opacity: 0;
+  z-index: 1;
+  line-height: 1;
+  width: fit-content;
+  text-align: center;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+  margin: 5vh auto 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-4 .slogan {
+    margin-top: 7.5vh;
+    font-size: 4.0625em;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-4 .slogan {
+    font-size: 3.125em;
+    margin-top: 10vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-4 .slogan {
+    white-space: nowrap;
+    font-size: 9.6875em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-4 .slogan {
+    font-size: 13.75em;
+  }
+}
+
+#reviews-5 {
+  background-color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+}
+#reviews-5.animate .title,
+#reviews-5.animate .paragraph > * {
+  animation: fade-in 2s forwards;
+}
+#reviews-5.animate .absolute > * {
+  animation: fade-in-up 2s forwards;
+}
+#reviews-5.animate .absolute--1 img {
+  animation-delay: 0.5s;
+}
+#reviews-5.animate .absolute--1 div {
+  animation-delay: 1s;
+}
+#reviews-5.animate .absolute--2 img {
+  animation-delay: 1s;
+}
+#reviews-5.animate .absolute--2 div {
+  animation-delay: 2s;
+}
+#reviews-5.animate .paragraph--1 p {
+  animation-delay: 0.6s;
+}
+#reviews-5.animate .paragraph--1 span {
+  animation-delay: 0.7s;
+}
+#reviews-5.animate .paragraph--1 a {
+  animation-delay: 0.8s;
+}
+#reviews-5.animate .paragraph--2 p {
+  animation-delay: 1.2s;
+}
+#reviews-5.animate .paragraph--2 span {
+  animation-delay: 1.4s;
+}
+#reviews-5.animate .paragraph--2 a {
+  animation-delay: 1.6s;
+}
+#reviews-5 .block {
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block:not(:last-of-type) {
+    padding-bottom: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block {
+    margin-right: 45px;
+    padding-bottom: 20vh;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block {
+    margin-right: 90px;
+  }
+}
+#reviews-5 .block .absolute {
+  display: flex;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .absolute--1 {
+    padding-bottom: 5vh;
+    padding-top: 2.5vh;
+    height: 394px;
+    width: 280px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-5 .block .absolute--1 {
+    height: 352px;
+    width: 250px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .absolute--1 {
+    margin-right: 90px;
+    height: 570px;
+    width: 405px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block .absolute--1 {
+    margin-right: 180px;
+    height: 526px;
+    width: 374px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .absolute--2 {
+    padding-bottom: 2.5vh;
+    height: 420px;
+    width: 285px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-5 .block .absolute--2 {
+    height: 376px;
+    width: 255px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .absolute--2 {
+    margin-left: 90px;
+    height: 444px;
+    width: 301px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block .absolute--2 {
+    margin-left: 180px;
+    height: 444px;
+    width: 301px;
+  }
+}
+#reviews-5 .block .absolute > * {
+  opacity: 0;
+}
+#reviews-5 .block .absolute img {
+  z-index: 1;
+  width: 100%;
+}
+#reviews-5 .block .absolute div {
+  background-color: #022329;
+  position: absolute;
+  height: 50%;
+  right: -10%;
+  width: 80%;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .absolute div {
+    bottom: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .absolute div {
+    top: 60%;
+  }
+}
+#reviews-5 .block .paragraph {
+  z-index: 2;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .paragraph {
+    margin-bottom: 2.5vh;
+  }
+}
+#reviews-5 .block .paragraph > * {
+  opacity: 0;
+}
+#reviews-5 .block .paragraph > span {
+  display: block;
+  line-height: 1.48;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .paragraph > span {
+    margin-top: 2.5vh;
+    font-size: 0.875em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-5 .block .paragraph > span {
+    font-size: 0.75em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .paragraph > span {
+    font-size: 1.25em;
+    margin-top: 1vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block .paragraph > span {
+    font-size: 1.5em;
+  }
+}
+#reviews-5 .block .paragraph p:not(.title) {
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .paragraph p:not(.title) {
+    white-space: nowrap;
+    font-size: 2.1875em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-5 .block .paragraph p:not(.title) {
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .paragraph p:not(.title) {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block .paragraph p:not(.title) {
+    font-size: 3.75em;
+  }
+}
+#reviews-5 .block .paragraph a {
+  color: #fff;
+  display: block;
+  margin-top: 5vh;
+  font-size: 1.5625em;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .paragraph a {
+    text-align: right;
+    font-size: 1.25em;
+  }
+}
+#reviews-5 .block .paragraph a span {
+  color: #022329;
+}
+#reviews-5 .block .paragraph .title {
+  opacity: 0;
+  z-index: 1;
+  line-height: 1;
+  text-align: right;
+  position: relative;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-5 .block .paragraph .title {
+    margin-bottom: 5vh;
+    margin-top: 7.5vh;
+    font-size: 5em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-5 .block .paragraph .title {
+    font-size: 3.75em;
+    margin-top: 10vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .paragraph .title {
+    margin-bottom: 5vh;
+    font-size: 6.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block .paragraph .title {
+    font-size: 10.3125em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .paragraph--1 {
+    width: 50vw;
+    top: 10vh;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block .paragraph--1 {
+    right: 5vw;
+    top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-5 .block .paragraph--2 {
+    width: 50vw;
+    left: 10vw;
+    top: -5vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #reviews-5 .block .paragraph--2 {
+    width: 65vw;
+    left: 15vw;
+  }
+}
+#reviews-5 .block .paragraph--2 p {
+  text-align: right;
+}
+
+#reviews-6 {
+  background-color: #022329;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-6 {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-6 {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+}
+#reviews-6.animate .slogan,
+#reviews-6.animate .youtube-player {
+  animation: fade-in-up 2s forwards;
+}
+#reviews-6.animate .youtube-player {
+  animation-delay: .1s;
+}
+#reviews-6 .slogan {
+  opacity: 0;
+  color: #fd959e;
+  margin-bottom: 1vh;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-6 .slogan {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #reviews-6 .slogan {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #reviews-6 .slogan {
+    font-size: 8.75em;
+  }
+}
+
+#reviews-7 {
+  background-color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-7 {
+    padding: 0;
+  }
+}
+#reviews-7.animate table tr,
+#reviews-7.animate .title-above-table {
+  animation: fade-in-up 2s forwards;
+}
+#reviews-7.animate table tr {
+  animation-delay: .1s;
+}
+#reviews-7.animate table tr:nth-of-type(2) {
+  animation-delay: .2s;
+}
+#reviews-7 table tr {
+  border-top: 1px solid #022329;
+}
+#reviews-7 table tr:last-of-type {
+  border-bottom: 1px solid #022329;
+}
+#reviews-7 table tr td:last-of-type a {
+  color: #022329;
+}
+@media only screen and (max-width: 767px) {
+  #reviews-7 table tr td:last-of-type a {
+    background-color: #022329;
+    color: #fd959e;
+  }
+}
+
 #courses-1 {
   background-color: #fff;
 }
@@ -4816,30 +5860,25 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 @media only screen and (max-width: 767px) {
   #courses-11 .round--1 {
-    right: 0;
     right: -2.5vw;
   }
   #courses-11 .round--2 {
     margin-top: 26vh;
     right: -5vw;
   }
-}
-@media only screen and (max-width: 767px) and (max-width: 399px) {
-  #courses-11 .round--2 {
-    margin-top: 27.5vh;
-  }
-}
-@media only screen and (max-width: 767px) {
   #courses-11 .round--3 {
     margin-top: 20vh;
   }
 }
-@media only screen and (max-width: 767px) and (max-width: 399px) {
+@media only screen and (max-width: 399px) {
+  #courses-11 .round--2 {
+    margin-top: 27.5vh;
+    right: 5vw;
+  }
   #courses-11 .round--3 {
     margin-left: 7.5vw;
   }
 }
-
 @media only screen and (min-width: 768px) {
   #courses-11 .round--1 {
     right: 10vw;
