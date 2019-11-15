@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var index = $('#index'),
+  var error = $('#error'),
+      index = $('#index'),
       about = $('#about'),
       reviews = $('#reviews'),
       courses = $('#courses'),
@@ -706,6 +707,35 @@ $(document).ready(function() {
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
             $('#nav').addClass('light');
+
+            break;
+        }
+      }
+    });
+  } else if (error.length > 0) {
+
+    // initialize scroll on the courses page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#error').addClass('animate');
+            $('#menu').addClass('light');
+            $('#nav').addClass('light');
+
+            // only for desktop version
+            if (window.innerWidth > 768) {
+              $('#logo').addClass('big dark');
+            } else {
+              $('#logo').addClass('small light');
+            };
 
             break;
         }

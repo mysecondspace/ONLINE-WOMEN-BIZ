@@ -875,6 +875,7 @@
         @include media(tablet) {
           margin-right: $padding-normal;
           margin-left: auto;
+          top: -5vh;
         }
 
         @include media(biggest) {
@@ -904,7 +905,7 @@
       div {
         background-color: $primary;
         position: absolute;
-        height: 50%;
+        height: 90%;
         right: -10%;
         width: 80%;
 
@@ -913,7 +914,7 @@
         }
 
         @include media(tablet) {
-          top: 60%;
+          top: 20%;
         }
       }
     }
@@ -1689,6 +1690,19 @@
 
     @include media(biggest) {
       margin-right: $padding-biggest;
+
+      &--1 {
+        right: 15vw;
+      }
+
+      &--2 {
+        right: 0;
+        top: 42.5vh;
+      }
+
+      &--3 {
+        top: 45vh;
+      }
     }
   }
 
@@ -1902,9 +1916,8 @@
         @include inline-block;
         @include image-retina('/../images/arrow-dark-small.png', '/../images/arrow-dark-small-2x.png');
         background-repeat: no-repeat;
-        background-color: $primary;
         background-position: center;
-        background-size: cover;
+        background-color: $primary;
         align-items: center;
         position: absolute;
         display: flex;

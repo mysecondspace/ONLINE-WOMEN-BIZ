@@ -478,10 +478,12 @@
       display: flex;
     }
 
-    p {
-      color: $light;
-      font-family: $cond-bold;
+    a {
+      @include transition($time-fast);
+      text-shadow: -1px 0 $gray, 0 1px $gray, 1px 0 $gray, 0 -1px $gray;
       text-transform: uppercase;
+      font-family: $cond-bold;
+      color: $light;
 
       @include media(phone) {
         font-size: em(60);
@@ -501,12 +503,10 @@
         font-size: em(80);
       }
 
-      &:not(.selected) {
-        text-shadow: -1px 0 $gray, 0 1px $gray, 1px 0 $gray, 0 -1px $gray;
-      }
-
-      &.selected {
+      &:focus,
+      &:hover {
         color: $primary;
+        text-shadow: none;
       }
     }
   }
@@ -554,6 +554,8 @@
     }
 
     a {
+      @include transition($time-fast);
+      border-bottom: 4px solid transparent;
       color: $blue;
 
       @include media(phone) {
@@ -575,6 +577,11 @@
       &:not(:last-of-type) {
         margin-right: 5vw;
       }
+
+      &:focus,
+      &:hover {
+        border-color: $blue
+      }
     }
   }
 
@@ -588,10 +595,11 @@
     }
 
     a {
-      color: $light;
-      font-size: em(25);
-      font-family: $cond-bold;
+      @include transition($time-fast);
       text-transform: uppercase;
+      font-family: $cond-bold;
+      font-size: em(25);
+      color: $light;
 
       @include media(smallest) {
         font-size: em(20);
@@ -603,6 +611,12 @@
 
       &:not(.current) {
         text-shadow: -1px 0 $gray, 0 1px $gray, 1px 0 $gray, 0 -1px $gray;
+      }
+
+      &:focus,
+      &:hover {
+        color: $primary;
+        text-shadow: none;
       }
 
       &.current {

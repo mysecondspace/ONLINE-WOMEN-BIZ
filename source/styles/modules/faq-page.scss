@@ -307,18 +307,8 @@
     }
   }
 
-  .item {
-    &:not(:last-of-type) {
-      border-bottom-color: $dark;
-    }
-
-    span {
-      color: $dark;
-    }
-
-    p {
-      color: $dark;
-    }
+  .item:not(:last-of-type) {
+    border-bottom-color: $dark;
   }
 }
 
@@ -345,6 +335,12 @@
 
     p {
       color: $primary;
+
+      &:focus,
+      &:hover,
+      &.selected {
+        color: $light;
+      }
     }
   }
 }

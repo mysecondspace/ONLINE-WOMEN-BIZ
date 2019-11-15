@@ -1,0 +1,106 @@
+#error {
+  background-color: $light;
+
+  .background {
+    background-color: $primary;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+
+    @include media(phone) {
+      animation: fade-in $time-slow forwards;
+      height: 100%;
+      width: 100%;
+      left: 0;
+    }
+
+    @include media(tablet) {
+      animation: fade-in-right $time-slow forwards;
+      width: calc(100% - #{$padding-normal});
+    }
+
+    @include media(biggest) {
+      width: calc(100% - #{$padding-biggest});
+    }
+  }
+
+  .paragraph {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+
+    > * {
+      opacity: 0;
+    }
+
+    p {
+      color: $light;
+      line-height: 1;
+      animation-delay: .1s;
+      font-family: $cond-bold;
+      animation: fade-in-right $time-slow .1s forwards;
+
+      @include media(phone) {
+        font-size: em(100);
+      }
+
+      @include media(tablet) {
+        font-size: em(300);
+      }
+
+      @include media(biggest) {
+        font-size: em(350);
+      }
+    }
+
+    span {
+      color: $light;
+      display: block;
+      font-family: $cond-light;
+      animation: fade-in-right $time-slow .2s forwards;
+
+      @include media(phone) {
+        margin-bottom: 5vh;
+        font-size: em(20);
+      }
+
+      @include media(tablet) {
+        margin-bottom: 10vh;
+        font-size: em(30);
+      }
+
+      @include media(biggest) {
+        font-size: em(50);
+      }
+    }
+
+    a {
+      @include transition($time-fast);
+      animation: fade-in-right $time-slow .3s forwards;
+      font-family: $cond-light;
+      background-color: $dark;
+      padding: 10px 20px 5px;
+      display: block;
+      margin: 0 auto;
+      color: $light;
+      opacity: 0;
+
+      @include media(phone) {
+        font-size: em(20);
+        width: 150px;
+      }
+
+      @include media(tablet) {
+        font-size: em(25);
+        width: 150px;
+      }
+
+      &:focus,
+      &:hover {
+        color: $dark;
+        background-color: $light;
+      }
+    }
+  }
+}

@@ -94,8 +94,19 @@
 #events-2 {
   background-color: $primary;
 
+  @include media(phone) {
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+  }
+
+  @include media(smallest) {
+    padding-bottom: 12.5vh;
+  }
+
   @include media(tablet) {
     padding-right: $indent-normal;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
   }
 
   @include media(biggest) {
@@ -103,6 +114,8 @@
   }
 
   &.animate {
+    $arrow: 4;
+
     .slogan,
     .paragraph > * {
       animation: fade-in-up $time-slow forwards;
@@ -121,6 +134,12 @@
         animation-delay: .4s;
       }
     }
+
+    @for $i from 1 through $arrow {
+      .arrow span:nth-of-type(#{$i}) {
+        animation: fade-in-down $time-slow .2s * $i forwards;
+      }
+    }
   }
 
   .slogan {
@@ -132,12 +151,10 @@
 
     @include media(phone) {
       font-size: em(34);
-      margin-top: 7.5vh;
     }
 
     @include media(smallest) {
       font-size: em(24);
-      margin-top: 10vh;
     }
 
     @include media(tablet) {
@@ -215,6 +232,25 @@
         display: initial;
         font-size: inherit;
       }
+    }
+  }
+
+  .arrow {
+    right: 0;
+    z-index: 1;
+    position: absolute;
+
+    @include media(phone) {
+      margin-right: 5vw;
+      margin-top: 2.5vh;
+    }
+
+    @include media(tablet) {
+      margin-top: 5vh;
+    }
+
+    @include media(biggest) {
+      margin-right: 10vw;
     }
   }
 }

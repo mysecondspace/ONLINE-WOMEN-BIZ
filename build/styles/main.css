@@ -190,6 +190,11 @@ html button {
   --logotype-width: 175px;
 }
 
+::selection {
+  background: #fd959e;
+  color: #fff;
+}
+
 #logo {
   position: fixed;
   z-index: 2;
@@ -217,7 +222,7 @@ html button {
   animation: fade-out 0.15s forwards;
 }
 #logo.big.primary {
-  background-image: url(../images/logo-big-primary.png);
+  background-image: url(/../images/logo-big-primary.png);
   height: 368px;
   width: 302px;
   background-repeat: no-repeat;
@@ -225,11 +230,11 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.big.primary {
     background-size: 151px 184px;
-    background-image: url(../images/logo-big-primary-2x.png);
+    background-image: url(/../images/logo-big-primary-2x.png);
   }
 }
 #logo.big.light {
-  background-image: url(../images/logo-big-light.png);
+  background-image: url(/../images/logo-big-light.png);
   height: 368px;
   width: 302px;
   background-repeat: no-repeat;
@@ -237,11 +242,11 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.big.light {
     background-size: 151px 184px;
-    background-image: url(../images/logo-big-light-2x.png);
+    background-image: url(/../images/logo-big-light-2x.png);
   }
 }
 #logo.big.dark {
-  background-image: url(../images/logo-big-dark.png);
+  background-image: url(/../images/logo-big-dark.png);
   height: 368px;
   width: 302px;
   background-repeat: no-repeat;
@@ -249,11 +254,11 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.big.dark {
     background-size: 151px 184px;
-    background-image: url(../images/logo-big-dark-2x.png);
+    background-image: url(/../images/logo-big-dark-2x.png);
   }
 }
 #logo.small.light {
-  background-image: url(../images/logo-small-light.png);
+  background-image: url(/../images/logo-small-light.png);
   height: 66px;
   width: 77px;
   background-repeat: no-repeat;
@@ -261,11 +266,11 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.small.light {
     background-size: 65.5px 56px;
-    background-image: url(../images/logo-small-light-2x.png);
+    background-image: url(/../images/logo-small-light-2x.png);
   }
 }
 #logo.small.dark {
-  background-image: url(../images/logo-small-dark.png);
+  background-image: url(/../images/logo-small-dark.png);
   height: 66px;
   width: 77px;
   background-repeat: no-repeat;
@@ -273,7 +278,7 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #logo.small.dark {
     background-size: 65.5px 56px;
-    background-image: url(../images/logo-small-dark-2x.png);
+    background-image: url(/../images/logo-small-dark-2x.png);
   }
 }
 
@@ -458,6 +463,9 @@ html button {
     font-size: 1.5em;
   }
 }
+#menu ul li a:hover, #menu ul li a.active {
+  font-family: "harmonia cond bold";
+}
 
 #footer {
   justify-content: space-between;
@@ -588,15 +596,17 @@ html button {
   }
 }
 #events-3 form button, #events-7 form button, #post-8 form button {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
   background-color: #fd959e;
   text-transform: uppercase;
   font-family: "harmonia cond bold";
-  padding: 10px 20px 6px;
+  padding: 10px 20px 5px;
   font-family: "harmonia bold";
   color: #022329;
-  font-size: 1.5625em;
   outline: none;
-  width: 200px;
   border: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -608,8 +618,14 @@ html button {
 }
 @media only screen and (min-width: 768px) {
   #events-3 form button, #events-7 form button, #post-8 form button {
+    font-size: 1.5625em;
     margin: 0 auto;
+    width: 200px;
   }
+}
+#events-3 form button:focus, #events-7 form button:focus, #post-8 form button:focus, #events-3 form button:hover, #events-7 form button:hover, #post-8 form button:hover {
+  color: #fd959e;
+  background-color: #fff;
 }
 #events-3 span, #events-7 span, #post-8 span {
   opacity: 0;
@@ -804,15 +820,15 @@ html button {
   }
 }
 .arrow.dark span {
-  background: url("../images/arrow-dark.png") center repeat;
+  background: url("/../images/arrow-dark.png") center repeat;
   background-size: cover;
 }
 .arrow.primary span {
-  background: url("../images/arrow-primary.png") center repeat;
+  background: url("/../images/arrow-primary.png") center repeat;
   background-size: cover;
 }
 .arrow.light span {
-  background: url("../images/arrow.png") center repeat;
+  background: url("/../images/arrow.png") center repeat;
   background-size: cover;
 }
 .arrow--right {
@@ -932,6 +948,7 @@ html button {
 .item span {
   display: block;
   font-size: 1.125em;
+  line-height: 1.48;
   padding: 1.5vh 0 3vh;
   font-family: "harmonia cond light";
 }
@@ -964,7 +981,7 @@ html button {
 }
 @media only screen and (min-width: 1920px) {
   .youtube-player {
-    width: calc(100% - calc(90px + var(--logotype-width)) * 2);
+    width: calc(100% - calc(90px + var(--logotype-width)));
   }
 }
 .youtube-player img {
@@ -980,16 +997,17 @@ html button {
   left: 50%;
   z-index: 1;
   content: '';
+  margin-left: 4px;
   position: absolute;
-  border-left: 35px solid #fff;
+  border-left: 35px solid #022329;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   transform: translate(-50%, -50%);
 }
 .youtube-player.pristine:after {
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -1001,25 +1019,15 @@ html button {
   border: 0;
   outline: 0;
   padding: 0;
-  width: 100px;
-  height: 65px;
+  width: 90px;
+  height: 90px;
   box-shadow: none;
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
   transform: translate(-50%, -50%);
+  background: rgba(253, 149, 158, 0.7);
   transition: opacity 0.15s ease;
   text-decoration: none;
   content: '';
-}
-.youtube-player.pristine--rounded:before {
-  border-left: 35px solid #022329;
-}
-.youtube-player.pristine--rounded:after {
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  background: rgba(253, 149, 158, 0.7);
-  height: 100px;
 }
 
 #faq-2 .paragraph p:last-of-type,
@@ -1058,7 +1066,7 @@ html button {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  background-image: url(../images/arrow-small.png);
+  background-image: url(/../images/arrow-small.png);
   height: 11px;
   width: 25px;
   background-repeat: no-repeat;
@@ -1069,7 +1077,7 @@ html button {
   #faq-2 .paragraph p:last-of-type span,
   .horizontal-list span {
     background-size: 25px 10.5px;
-    background-image: url(../images/arrow-small-2x.png);
+    background-image: url(/../images/arrow-small-2x.png);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1132,9 +1140,9 @@ html button {
 }
 @media only screen and (min-width: 1920px) {
   .round {
-    font-size: 2.5em;
-    height: 400px;
-    width: 400px;
+    font-size: 5em;
+    height: 550px;
+    width: 550px;
   }
 }
 
@@ -1557,11 +1565,11 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   color: #fff;
 }
 #index-1 .circle a {
-  background: url("../images/mouse-light.svg") center no-repeat;
+  background: url("/../images/mouse-light.svg") center no-repeat;
   background-size: 30%;
 }
 #index-1 .letter {
-  background: url("../images/letter.png") no-repeat;
+  background: url("/../images/letter.png") no-repeat;
   background-position: 100% 0;
   background-size: 1190px;
   position: absolute;
@@ -2312,7 +2320,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   color: #fd959e;
 }
 #about-1 .circle a {
-  background: url("../images/mouse-primary.svg") center no-repeat;
+  background: url("/../images/mouse-primary.svg") center no-repeat;
   background-size: 30%;
 }
 #about-1 .photo {
@@ -2324,7 +2332,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (max-width: 767px) {
   #about-1 .photo {
     animation: fade-in 2s forwards;
-    background: url("../images/about-phone-1.jpg") no-repeat;
+    background: url("/../images/about-phone-1.jpg") no-repeat;
     background-position: 40%;
     background-size: cover;
     height: 100%;
@@ -2334,7 +2342,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (min-width: 768px) {
   #about-1 .photo {
     animation: fade-in-up 2s forwards;
-    background: url("../images/about-1.jpg") no-repeat;
+    background: url("/../images/about-1.jpg") no-repeat;
     background-size: calc(100% - calc(45px + var(--logotype-width)));
     background-position: 100% 0;
     height: 110%;
@@ -2764,7 +2772,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 #about-3 .circle > span::after {
   content: '';
-  background: url("../images/arrow.png") center no-repeat;
+  background: url("/../images/arrow.png") center no-repeat;
   background-size: cover;
   position: absolute;
   right: 0;
@@ -3141,11 +3149,11 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   color: #022329;
 }
 #reviews-1 .circle a {
-  background: url("../images/mouse-dark.svg") center no-repeat;
+  background: url("/../images/mouse-dark.svg") center no-repeat;
   background-size: 30%;
 }
 #reviews-1 .photo {
-  background: url("../images/reviews-1.jpg") no-repeat;
+  background: url("/../images/reviews-1.jpg") no-repeat;
   width: calc(100% - calc(45px + var(--logotype-width)));
   background-position: 100% 0;
   background-size: cover;
@@ -3565,7 +3573,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
     margin-top: 15px;
   }
   #reviews-3 .round--1::after {
-    background-image: url(../images/logo-small-light.png);
+    background-image: url(/../images/logo-small-light.png);
     height: 66px;
     width: 77px;
     background-repeat: no-repeat;
@@ -3574,7 +3582,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (max-width: 767px) and (min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 2dppx) {
   #reviews-3 .round--1::after {
     background-size: 65.5px 56px;
-    background-image: url(../images/logo-small-light-2x.png);
+    background-image: url(/../images/logo-small-light-2x.png);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -3593,7 +3601,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
     top: 5vh;
   }
   #reviews-3 .round--1::after {
-    background-image: url(../images/logo-small-light.png);
+    background-image: url(/../images/logo-small-light.png);
     height: 66px;
     width: 77px;
     background-repeat: no-repeat;
@@ -3602,7 +3610,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 2dppx) {
   #reviews-3 .round--1::after {
     background-size: 65.5px 56px;
-    background-image: url(../images/logo-small-light-2x.png);
+    background-image: url(/../images/logo-small-light-2x.png);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3611,16 +3619,19 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
     right: 7.5vw;
   }
   #reviews-3 .round--3 {
-    right: 20vw;
     top: 65vh;
+    right: 18vw;
   }
 }
 @media only screen and (min-width: 1920px) {
   #reviews-3 .round {
     margin-right: calc(90px + var(--logotype-width));
   }
+  #reviews-3 .round--1 {
+    right: 0;
+  }
   #reviews-3 .round--1::after {
-    background-image: url(../images/logo-big-light.png);
+    background-image: url(/../images/logo-big-light.png);
     height: 368px;
     width: 302px;
     background-repeat: no-repeat;
@@ -3629,10 +3640,19 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (min-width: 1920px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1920px) and (min-resolution: 2dppx) {
   #reviews-3 .round--1::after {
     background-size: 151px 184px;
-    background-image: url(../images/logo-big-light-2x.png);
+    background-image: url(/../images/logo-big-light-2x.png);
   }
 }
-
+@media only screen and (min-width: 1920px) {
+  #reviews-3 .round--2 {
+    top: 47.5vh;
+    right: -2.5vw;
+  }
+  #reviews-3 .round--3 {
+    top: 75vh;
+    right: 16vw;
+  }
+}
 @media only screen and (max-width: 767px) {
   #reviews-3 .arrow {
     margin-top: 40vh;
@@ -4160,17 +4180,17 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   }
 }
 #courses-1 .circle a {
-  background: url("../images/mouse-light.svg") center no-repeat;
+  background: url("/../images/mouse-light.svg") center no-repeat;
   background-size: 30%;
 }
 @media only screen and (min-width: 1920px) {
   #courses-1 .circle a {
-    background: url("../images/mouse-primary.svg") center no-repeat;
+    background: url("/../images/mouse-primary.svg") center no-repeat;
     background-size: 30%;
   }
 }
 #courses-1 .photo {
-  background: url("../images/courses-1.jpg") no-repeat;
+  background: url("/../images/courses-1.jpg") no-repeat;
   width: calc(100% - calc(45px + var(--logotype-width)));
   background-position: 100% 0;
   background-size: cover;
@@ -5029,6 +5049,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   #courses-7 .block .absolute--1 {
     margin-right: calc(45px + var(--logotype-width));
     margin-left: auto;
+    top: -5vh;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -5056,7 +5077,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 #courses-7 .block .absolute div {
   background-color: #fd959e;
   position: absolute;
-  height: 50%;
+  height: 90%;
   right: -10%;
   width: 80%;
 }
@@ -5067,7 +5088,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 @media only screen and (min-width: 768px) {
   #courses-7 .block .absolute div {
-    top: 60%;
+    top: 20%;
   }
 }
 #courses-7 .block .paragraph {
@@ -5821,7 +5842,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  background-image: url(../images/arrow-small.png);
+  background-image: url(/../images/arrow-small.png);
   height: 11px;
   width: 25px;
   background-repeat: no-repeat;
@@ -5834,7 +5855,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #courses-11 .info ul li::before {
     background-size: 25px 10.5px;
-    background-image: url(../images/arrow-small-2x.png);
+    background-image: url(/../images/arrow-small-2x.png);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -5890,6 +5911,16 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (min-width: 1920px) {
   #courses-11 .round {
     margin-right: calc(90px + var(--logotype-width));
+  }
+  #courses-11 .round--1 {
+    right: 15vw;
+  }
+  #courses-11 .round--2 {
+    right: 0;
+    top: 42.5vh;
+  }
+  #courses-11 .round--3 {
+    top: 45vh;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -6113,14 +6144,13 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  background-image: url(../images/arrow-dark-small.png);
+  background-image: url(/../images/arrow-dark-small.png);
   height: 11px;
   width: 25px;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
-  background-color: #fd959e;
   background-position: center;
-  background-size: cover;
+  background-color: #fd959e;
   align-items: center;
   position: absolute;
   display: flex;
@@ -6132,7 +6162,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #courses-12 .paragraph .purchase::after {
     background-size: 25px 10.5px;
-    background-image: url(../images/arrow-dark-small-2x.png);
+    background-image: url(/../images/arrow-dark-small-2x.png);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -6153,11 +6183,11 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   color: #022329;
 }
 #events-1 .circle a {
-  background: url("../images/mouse-dark.svg") center no-repeat;
+  background: url("/../images/mouse-dark.svg") center no-repeat;
   background-size: 30%;
 }
 #events-1 .photo {
-  background: url("../images/events-1.jpg") no-repeat;
+  background: url("/../images/events-1.jpg") no-repeat;
   background-position: 100% 0;
   background-size: cover;
   position: absolute;
@@ -6245,9 +6275,22 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 #events-2 {
   background-color: #fd959e;
 }
+@media only screen and (max-width: 767px) {
+  #events-2 {
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #events-2 {
+    padding-bottom: 12.5vh;
+  }
+}
 @media only screen and (min-width: 768px) {
   #events-2 {
     padding-right: 45px;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -6268,6 +6311,18 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 #events-2.animate .paragraph span {
   animation-delay: .4s;
 }
+#events-2.animate .arrow span:nth-of-type(1) {
+  animation: fade-in-down 2s 0.2s forwards;
+}
+#events-2.animate .arrow span:nth-of-type(2) {
+  animation: fade-in-down 2s 0.4s forwards;
+}
+#events-2.animate .arrow span:nth-of-type(3) {
+  animation: fade-in-down 2s 0.6s forwards;
+}
+#events-2.animate .arrow span:nth-of-type(4) {
+  animation: fade-in-down 2s 0.8s forwards;
+}
 #events-2 .slogan {
   opacity: 0;
   z-index: 1;
@@ -6278,13 +6333,11 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media only screen and (max-width: 767px) {
   #events-2 .slogan {
     font-size: 2.125em;
-    margin-top: 7.5vh;
   }
 }
 @media only screen and (max-width: 399px) {
   #events-2 .slogan {
     font-size: 1.5em;
-    margin-top: 10vh;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -6367,6 +6420,27 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   color: #fff;
   display: initial;
   font-size: inherit;
+}
+#events-2 .arrow {
+  right: 0;
+  z-index: 1;
+  position: absolute;
+}
+@media only screen and (max-width: 767px) {
+  #events-2 .arrow {
+    margin-right: 5vw;
+    margin-top: 2.5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #events-2 .arrow {
+    margin-top: 5vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #events-2 .arrow {
+    margin-right: 10vw;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -6975,7 +7049,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   color: #fff;
 }
 #blog-1 .circle a {
-  background: url("../images/mouse-light.svg") center no-repeat;
+  background: url("/../images/mouse-light.svg") center no-repeat;
   background-size: 30%;
 }
 #blog-1 .title {
@@ -7417,11 +7491,11 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   color: #022329;
 }
 #post-1 .circle a {
-  background: url("../images/mouse-dark.svg") center no-repeat;
+  background: url("/../images/mouse-dark.svg") center no-repeat;
   background-size: 30%;
 }
 #post-1 .photo {
-  background: url("../images/post-1.jpg") no-repeat;
+  background: url("/../images/post-1.jpg") no-repeat;
   animation: fade-in-up 2s forwards;
   position: absolute;
   z-index: 1;
@@ -7904,38 +7978,41 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
     display: flex;
   }
 }
-#post-7 .hashtags p {
-  color: #fff;
-  font-family: "harmonia cond bold";
+#post-7 .hashtags a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
   text-transform: uppercase;
+  font-family: "harmonia cond bold";
+  color: #fff;
 }
 @media only screen and (max-width: 767px) {
-  #post-7 .hashtags p {
+  #post-7 .hashtags a {
     font-size: 3.75em;
   }
 }
 @media only screen and (max-width: 399px) {
-  #post-7 .hashtags p {
+  #post-7 .hashtags a {
     font-size: 3.125em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #post-7 .hashtags p {
+  #post-7 .hashtags a {
     font-size: 3.75em;
     width: 33.33%;
     float: left;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #post-7 .hashtags p {
+  #post-7 .hashtags a {
     font-size: 5em;
   }
 }
-#post-7 .hashtags p:not(.selected) {
-  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
-}
-#post-7 .hashtags p.selected {
+#post-7 .hashtags a:focus, #post-7 .hashtags a:hover {
   color: #fd959e;
+  text-shadow: none;
 }
 #post-7 .share {
   opacity: 0;
@@ -7984,6 +8061,11 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   }
 }
 #post-7 .share a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  border-bottom: 4px solid transparent;
   color: #1970c8;
 }
 @media only screen and (max-width: 767px) {
@@ -8009,6 +8091,9 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 #post-7 .share a:not(:last-of-type) {
   margin-right: 5vw;
 }
+#post-7 .share a:focus, #post-7 .share a:hover {
+  border-color: #1970c8;
+}
 #post-7 .breadcrumbs {
   margin: 5vh 0;
 }
@@ -8020,10 +8105,14 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   }
 }
 #post-7 .breadcrumbs a {
-  color: #fff;
-  font-size: 1.5625em;
-  font-family: "harmonia cond bold";
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
   text-transform: uppercase;
+  font-family: "harmonia cond bold";
+  font-size: 1.5625em;
+  color: #fff;
 }
 @media only screen and (max-width: 399px) {
   #post-7 .breadcrumbs a {
@@ -8037,6 +8126,10 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 #post-7 .breadcrumbs a:not(.current) {
   text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
+}
+#post-7 .breadcrumbs a:focus, #post-7 .breadcrumbs a:hover {
+  color: #fd959e;
+  text-shadow: none;
 }
 #post-7 .breadcrumbs a.current {
   color: #fd959e;
@@ -8053,7 +8146,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  background-image: url(../images/arrow-small.png);
+  background-image: url(/../images/arrow-small.png);
   height: 11px;
   width: 25px;
   background-repeat: no-repeat;
@@ -8063,7 +8156,7 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #post-7 .breadcrumbs span {
     background-size: 25px 10.5px;
-    background-image: url(../images/arrow-small-2x.png);
+    background-image: url(/../images/arrow-small-2x.png);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -8098,18 +8191,18 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   }
 }
 #faq-1 .circle a {
-  background: url("../images/mouse-light.svg") center no-repeat;
+  background: url("/../images/mouse-light.svg") center no-repeat;
   background-size: 30%;
 }
 @media only screen and (min-width: 1920px) {
   #faq-1 .circle a {
-    background: url("../images/mouse-dark.svg") center no-repeat;
+    background: url("/../images/mouse-dark.svg") center no-repeat;
     background-size: 30%;
   }
 }
 #faq-1 .photo {
   animation: fade-in-up 2s forwards;
-  background: url("../images/faq-1.jpg") no-repeat;
+  background: url("/../images/faq-1.jpg") no-repeat;
   position: absolute;
   z-index: 1;
   opacity: 0;
@@ -8395,12 +8488,6 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 #faq-4 .item:not(:last-of-type) {
   border-bottom-color: #022329;
 }
-#faq-4 .item span {
-  color: #022329;
-}
-#faq-4 .item p {
-  color: #022329;
-}
 
 #faq-5 {
   background-color: #022329;
@@ -8437,6 +8524,9 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
 }
 #faq-5 .item p {
   color: #fd959e;
+}
+#faq-5 .item p:focus, #faq-5 .item p:hover, #faq-5 .item p.selected {
+  color: #fff;
 }
 
 #faq-6.animate .title {
@@ -8609,4 +8699,117 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
     background-color: #022329;
     color: #fd959e;
   }
+}
+
+#error {
+  background-color: #fff;
+}
+#error .background {
+  background-color: #fd959e;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #error .background {
+    animation: fade-in 2s forwards;
+    height: 100%;
+    width: 100%;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #error .background {
+    animation: fade-in-right 2s forwards;
+    width: calc(100% - calc(45px + var(--logotype-width)));
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #error .background {
+    width: calc(100% - calc(90px + var(--logotype-width)));
+  }
+}
+#error .paragraph {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+#error .paragraph > * {
+  opacity: 0;
+}
+#error .paragraph p {
+  color: #fff;
+  line-height: 1;
+  animation-delay: .1s;
+  font-family: "harmonia cond bold";
+  animation: fade-in-right 2s 0.1s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #error .paragraph p {
+    font-size: 6.25em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #error .paragraph p {
+    font-size: 18.75em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #error .paragraph p {
+    font-size: 21.875em;
+  }
+}
+#error .paragraph span {
+  color: #fff;
+  display: block;
+  font-family: "harmonia cond light";
+  animation: fade-in-right 2s 0.2s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #error .paragraph span {
+    margin-bottom: 5vh;
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #error .paragraph span {
+    margin-bottom: 10vh;
+    font-size: 1.875em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #error .paragraph span {
+    font-size: 3.125em;
+  }
+}
+#error .paragraph a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  animation: fade-in-right 2s 0.3s forwards;
+  font-family: "harmonia cond light";
+  background-color: #022329;
+  padding: 10px 20px 5px;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #error .paragraph a {
+    font-size: 1.25em;
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #error .paragraph a {
+    font-size: 1.5625em;
+    width: 150px;
+  }
+}
+#error .paragraph a:focus, #error .paragraph a:hover {
+  color: #022329;
+  background-color: #fff;
 }

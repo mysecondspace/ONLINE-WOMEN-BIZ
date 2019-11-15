@@ -26,6 +26,10 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [
   {
+    "url": "404.html",
+    "revision": "4b9a286689b5758da48e4eec1aa9d6b5"
+  },
+  {
     "url": "about.html",
     "revision": "3e6d99716641432ce36eb5d009708d5d"
   },
@@ -35,11 +39,11 @@ self.__precacheManifest = [
   },
   {
     "url": "courses.html",
-    "revision": "612d90609ae1b69037dc7a903b879b08"
+    "revision": "3bc96bf8f6992c8ad883ae2e222943c3"
   },
   {
     "url": "events.html",
-    "revision": "77e0ed9f2133606752e141aa0c7c2263"
+    "revision": "2dc546a305d25e0b6efff9ab3f2946aa"
   },
   {
     "url": "faq.html",
@@ -407,11 +411,11 @@ self.__precacheManifest = [
   },
   {
     "url": "post.html",
-    "revision": "bd008441e08527be42a6784c85160b0a"
+    "revision": "9dfa5ae5713af89a5559900aeef663cc"
   },
   {
     "url": "reviews.html",
-    "revision": "15f3971ca9b3794e9e74b6de4cc96628"
+    "revision": "b45645ed2c2c4b848cbb77ed42dc61ab"
   },
   {
     "url": "scripts/hover.min.js",
@@ -423,7 +427,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "6e0b72b8f8672cb49d8df9e0189f1874"
+    "revision": "83701c9aa54d0dd675e0c9c03ba948d5"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -435,11 +439,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "d241b2f0b7e7d1ff30a969a902ace137"
+    "revision": "52077aadb0596f9b9ed73ef66811d151"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "249873174509fca45cd78e7944d9f504"
+    "revision": "a01573868238b1a7d01430ecbe216910"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
