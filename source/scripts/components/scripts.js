@@ -330,9 +330,13 @@ $(document).ready(function() {
       }
     });
   } else if (courses.length > 0) {
-    $('#menu a[href*="courses"]').addClass('active');
+    $('#menu a[href*="entrepreneur-1"]').addClass('active');
     Emblem.init('#scroll p');
-    Emblem.init('#circle p');
+
+    // check page
+    if ($('.foundation')[0]){
+      Emblem.init('#circle p');
+    };
 
     // initialize scroll on the courses page
     $('#main').fullpage({

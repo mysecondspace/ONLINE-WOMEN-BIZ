@@ -270,12 +270,8 @@
           &:hover,
           &.active {
             font-size: em(24);
+            font-family: $cond-bold;
           }
-        }
-
-        &:hover,
-        &.active {
-          font-family: $cond-bold;
         }
       }
     }
