@@ -1,0 +1,39 @@
+#entrepreneurs {
+  background-color: $primary;
+
+  @include media(phone) {
+    padding: 0;
+  }
+
+  &.animate {
+    table tr,
+    .title-above-table, {
+      animation: fade-in-up $time-slow forwards;
+    }
+
+    table tr {
+      animation-delay: .1s;
+
+      &:nth-of-type(2) {
+        animation-delay: .2s;
+      }
+    }
+  }
+
+  table tr {
+    border-top: 1px solid $dark;
+
+    &:last-of-type {
+      border-bottom: 1px solid $dark;
+    }
+
+    td:last-of-type a {
+      color: $dark;
+
+      @include media(phone) {
+        background-color: $secondary;
+        color: $primary;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ $(document).ready(function() {
       index = $('#index'),
       about = $('#about'),
       reviews = $('#reviews'),
+      entrepreneurs = $('#entrepreneurs'),
       courses = $('#courses'),
       events = $('#events'),
       blog = $('#blog'),
@@ -740,6 +741,30 @@ $(document).ready(function() {
             } else {
               $('#logo').addClass('small light');
             };
+
+            break;
+        }
+      }
+    });
+  } else if (entrepreneurs.length > 0) {
+    $('#menu a[href*="courses"]').addClass('active');
+
+    // initialize scroll on the courses page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#entrepreneurs').addClass('animate');
+            $('#logo').addClass('big light');
+            $('#menu').addClass('primary');
+            $('#nav').addClass('light');
 
             break;
         }

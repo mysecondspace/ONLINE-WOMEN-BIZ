@@ -2,7 +2,7 @@
 |-- [HOME](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/index.html)<br>
 |-- [ABOUT](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/about.html)<br>
 |-- [REVIEWS](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/reviews.html)<br>
-|-- COURSES<br>
+|-- [COURSES](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/courses.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Woman Entrepreneur 1: Foundation](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/entrepreneur-1.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Woman Entrepreneur 2: Growth](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/entrepreneur-2.html)<br>
 |-- [EVENTS](https://mysecondspace.github.io/ONLINE-WOMEN-BIZ/build/events.html)<br>

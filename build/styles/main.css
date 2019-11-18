@@ -4166,6 +4166,40 @@ body#faq #footer > div div, body#post #footer > div div, body#events #footer > d
   }
 }
 
+#entrepreneurs {
+  background-color: #fd959e;
+}
+@media only screen and (max-width: 767px) {
+  #entrepreneurs {
+    padding: 0;
+  }
+}
+#entrepreneurs.animate table tr,
+#entrepreneurs.animate .title-above-table {
+  animation: fade-in-up 2s forwards;
+}
+#entrepreneurs.animate table tr {
+  animation-delay: .1s;
+}
+#entrepreneurs.animate table tr:nth-of-type(2) {
+  animation-delay: .2s;
+}
+#entrepreneurs table tr {
+  border-top: 1px solid #022329;
+}
+#entrepreneurs table tr:last-of-type {
+  border-bottom: 1px solid #022329;
+}
+#entrepreneurs table tr td:last-of-type a {
+  color: #022329;
+}
+@media only screen and (max-width: 767px) {
+  #entrepreneurs table tr td:last-of-type a {
+    background-color: #022329;
+    color: #fd959e;
+  }
+}
+
 #courses-1 {
   background-color: #fff;
 }
