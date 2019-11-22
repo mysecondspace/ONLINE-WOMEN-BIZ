@@ -12,7 +12,7 @@
     }
   }
 
-  .photo {
+  img {
     background: url('/../images/post-1.jpg') no-repeat;
     animation: fade-in-up $time-slow forwards;
     position: absolute;
@@ -21,23 +21,15 @@
     right: 0;
 
     @include media(phone) {
-      background-position: -45% 45%;
-      background-size: 130%;
-      height: 100%;
-      width: 65%;
-    }
-
-    @include media(smallest) {
-      background-position: -45% 67%;
+      right: -20vw;
+      width: 75%;
+      top: 25vh;
     }
 
     @include media(tablet) {
-      background-position: 100% 0;
-      background-size: contain;
       right: $indent-normal;
       top: $indent-normal;
       height: 70%;
-      width: 100%;
     }
 
     @include media(biggest) {
@@ -110,7 +102,7 @@
       opacity: 0;
     }
 
-    p {
+    h1 {
       color: $dark;
       margin-bottom: 1%;
       animation-delay: .1s;
@@ -172,11 +164,24 @@
 
 #post-2 {
   &.animate {
-    .text p {
-      animation: fade-in-up $time-slow forwards;
+    .text {
+      p,
+      ul li {
+        animation: fade-in-up $time-slow forwards;
 
-      &:last-of-type {
-        animation-delay: .1s;
+        &:last-of-type {
+          animation-delay: .1s;
+        }
+      }
+
+      ul li {
+        $list: 3;
+
+        @for $i from 1 through $list {
+          &:nth-of-type(#{$i}) {
+            animation-delay: .2s * $i;
+          }
+        }
       }
     }
   }
@@ -385,8 +390,13 @@
     $text: 6;
 
     @for $i from 1 through $text {
-      .text p:nth-of-type(#{$i}) {
-        animation: fade-in-up $time-slow .1s * $i forwards;
+      .text {
+        p,
+        h2 {
+          &:nth-of-type(#{$i}) {
+            animation: fade-in-up $time-slow .5s * $i forwards;
+          }
+        }
       }
     }
   }
@@ -437,8 +447,13 @@
     $text: 4;
 
     @for $i from 1 through $text {
-      .text p:nth-of-type(#{$i}) {
-        animation: fade-in-up $time-slow .1s * $i forwards;
+      .text {
+        p,
+        h2 {
+          &:nth-of-type(#{$i}) {
+            animation: fade-in-up $time-slow .5s * $i forwards;
+          }
+        }
       }
     }
   }

@@ -31,51 +31,63 @@ self.__precacheManifest = [
   },
   {
     "url": "about.html",
-    "revision": "f71c7431fcf333c1c792d8ed05e08490"
+    "revision": "f959d30d1f3e80694877fb92d777bee5"
   },
   {
     "url": "blog.html",
-    "revision": "48311e299b176fc5cf2384e29844c0e0"
+    "revision": "b66a64020f9f2cbaef7639ed60282e9f"
   },
   {
     "url": "courses.html",
-    "revision": "45f5e6b0a07a9d5b1c64c5b7178ef0c8"
+    "revision": "ae0bbf15421d4c3e81d0bd83cdb8ca20"
   },
   {
     "url": "entrepreneur-1.html",
-    "revision": "a1f6ef118b3063d73924cc7214731d9d"
+    "revision": "46db0ec4d33d588891e99932e29db2f3"
   },
   {
     "url": "entrepreneur-2.html",
-    "revision": "3cb6e8adb05e312c848d25be545a681d"
-  },
-  {
-    "url": "entrepreneurs-page.scss",
-    "revision": "fe6e01cd672574ce3c2189da62d35fe9"
+    "revision": "dba29bd3a7d99dcbb24d24545a92eb33"
   },
   {
     "url": "events.html",
-    "revision": "2dc546a305d25e0b6efff9ab3f2946aa"
+    "revision": "3dcb105fa306b6dfaf9b5cc148ade5e0"
   },
   {
     "url": "faq.html",
-    "revision": "1c8f093706bb13247464a25092cc8b9c"
+    "revision": "db8265067587e1838612b1ce263a4cc0"
   },
   {
     "url": "fonts/harmonia-bold.otf",
     "revision": "ee8663cd4c1627cb0aad21b8c8b0f63e"
   },
   {
+    "url": "fonts/harmonia-cond-bold 3.ttf",
+    "revision": "e9df7da42e3127cda579905e5ba2191c"
+  },
+  {
     "url": "fonts/harmonia-cond-bold.ttf",
     "revision": "e9df7da42e3127cda579905e5ba2191c"
+  },
+  {
+    "url": "fonts/harmonia-cond-light 3.ttf",
+    "revision": "c43ce7896f8bdc4da27fd192d4814d6b"
   },
   {
     "url": "fonts/harmonia-cond-light.ttf",
     "revision": "c43ce7896f8bdc4da27fd192d4814d6b"
   },
   {
+    "url": "fonts/harmonia-cond-normal 3.ttf",
+    "revision": "9bfb9696975c03b0ed9b93cdb5123ad0"
+  },
+  {
     "url": "fonts/harmonia-cond-normal.ttf",
     "revision": "9bfb9696975c03b0ed9b93cdb5123ad0"
+  },
+  {
+    "url": "fonts/harmonia-normal 2.otf",
+    "revision": "6fd7e0f0248f1c0320476e13c81e4047"
   },
   {
     "url": "fonts/harmonia-normal.otf",
@@ -96,6 +108,10 @@ self.__precacheManifest = [
   {
     "url": "images/about-4.jpg",
     "revision": "6d43f7f4e40151bd1b6acab26d7bcc20"
+  },
+  {
+    "url": "images/about-online-women-biz.jpg",
+    "revision": "c627a9b184d828c51e211985e923f65d"
   },
   {
     "url": "images/about-phone-1.jpg",
@@ -162,24 +178,24 @@ self.__precacheManifest = [
     "revision": "e7e157c786dd69b7c23721aa98db403f"
   },
   {
-    "url": "images/displacement.png",
+    "url": "images/displacement 2.png",
     "revision": "3408054e5f083993c59b1b92204fbc12"
   },
   {
-    "url": "images/events-1.jpg",
-    "revision": "98241d97c042b35ba27548523b3f1cc1"
+    "url": "images/displacement.png",
+    "revision": "3408054e5f083993c59b1b92204fbc12"
   },
   {
     "url": "images/events-2.jpg",
     "revision": "18a5561554538af8d9a92d72ce4dba5f"
   },
   {
-    "url": "images/faq-1.jpg",
-    "revision": "e9cc95d2b75b530e16fc5f979719eeea"
+    "url": "images/events-online-women-biz.jpg",
+    "revision": "98241d97c042b35ba27548523b3f1cc1"
   },
   {
-    "url": "images/foundation-1.jpg",
-    "revision": "c9f44f945ac160868a297a13b2dee220"
+    "url": "images/faq-1.jpg",
+    "revision": "e9cc95d2b75b530e16fc5f979719eeea"
   },
   {
     "url": "images/foundation-2.png",
@@ -222,24 +238,48 @@ self.__precacheManifest = [
     "revision": "7678f0fded467474016f58115a4dd44f"
   },
   {
+    "url": "images/index-3 2.jpg",
+    "revision": "5a374a5ad4215d17c6ca78cbca443d84"
+  },
+  {
     "url": "images/index-3.jpg",
     "revision": "5a374a5ad4215d17c6ca78cbca443d84"
+  },
+  {
+    "url": "images/index-4 2.jpg",
+    "revision": "a637ba09d20381686059acbe7315e301"
   },
   {
     "url": "images/index-4.jpg",
     "revision": "a637ba09d20381686059acbe7315e301"
   },
   {
+    "url": "images/index-hover-1 2.jpg",
+    "revision": "820da0ee790921dcf3ea852346f2f26b"
+  },
+  {
     "url": "images/index-hover-1.jpg",
     "revision": "820da0ee790921dcf3ea852346f2f26b"
+  },
+  {
+    "url": "images/index-hover-2 2.jpg",
+    "revision": "611086be881a338a90679777661f68c5"
   },
   {
     "url": "images/index-hover-2.jpg",
     "revision": "611086be881a338a90679777661f68c5"
   },
   {
+    "url": "images/index-hover-3 2.jpg",
+    "revision": "3848c94c22277f531b594928e0c722fa"
+  },
+  {
     "url": "images/index-hover-3.jpg",
     "revision": "3848c94c22277f531b594928e0c722fa"
+  },
+  {
+    "url": "images/index-hover-4 2.jpg",
+    "revision": "866077db7d60405ffd926ded7f4c6663"
   },
   {
     "url": "images/index-hover-4.jpg",
@@ -247,7 +287,15 @@ self.__precacheManifest = [
   },
   {
     "url": "images/letter.png",
-    "revision": "590e2a296bf8534ec01670f0ef01ed3f"
+    "revision": "38711862aaf6bbb403466965fcb115aa"
+  },
+  {
+    "url": "images/logo-big-dark 2.png",
+    "revision": "981695f909741bb3c2749526d762d2e2"
+  },
+  {
+    "url": "images/logo-big-dark-2x 2.png",
+    "revision": "981695f909741bb3c2749526d762d2e2"
   },
   {
     "url": "images/logo-big-dark-2x.png",
@@ -258,12 +306,24 @@ self.__precacheManifest = [
     "revision": "981695f909741bb3c2749526d762d2e2"
   },
   {
+    "url": "images/logo-big-light 2.png",
+    "revision": "3ec2c2421f01c2b712f28cb9e87f3621"
+  },
+  {
+    "url": "images/logo-big-light-2x 2.png",
+    "revision": "3ec2c2421f01c2b712f28cb9e87f3621"
+  },
+  {
     "url": "images/logo-big-light-2x.png",
     "revision": "3ec2c2421f01c2b712f28cb9e87f3621"
   },
   {
     "url": "images/logo-big-light.png",
     "revision": "3ec2c2421f01c2b712f28cb9e87f3621"
+  },
+  {
+    "url": "images/logo-big-primary-2x 2.png",
+    "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
     "url": "images/logo-big-primary-2x.png",
@@ -274,12 +334,24 @@ self.__precacheManifest = [
     "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
+    "url": "images/logo-dark 2.svg",
+    "revision": "cfc2d1638c778f6d8061574c62987d69"
+  },
+  {
     "url": "images/logo-dark.svg",
     "revision": "cfc2d1638c778f6d8061574c62987d69"
   },
   {
+    "url": "images/logo-light 2.svg",
+    "revision": "4e299a7be4f4422989e243ce7192aab6"
+  },
+  {
     "url": "images/logo-light.svg",
     "revision": "4e299a7be4f4422989e243ce7192aab6"
+  },
+  {
+    "url": "images/logo-small-dark 2.png",
+    "revision": "f96596dd2835a1166fc3f786a8d7632b"
   },
   {
     "url": "images/logo-small-dark-2x.png",
@@ -291,11 +363,15 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-light-2x.png",
-    "revision": "87bab3a410a6e244406ef1a9baaf919d"
+    "revision": "4584d0753b5908195e23787e74c4f978"
   },
   {
     "url": "images/logo-small-light.png",
-    "revision": "1038c5865dacc71684e5faee1d0c1934"
+    "revision": "756e1005c77b17ec41c0549e70376a4f"
+  },
+  {
+    "url": "images/mouse-dark 2.svg",
+    "revision": "6fdc75dd67a4597baf7d885192f446d9"
   },
   {
     "url": "images/mouse-dark.svg",
@@ -303,19 +379,15 @@ self.__precacheManifest = [
   },
   {
     "url": "images/mouse-light.svg",
-    "revision": "06d9803b5d30acf2fcd56deb4bcda386"
+    "revision": "80eba6d79c5697c74aa3b1a4e7fc1fa8"
   },
   {
     "url": "images/mouse-primary.svg",
-    "revision": "07d1b38b7a6f9c8cd919f0b9052f5a5a"
+    "revision": "d6fdd2314ffae788951f86a5190d0a81"
   },
   {
     "url": "images/post-1.jpg",
     "revision": "0f7f5986be37d3a3a61f5e7db6ceee58"
-  },
-  {
-    "url": "images/reviews-1.jpg",
-    "revision": "d4c2de35561139fccebaba63430fe0ce"
   },
   {
     "url": "images/reviews-2.jpg",
@@ -354,16 +426,20 @@ self.__precacheManifest = [
     "revision": "80de979f3bb83cad5b7b7f58ccdcbf86"
   },
   {
+    "url": "images/women-entrepreneur-life-business-success.jpg",
+    "revision": "901a906f078168f4ef421efc6e3f8828"
+  },
+  {
     "url": "index.html",
-    "revision": "021ac748a12c7885303924f25f84948f"
+    "revision": "278db6f9d136d7bce975220d06088031"
   },
   {
     "url": "post.html",
-    "revision": "1f3d291a0a6a6ec8a8030fa29521f7d5"
+    "revision": "1322e45741329c6cc0f053b8e015a27a"
   },
   {
     "url": "reviews.html",
-    "revision": "11d2c5218f329e4a913892a44e45b334"
+    "revision": "e5aaee10274811eeac68159114efe11c"
   },
   {
     "url": "scripts/hover.min.js",
@@ -374,8 +450,16 @@ self.__precacheManifest = [
     "revision": "9bbcdae459cb4cc81dae479e280ac8ee"
   },
   {
+    "url": "scripts/main.min 3.js",
+    "revision": "f669e47a090e8aebff51844eab1b516a"
+  },
+  {
     "url": "scripts/main.min.js",
-    "revision": "627168c70d9cf05bde680fdc2578e813"
+    "revision": "f669e47a090e8aebff51844eab1b516a"
+  },
+  {
+    "url": "scripts/scripts.min 3.js",
+    "revision": "c977c28865aa3580c7cd480ea3fd45f1"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -387,11 +471,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "c249352068c4bbed097f9c3ad5369a8d"
+    "revision": "386cf0afe2bdbc0a14ea75c3576b886b"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "4b9354e8ea0e2fa237509a32b236641c"
+    "revision": "2917651daa7f80b3299c917969e842ab"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

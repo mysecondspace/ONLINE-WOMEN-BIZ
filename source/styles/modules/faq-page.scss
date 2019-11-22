@@ -300,6 +300,7 @@
 
   &.animate {
     $item: 10;
+
     @for $i from 1 through $item {
       .item:nth-of-type(#{$i}) {
         animation: fade-in-up $time-slow .1s * $i forwards;
@@ -317,6 +318,7 @@
 
   &.animate {
     $item: 8;
+
     @for $i from 1 through $item {
       .item:nth-of-type(#{$i}) {
         animation: fade-in-up $time-slow .1s * $i forwards;
@@ -329,7 +331,8 @@
       border-bottom-color: $primary;
     }
 
-    span {
+    div,
+    ul li::before {
       color: $light;
     }
 

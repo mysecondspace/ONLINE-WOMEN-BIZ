@@ -13,7 +13,7 @@
   }
 
   .photo {
-    background: url('/../images/events-1.jpg') no-repeat;
+    background: url('/../images/events-online-women-biz.jpg') no-repeat;
     background-position: 100% 0;
     background-size: cover;
     position: absolute;
@@ -550,9 +550,9 @@
       }
     }
 
-    @for $i from 1 through $paragraph {
+    @for $i from 1 through $list {
       ul li:nth-of-type(#{$i}) {
-        animation: fade-in-up $time-slow .3s * $i forwards;
+        animation: fade-in-up $time-slow .8s * $i forwards;
       }
     }
   }

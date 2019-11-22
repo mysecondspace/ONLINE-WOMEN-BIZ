@@ -333,7 +333,7 @@
     align-items: center;
     justify-content: space-between;
 
-    div {
+    a {
       background: url('../images/logo-light.svg') no-repeat;
       display: flex;
       width: 100px;
@@ -735,8 +735,7 @@
     }
   }
 
-  span {
-    display: block;
+  div {
     font-size: em(18);
     line-height: 1.48;
     padding: 1.5vh 0 3vh;
@@ -749,6 +748,21 @@
     @include media(biggest) {
       padding: 3vh 0 4vh;
       font-size: em(22);
+    }
+
+    ul li {
+      padding-left: 20px;
+      position: relative;
+
+      @include media(phone) {
+        padding-left: 15px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '\2022';
+        left: 0;
+      }
     }
   }
 }
@@ -775,7 +789,7 @@
   }
 
   &.pristine {
-    &:hover:after {
+    &:hover::after {
       opacity: 1;
     }
 
@@ -917,7 +931,8 @@
     margin-left: $padding-biggest;
   }
 
-  > p {
+  > p,
+  > h2 {
     opacity: 0;
     color: $dark;
 
@@ -950,36 +965,58 @@
           padding-top: 5vh;
         }
       }
-
-      + p {
-        line-height: 1.48;
-
-        @include media(phone) {
-          margin-top: 2.5vh;
-        }
-
-        @include media(smallest) {
-          font-size: em(14);
-        }
-
-        @include media(tablet) {
-          font-size: em(20);
-          margin-top: 5vh;
-        }
-
-        @include media(biggest) {
-          margin-top: 2.5vh;
-          font-size: em(24);
-        }
-      }
     }
   }
 
-  &--light > p {
-    color: $light;
+  ul li,
+  p:not(.title) {
+    line-height: 1.48;
+    color: $dark;
+    opacity: 0;
 
-    &.title {
+    @include media(phone) {
+      margin-top: 2.5vh;
+    }
+
+    @include media(smallest) {
+      font-size: em(14);
+    }
+
+    @include media(tablet) {
+      font-size: em(20);
+      margin-top: 5vh;
+    }
+
+    @include media(biggest) {
+      margin-top: 2.5vh;
+      font-size: em(24);
+    }
+  }
+
+  ul li {
+    padding-left: 30px;
+    position: relative;
+
+    @include media(phone) {
+      padding-left: 15px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '\2022';
       color: $primary;
+      left: 0;
+    }
+  }
+
+  &--light {
+    > p,
+    > h2 {
+      color: $light;
+
+      &.title {
+        color: $primary;
+      }
     }
   }
 }

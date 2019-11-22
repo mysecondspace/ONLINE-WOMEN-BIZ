@@ -46,11 +46,11 @@ $(document).ready(function() {
 
   // toggle list
   var elem = $(".item p"),
-      item = $(".item span");
+      item = $(".item div");
 
   item.hide();
   elem.click(function(e) {
-    var span = $(this).parent().find("span");
+    var span = $(this).parent().find("div");
 
     span.toggle();
     item.not(span).hide();
@@ -213,6 +213,7 @@ $(document).ready(function() {
             $('#about-1').addClass('animate');
             $('#logo').addClass('big primary');
             $('#menu').addClass('light');
+            $('#nav').addClass('primary');
 
             break;
           case 1:
@@ -762,9 +763,9 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#entrepreneurs').addClass('animate');
-            $('#logo').addClass('big light');
+            $('#logo').addClass('small dark');
             $('#menu').addClass('primary');
-            $('#nav').addClass('light');
+            $('#nav').addClass('dark');
 
             break;
         }
