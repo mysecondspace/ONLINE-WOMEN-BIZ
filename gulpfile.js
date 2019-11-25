@@ -64,7 +64,7 @@ gulp.task('html', () => {
     .pipe(plugins.plumber())
     .pipe(plugins.rigger())
     .pipe(plugins.htmlMinifier({
-      collapseWhitespace: true
+      collapseWhitespace: false
     }))
     .pipe(gulp.dest(path.build.html))
     .pipe(plugins.browserSync.reload({

@@ -2,7 +2,7 @@ $(document).ready(function() {
   var error = $('#error'),
       index = $('#index'),
       about = $('#about'),
-      reviews = $('#reviews'),
+      ninaMua = $('#nina-mua'),
       entrepreneurs = $('#entrepreneurs'),
       courses = $('#courses'),
       events = $('#events'),
@@ -72,8 +72,8 @@ $(document).ready(function() {
       $('.block').addClass('swiper-slide').wrapAll('<div class="swiper-container">').wrapAll('<div class="swiper-wrapper">');
       $('.swiper-container').append('<div class="swiper-pagination"></div>');
 
-    // create swiper on the about page
-    } else if (about.length > 0) {
+    // create swiper on the nina mua page
+    } else if (ninaMua.length > 0) {
       $('.block .absolute img').addClass('swiper-slide').wrapAll('<div class="swiper-container">').wrapAll('<div class="swiper-wrapper">');
       $('.swiper-container').append('<div class="swiper-pagination"></div>');
 
@@ -190,12 +190,12 @@ $(document).ready(function() {
         }
       }
     });
-  } else if (about.length > 0) {
-    $('#menu a[href*="about"]').addClass('active');
+  } else if (ninaMua.length > 0) {
+    $('#menu a[href*="nina-mua"]').addClass('active');
     Emblem.init('#scroll p');
     Emblem.init('#circle p');
 
-    // initialize scroll on the about page
+    // initialize scroll on the nina mua page
     $('#main').fullpage({
 
       // options here
@@ -210,14 +210,14 @@ $(document).ready(function() {
         // sections
         switch(destination.index) {
           case 0:
-            $('#about-1').addClass('animate');
+            $('#nina-mua-1').addClass('animate');
             $('#logo').addClass('big primary');
             $('#menu').addClass('light');
             $('#nav').addClass('primary');
 
             break;
           case 1:
-            $('#about-2').addClass('animate');
+            $('#nina-mua-2').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
             $('#nav').addClass('light');
@@ -233,14 +233,14 @@ $(document).ready(function() {
 
             break;
           case 2:
-            $('#about-3').addClass('animate');
+            $('#nina-mua-3').addClass('animate');
             $('#logo').addClass('small dark');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
 
             break;
           case 3:
-            $('#about-4').addClass('animate');
+            $('#nina-mua-4').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('secondary');
             $('#nav').addClass('light');
@@ -249,11 +249,11 @@ $(document).ready(function() {
         }
       }
     });
-  } else if (reviews.length > 0) {
-    $('#menu a[href*="reviews"]').addClass('active');
+  } else if (about.length > 0) {
+    $('#menu a[href*="about"]').addClass('active');
     Emblem.init('#scroll p');
 
-    // initialize scroll on the about page
+    // initialize scroll on the nina mua page
     $('#main').fullpage({
 
       // options here
@@ -268,7 +268,7 @@ $(document).ready(function() {
         // sections
         switch(destination.index) {
           case 0:
-            $('#reviews-1').addClass('animate');
+            $('#about-1').addClass('animate');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
 
@@ -281,21 +281,21 @@ $(document).ready(function() {
 
             break;
           case 1:
-            $('#reviews-2').addClass('animate');
+            $('#about-2').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
             $('#nav').addClass('light');
 
             break;
           case 2:
-            $('#reviews-3').addClass('animate');
+            $('#about-3').addClass('animate');
             $('#logo').addClass('small dark');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
 
             break;
           case 3:
-            $('#reviews-4').addClass('animate');
+            $('#about-4').addClass('animate');
             $('#logo').addClass('small dark');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
@@ -308,21 +308,21 @@ $(document).ready(function() {
 
             break;
           case 4:
-            $('#reviews-5').addClass('animate');
+            $('#about-5').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
             $('#nav').addClass('light');
 
             break;
           case 5:
-            $('#reviews-6').addClass('animate');
+            $('#about-6').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('secondary');
             $('#nav').addClass('light');
 
             break;
           case 6:
-            $('#reviews-7').addClass('animate');
+            $('#about-7').addClass('animate');
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
             $('#nav').addClass('light');
@@ -445,7 +445,7 @@ $(document).ready(function() {
     $('#menu a[href*="events"]').addClass('active');
     Emblem.init('#scroll p');
 
-    // initialize scroll on the about page
+    // initialize scroll on the nina mua page
     $('#main').fullpage({
 
       // options here
@@ -521,7 +521,7 @@ $(document).ready(function() {
     $('#menu a[href*="blog"]').addClass('active');
     Emblem.init('#scroll p');
 
-    // initialize scroll on the about page
+    // initialize scroll on the nina mua page
     $('#main').fullpage({
 
       // options here
@@ -575,7 +575,7 @@ $(document).ready(function() {
   } else if (post.length > 0) {
     Emblem.init('#scroll p');
 
-    // initialize scroll on the about page
+    // initialize scroll on the nina mua page
     $('#main').fullpage({
 
       // options here
@@ -652,7 +652,7 @@ $(document).ready(function() {
     $('#menu a[href*="faq"]').addClass('active');
     Emblem.init('#scroll p');
 
-    // initialize scroll on the about page
+    // initialize scroll on the nina mua page
     $('#main').fullpage({
 
       // options here
