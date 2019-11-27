@@ -1571,7 +1571,7 @@ body#faq #footer p, body#post #footer p, body#events #footer p, body#reviews #fo
 body#faq #footer p a, body#post #footer p a, body#events #footer p a, body#reviews #footer p a, body#courses #footer p a {
   color: #022329;
 }
-body#faq #footer > div div, body#post #footer > div div, body#events #footer > div div, body#reviews #footer > div div, body#courses #footer > div div {
+body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a, body#reviews #footer > div a, body#courses #footer > div a {
   background: url("../images/logo-dark.svg") no-repeat;
 }
 

@@ -259,11 +259,11 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-big-primary-2x.png",
-    "revision": "ccba8e95903f4bf6a1904d41f5f48f2a"
+    "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
     "url": "images/logo-big-primary.png",
-    "revision": "b2b3a57764898fe37f5be506e370be42"
+    "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
     "url": "images/logo-dark.svg",
@@ -387,7 +387,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.min.css",
-    "revision": "67981780264e5c0fc62891b6736c0343"
+    "revision": "2ca68573bad61a6b58eb3d08f4371019"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
