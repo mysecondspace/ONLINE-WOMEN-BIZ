@@ -36,7 +36,6 @@
 
   .photo {
     background: url('/../images/about-online-women-biz.jpg') no-repeat;
-    width: calc(100% - #{$padding-normal});
     background-position: 100% 0;
     background-size: cover;
     position: absolute;
@@ -55,9 +54,14 @@
 
     @include media(tablet) {
       animation: fade-in-right $time-slow forwards;
+      width: calc(100% - #{$padding-normal} * 3);
       background-position: left;
       background-size: contain;
       left: $padding-normal;
+    }
+
+    @include media(desktop) {
+      width: calc(100% - #{$padding-normal});
     }
 
     @include media(biggest) {
@@ -115,6 +119,10 @@
         }
 
         @include media(tablet) {
+          font-size: em(80);
+        }
+
+        @include media(desktop) {
           font-size: em(100);
         }
 
@@ -202,8 +210,12 @@
     }
 
     @include media(tablet) {
-      font-size: em(140);
+      font-size: em(100);
       width: 50vw;
+    }
+
+    @include media(desktop) {
+      font-size: em(140);
     }
 
     @include media(biggest) {
@@ -232,6 +244,10 @@
 
       @include media(tablet) {
         margin-top: 2.5vh;
+        font-size: em(15);
+      }
+
+      @include media(desktop) {
         font-size: em(20);
       }
 
@@ -261,9 +277,14 @@
     @include media(tablet) {
       right: $indent-normal;
       position: absolute;
+      height: 422px;
+      width: 400px;
+      top: 0;
+    }
+
+    @include media(desktop) {
       height: 638px;
       width: 605px;
-      top: 0;
     }
 
     @include media(biggest) {
@@ -370,8 +391,12 @@
     }
 
     @include media(tablet) {
-      font-size: em(100);
+      font-size: em(80);
       width: 50vw;
+    }
+
+    @include media(desktop) {
+      font-size: em(100);
     }
 
     @include media(biggest) {
@@ -406,6 +431,10 @@
 
       @include media(tablet) {
         margin-top: 2.5vh;
+        font-size: em(15);
+      }
+
+      @include media(desktop) {
         font-size: em(20);
       }
 
@@ -471,12 +500,18 @@
 
       &--2 {
         top: 37.5vh;
-        right: 7.5vw;
+        right: 5vw;
       }
 
       &--3 {
         top: 65vh;
         right: 18vw;
+      }
+    }
+
+    @include media(desktop) {
+      &--2 {
+        right: 7.5vw;
       }
     }
 
@@ -737,6 +772,11 @@
 
         @include media(tablet) {
           margin-right: $indent-normal * 2;
+          height: 422px;
+          width: 300px;
+        }
+
+        @include media(desktop) {
           height: 570px;
           width: 405px;
         }
@@ -762,6 +802,11 @@
 
         @include media(tablet) {
           margin-left: $indent-normal * 2;
+          height: 405px;
+          width: 275px;
+        }
+
+        @include media(desktop) {
           height: 444px;
           width: 301px;
         }
@@ -824,8 +869,12 @@
         }
 
         @include media(tablet) {
-          font-size: em(20);
+          font-size: em(15);
           margin-top: 1vh;
+        }
+
+        @include media(desktop) {
+          font-size: em(20);
         }
 
         @include media(biggest) {
@@ -895,6 +944,10 @@
 
         @include media(tablet) {
           margin-bottom: 5vh;
+          font-size: em(70);
+        }
+
+        @include media(desktop) {
           font-size: em(100);
         }
 

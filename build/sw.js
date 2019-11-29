@@ -43,11 +43,11 @@ self.__precacheManifest = [
   },
   {
     "url": "entrepreneur-1.html",
-    "revision": "3a972081540a231a7d44db54ddf9de0e"
+    "revision": "260545bb32947925e4dd52d0da4c5c9d"
   },
   {
     "url": "entrepreneur-2.html",
-    "revision": "87060ab4ed13ea5ed6c021b016ec06c7"
+    "revision": "f76557ab25f6af47cf35c466f354a8c5"
   },
   {
     "url": "events.html",
@@ -175,7 +175,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/foundation-2.png",
-    "revision": "671a2c28e929fcc34ee9ae7ca8ac0dae"
+    "revision": "7a6f5427923bb35b0b85e8c182ef12e6"
   },
   {
     "url": "images/foundation-3.jpg",
@@ -195,7 +195,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/growth-2.png",
-    "revision": "f2062574767a5ed7edfd84285a5333a4"
+    "revision": "dbc225d1e5dbd61151b8938c346ddf5f"
   },
   {
     "url": "images/growth-3.jpg",
@@ -239,7 +239,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/letter.png",
-    "revision": "38711862aaf6bbb403466965fcb115aa"
+    "revision": "590e2a296bf8534ec01670f0ef01ed3f"
   },
   {
     "url": "images/logo-big-dark-2x.png",
@@ -283,7 +283,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-light-2x.png",
-    "revision": "4584d0753b5908195e23787e74c4f978"
+    "revision": "87bab3a410a6e244406ef1a9baaf919d"
   },
   {
     "url": "images/logo-small-light.png",
@@ -346,12 +346,16 @@ self.__precacheManifest = [
     "revision": "80de979f3bb83cad5b7b7f58ccdcbf86"
   },
   {
+    "url": "images/turn.png",
+    "revision": "be9c79b9a75b461216c906c6d217594c"
+  },
+  {
     "url": "images/women-entrepreneur-life-business-success.jpg",
     "revision": "901a906f078168f4ef421efc6e3f8828"
   },
   {
     "url": "index.html",
-    "revision": "e65129cf4f4d6251caf04ac7c51312cc"
+    "revision": "f81851e0ae50a8fcbb4eeaeb8d386ef1"
   },
   {
     "url": "nina-mua.html",
@@ -371,7 +375,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "273facabc334b4292acca02eff2eb3f3"
+    "revision": "92ef312bf782d0a24ecb1092d31746d0"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -383,11 +387,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "eaf32cb81d2e64427ce83678419abc1e"
+    "revision": "1283473c5f6672b79a4b3a289e0169e0"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "2ca68573bad61a6b58eb3d08f4371019"
+    "revision": "1213bc7a9b7da4b8e6c3b1205934394b"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

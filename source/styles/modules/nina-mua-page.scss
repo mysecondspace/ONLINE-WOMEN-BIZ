@@ -82,6 +82,10 @@
       }
 
       @include media(tablet) {
+        font-size: em(80);
+      }
+
+      @include media(desktop) {
         font-size: em(110);
       }
 
@@ -100,8 +104,12 @@
         }
 
         @include media(tablet) {
-          font-size: em(20);
+          font-size: em(16);
           margin-left: 25%;
+        }
+
+        @include media(desktop) {
+          font-size: em(20);
         }
 
         @include media(biggest) {
@@ -158,6 +166,10 @@
     }
 
     @include media(tablet) {
+      width: calc(75% - #{$indent-normal});
+    }
+
+    @include media(desktop) {
       width: calc(70% - #{$indent-normal});
     }
 
@@ -179,6 +191,10 @@
       }
 
       @include media(tablet) {
+        font-size: em(60);
+      }
+
+      @include media(desktop) {
         font-size: em(80);
       }
 
@@ -197,6 +213,10 @@
 
         @include media(tablet) {
           left: 5px;
+          top: 65px;
+        }
+
+        @include media(desktop) {
           top: 85px;
         }
 
@@ -217,6 +237,10 @@
 
         @include media(tablet) {
           margin-left: $indent-normal;
+          width: 75%;
+        }
+
+        @include media(desktop) {
           width: 80%;
         }
 
@@ -488,9 +512,14 @@
     font-family: $cond-normal;
 
     @include media(tablet) {
-      position: absolute;
       right: $indent-normal;
+      position: absolute;
+      font-size: em(18);
       width: 27.5%;
+    }
+
+    @include media(desktop) {
+      font-size: em(20);
     }
 
     @include media(biggest) {
@@ -542,6 +571,10 @@
         }
 
         @include media(tablet) {
+          font-size: em(120);
+        }
+
+        @include media(desktop) {
           font-size: em(160);
         }
 
@@ -640,10 +673,16 @@
           }
 
           @include media(tablet) {
+            right: $indent-normal;
+            height: 345px;
+            width: 280px;
+            top: 0;
+          }
+
+          @include media(desktop) {
             right: $indent-biggest;
             height: 400px;
             width: 325px;
-            top: 0;
           }
 
           @include media(biggest) {
@@ -653,9 +692,17 @@
 
           + div {
             height: 15%;
-            width: 28%;
             top: -2.5%;
-            right: 15%;
+
+            @include media(tablet) {
+              width: 38%;
+              right: 5%;
+            }
+
+            @include media(desktop) {
+              width: 28%;
+              right: 15%;
+            }
 
             @include media(biggest) {
               width: 20%;
@@ -711,6 +758,15 @@
             width: 50%;
             right: 5%;
             top: 35%;
+
+            @include media(tablet) {
+              top: 45%;
+            }
+
+            @include media(desktop) {
+              top: 35%;
+            }
+
 
             @include media(biggest) {
               right: -2.5%;

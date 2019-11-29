@@ -117,18 +117,23 @@
     top: 15vh;
     opacity: 0;
     z-index: 1;
-    right: 30vw;
     color: $primary;
     position: absolute;
     font-family: $cond-bold;
 
     @include media(phone) {
       font-size: em(60);
+      right: 30vw;
       top: 7.5vh;
     }
 
     @include media(tablet) {
       font-size: em(150);
+      right: 20vw;
+    }
+
+    @include media(desktop) {
+      right: 30vw;
     }
 
     @include media(biggest) {
@@ -152,6 +157,11 @@
 
       @include media(tablet) {
         margin-left: $indent-normal;
+        height: 598px;
+        width: 400px;
+      }
+
+      @include media(desktop) {
         height: 890px;
         width: 595px;
       }
@@ -384,6 +394,11 @@
   .paragraph {
     &--1 {
       @include media(tablet) {
+        top: 20vh;
+        left: 0;
+      }
+
+      @include media(desktop) {
         left: 5vw;
         top: 30vh;
       }
@@ -396,6 +411,11 @@
 
     &--2 {
       @include media(tablet) {
+        left: 47.5vw;
+        top: 32.5vh;
+      }
+
+      @include media(desktop) {
         left: 40vw;
         top: 20vh;
       }
@@ -443,6 +463,11 @@
   .paragraph {
     &--1 {
       @include media(tablet) {
+        top: 5vh;
+        left: 0;
+      }
+
+      @include media(desktop) {
         left: 10vw;
         top: 20vh;
       }
@@ -455,8 +480,12 @@
 
     &--2 {
       @include media(tablet) {
-        left: 45vw;
+        left: 55vw;
         top: 35vh;
+      }
+
+      @include media(desktop) {
+        left: 45vw;
       }
 
       @include media(biggest) {
@@ -478,6 +507,11 @@
     }
 
     @include media(tablet) {
+      height: 334px;
+      width: 500px;
+    }
+
+    @include media(desktop) {
       height: 465px;
       width: 697px;
     }
@@ -485,6 +519,10 @@
 
   .paragraph {
     @include media(tablet) {
+      top: 5vh;
+    }
+
+    @include media(desktop) {
       top: 25vh;
       left: 0;
     }

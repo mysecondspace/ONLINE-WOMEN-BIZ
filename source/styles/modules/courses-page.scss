@@ -91,6 +91,11 @@
 
     @include media(tablet) {
       left: calc(#{$padding-normal} + #{$indent-normal});
+      width: calc(55% - #{$indent-normal});
+      bottom: 20vh;
+    }
+
+    @include media(desktop) {
       width: calc(40% - #{$indent-normal});
       bottom: 30vh;
     }
@@ -170,6 +175,9 @@
     @include media(biggest) {
       width: calc(100% - #{$padding-biggest} * 2);
       margin-left: 0;
+    }
+    p:not(.title) {
+      color: $light;
     }
   }
 
@@ -274,12 +282,17 @@
       p {
         color: $light;
         text-transform: uppercase;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 
         @include media(phone) {
           font-size: em(35);
         }
 
         @include media(tablet) {
+          font-size: em(80);
+        }
+
+        @include media(desktop) {
           font-size: em(100);
         }
       }
@@ -296,7 +309,14 @@
         }
 
         @include media(tablet) {
+          width: calc(80% + #{$indent-phone} * 4);
           right: -19vw;
+          top: 0vh;
+        }
+
+        @include media(desktop) {
+          right: -19vw;
+          width: auto;
           top: -10vh;
         }
       }
@@ -398,8 +418,12 @@
     }
 
     @include media(tablet) {
-      font-size: em(125);
+      font-size: em(90);
       width: 60%;
+    }
+
+    @include media(desktop) {
+      font-size: em(125);
     }
 
     @include media(biggest) {
@@ -454,6 +478,10 @@
       }
 
       @include media(tablet) {
+        font-size: em(18);
+      }
+
+      @include media(desktop) {
         font-size: em(24);
       }
     }
@@ -550,6 +578,10 @@
     }
 
     @include media(tablet) {
+      font-size: em(80);
+    }
+
+    @include media(desktop) {
       font-size: em(110);
     }
 
@@ -587,8 +619,12 @@
       }
 
       @include media(tablet) {
-        font-size: em(20);
+        font-size: em(18);
         width: 80%;
+      }
+
+      @include media(biggest) {
+        font-size: em(20);
       }
 
       @include media(biggest) {
@@ -614,6 +650,10 @@
       }
 
       @include media(tablet) {
+        font-size: em(16);
+      }
+
+      @include media(desktop) {
         font-size: em(22);
       }
 
@@ -689,6 +729,10 @@
     }
 
     @include media(tablet) {
+      font-size: em(80);
+    }
+
+    @include media(desktop) {
       font-size: em(100);
     }
 
@@ -779,8 +823,12 @@
 
     @include media(tablet) {
       position: absolute;
-      font-size: em(100);
+      font-size: em(80);
       top: -40px;
+    }
+
+    @include media(desktop) {
+      font-size: em(100);
     }
 
     @include media(biggest) {
@@ -887,6 +935,11 @@
       }
 
       @include media(tablet) {
+        height: 374px;
+        width: 350px;
+      }
+
+      @include media(desktop) {
         height: 508px;
         width: 475px;
       }
@@ -902,9 +955,13 @@
         }
 
         @include media(tablet) {
-          margin-right: $padding-normal;
+          margin-right: $indent-normal;
           margin-left: auto;
           top: -5vh;
+        }
+
+        @include media(desktop) {
+          margin-right: $padding-normal;
         }
 
         @include media(biggest) {
@@ -986,6 +1043,10 @@
         }
 
         @include media(tablet) {
+          font-size: em(60);
+        }
+
+        @include media(desktop) {
           font-size: em(80);
         }
 
@@ -1048,6 +1109,10 @@
       &--2 {
         @include media(tablet) {
           left: 10vw;
+          top: 0;
+        }
+
+        @include media(desktop) {
           top: -5vh;
         }
 
@@ -1221,6 +1286,14 @@
         &--color {
           color: $primary;
 
+          @include media(tablet) {
+            width: 45vw;
+          }
+
+          @include media(desktop) {
+            width: 45vw;
+          }
+
           + p {
             text-transform: none;
 
@@ -1330,6 +1403,10 @@
 
     @include media(tablet) {
       margin-bottom: 15vh;
+      width: 70vw;
+    }
+
+    @include media(desktop) {
       width: 80vw;
     }
 
@@ -1585,6 +1662,10 @@
         }
 
         @include media(tablet) {
+          font-size: em(80);
+        }
+
+        @include media(desktop) {
           font-size: em(100);
         }
 
@@ -1628,6 +1709,11 @@
     }
 
     @include media(tablet) {
+      padding-bottom: 30vh;
+      padding-top: 15vh;
+    }
+
+    @include media(desktop) {
       padding-bottom: 20vh;
       padding-top: 15vh;
     }
@@ -1689,6 +1775,10 @@
       }
 
       @include media(tablet) {
+        font-size: em(80);
+      }
+
+      @include media(desktop) {
         font-size: em(100);
       }
     }
@@ -1709,6 +1799,10 @@
         margin-bottom: 1vh;
 
         @include media(tablet) {
+          font-size: em(16);
+        }
+
+        @include media(desktop) {
           font-size: em(22);
         }
 
@@ -1730,6 +1824,10 @@
           }
 
           @include media(tablet) {
+            top: 5px;
+          }
+
+          @include media(desktop) {
             top: 6px;
           }
 
@@ -1771,13 +1869,19 @@
       }
 
       &--2 {
+        right: 2.5vw;
         top: 37.5vh;
-        right: 7.5vw;
       }
 
       &--3 {
         right: 25vw;
         top: 50vh;
+      }
+    }
+
+    @include media(desktop) {
+      &--2 {
+        right: 7.5vw;
       }
     }
 
@@ -1805,6 +1909,10 @@
     }
 
     @include media(tablet) {
+      margin-top: 35vh;
+    }
+
+    @include media(desktop) {
       margin-top: 20vh;
     }
 
@@ -2017,6 +2125,10 @@
         }
 
         @include media(tablet) {
+          height: 52px;
+        }
+
+        @include media(desktop) {
           height: 50px;
         }
       }

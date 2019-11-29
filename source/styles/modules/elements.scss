@@ -149,7 +149,6 @@
 }
 
 #menu {
-  top: calc(50% - var(--menu-height) / 2);
   left: $indent-normal;
   position: fixed;
   z-index: 2;
@@ -166,6 +165,14 @@
     &.opened {
       display: flex;
     }
+  }
+
+  @include media(tablet) {
+    top: calc(50% - var(--menu-height) / 3);
+  }
+
+  @include media(desktop) {
+    top: calc(50% - var(--menu-height) / 2);
   }
 
   &.animate-in {
@@ -471,12 +478,33 @@
     }
 
     @include media(tablet) {
+      font-size: em(90);
+    }
+
+    @include media(desktop) {
       font-size: em(120);
     }
 
     @include media(biggest) {
       font-size: em(140);
     }
+  }
+}
+
+.turn {
+  background: url('/../images/turn.png') center no-repeat;
+  background-color: $dark;
+  background-size: cover;
+  position: fixed;
+  display: none;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  &.on {
+    display: block;
   }
 }
 
@@ -558,6 +586,10 @@
     }
 
     @include media(tablet) {
+      font-size: em(15);
+    }
+
+    @include media(desktop) {
       font-size: em(18);
     }
 
@@ -646,6 +678,10 @@
     }
 
     @include media(tablet) {
+      margin-right: 5vw;
+    }
+
+    @include media(desktop) {
       margin-right: 8vw;
     }
 
@@ -711,6 +747,10 @@
     }
 
     @include media(tablet) {
+      font-size: em(27);
+    }
+
+    @include media(desktop) {
       font-size: em(37);
     }
 
@@ -842,6 +882,10 @@
   }
 
   @include media(tablet) {
+    font-size: em(20);
+  }
+
+  @include media(desktop) {
     font-size: em(24);
   }
 

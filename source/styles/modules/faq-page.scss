@@ -204,6 +204,11 @@
   .paragraph {
     @include media(tablet) {
       width: calc(100% - #{$indent-normal});
+      margin-top: 20vh;
+    }
+
+    @include media(desktop) {
+      margin-top: 0;
     }
 
     @include media(biggest) {
@@ -226,8 +231,12 @@
         }
 
         @include media(tablet) {
-          font-size: em(35);
+          font-size: em(25);
           width: 80%;
+        }
+
+        @include media(desktop) {
+          font-size: em(35);
         }
 
         @include media(biggest) {
@@ -280,6 +289,10 @@
       }
 
       @include media(tablet) {
+        font-size: em(25);
+      }
+
+      @include media(desktop) {
         font-size: em(35);
       }
 

@@ -15,6 +15,16 @@ $(document).ready(function() {
     elements_selector: '.lazy'
   });
 
+  // plese turn your devide
+  $(window).resize(function() {
+    if (window.innerWidth > 768 && window.matchMedia("(orientation: portrait)").matches) {
+      $('body').prepend($('<div class="turn"></div>'));
+      $('.turn').addClass('on');
+    } else {
+      $('.turn').removeClass('on');
+    }
+  });
+
   // video button
   var players = document.querySelectorAll('.youtube-player')
   var loadPlayer = function (event) {
