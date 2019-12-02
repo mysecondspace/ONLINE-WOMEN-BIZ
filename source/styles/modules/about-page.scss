@@ -1070,6 +1070,10 @@
         background-color: $secondary;
         color: $primary;
       }
+
+      &:hover {
+        color: $light;
+      }
     }
   }
 }

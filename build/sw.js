@@ -47,7 +47,7 @@ self.__precacheManifest = [
   },
   {
     "url": "entrepreneur-2.html",
-    "revision": "f76557ab25f6af47cf35c466f354a8c5"
+    "revision": "dea4e2ff64d224ee801c23909349874e"
   },
   {
     "url": "events.html",
@@ -76,6 +76,10 @@ self.__precacheManifest = [
   {
     "url": "fonts/harmonia-normal.otf",
     "revision": "6fd7e0f0248f1c0320476e13c81e4047"
+  },
+  {
+    "url": "images/about-1.jpg",
+    "revision": "6c9336275449abbf4652f965c9deb6f3"
   },
   {
     "url": "images/about-2.jpg",
@@ -115,7 +119,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/arrow-small-2x.png",
-    "revision": "8330c3bbc51c652e82ed2a725540bb5b"
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
     "url": "images/arrow-small.png",
@@ -123,7 +127,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/arrow.png",
-    "revision": "c84423373dc35680532b7c6b04cfde9e"
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
     "url": "images/blog-1.jpg",
@@ -175,7 +179,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/foundation-2.png",
-    "revision": "7a6f5427923bb35b0b85e8c182ef12e6"
+    "revision": "671a2c28e929fcc34ee9ae7ca8ac0dae"
   },
   {
     "url": "images/foundation-3.jpg",
@@ -190,12 +194,8 @@ self.__precacheManifest = [
     "revision": "a38b6be8c46ec1ca7d005af64d54afa7"
   },
   {
-    "url": "images/growth-1.jpg",
-    "revision": "f07f9201c16d31442c4f3d95afce3d5d"
-  },
-  {
     "url": "images/growth-2.png",
-    "revision": "dbc225d1e5dbd61151b8938c346ddf5f"
+    "revision": "f2062574767a5ed7edfd84285a5333a4"
   },
   {
     "url": "images/growth-3.jpg",
@@ -239,7 +239,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/letter.png",
-    "revision": "590e2a296bf8534ec01670f0ef01ed3f"
+    "revision": "38711862aaf6bbb403466965fcb115aa"
   },
   {
     "url": "images/logo-big-dark-2x.png",
@@ -263,7 +263,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-big-primary.png",
-    "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
+    "revision": "b2b3a57764898fe37f5be506e370be42"
   },
   {
     "url": "images/logo-dark.svg",
@@ -275,7 +275,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-dark-2x.png",
-    "revision": "4cf3f969c08e5d1794a9af3186718142"
+    "revision": "163bbf682b1cc10c7fc27343f8d57053"
   },
   {
     "url": "images/logo-small-dark.png",
@@ -283,7 +283,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-light-2x.png",
-    "revision": "87bab3a410a6e244406ef1a9baaf919d"
+    "revision": "4584d0753b5908195e23787e74c4f978"
   },
   {
     "url": "images/logo-small-light.png",
@@ -300,10 +300,6 @@ self.__precacheManifest = [
   {
     "url": "images/mouse-primary.svg",
     "revision": "d6fdd2314ffae788951f86a5190d0a81"
-  },
-  {
-    "url": "images/nina-mua-1.jpg",
-    "revision": "e1c16f26093ac7c685aaf238007c6231"
   },
   {
     "url": "images/nina-mua-2.jpg",
@@ -350,7 +346,11 @@ self.__precacheManifest = [
     "revision": "be9c79b9a75b461216c906c6d217594c"
   },
   {
-    "url": "images/women-entrepreneur-life-business-success.jpg",
+    "url": "images/woman-entrepreneur-2-growth.jpg",
+    "revision": "0fa81dd2bfd592a111ba55b8539fe975"
+  },
+  {
+    "url": "images/woman-entrepreneur-life-business-success.jpg",
     "revision": "901a906f078168f4ef421efc6e3f8828"
   },
   {
@@ -375,7 +375,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "92ef312bf782d0a24ecb1092d31746d0"
+    "revision": "d379e5f050b8f6cbfb42397dfcc02c22"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -387,11 +387,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "1283473c5f6672b79a4b3a289e0169e0"
+    "revision": "c7d947c5516199bf64de4dedac2375f3"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "1213bc7a9b7da4b8e6c3b1205934394b"
+    "revision": "8dae341e7744ff98e0f2d1d68e7da19a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

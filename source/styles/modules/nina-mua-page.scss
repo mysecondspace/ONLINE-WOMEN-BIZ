@@ -29,7 +29,7 @@
 
     @include media(tablet) {
       animation: fade-in-up $time-slow forwards;
-      background: url('/../images/nina-mua-1.jpg') no-repeat;
+      background: url('/../images/about-1.jpg') no-repeat;
       background-size: calc(100% - #{$padding-normal});
       background-position: 100% 0;
       height: 110%;
@@ -841,6 +841,10 @@
 
         @include media(phone) {
           color: $secondary;
+        }
+
+        &:hover {
+          color: $light;
         }
       }
     }

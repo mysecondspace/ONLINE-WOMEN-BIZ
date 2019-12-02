@@ -3,14 +3,14 @@
 
   &.foundation {
     .photo {
-      background: url('/../images/women-entrepreneur-life-business-success.jpg') no-repeat;
+      background: url('/../images/woman-entrepreneur-life-business-success.jpg') no-repeat;
 
     }
   }
 
   &.growth {
     .photo {
-      background: url('/../images/growth-1.jpg') no-repeat;
+      background: url('/../images/woman-entrepreneur-2-growth.jpg') no-repeat;
     }
   }
 
@@ -335,6 +335,18 @@
     padding-top: 10vh;
   }
 
+  @include media(laptop) {
+    min-height: 600px;
+  }
+
+  @include media(desktop) {
+    min-height: 750px;
+  }
+
+  @include media(biggest) {
+    min-height: 850px;
+  }
+
   > div > div {
     position: relative;
   }
@@ -392,7 +404,7 @@
     @include media(tablet) {
       right: 10vw;
       width: 35%;
-      top: 5vh;
+      top: 0;
     }
 
     @include media(biggest) {
@@ -633,7 +645,7 @@
       }
     }
 
-    span {
+    > span {
       display: block;
       margin-top: 5vh;
       text-align: right;
@@ -2095,19 +2107,21 @@
     }
 
     .purchase {
-      float: right;
-      font-size: em(22);
-      margin-right: 50px;
-      padding: 14px 20px 10px;
+      @include transition($time-fast);
+      border-right: 1px solid $dark;
       background-color: $primary;
       text-transform: uppercase;
-      border-right: 1px solid $dark;
       font-family: $cond-bold;
+      padding: 14px 20px 10px;
+      margin-right: 50px;
+      font-size: em(22);
       margin-top: 5vh;
+      float: right;
       color: $dark;
 
       &::after {
         @include inline-block;
+        @include transition($time-fast);
         @include image-retina('/../images/arrow-dark-small.png', '/../images/arrow-dark-small-2x.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -2130,6 +2144,15 @@
 
         @include media(desktop) {
           height: 50px;
+        }
+      }
+
+      &:hover {
+        color: $dark;
+        background-color: $light;
+
+        &::after {
+          background-color: $light;
         }
       }
     }

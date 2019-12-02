@@ -240,6 +240,7 @@
     }
 
     a {
+      @include transition($time-fast);
       margin-right: 2.5vw;
       float: right;
 
@@ -252,6 +253,10 @@
         font-size: em(24);
         margin-top: 10vh;
         color: $primary;
+      }
+
+      &:hover {
+        color: $light;
       }
     }
   }
@@ -770,6 +775,10 @@
           margin-top: 5vh;
           color: $primary;
           float: left;
+        }
+
+        &:hover {
+          color: $light;
         }
       }
 

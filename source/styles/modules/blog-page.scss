@@ -228,6 +228,10 @@
           color: $primary;
           float: left;
         }
+
+        &:hover {
+          color: $light;
+        }
       }
     }
   }
@@ -342,6 +346,10 @@
         margin-top: 5vh;
         color: $primary;
         float: left;
+      }
+
+      &:hover {
+        color: $light;
       }
     }
   }

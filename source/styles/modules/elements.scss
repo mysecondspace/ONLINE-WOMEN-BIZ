@@ -1283,10 +1283,11 @@ table {
         }
 
         a {
-          float: right;
-          font-size: em(18);
-          margin-top: 2.5vh;
+          @include transition($time-fast);
           margin-right: 2.5vw;
+          margin-top: 2.5vh;
+          font-size: em(18);
+          float: right;
 
           @include media(smallest) {
             margin-top: 1.5vh;

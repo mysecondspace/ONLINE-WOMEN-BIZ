@@ -1558,10 +1558,14 @@ table tr td:last-of-type {
   }
 }
 table tr td:last-of-type a {
-  float: right;
-  font-size: 1.125em;
-  margin-top: 2.5vh;
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
   margin-right: 2.5vw;
+  margin-top: 2.5vh;
+  font-size: 1.125em;
+  float: right;
 }
 @media only screen and (max-width: 399px) {
   table tr td:last-of-type a {
@@ -1871,6 +1875,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #index-2 .paragraph a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
   margin-right: 2.5vw;
   float: right;
 }
@@ -1886,6 +1894,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     margin-top: 10vh;
     color: #fd959e;
   }
+}
+#index-2 .paragraph a:hover {
+  color: #fff;
 }
 
 #index-3 {
@@ -2425,6 +2436,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     color: #fd959e;
     float: left;
   }
+}
+#index-5 .block .paragraph a:hover {
+  color: #fff;
 }
 @media only screen and (min-width: 768px) {
   #index-5 .block .paragraph--1 {
@@ -3575,6 +3589,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     color: #fd959e;
   }
 }
+#about-7 table tr td:last-of-type a:hover {
+  color: #fff;
+}
 
 #nina-mua-1 {
   background-color: #fff;
@@ -3605,7 +3622,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 768px) {
   #nina-mua-1 .photo {
     animation: fade-in-up 2s forwards;
-    background: url("../images/nina-mua-1.jpg") no-repeat;
+    background: url("../images/about-1.jpg") no-repeat;
     background-size: calc(100% - calc(45px + var(--logotype-width)));
     background-position: 100% 0;
     height: 110%;
@@ -4440,6 +4457,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     color: #022329;
   }
 }
+#nina-mua-4 table tr td:last-of-type a:hover {
+  color: #fff;
+}
 #nina-mua-4 > * {
   color: #fd959e;
 }
@@ -4492,15 +4512,18 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     color: #fd959e;
   }
 }
+#entrepreneurs table tr td:last-of-type a:hover {
+  color: #fff;
+}
 
 #courses-1 {
   background-color: #fff;
 }
 #courses-1.foundation .photo {
-  background: url("../images/women-entrepreneur-life-business-success.jpg") no-repeat;
+  background: url("../images/woman-entrepreneur-life-business-success.jpg") no-repeat;
 }
 #courses-1.growth .photo {
-  background: url("../images/growth-1.jpg") no-repeat;
+  background: url("../images/woman-entrepreneur-2-growth.jpg") no-repeat;
 }
 #courses-1.foundation .photo, #courses-1.growth .photo {
   background-position: 100% 0;
@@ -4830,6 +4853,21 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     padding-top: 10vh;
   }
 }
+@media only screen and (min-width: 1024px) {
+  #courses-3 {
+    min-height: 600px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #courses-3 {
+    min-height: 750px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-3 {
+    min-height: 850px;
+  }
+}
 #courses-3 > div > div {
   position: relative;
 }
@@ -4877,7 +4915,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   #courses-3 .image {
     right: 10vw;
     width: 35%;
-    top: 5vh;
+    top: 0;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -5128,7 +5166,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     width: 45%;
   }
 }
-#courses-4 .paragraph span {
+#courses-4 .paragraph > span {
   display: block;
   margin-top: 5vh;
   text-align: right;
@@ -5136,32 +5174,32 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   text-transform: uppercase;
 }
 @media only screen and (max-width: 767px) {
-  #courses-4 .paragraph span {
+  #courses-4 .paragraph > span {
     padding-left: 20vw;
     font-size: 1.125em;
   }
 }
 @media only screen and (max-width: 399px) {
-  #courses-4 .paragraph span {
+  #courses-4 .paragraph > span {
     font-size: 0.875em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #courses-4 .paragraph span {
+  #courses-4 .paragraph > span {
     font-size: 1em;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #courses-4 .paragraph span {
+  #courses-4 .paragraph > span {
     font-size: 1.375em;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #courses-4 .paragraph span {
+  #courses-4 .paragraph > span {
     font-size: 1.875em;
   }
 }
-#courses-4 .paragraph span span {
+#courses-4 .paragraph > span span {
   color: #fff;
   display: initial;
   font-size: inherit;
@@ -6652,15 +6690,19 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-12 .paragraph .purchase {
-  float: right;
-  font-size: 1.375em;
-  margin-right: 50px;
-  padding: 14px 20px 10px;
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  border-right: 1px solid #022329;
   background-color: #fd959e;
   text-transform: uppercase;
-  border-right: 1px solid #022329;
   font-family: "harmonia cond bold";
+  padding: 14px 20px 10px;
+  margin-right: 50px;
+  font-size: 1.375em;
   margin-top: 5vh;
+  float: right;
   color: #022329;
 }
 #courses-12 .paragraph .purchase::after {
@@ -6669,6 +6711,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
   background-image: url(../images/arrow-dark-small.png);
   height: 11px;
   width: 25px;
@@ -6704,6 +6750,13 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   #courses-12 .paragraph .purchase::after {
     height: 50px;
   }
+}
+#courses-12 .paragraph .purchase:hover {
+  color: #022329;
+  background-color: #fff;
+}
+#courses-12 .paragraph .purchase:hover::after {
+  background-color: #fff;
 }
 
 #events-1 {
@@ -7759,6 +7812,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     float: left;
   }
 }
+#blog-1 .block .paragraph a:hover {
+  color: #fff;
+}
 
 @media only screen and (max-width: 767px) {
   #blog-2 .absolute,
@@ -7913,6 +7969,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     color: #fd959e;
     float: left;
   }
+}
+#blog-2 .paragraph a:hover,
+#blog-3 .paragraph a:hover,
+#blog-4 .paragraph a:hover {
+  color: #fff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8518,6 +8579,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     float: right;
   }
 }
+#post-3 .block .paragraph a:hover {
+  color: #fff;
+}
 
 #post-4.animate .text p:nth-of-type(1),
 #post-4.animate .text h2:nth-of-type(1) {
@@ -8576,6 +8640,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     background-color: #022329;
     color: #fd959e;
   }
+}
+#post-5 table tr td:last-of-type a:hover {
+  color: #fff;
 }
 
 #post-6.animate .text p:nth-of-type(1),
@@ -9374,6 +9441,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     background-color: #022329;
     color: #fd959e;
   }
+}
+#faq-7 table tr td:last-of-type a:hover {
+  color: #fff;
 }
 
 #error {
