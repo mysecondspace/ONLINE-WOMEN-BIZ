@@ -465,7 +465,18 @@
 
 #post-6 {
   &.animate {
+    $list: 9;
     $text: 4;
+
+    ul li {
+      animation: fade-in-up $time-slow forwards;
+
+      @for $i from 1 through $list {
+        &:nth-of-type(#{$i}) {
+          animation-delay: .2s * $i;
+        }
+      }
+    }
 
     @for $i from 1 through $text {
       .text {

@@ -8645,6 +8645,36 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #fff;
 }
 
+#post-6.animate ul li {
+  animation: fade-in-up 2s forwards;
+}
+#post-6.animate ul li:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+#post-6.animate ul li:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+#post-6.animate ul li:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+#post-6.animate ul li:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+#post-6.animate ul li:nth-of-type(5) {
+  animation-delay: 1s;
+}
+#post-6.animate ul li:nth-of-type(6) {
+  animation-delay: 1.2s;
+}
+#post-6.animate ul li:nth-of-type(7) {
+  animation-delay: 1.4s;
+}
+#post-6.animate ul li:nth-of-type(8) {
+  animation-delay: 1.6s;
+}
+#post-6.animate ul li:nth-of-type(9) {
+  animation-delay: 1.8s;
+}
 #post-6.animate .text p:nth-of-type(1),
 #post-6.animate .text h2:nth-of-type(1) {
   animation: fade-in-up 2s 0.5s forwards;

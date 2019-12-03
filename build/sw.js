@@ -119,7 +119,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/arrow-small-2x.png",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
+    "revision": "8330c3bbc51c652e82ed2a725540bb5b"
   },
   {
     "url": "images/arrow-small.png",
@@ -127,7 +127,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/arrow.png",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
+    "revision": "c84423373dc35680532b7c6b04cfde9e"
   },
   {
     "url": "images/blog-1.jpg",
@@ -387,11 +387,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "c7d947c5516199bf64de4dedac2375f3"
+    "revision": "8b41d4854c8c9bba667ccee1d07f81b1"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "8dae341e7744ff98e0f2d1d68e7da19a"
+    "revision": "fad8a9da87335fa85618e849dbb47a48"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
