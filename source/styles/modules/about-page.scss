@@ -198,6 +198,7 @@
     position: relative;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(30);
@@ -230,6 +231,7 @@
     }
 
     p {
+      animation: fade-in-up-reverse $time-slow;
       line-height: 1.48;
       opacity: 0;
 
@@ -295,6 +297,7 @@
 
     > * {
       opacity: 0;
+      animation: fade-in-up-reverse $time-slow;
     }
 
     img {
@@ -379,6 +382,7 @@
     position: relative;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(30);
@@ -417,6 +421,7 @@
     }
 
     p {
+      animation: fade-in-up-reverse $time-slow;
       line-height: 1.48;
       opacity: 0;
 
@@ -568,7 +573,6 @@
   }
 
   &.animate {
-    .image,
     .slogan,
     .absolute > * {
       animation: fade-in-up $time-slow forwards;
@@ -614,6 +618,7 @@
 
     > * {
       opacity: 0;
+      animation: fade-in-up-reverse $time-slow;
     }
 
     img {
@@ -650,6 +655,7 @@
     text-align: center;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
     margin: 5vh auto 0;
 
     @include media(phone) {
@@ -689,45 +695,47 @@
 
   &.animate {
     .title,
-    .paragraph > * {
+    .block .paragraph > * {
       animation: fade-in $time-slow forwards;
     }
 
-    .absolute {
-      $absolute: 2;
+    .block {
+      .absolute {
+        $absolute: 2;
 
-      > * {
-        animation: fade-in-up $time-slow forwards;
-      }
+        > * {
+          animation: fade-in-up $time-slow forwards;
+        }
 
-      @for $i from 1 through $absolute {
-        &--#{$i} {
-          img {
-            animation-delay: .5s * $i;
-          }
+        @for $i from 1 through $absolute {
+          &--#{$i} {
+            img {
+              animation-delay: .5s * $i;
+            }
 
-          div {
-            animation-delay: 1s * $i;
+            div {
+              animation-delay: 1s * $i;
+            }
           }
         }
       }
-    }
 
-    .paragraph {
-      $paragraph: 2;
+      .paragraph {
+        $paragraph: 2;
 
-      @for $i from 1 through $paragraph {
-        &--#{$i} {
-          p {
-            animation-delay: .6s * $i;
-          }
+        @for $i from 1 through $paragraph {
+          &--#{$i} {
+            p {
+              animation-delay: .6s * $i;
+            }
 
-          span {
-            animation-delay: .7s * $i;
-          }
+            span {
+              animation-delay: .7s * $i;
+            }
 
-          a {
-            animation-delay: .8s * $i;
+            a {
+              animation-delay: .8s * $i;
+            }
           }
         }
       }
@@ -820,6 +828,7 @@
 
       > * {
         opacity: 0;
+        animation: fade-in-up-reverse $time-slow;
       }
 
       img {
@@ -853,6 +862,7 @@
 
       > * {
         opacity: 0;
+        animation: fade-out $time-slow;
       }
 
       > span {
@@ -930,6 +940,7 @@
         position: relative;
         font-family: $cond-bold;
         text-transform: uppercase;
+        animation: fade-out $time-slow;
 
         @include media(phone) {
           margin-bottom: 5vh;
@@ -1019,6 +1030,7 @@
     margin-bottom: 1vh;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(60);

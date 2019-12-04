@@ -206,41 +206,43 @@
 
   &.animate {
     .title,
-    .paragraph > * {
+    .block .paragraph > * {
       animation: fade-in $time-slow forwards;
     }
 
-    .absolute {
-      $absolute: 3;
+    .block {
+      .absolute {
+        $absolute: 3;
 
-      > * {
-        animation: fade-in-up $time-slow forwards;
-      }
+        > * {
+          animation: fade-in-up $time-slow forwards;
+        }
 
-      @for $i from 1 through $absolute {
-        &--#{$i} {
-          img {
-            animation-delay: .5s * $i;
-          }
+        @for $i from 1 through $absolute {
+          &--#{$i} {
+            img {
+              animation-delay: .5s * $i;
+            }
 
-          div {
-            animation-delay: .75s * $i;
+            div {
+              animation-delay: .75s * $i;
+            }
           }
         }
       }
-    }
 
-    .paragraph {
-      $paragraph: 3;
+      .paragraph {
+        $paragraph: 3;
 
-      @for $i from 1 through $paragraph {
-        &--#{$i} {
-          p {
-            animation-delay: .6s * $i;
-          }
+        @for $i from 1 through $paragraph {
+          &--#{$i} {
+            p {
+              animation-delay: .6s * $i;
+            }
 
-          a {
-            animation-delay: .7s * $i;
+            a {
+              animation-delay: .7s * $i;
+            }
           }
         }
       }
@@ -252,6 +254,7 @@
     color: $light;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-out $time-slow;
 
     @include media(phone) {
       font-size: em(30);
@@ -306,6 +309,7 @@
 
       > * {
         opacity: 0;
+        animation: fade-in-up-reverse $time-slow;
       }
 
       div {
@@ -354,6 +358,7 @@
 
       > * {
         opacity: 0;
+        animation: fade-out $time-slow;
       }
 
       p {
@@ -512,58 +517,10 @@
     }
   }
 
-  .hashtags {
-    opacity: 0;
-
-    @include media(phone) {
-      display: grid;
-      margin: 5vh 0;
-    }
-
-    @include media(tablet) {
-      margin: 5vh 0;
-      display: flex;
-    }
-
-    @include media(desktop) {
-      margin: 10vh 0;
-    }
-
-    a {
-      @include transition($time-fast);
-      text-shadow: -1px 0 $gray, 0 1px $gray, 1px 0 $gray, 0 -1px $gray;
-      text-transform: uppercase;
-      font-family: $cond-bold;
-      color: $light;
-
-      @include media(phone) {
-        font-size: em(60);
-      }
-
-      @include media(smallest) {
-        font-size: em(50);
-      }
-
-      @include media(tablet) {
-        font-size: em(50);
-        width: 33.33%;
-        float: left;
-      }
-
-      @include media(desktop) {
-        font-size: em(60);
-      }
-
-      @include media(biggest) {
-        font-size: em(80);
-      }
-
-      &:focus,
-      &:hover {
-        color: $primary;
-        text-shadow: none;
-      }
-    }
+  .share,
+  .hashtags,
+  .breadcrumbs {
+    animation: fade-in-up-reverse $time-slow;
   }
 
   .share {
@@ -640,8 +597,63 @@
     }
   }
 
+  .hashtags {
+    opacity: 0;
+
+    @include media(phone) {
+      display: grid;
+      margin: 5vh 0;
+    }
+
+    @include media(tablet) {
+      margin: 5vh 0;
+      display: flex;
+    }
+
+    @include media(desktop) {
+      margin: 10vh 0;
+    }
+
+    a {
+      @include transition($time-fast);
+      text-shadow: -1px 0 $gray, 0 1px $gray, 1px 0 $gray, 0 -1px $gray;
+      text-transform: uppercase;
+      font-family: $cond-bold;
+      color: $light;
+
+      @include media(phone) {
+        font-size: em(60);
+      }
+
+      @include media(smallest) {
+        font-size: em(50);
+      }
+
+      @include media(tablet) {
+        font-size: em(50);
+        width: 33.33%;
+        float: left;
+      }
+
+      @include media(desktop) {
+        font-size: em(60);
+      }
+
+      @include media(biggest) {
+        font-size: em(80);
+      }
+
+      &:focus,
+      &:hover {
+        color: $primary;
+        text-shadow: none;
+      }
+    }
+  }
+
   .breadcrumbs {
     margin: 5vh 0;
+    opacity: 0;
 
     @include media(phone) {
       margin: 5vh auto;

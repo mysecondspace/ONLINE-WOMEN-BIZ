@@ -216,6 +216,8 @@
     }
 
     p {
+      animation: fade-in-up-reverse $time-slow;
+
       &:first-of-type {
         font-family: $cond-bold;
         position: relative;
@@ -279,6 +281,7 @@
       color: $primary;
       position: relative;
       font-family: $cond-bold;
+      animation: fade-in-right-reverse $time-slow;
 
       @include media(phone) {
         font-size: em(25);
@@ -379,6 +382,7 @@
     opacity: 0;
     padding-top: 5vh;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(30);
@@ -400,6 +404,7 @@
   .list {
     opacity: 0;
     padding: 20px 0;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(smallest) {
       padding: 10px 0;

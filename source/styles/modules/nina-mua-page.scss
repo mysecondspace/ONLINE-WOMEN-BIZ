@@ -134,17 +134,15 @@
 
   &.animate {
     .paragraph {
-      p {
-        animation: fade-in-up $time-slow forwards;
-      }
-
       p:first-of-type {
+        animation: fade-in-up $time-slow forwards;
+
         span {
           animation: fade-in-up $time-slow .2s forwards;
         }
 
         + p {
-          animation-delay: .1s;
+          animation: fade-in-up $time-slow .1s forwards;
         }
       }
     }
@@ -185,6 +183,7 @@
       animation-delay: .1s;
       font-family: $cond-bold;
       text-shadow: -1px 0 $dark, 0 1px $dark, 1px 0 $dark, 0 -1px $dark;
+      animation: fade-in-up-reverse $time-slow;
 
       @include media(phone) {
         font-size: em(35);
@@ -203,6 +202,7 @@
       }
 
       span {
+        animation: fade-in-up-reverse $time-slow;
         position: absolute;
         color: $dark;
         opacity: 0;
@@ -232,6 +232,7 @@
         font-size: em(20);
         line-height: 1.48;
         font-family: $cond-normal;
+        animation: fade-in-up-reverse $time-slow;
         animation-delay: .2s;
         margin-top: 5%;
 
@@ -259,6 +260,7 @@
     bottom: 0;
     opacity: 0;
     position: absolute;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       margin: 0 auto;
@@ -333,47 +335,49 @@
       animation: fade-in-right $time-slow .3s forwards;
     }
 
-    .absolute {
-      > * {
-        animation: fade-in-up $time-slow forwards;
-      }
-
-      img {
-        &:nth-of-type(1) + div {
-          animation-delay: 1s;
+    .block {
+      .absolute {
+        > * {
+          animation: fade-in-up $time-slow forwards;
         }
 
-        &:nth-of-type(2) {
-          animation-delay: .1s;
+        img {
+          &:nth-of-type(1) + div {
+            animation-delay: 1s;
+          }
 
-          + div {
-            animation-delay: 1.1s;
+          &:nth-of-type(2) {
+            animation-delay: .1s;
+
+            + div {
+              animation-delay: 1.1s;
+            }
+          }
+
+          &:nth-of-type(3) {
+            animation-delay: .2s;
+
+            + div {
+              animation-delay: 1.2s;
+            }
           }
         }
+      }
 
-        &:nth-of-type(3) {
-          animation-delay: .2s;
-
-          + div {
-            animation-delay: 1.2s;
-          }
+      .paragraph {
+        p {
+          animation: fade-in-up $time-slow forwards;
         }
-      }
-    }
 
-    .paragraph {
-      p {
-        animation: fade-in-up $time-slow forwards;
-      }
-
-      p:first-of-type {
-        animation-delay: .4s;
-
-        + p {
-          animation-delay: .5s;
+        p:first-of-type {
+          animation-delay: .4s;
 
           + p {
-            animation-delay: .6s;
+            animation-delay: .5s;
+
+            + p {
+              animation-delay: .6s;
+            }
           }
         }
       }
@@ -384,6 +388,7 @@
     opacity: 0;
     color: $dark;
     font-family: $cond-bold;
+    animation: fade-in-down-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(30);
@@ -401,6 +406,7 @@
   .circle {
     opacity: 0;
     position: relative;
+    animation: fade-out $time-slow;
 
     @include media(phone) {
       margin: 5vh 0;
@@ -438,6 +444,7 @@
         bottom: 0;
         opacity: 0;
         text-transform: uppercase;
+        animation: fade-out $time-slow;
         transition: all .5s cubic-bezier(0, 0, 0, 1);
 
         @include media(phone) {
@@ -455,6 +462,7 @@
       color: $dark;
       position: absolute;
       width: fit-content;
+      animation: fade-out $time-slow;
       font-family: $cond-bold;
       top: calc(50% - 39px);
       margin: 0 auto;
@@ -510,6 +518,7 @@
     font-size: em(20);
     top: calc(100vh - 144px);
     font-family: $cond-normal;
+    animation: fade-in-right-reverse $time-slow;
 
     @include media(tablet) {
       right: $indent-normal;
@@ -659,6 +668,7 @@
         }
 
         @include media(tablet) {
+          animation: fade-in-up-reverse $time-slow;
           position: absolute;
           opacity: 0;
         }
@@ -855,6 +865,7 @@
   }
 
   .sup {
+    animation: fade-in-up-reverse $time-slow;
     font-family: $cond-light;
     opacity: 0;
 

@@ -35,6 +35,11 @@
   }
 
   &.big {
+    @media (max-device-pixel-ratio: 1), (max-resolution: 1dppx) {
+      background-size: contain;
+      width: 151px !important;
+    }
+
     &.primary {
       @include image-retina('/../images/logo-big-primary.png', '/../images/logo-big-primary-2x.png');
     }
@@ -372,6 +377,7 @@
     opacity: 0;
     display: grid;
     margin-top: 10vh;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       margin-right: $indent-phone;
@@ -445,6 +451,7 @@
     color: $light;
     display: block;
     font-family: $cond-light;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(22);
@@ -464,6 +471,7 @@
   }
 
   .title {
+    animation: fade-out $time-slow;
     text-transform: uppercase;
     font-family: $cond-light;
     color: $primary;
@@ -543,6 +551,7 @@
     line-height: 1;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(20);
@@ -580,6 +589,7 @@
     display: block;
     margin-top: 2vh;
     line-height: 1.48;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(13);
@@ -612,6 +622,7 @@
 
   span {
     opacity: 0;
+    animation: fade-in-down-reverse $time-slow;
 
     @include media(phone) {
       height: 105px;
@@ -695,6 +706,7 @@
   opacity: 0;
   overflow: hidden;
   text-align: left;
+  animation: fade-in-up-reverse $time-slow;
 
   @include media(phone) {
     width: 100%;
@@ -808,6 +820,7 @@
 }
 
 .youtube-player {
+  animation: fade-in-up-reverse $time-slow;
   position: relative;
   opacity: 0;
 
@@ -895,6 +908,7 @@
 
   p {
     opacity: 0;
+    animation: fade-in-up-reverse $time-slow;
   }
 
   span {
@@ -926,6 +940,7 @@
 .round {
   @include inline-block;
   @include border-radius(100%);
+  animation: fade-out $time-slow;
   background-color: $dark;
   font-family: $cond-bold;
   display: inline-grid;
@@ -979,6 +994,7 @@
   > h2 {
     opacity: 0;
     color: $dark;
+    animation: fade-in-up-reverse $time-slow;
 
     &.title {
       line-height: 1;
@@ -1014,6 +1030,7 @@
 
   ul li,
   p:not(.title) {
+    animation: fade-in-up-reverse $time-slow;
     line-height: 1.48;
     color: $dark;
     opacity: 0;
@@ -1174,6 +1191,7 @@
 }
 
 .title-above-table {
+  animation: fade-in-up-reverse $time-slow;
   text-transform: uppercase;
   font-family: $cond-light;
   opacity: 0;
@@ -1216,6 +1234,7 @@ table {
 
   tr {
     opacity: 0;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       padding: 20px $indent-phone;

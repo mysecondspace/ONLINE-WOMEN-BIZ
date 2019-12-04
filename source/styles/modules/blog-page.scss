@@ -3,7 +3,7 @@
 
   &.animate {
     .title,
-    .paragraph > * {
+    .block .paragraph > * {
       animation: fade-in $time-slow forwards;
     }
 
@@ -11,37 +11,39 @@
       animation-delay: .5s;
     }
 
-    .absolute {
-      $absolute: 3;
+    .block {
+      .absolute {
+        $absolute: 3;
 
-      > * {
-        animation: fade-in-up $time-slow forwards;
-      }
+        > * {
+          animation: fade-in-up $time-slow forwards;
+        }
 
-      @for $i from 1 through $absolute {
-        &--#{$i} {
-          img {
-            animation-delay: .5s * $i;
-          }
+        @for $i from 1 through $absolute {
+          &--#{$i} {
+            img {
+              animation-delay: .5s * $i;
+            }
 
-          div {
-            animation-delay: 1s * $i;
+            div {
+              animation-delay: 1s * $i;
+            }
           }
         }
       }
-    }
 
-    .paragraph {
-      $paragraph: 3;
+      .paragraph {
+        $paragraph: 3;
 
-      @for $i from 1 through $paragraph {
-        &--#{$i} {
-          p {
-            animation-delay: .6s * $i;
-          }
+        @for $i from 1 through $paragraph {
+          &--#{$i} {
+            p {
+              animation-delay: .6s * $i;
+            }
 
-          a {
-            animation-delay: .7s * $i;
+            a {
+              animation-delay: .7s * $i;
+            }
           }
         }
       }
@@ -68,9 +70,9 @@
       position: relative;
       display: block;
 
-
       > * {
         opacity: 0;
+        animation: fade-in-up-reverse $time-slow;
       }
 
       div {
@@ -87,6 +89,7 @@
 
       > * {
         opacity: 0;
+        animation: fade-out $time-slow;
       }
 
       p {
@@ -356,80 +359,86 @@
 }
 
 #blog-2 {
-  .absolute {
-    &--1 {
-      @include media(phone) {
-        height: 332px;
+  .block {
+    @include media(biggest) {
+      padding-top: 10vh;
+    }
+
+    .absolute {
+      &--1 {
+        @include media(phone) {
+          height: 332px;
+        }
+
+        @include media(smallest) {
+          height: 292px;
+        }
+
+        @include media(tablet) {
+          height: 510px;
+          width: 506px;
+        }
+
+        @include media(biggest) {
+          height: 570px;
+          width: 566px;
+        }
       }
 
-      @include media(smallest) {
-        height: 292px;
-      }
+      &--2 {
+        @include media(phone) {
+          height: 332px;
+        }
 
-      @include media(tablet) {
-        height: 510px;
-        width: 506px;
-      }
+        @include media(smallest) {
+          height: 290px;
+          width: 284px;
+        }
 
-      @include media(biggest) {
-        height: 570px;
-        width: 566px;
+        @include media(tablet) {
+          height: 460px;
+          width: 450px;
+        }
+
+        @include media(biggest) {
+          height: 526px;
+          width: 515px;
+        }
       }
     }
 
-    &--2 {
-      @include media(phone) {
-        height: 332px;
+    .paragraph {
+      &--1 {
+        @include media(tablet) {
+          top: 20vh;
+          left: 0;
+        }
+
+        @include media(desktop) {
+          left: 5vw;
+          top: 30vh;
+        }
+
+        @include media(biggest) {
+          left: 32.5vw;
+          top: 20vh;
+        }
       }
 
-      @include media(smallest) {
-        height: 290px;
-        width: 284px;
-      }
+      &--2 {
+        @include media(tablet) {
+          left: 47.5vw;
+          top: 32.5vh;
+        }
 
-      @include media(tablet) {
-        height: 460px;
-        width: 450px;
-      }
+        @include media(desktop) {
+          left: 40vw;
+          top: 20vh;
+        }
 
-      @include media(biggest) {
-        height: 526px;
-        width: 515px;
-      }
-    }
-  }
-
-  .paragraph {
-    &--1 {
-      @include media(tablet) {
-        top: 20vh;
-        left: 0;
-      }
-
-      @include media(desktop) {
-        left: 5vw;
-        top: 30vh;
-      }
-
-      @include media(biggest) {
-        left: 32.5vw;
-        top: 20vh;
-      }
-    }
-
-    &--2 {
-      @include media(tablet) {
-        left: 47.5vw;
-        top: 32.5vh;
-      }
-
-      @include media(desktop) {
-        left: 40vw;
-        top: 20vh;
-      }
-
-      @include media(biggest) {
-        left: 25vw;
+        @include media(biggest) {
+          left: 25vw;
+        }
       }
     }
   }

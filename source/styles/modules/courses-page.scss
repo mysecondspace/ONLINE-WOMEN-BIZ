@@ -144,8 +144,6 @@
     }
 
     .info {
-      $paragraph: 4;
-
       .title {
         animation-delay: .3s;
 
@@ -154,14 +152,8 @@
         }
       }
 
-      img {
-        animation: fade-in-right $time-slow .5s forwards;
-      }
-
-      @for $i from 1 through $paragraph {
-        div p:nth-of-type(#{$i}) {
-          animation: fade-in-left $time-slow .5s * $i forwards;
-        }
+      div p {
+        animation: none;
       }
     }
   }
@@ -176,6 +168,7 @@
       width: calc(100% - #{$padding-biggest} * 2);
       margin-left: 0;
     }
+
     p:not(.title) {
       color: $light;
     }
@@ -197,6 +190,7 @@
     p {
       opacity: 0;
       font-family: $cond-bold;
+      animation: fade-in-up-reverse $time-slow;
 
       &.title {
         text-transform: uppercase;
@@ -280,7 +274,9 @@
       }
 
       p {
+        opacity: 1;
         color: $light;
+        animation: none;
         text-transform: uppercase;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 
@@ -300,7 +296,6 @@
       img {
         position: absolute;
         z-index: -1;
-        opacity: 0;
 
         @include media(phone) {
           width: calc(100% + #{$indent-phone} * 4);
@@ -315,8 +310,12 @@
         }
 
         @include media(desktop) {
-          right: -19vw;
+          right: -25vw;
           width: auto;
+          top: -13vh;
+        }
+
+        @include media(biggest) {
           top: -10vh;
         }
       }
@@ -385,6 +384,7 @@
   }
 
   .image {
+    animation: fade-in-up-reverse $time-slow;
     position: absolute;
     display: block;
     z-index: -1;
@@ -475,6 +475,7 @@
 
     > * {
       opacity: 0;
+      animation: fade-in-up-reverse $time-slow;
     }
 
     p {
@@ -541,6 +542,7 @@
   }
 
   .image {
+    animation: fade-in-up-reverse $time-slow;
     margin: 0 auto;
     display: block;
     opacity: 0;
@@ -578,6 +580,7 @@
     text-align: center;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(34);
@@ -615,6 +618,7 @@
 
     > * {
       opacity: 0;
+      animation: fade-in-up-reverse $time-slow;
     }
 
     p {
@@ -731,6 +735,7 @@
     margin-bottom: 5vh;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
       font-size: em(75);
@@ -819,6 +824,7 @@
     line-height: 1;
     font-family: $cond-bold;
     text-transform: uppercase;
+    animation: fade-in-down-reverse $time-slow .2s;
     width: fit-content;
     color: $primary;
     margin: 0 auto;
@@ -859,55 +865,52 @@
   }
 
   &.animate {
-    .title,
-    .paragraph > * {
+    .block .paragraph > * {
       animation: fade-in $time-slow forwards;
     }
 
-    .title {
-      animation-delay: .5s;
-    }
+    .block {
+      .absolute {
+        $absolute: 2;
 
-    .absolute {
-      $absolute: 2;
-
-      > * {
-        animation: fade-in-up $time-slow forwards;
-      }
-
-      @for $i from 1 through $absolute {
-        &--#{$i} {
-          img {
-            animation-delay: .5s * $i;
-          }
-
-          div {
-            animation-delay: 1s * $i;
-          }
-        }
-      }
-    }
-
-    .paragraph {
-      $paragraph: 2;
-      $list: 5;
-
-      @for $i from 1 through $paragraph {
-        &--#{$i} {
-          p {
-            animation-delay: .6s * $i;
-          }
-
-          span {
-            animation-delay: .7s * $i;
-          }
-        }
-      }
-
-      @for $i from 1 through $list {
-        ul li:nth-of-type(#{$i}) {
+        > * {
           animation: fade-in-up $time-slow forwards;
-          animation-delay: .8s * $i;
+        }
+
+        @for $i from 1 through $absolute {
+          &--#{$i} {
+            img {
+              animation-delay: .5s * $i;
+            }
+
+            div {
+              animation-delay: 1s * $i;
+            }
+          }
+        }
+      }
+
+      .paragraph {
+        $paragraph: 2;
+        $list: 5;
+
+        @for $i from 1 through $paragraph {
+          &--#{$i} {
+            p {
+              animation-delay: .6s * $i;
+            }
+
+            span {
+              animation-delay: .7s * $i;
+            }
+          }
+        }
+
+        @for $i from 1 through $list {
+          ul li:nth-of-type(#{$i}) {
+            animation: fade-in-up $time-slow forwards;
+            animation-delay: .8s * $i;
+          }
         }
       }
     }
@@ -993,6 +996,7 @@
 
       > * {
         opacity: 0;
+        animation: fade-in-up-reverse $time-slow;
       }
 
       img {
@@ -1030,6 +1034,7 @@
 
       > * {
         opacity: 0;
+        animation: fade-out $time-slow;
       }
 
       > span {
@@ -1091,6 +1096,7 @@
           opacity: 0;
           color: $primary;
           font-family: $bold;
+          animation: fade-in-up-reverse $time-slow;
 
           @include media(tablet) {
             font-size: em(22);
@@ -1199,6 +1205,7 @@
     > p {
       opacity: 0;
       color: $dark;
+      animation: fade-in-up-reverse $time-slow;
 
       &.title {
         line-height: 1;
@@ -1425,6 +1432,7 @@
     > p {
       opacity: 0;
       color: $dark;
+      animation: fade-in-up-reverse $time-slow;
 
       &.title {
         line-height: 1;
@@ -1530,6 +1538,7 @@
     .circle {
       opacity: 0;
       position: relative;
+      animation: fade-out $time-slow;
 
       @include media(tablet) {
         margin-left: calc(0px - #{$padding-normal} / 2);
@@ -1563,6 +1572,7 @@
           bottom: 0;
           opacity: 0;
           text-transform: uppercase;
+          animation: fade-out $time-slow;
           transition: all .5s cubic-bezier(0, 0, 0, 1);
 
           @include media(phone) {
@@ -1580,6 +1590,7 @@
         color: $light;
         position: absolute;
         width: fit-content;
+        animation: fade-out $time-slow;
         text-transform: uppercase;
         font-family: $cond-bold;
         margin: 0 auto;
@@ -1664,6 +1675,7 @@
         line-height: 1;
         position: relative;
         text-transform: uppercase;
+        animation: fade-in-up-reverse $time-slow;
 
         @include media(phone) {
           font-size: em(55);
@@ -1781,6 +1793,7 @@
       opacity: 0;
       font-family: $cond-bold;
       text-transform: uppercase;
+      animation: fade-in-up-reverse $time-slow;
 
       @include media(phone) {
         font-size: em(60);
@@ -1809,6 +1822,7 @@
         padding-left: 50px;
         position: relative;
         margin-bottom: 1vh;
+        animation: fade-in-up-reverse $time-slow;
 
         @include media(tablet) {
           font-size: em(16);
@@ -1931,6 +1945,7 @@
     > * {
       opacity: 0;
       text-transform: uppercase;
+      animation: fade-out $time-slow;
     }
 
     p {
@@ -2000,7 +2015,7 @@
       }
     }
 
-    .purchase {
+    .paragraph .purchase {
       animation: fade-in-up $time-slow 1s forwards;
     }
   }
@@ -2017,6 +2032,7 @@
     > * {
       opacity: 0;
       text-transform: uppercase;
+      animation: fade-in-up-reverse $time-slow;
     }
 
     p {
@@ -2108,6 +2124,7 @@
 
     .purchase {
       @include transition($time-fast);
+      animation: fade-in-up-reverse $time-slow;
       border-right: 1px solid $dark;
       background-color: $primary;
       text-transform: uppercase;
@@ -2118,6 +2135,7 @@
       margin-top: 5vh;
       float: right;
       color: $dark;
+      opacity: 0;
 
       &::after {
         @include inline-block;

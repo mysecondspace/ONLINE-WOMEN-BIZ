@@ -43,7 +43,7 @@ self.__precacheManifest = [
   },
   {
     "url": "entrepreneur-1.html",
-    "revision": "260545bb32947925e4dd52d0da4c5c9d"
+    "revision": "4bce1c489e66c17c5a3500aaf05c83be"
   },
   {
     "url": "entrepreneur-2.html",
@@ -55,7 +55,7 @@ self.__precacheManifest = [
   },
   {
     "url": "faq.html",
-    "revision": "5e700527c1a24dd0a288c0c72cdcd2ca"
+    "revision": "10e76deeefaf15eda1b9b00f8932338d"
   },
   {
     "url": "fonts/harmonia-bold.otf",
@@ -263,7 +263,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-big-primary.png",
-    "revision": "b2b3a57764898fe37f5be506e370be42"
+    "revision": "ce9cb694e5ffc9fa34a5aa61e72f6d76"
   },
   {
     "url": "images/logo-dark.svg",
@@ -275,7 +275,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-dark-2x.png",
-    "revision": "163bbf682b1cc10c7fc27343f8d57053"
+    "revision": "4cf3f969c08e5d1794a9af3186718142"
   },
   {
     "url": "images/logo-small-dark.png",
@@ -375,7 +375,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "d379e5f050b8f6cbfb42397dfcc02c22"
+    "revision": "4db08403ad672d8a61d32ef887af9ab7"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -387,11 +387,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "8b41d4854c8c9bba667ccee1d07f81b1"
+    "revision": "45ef2ae00b72c23e96c20922b147914c"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "fad8a9da87335fa85618e849dbb47a48"
+    "revision": "82532b164de8855fbb9cf3a8adc9f203"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

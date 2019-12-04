@@ -217,10 +217,30 @@ $(document).ready(function() {
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
 
+        // back to original state
+        switch(origin && origin.index) {
+          case 0:
+            $('#nina-mua-1').removeClass('animate');
+
+            break;
+          case 1:
+            $('#nina-mua-2').removeClass('animate');
+            $('.paragraph p:first-of-type span').removeClass('parallax');
+
+            break;
+          case 2:
+            $('#nina-mua-3').removeClass('animate');
+
+            break;
+          case 3:
+            $('#nina-mua-4').removeClass('animate');
+
+            break;
+        }
+
         // sections
         switch(destination.index) {
           case 0:
-            $('#nina-mua-1').addClass('animate');
             $('#logo').addClass('big primary');
             $('#menu').addClass('light');
             $('#nav').addClass('primary');
@@ -274,6 +294,37 @@ $(document).ready(function() {
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        switch(origin && origin.index) {
+          case 0:
+            $('#about-1').removeClass('animate');
+
+            break;
+          case 1:
+            $('#about-2').removeClass('animate');
+
+            break;
+          case 2:
+            $('#about-3').removeClass('animate');
+
+            break;
+          case 3:
+            $('#about-4').removeClass('animate');
+
+            break;
+          case 4:
+            $('#about-5').removeClass('animate');
+
+            break;
+          case 5:
+            $('#about-6').removeClass('animate');
+
+            break;
+          case 6:
+            $('#about-7').removeClass('animate');
+
+            break;
+        }
 
         // sections
         switch(destination.index) {
@@ -362,6 +413,59 @@ $(document).ready(function() {
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
 
+        // back to original state
+        switch(origin && origin.index) {
+          case 0:
+            $('#courses-1').removeClass('animate');
+
+            break;
+          case 1:
+            $('#courses-2').removeClass('animate');
+
+            break;
+          case 2:
+            $('#courses-3').removeClass('animate');
+
+            break;
+          case 3:
+            $('#courses-4').removeClass('animate');
+            $('.slogan').removeClass('parallax');
+
+            break;
+          case 4:
+            $('#courses-5').removeClass('animate');
+
+            break;
+          case 5:
+            $('#courses-6').removeClass('animate');
+
+            break;
+          case 6:
+            $('#courses-7').removeClass('animate');
+
+            break;
+          case 7:
+            $('#courses-8').removeClass('animate');
+
+            break;
+          case 8:
+            $('#courses-9').removeClass('animate');
+
+            break;
+          case 9:
+            $('#courses-10').removeClass('animate');
+
+            break;
+          case 10:
+            $('#courses-11').removeClass('animate');
+
+            break;
+          case 11:
+            $('#courses-12').removeClass('animate');
+
+            break;
+        }
+
         // sections
         switch(destination.index) {
           case 0:
@@ -377,6 +481,24 @@ $(document).ready(function() {
             $('#menu').addClass('secondary');
             $('#nav').addClass('light');
 
+            // scroll menu and parallax
+            $(window).scroll(function() {
+
+              // background image parallax
+              var first = document.querySelector(".info div p:nth-of-type(1)"),
+                  second = document.querySelector(".info div p:nth-of-type(2)"),
+                  third = document.querySelector(".info div p:nth-of-type(3)"),
+                  fourth = document.querySelector(".info div p:nth-of-type(4)"),
+                  image = document.querySelector(".info div img"),
+                  height = window.pageYOffset;
+
+              first.style.transform = "translateX(" + (height * .05) + "px)";
+              second.style.transform = "translateX(" + (height * .075) + "px)";
+              third.style.transform = "translateX(" + (height * .025) + "px)";
+              fourth.style.transform = "translateX(" + (height * .1) + "px)";
+              image.style.transform = "translateY(" + (height * .05) + "px)";
+            });
+
             break;
           case 2:
             $('#courses-3').addClass('animate');
@@ -390,6 +512,15 @@ $(document).ready(function() {
             $('#logo').addClass('small light');
             $('#menu').addClass('primary');
             $('#nav').addClass('light');
+
+            // only for desktop version
+            if (window.innerWidth > 768) {
+              function timeout() {
+                $('.slogan').addClass('parallax');
+              };
+
+              setTimeout(timeout, 2000);
+            }
 
             break;
           case 4:
@@ -467,6 +598,38 @@ $(document).ready(function() {
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
 
+        // back to original state
+        switch(origin && origin.index) {
+          case 0:
+            $('#events-1').removeClass('animate');
+
+            break;
+          case 1:
+            $('#events-2').removeClass('animate');
+
+            break;
+          case 2:
+            $('#events-3').removeClass('animate');
+
+            break;
+          case 3:
+            $('#events-4').removeClass('animate');
+
+            break;
+          case 4:
+            $('#events-5').removeClass('animate');
+
+            break;
+          case 5:
+            $('#events-6').removeClass('animate');
+
+            break;
+          case 6:
+            $('#events-7').removeClass('animate');
+
+            break;
+        }
+
         // sections
         switch(destination.index) {
           case 0:
@@ -543,6 +706,26 @@ $(document).ready(function() {
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
 
+        // back to original state
+        switch(origin && origin.index) {
+          case 0:
+            $('#blog-1').removeClass('animate');
+
+            break;
+          case 1:
+            $('#blog-2').removeClass('animate');
+
+            break;
+          case 2:
+            $('#blog-3').removeClass('animate');
+
+            break;
+          case 3:
+            $('#blog-4').removeClass('animate');
+
+            break;
+        }
+
         // sections
         switch(destination.index) {
           case 0:
@@ -596,6 +779,42 @@ $(document).ready(function() {
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // back to original state
+        switch(origin && origin.index) {
+          case 0:
+            $('#post-1').removeClass('animate');
+
+            break;
+          case 1:
+            $('#post-2').removeClass('animate');
+
+            break;
+          case 2:
+            $('#post-3').removeClass('animate');
+
+            break;
+          case 3:
+            $('#post-4').removeClass('animate');
+
+            break;
+          case 4:
+            $('#post-5').removeClass('animate');
+
+            break;
+          case 5:
+            $('#post-6').removeClass('animate');
+
+            break;
+          case 6:
+            $('#post-7').removeClass('animate');
+
+            break;
+          case 7:
+            $('#post-8').removeClass('animate');
+
+            break;
+        }
 
         // sections
         switch(destination.index) {
@@ -673,6 +892,38 @@ $(document).ready(function() {
       licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
       afterLoad: function(origin, destination, direction) {
         $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // back to original state
+        switch(origin && origin.index) {
+          case 0:
+            $('#faq-1').removeClass('animate');
+
+            break;
+          case 1:
+            $('#faq-2').removeClass('animate');
+
+            break;
+          case 2:
+            $('#faq-3').removeClass('animate');
+
+            break;
+          case 3:
+            $('#faq-4').removeClass('animate');
+
+            break;
+          case 4:
+            $('#faq-5').removeClass('animate');
+
+            break;
+          case 5:
+            $('#faq-6').removeClass('animate');
+
+            break;
+          case 6:
+            $('#faq-7').removeClass('animate');
+
+            break;
+        }
 
         // sections
         switch(destination.index) {

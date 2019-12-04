@@ -121,6 +121,16 @@
     transform: translateX(0);
   }
 }
+@keyframes fade-in-right-reverse {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
 @keyframes fade-in-right-big {
   0% {
     opacity: 0;
@@ -220,6 +230,12 @@ html button {
 }
 #logo.animate-out-down {
   animation: fade-out 0.15s forwards;
+}
+@media (max-device-pixel-ratio: 1), (max-resolution: 1dppx) {
+  #logo.big {
+    background-size: contain;
+    width: 151px !important;
+  }
 }
 #logo.big.primary {
   background-image: url(../images/logo-big-primary.png);
@@ -560,6 +576,7 @@ html button {
   opacity: 0;
   display: grid;
   margin-top: 10vh;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-3 form, #events-7 form, #post-8 form {
@@ -639,6 +656,7 @@ html button {
   color: #fff;
   display: block;
   font-family: "harmonia cond light";
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-3 span, #events-7 span, #post-8 span {
@@ -661,6 +679,7 @@ html button {
   }
 }
 #events-3 .title, #events-7 .title, #post-8 .title {
+  animation: fade-out 2s;
   text-transform: uppercase;
   font-family: "harmonia cond light";
   color: #fd959e;
@@ -747,6 +766,7 @@ html button {
   line-height: 1;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   .component p {
@@ -788,6 +808,7 @@ html button {
   display: block;
   margin-top: 2vh;
   line-height: 1.48;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   .component > span {
@@ -823,6 +844,7 @@ html button {
 }
 .arrow span {
   opacity: 0;
+  animation: fade-in-down-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   .arrow span {
@@ -902,6 +924,7 @@ html button {
   opacity: 0;
   overflow: hidden;
   text-align: left;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   .item {
@@ -1021,6 +1044,7 @@ html button {
 }
 
 .youtube-player {
+  animation: fade-in-up-reverse 2s;
   position: relative;
   opacity: 0;
 }
@@ -1120,6 +1144,7 @@ html button {
 #faq-2 .paragraph p:last-of-type p,
 .horizontal-list p {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #faq-2 .paragraph p:last-of-type span,
 .horizontal-list span {
@@ -1170,6 +1195,7 @@ html button {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
+  animation: fade-out 2s;
   background-color: #022329;
   font-family: "harmonia cond bold";
   display: inline-grid;
@@ -1229,6 +1255,7 @@ html button {
 .text > h2 {
   opacity: 0;
   color: #022329;
+  animation: fade-in-up-reverse 2s;
 }
 .text > p.title,
 .text > h2.title {
@@ -1273,6 +1300,7 @@ html button {
 }
 .text ul li,
 .text p:not(.title) {
+  animation: fade-in-up-reverse 2s;
   line-height: 1.48;
   color: #022329;
   opacity: 0;
@@ -1439,6 +1467,7 @@ html button {
 }
 
 .title-above-table {
+  animation: fade-in-up-reverse 2s;
   text-transform: uppercase;
   font-family: "harmonia cond light";
   opacity: 0;
@@ -1480,6 +1509,7 @@ table {
 }
 table tr {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   table tr {
@@ -2679,6 +2709,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   position: relative;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #about-2 .slogan {
@@ -2715,6 +2746,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #about-2 .paragraph p {
+  animation: fade-in-up-reverse 2s;
   line-height: 1.48;
   opacity: 0;
 }
@@ -2788,6 +2820,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #about-2 .absolute > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #about-2 .absolute img {
   z-index: 1;
@@ -2867,6 +2900,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   position: relative;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #about-3 .slogan {
@@ -2910,6 +2944,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #about-3 .paragraph p {
+  animation: fade-in-up-reverse 2s;
   line-height: 1.48;
   opacity: 0;
 }
@@ -3084,7 +3119,6 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     padding-top: 10vh;
   }
 }
-#about-4.animate .image,
 #about-4.animate .slogan,
 #about-4.animate .absolute > * {
   animation: fade-in-up 2s forwards;
@@ -3130,6 +3164,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #about-4 .absolute > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #about-4 .absolute img {
   z-index: 1;
@@ -3165,6 +3200,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   text-align: center;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
   margin: 5vh auto 0;
 }
 @media only screen and (max-width: 767px) {
@@ -3208,40 +3244,40 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #about-5.animate .title,
-#about-5.animate .paragraph > * {
+#about-5.animate .block .paragraph > * {
   animation: fade-in 2s forwards;
 }
-#about-5.animate .absolute > * {
+#about-5.animate .block .absolute > * {
   animation: fade-in-up 2s forwards;
 }
-#about-5.animate .absolute--1 img {
+#about-5.animate .block .absolute--1 img {
   animation-delay: 0.5s;
 }
-#about-5.animate .absolute--1 div {
+#about-5.animate .block .absolute--1 div {
   animation-delay: 1s;
 }
-#about-5.animate .absolute--2 img {
+#about-5.animate .block .absolute--2 img {
   animation-delay: 1s;
 }
-#about-5.animate .absolute--2 div {
+#about-5.animate .block .absolute--2 div {
   animation-delay: 2s;
 }
-#about-5.animate .paragraph--1 p {
+#about-5.animate .block .paragraph--1 p {
   animation-delay: 0.6s;
 }
-#about-5.animate .paragraph--1 span {
+#about-5.animate .block .paragraph--1 span {
   animation-delay: 0.7s;
 }
-#about-5.animate .paragraph--1 a {
+#about-5.animate .block .paragraph--1 a {
   animation-delay: 0.8s;
 }
-#about-5.animate .paragraph--2 p {
+#about-5.animate .block .paragraph--2 p {
   animation-delay: 1.2s;
 }
-#about-5.animate .paragraph--2 span {
+#about-5.animate .block .paragraph--2 span {
   animation-delay: 1.4s;
 }
-#about-5.animate .paragraph--2 a {
+#about-5.animate .block .paragraph--2 a {
   animation-delay: 1.6s;
 }
 #about-5 .block {
@@ -3337,6 +3373,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #about-5 .block .absolute > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #about-5 .block .absolute img {
   z-index: 1;
@@ -3369,6 +3406,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #about-5 .block .paragraph > * {
   opacity: 0;
+  animation: fade-out 2s;
 }
 #about-5 .block .paragraph > span {
   display: block;
@@ -3451,6 +3489,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   position: relative;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-out 2s;
 }
 @media only screen and (max-width: 767px) {
   #about-5 .block .paragraph .title {
@@ -3539,6 +3578,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   margin-bottom: 1vh;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #about-6 .slogan {
@@ -3735,14 +3775,14 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     padding-bottom: 500px;
   }
 }
-#nina-mua-2.animate .paragraph p {
+#nina-mua-2.animate .paragraph p:first-of-type {
   animation: fade-in-up 2s forwards;
 }
 #nina-mua-2.animate .paragraph p:first-of-type span {
   animation: fade-in-up 2s 0.2s forwards;
 }
 #nina-mua-2.animate .paragraph p:first-of-type + p {
-  animation-delay: .1s;
+  animation: fade-in-up 2s 0.1s forwards;
 }
 #nina-mua-2.animate .absolute {
   animation: fade-in-up 2s 0.3s forwards;
@@ -3783,6 +3823,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .1s;
   font-family: "harmonia cond bold";
   text-shadow: -1px 0 #022329, 0 1px #022329, 1px 0 #022329, 0 -1px #022329;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #nina-mua-2 .paragraph p:first-of-type {
@@ -3805,6 +3846,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #nina-mua-2 .paragraph p:first-of-type span {
+  animation: fade-in-up-reverse 2s;
   position: absolute;
   color: #022329;
   opacity: 0;
@@ -3837,6 +3879,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-size: 1.25em;
   line-height: 1.48;
   font-family: "harmonia cond normal";
+  animation: fade-in-up-reverse 2s;
   animation-delay: .2s;
   margin-top: 5%;
 }
@@ -3863,6 +3906,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   bottom: 0;
   opacity: 0;
   position: absolute;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #nina-mua-2 .absolute {
@@ -3937,40 +3981,41 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #nina-mua-3.animate .small {
   animation: fade-in-right 2s 0.3s forwards;
 }
-#nina-mua-3.animate .absolute > * {
+#nina-mua-3.animate .block .absolute > * {
   animation: fade-in-up 2s forwards;
 }
-#nina-mua-3.animate .absolute img:nth-of-type(1) + div {
+#nina-mua-3.animate .block .absolute img:nth-of-type(1) + div {
   animation-delay: 1s;
 }
-#nina-mua-3.animate .absolute img:nth-of-type(2) {
+#nina-mua-3.animate .block .absolute img:nth-of-type(2) {
   animation-delay: .1s;
 }
-#nina-mua-3.animate .absolute img:nth-of-type(2) + div {
+#nina-mua-3.animate .block .absolute img:nth-of-type(2) + div {
   animation-delay: 1.1s;
 }
-#nina-mua-3.animate .absolute img:nth-of-type(3) {
+#nina-mua-3.animate .block .absolute img:nth-of-type(3) {
   animation-delay: .2s;
 }
-#nina-mua-3.animate .absolute img:nth-of-type(3) + div {
+#nina-mua-3.animate .block .absolute img:nth-of-type(3) + div {
   animation-delay: 1.2s;
 }
-#nina-mua-3.animate .paragraph p {
+#nina-mua-3.animate .block .paragraph p {
   animation: fade-in-up 2s forwards;
 }
-#nina-mua-3.animate .paragraph p:first-of-type {
+#nina-mua-3.animate .block .paragraph p:first-of-type {
   animation-delay: .4s;
 }
-#nina-mua-3.animate .paragraph p:first-of-type + p {
+#nina-mua-3.animate .block .paragraph p:first-of-type + p {
   animation-delay: .5s;
 }
-#nina-mua-3.animate .paragraph p:first-of-type + p + p {
+#nina-mua-3.animate .block .paragraph p:first-of-type + p + p {
   animation-delay: .6s;
 }
 #nina-mua-3 .title {
   opacity: 0;
   color: #022329;
   font-family: "harmonia cond bold";
+  animation: fade-in-down-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #nina-mua-3 .title {
@@ -3990,6 +4035,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #nina-mua-3 .circle {
   opacity: 0;
   position: relative;
+  animation: fade-out 2s;
 }
 @media only screen and (max-width: 767px) {
   #nina-mua-3 .circle {
@@ -4037,6 +4083,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   bottom: 0;
   opacity: 0;
   text-transform: uppercase;
+  animation: fade-out 2s;
   transition: all 0.5s cubic-bezier(0, 0, 0, 1);
 }
 @media only screen and (max-width: 767px) {
@@ -4054,6 +4101,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #022329;
   position: absolute;
   width: fit-content;
+  animation: fade-out 2s;
   font-family: "harmonia cond bold";
   top: calc(50% - 39px);
   margin: 0 auto;
@@ -4113,6 +4161,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-size: 1.25em;
   top: calc(100vh - 144px);
   font-family: "harmonia cond normal";
+  animation: fade-in-right-reverse 2s;
 }
 @media only screen and (min-width: 768px) {
   #nina-mua-3 .small {
@@ -4277,6 +4326,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 768px) {
   #nina-mua-3 .block .absolute img {
+    animation: fade-in-up-reverse 2s;
     position: absolute;
     opacity: 0;
   }
@@ -4464,6 +4514,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #fd959e;
 }
 #nina-mua-4 .sup {
+  animation: fade-in-up-reverse 2s;
   font-family: "harmonia cond light";
   opacity: 0;
 }
@@ -4657,20 +4708,8 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-2.animate .info .title + p {
   animation-delay: .4s;
 }
-#courses-2.animate .info img {
-  animation: fade-in-right 2s 0.5s forwards;
-}
-#courses-2.animate .info div p:nth-of-type(1) {
-  animation: fade-in-left 2s 0.5s forwards;
-}
-#courses-2.animate .info div p:nth-of-type(2) {
-  animation: fade-in-left 2s 1s forwards;
-}
-#courses-2.animate .info div p:nth-of-type(3) {
-  animation: fade-in-left 2s 1.5s forwards;
-}
-#courses-2.animate .info div p:nth-of-type(4) {
-  animation: fade-in-left 2s 2s forwards;
+#courses-2.animate .info div p {
+  animation: none;
 }
 @media only screen and (min-width: 768px) {
   #courses-2 .text {
@@ -4705,6 +4744,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-2 .info p {
   opacity: 0;
   font-family: "harmonia cond bold";
+  animation: fade-in-up-reverse 2s;
 }
 #courses-2 .info p.title {
   text-transform: uppercase;
@@ -4795,7 +4835,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-family: "harmonia cond bold";
 }
 #courses-2 .info div p {
+  opacity: 1;
   color: #fff;
+  animation: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -4817,7 +4859,6 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-2 .info div img {
   position: absolute;
   z-index: -1;
-  opacity: 0;
 }
 @media only screen and (max-width: 767px) {
   #courses-2 .info div img {
@@ -4835,8 +4876,13 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1440px) {
   #courses-2 .info div img {
-    right: -19vw;
+    right: -25vw;
     width: auto;
+    top: -13vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #courses-2 .info div img {
     top: -10vh;
   }
 }
@@ -4893,6 +4939,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .8s;
 }
 #courses-3 .image {
+  animation: fade-in-up-reverse 2s;
   position: absolute;
   display: block;
   z-index: -1;
@@ -4989,6 +5036,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-3 .paragraph > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #courses-3 .paragraph p {
   line-height: 1.48;
@@ -5051,6 +5099,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .4s;
 }
 #courses-4 .image {
+  animation: fade-in-up-reverse 2s;
   margin: 0 auto;
   display: block;
   opacity: 0;
@@ -5091,6 +5140,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   text-align: center;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #courses-4 .slogan {
@@ -5133,6 +5183,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-4 .paragraph > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #courses-4 .paragraph p {
   line-height: 1.48;
@@ -5252,6 +5303,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   margin-bottom: 5vh;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #courses-5 .slogan {
@@ -5334,6 +5386,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   line-height: 1;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-down-reverse 2s 0.2s;
   width: fit-content;
   color: #fd959e;
   margin: 0 auto;
@@ -5378,57 +5431,53 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     padding-top: 5vh;
   }
 }
-#courses-7.animate .title,
-#courses-7.animate .paragraph > * {
+#courses-7.animate .block .paragraph > * {
   animation: fade-in 2s forwards;
 }
-#courses-7.animate .title {
-  animation-delay: .5s;
-}
-#courses-7.animate .absolute > * {
+#courses-7.animate .block .absolute > * {
   animation: fade-in-up 2s forwards;
 }
-#courses-7.animate .absolute--1 img {
+#courses-7.animate .block .absolute--1 img {
   animation-delay: 0.5s;
 }
-#courses-7.animate .absolute--1 div {
+#courses-7.animate .block .absolute--1 div {
   animation-delay: 1s;
 }
-#courses-7.animate .absolute--2 img {
+#courses-7.animate .block .absolute--2 img {
   animation-delay: 1s;
 }
-#courses-7.animate .absolute--2 div {
+#courses-7.animate .block .absolute--2 div {
   animation-delay: 2s;
 }
-#courses-7.animate .paragraph--1 p {
+#courses-7.animate .block .paragraph--1 p {
   animation-delay: 0.6s;
 }
-#courses-7.animate .paragraph--1 span {
+#courses-7.animate .block .paragraph--1 span {
   animation-delay: 0.7s;
 }
-#courses-7.animate .paragraph--2 p {
+#courses-7.animate .block .paragraph--2 p {
   animation-delay: 1.2s;
 }
-#courses-7.animate .paragraph--2 span {
+#courses-7.animate .block .paragraph--2 span {
   animation-delay: 1.4s;
 }
-#courses-7.animate .paragraph ul li:nth-of-type(1) {
+#courses-7.animate .block .paragraph ul li:nth-of-type(1) {
   animation: fade-in-up 2s forwards;
   animation-delay: 0.8s;
 }
-#courses-7.animate .paragraph ul li:nth-of-type(2) {
+#courses-7.animate .block .paragraph ul li:nth-of-type(2) {
   animation: fade-in-up 2s forwards;
   animation-delay: 1.6s;
 }
-#courses-7.animate .paragraph ul li:nth-of-type(3) {
+#courses-7.animate .block .paragraph ul li:nth-of-type(3) {
   animation: fade-in-up 2s forwards;
   animation-delay: 2.4s;
 }
-#courses-7.animate .paragraph ul li:nth-of-type(4) {
+#courses-7.animate .block .paragraph ul li:nth-of-type(4) {
   animation: fade-in-up 2s forwards;
   animation-delay: 3.2s;
 }
-#courses-7.animate .paragraph ul li:nth-of-type(5) {
+#courses-7.animate .block .paragraph ul li:nth-of-type(5) {
   animation: fade-in-up 2s forwards;
   animation-delay: 4s;
 }
@@ -5520,6 +5569,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-7 .block .absolute > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #courses-7 .block .absolute img {
   z-index: 1;
@@ -5557,6 +5607,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-7 .block .paragraph > * {
   opacity: 0;
+  animation: fade-out 2s;
 }
 #courses-7 .block .paragraph > span {
   color: #fff;
@@ -5623,6 +5674,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
   color: #fd959e;
   font-family: "harmonia bold";
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (min-width: 768px) {
   #courses-7 .block .paragraph ul li {
@@ -5741,6 +5793,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-8 .info > p {
   opacity: 0;
   color: #022329;
+  animation: fade-in-up-reverse 2s;
 }
 #courses-8 .info > p.title {
   line-height: 1;
@@ -5984,6 +6037,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-9 .info > p {
   opacity: 0;
   color: #022329;
+  animation: fade-in-up-reverse 2s;
 }
 #courses-9 .info > p.title {
   line-height: 1;
@@ -6085,6 +6139,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-10.foundation .circle {
   opacity: 0;
   position: relative;
+  animation: fade-out 2s;
 }
 @media only screen and (min-width: 768px) {
   #courses-10.foundation .circle {
@@ -6127,6 +6182,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   bottom: 0;
   opacity: 0;
   text-transform: uppercase;
+  animation: fade-out 2s;
   transition: all 0.5s cubic-bezier(0, 0, 0, 1);
 }
 @media only screen and (max-width: 767px) {
@@ -6144,6 +6200,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #fff;
   position: absolute;
   width: fit-content;
+  animation: fade-out 2s;
   text-transform: uppercase;
   font-family: "harmonia cond bold";
   margin: 0 auto;
@@ -6228,6 +6285,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   line-height: 1;
   position: relative;
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #courses-10.growth .info > * {
@@ -6349,6 +6407,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #courses-11 .info p {
@@ -6380,6 +6439,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   padding-left: 50px;
   position: relative;
   margin-bottom: 1vh;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (min-width: 768px) {
   #courses-11 .info ul li {
@@ -6508,6 +6568,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-11 .paragraph > * {
   opacity: 0;
   text-transform: uppercase;
+  animation: fade-out 2s;
 }
 #courses-11 .paragraph p {
   font-family: "harmonia cond bold";
@@ -6578,7 +6639,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-12.animate .paragraph p:nth-of-type(3) {
   animation: fade-in-up 2s 1.5s forwards;
 }
-#courses-12.animate .purchase {
+#courses-12.animate .paragraph .purchase {
   animation: fade-in-up 2s 1s forwards;
 }
 @media only screen and (min-width: 768px) {
@@ -6594,6 +6655,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-12 .paragraph > * {
   opacity: 0;
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 #courses-12 .paragraph p {
   text-transform: uppercase;
@@ -6694,6 +6756,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   -o-transition: 0.15s;
   -webkit-transition: 0.15s;
   transition: 0.15s;
+  animation: fade-in-up-reverse 2s;
   border-right: 1px solid #022329;
   background-color: #fd959e;
   text-transform: uppercase;
@@ -6704,6 +6767,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   margin-top: 5vh;
   float: right;
   color: #022329;
+  opacity: 0;
 }
 #courses-12 .paragraph .purchase::after {
   display: inline-block;
@@ -6912,6 +6976,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   line-height: 1;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-2 .slogan {
@@ -6948,6 +7013,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #events-2 .paragraph > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #events-2 .paragraph p {
   margin-top: 2.5vh;
@@ -7058,6 +7124,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   line-height: 1;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-4 .slogan {
@@ -7094,6 +7161,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   margin-top: 7.5vh;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-4 .title {
@@ -7157,6 +7225,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   position: relative;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-5 .slogan {
@@ -7193,6 +7262,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   display: block;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-5 .slogan + span {
@@ -7216,6 +7286,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #events-5 .paragraph p {
+  animation: fade-in-up-reverse 2s;
   line-height: 1.48;
   opacity: 0;
 }
@@ -7291,6 +7362,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #events-5 .absolute > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #events-5 .absolute img {
   z-index: 1;
@@ -7378,6 +7450,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #events-6 .info > p {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #events-6 .info > p.title {
   color: #fff;
@@ -7495,6 +7568,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #events-6 .info ul li {
   opacity: 0;
+  animation: fade-in-up-reverser 2s;
 }
 @media only screen and (max-width: 767px) {
   #events-6 .arrow {
@@ -7572,55 +7646,56 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #events-7 .title + span {
   opacity: 0;
   display: block;
+  animation: fade-in-up-reverse 2s 1s;
 }
 
 #blog section {
   background-color: #022329;
 }
 #blog section.animate .title,
-#blog section.animate .paragraph > * {
+#blog section.animate .block .paragraph > * {
   animation: fade-in 2s forwards;
 }
 #blog section.animate .title {
   animation-delay: .5s;
 }
-#blog section.animate .absolute > * {
+#blog section.animate .block .absolute > * {
   animation: fade-in-up 2s forwards;
 }
-#blog section.animate .absolute--1 img {
+#blog section.animate .block .absolute--1 img {
   animation-delay: 0.5s;
 }
-#blog section.animate .absolute--1 div {
+#blog section.animate .block .absolute--1 div {
   animation-delay: 1s;
 }
-#blog section.animate .absolute--2 img {
+#blog section.animate .block .absolute--2 img {
   animation-delay: 1s;
 }
-#blog section.animate .absolute--2 div {
+#blog section.animate .block .absolute--2 div {
   animation-delay: 2s;
 }
-#blog section.animate .absolute--3 img {
+#blog section.animate .block .absolute--3 img {
   animation-delay: 1.5s;
 }
-#blog section.animate .absolute--3 div {
+#blog section.animate .block .absolute--3 div {
   animation-delay: 3s;
 }
-#blog section.animate .paragraph--1 p {
+#blog section.animate .block .paragraph--1 p {
   animation-delay: 0.6s;
 }
-#blog section.animate .paragraph--1 a {
+#blog section.animate .block .paragraph--1 a {
   animation-delay: 0.7s;
 }
-#blog section.animate .paragraph--2 p {
+#blog section.animate .block .paragraph--2 p {
   animation-delay: 1.2s;
 }
-#blog section.animate .paragraph--2 a {
+#blog section.animate .block .paragraph--2 a {
   animation-delay: 1.4s;
 }
-#blog section.animate .paragraph--3 p {
+#blog section.animate .block .paragraph--3 p {
   animation-delay: 1.8s;
 }
-#blog section.animate .paragraph--3 a {
+#blog section.animate .block .paragraph--3 a {
   animation-delay: 2.1s;
 }
 #blog section .block {
@@ -7648,6 +7723,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #blog section .block .absolute > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #blog section .block .absolute div {
   background-color: #fd959e;
@@ -7661,6 +7737,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #blog section .block .paragraph > * {
   opacity: 0;
+  animation: fade-out 2s;
 }
 #blog section .block .paragraph p {
   color: #fd959e;
@@ -7976,83 +8053,88 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #fff;
 }
 
+@media only screen and (min-width: 1920px) {
+  #blog-2 .block {
+    padding-top: 10vh;
+  }
+}
 @media only screen and (max-width: 767px) {
-  #blog-2 .absolute--1 {
+  #blog-2 .block .absolute--1 {
     height: 332px;
   }
 }
 @media only screen and (max-width: 399px) {
-  #blog-2 .absolute--1 {
+  #blog-2 .block .absolute--1 {
     height: 292px;
   }
 }
 @media only screen and (min-width: 768px) {
-  #blog-2 .absolute--1 {
+  #blog-2 .block .absolute--1 {
     height: 510px;
     width: 506px;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #blog-2 .absolute--1 {
+  #blog-2 .block .absolute--1 {
     height: 570px;
     width: 566px;
   }
 }
 @media only screen and (max-width: 767px) {
-  #blog-2 .absolute--2 {
+  #blog-2 .block .absolute--2 {
     height: 332px;
   }
 }
 @media only screen and (max-width: 399px) {
-  #blog-2 .absolute--2 {
+  #blog-2 .block .absolute--2 {
     height: 290px;
     width: 284px;
   }
 }
 @media only screen and (min-width: 768px) {
-  #blog-2 .absolute--2 {
+  #blog-2 .block .absolute--2 {
     height: 460px;
     width: 450px;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #blog-2 .absolute--2 {
+  #blog-2 .block .absolute--2 {
     height: 526px;
     width: 515px;
   }
 }
 @media only screen and (min-width: 768px) {
-  #blog-2 .paragraph--1 {
+  #blog-2 .block .paragraph--1 {
     top: 20vh;
     left: 0;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #blog-2 .paragraph--1 {
+  #blog-2 .block .paragraph--1 {
     left: 5vw;
     top: 30vh;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #blog-2 .paragraph--1 {
+  #blog-2 .block .paragraph--1 {
     left: 32.5vw;
     top: 20vh;
   }
 }
 @media only screen and (min-width: 768px) {
-  #blog-2 .paragraph--2 {
+  #blog-2 .block .paragraph--2 {
     left: 47.5vw;
     top: 32.5vh;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #blog-2 .paragraph--2 {
+  #blog-2 .block .paragraph--2 {
     left: 40vw;
     top: 20vh;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #blog-2 .paragraph--2 {
+  #blog-2 .block .paragraph--2 {
     left: 25vw;
   }
 }
@@ -8374,46 +8456,46 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #post-3.animate .title,
-#post-3.animate .paragraph > * {
+#post-3.animate .block .paragraph > * {
   animation: fade-in 2s forwards;
 }
-#post-3.animate .absolute > * {
+#post-3.animate .block .absolute > * {
   animation: fade-in-up 2s forwards;
 }
-#post-3.animate .absolute--1 img {
+#post-3.animate .block .absolute--1 img {
   animation-delay: 0.5s;
 }
-#post-3.animate .absolute--1 div {
+#post-3.animate .block .absolute--1 div {
   animation-delay: 0.75s;
 }
-#post-3.animate .absolute--2 img {
+#post-3.animate .block .absolute--2 img {
   animation-delay: 1s;
 }
-#post-3.animate .absolute--2 div {
+#post-3.animate .block .absolute--2 div {
   animation-delay: 1.5s;
 }
-#post-3.animate .absolute--3 img {
+#post-3.animate .block .absolute--3 img {
   animation-delay: 1.5s;
 }
-#post-3.animate .absolute--3 div {
+#post-3.animate .block .absolute--3 div {
   animation-delay: 2.25s;
 }
-#post-3.animate .paragraph--1 p {
+#post-3.animate .block .paragraph--1 p {
   animation-delay: 0.6s;
 }
-#post-3.animate .paragraph--1 a {
+#post-3.animate .block .paragraph--1 a {
   animation-delay: 0.7s;
 }
-#post-3.animate .paragraph--2 p {
+#post-3.animate .block .paragraph--2 p {
   animation-delay: 1.2s;
 }
-#post-3.animate .paragraph--2 a {
+#post-3.animate .block .paragraph--2 a {
   animation-delay: 1.4s;
 }
-#post-3.animate .paragraph--3 p {
+#post-3.animate .block .paragraph--3 p {
   animation-delay: 1.8s;
 }
-#post-3.animate .paragraph--3 a {
+#post-3.animate .block .paragraph--3 a {
   animation-delay: 2.1s;
 }
 #post-3 .title {
@@ -8421,6 +8503,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #fff;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
+  animation: fade-out 2s;
 }
 @media only screen and (max-width: 767px) {
   #post-3 .title {
@@ -8483,6 +8566,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #post-3 .block .absolute > * {
   opacity: 0;
+  animation: fade-in-up-reverse 2s;
 }
 #post-3 .block .absolute div {
   background-color: #fd959e;
@@ -8528,6 +8612,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #post-3 .block .paragraph > * {
   opacity: 0;
+  animation: fade-out 2s;
 }
 #post-3 .block .paragraph p {
   color: #fd959e;
@@ -8708,66 +8793,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #post-7.animate .breadcrumbs {
   animation-delay: .2s;
 }
-#post-7 .hashtags {
-  opacity: 0;
-}
-@media only screen and (max-width: 767px) {
-  #post-7 .hashtags {
-    display: grid;
-    margin: 5vh 0;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #post-7 .hashtags {
-    margin: 5vh 0;
-    display: flex;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  #post-7 .hashtags {
-    margin: 10vh 0;
-  }
-}
-#post-7 .hashtags a {
-  -moz-transition: 0.15s;
-  -o-transition: 0.15s;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
-  text-transform: uppercase;
-  font-family: "harmonia cond bold";
-  color: #fff;
-}
-@media only screen and (max-width: 767px) {
-  #post-7 .hashtags a {
-    font-size: 3.75em;
-  }
-}
-@media only screen and (max-width: 399px) {
-  #post-7 .hashtags a {
-    font-size: 3.125em;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #post-7 .hashtags a {
-    font-size: 3.125em;
-    width: 33.33%;
-    float: left;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  #post-7 .hashtags a {
-    font-size: 3.75em;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  #post-7 .hashtags a {
-    font-size: 5em;
-  }
-}
-#post-7 .hashtags a:focus, #post-7 .hashtags a:hover {
-  color: #fd959e;
-  text-shadow: none;
+#post-7 .share,
+#post-7 .hashtags,
+#post-7 .breadcrumbs {
+  animation: fade-in-up-reverse 2s;
 }
 #post-7 .share {
   opacity: 0;
@@ -8849,8 +8878,70 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #post-7 .share a:focus, #post-7 .share a:hover {
   border-color: #1970c8;
 }
+#post-7 .hashtags {
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .hashtags {
+    display: grid;
+    margin: 5vh 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-7 .hashtags {
+    margin: 5vh 0;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #post-7 .hashtags {
+    margin: 10vh 0;
+  }
+}
+#post-7 .hashtags a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
+  text-transform: uppercase;
+  font-family: "harmonia cond bold";
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  #post-7 .hashtags a {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (max-width: 399px) {
+  #post-7 .hashtags a {
+    font-size: 3.125em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #post-7 .hashtags a {
+    font-size: 3.125em;
+    width: 33.33%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #post-7 .hashtags a {
+    font-size: 3.75em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #post-7 .hashtags a {
+    font-size: 5em;
+  }
+}
+#post-7 .hashtags a:focus, #post-7 .hashtags a:hover {
+  color: #fd959e;
+  text-shadow: none;
+}
 #post-7 .breadcrumbs {
   margin: 5vh 0;
+  opacity: 0;
 }
 @media only screen and (max-width: 767px) {
   #post-7 .breadcrumbs {
@@ -9135,6 +9226,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     width: calc(70% - 90px);
   }
 }
+#faq-2 .paragraph p {
+  animation: fade-in-up-reverse 2s;
+}
 #faq-2 .paragraph p:first-of-type {
   font-family: "harmonia cond bold";
   position: relative;
@@ -9192,6 +9286,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #fd959e;
   position: relative;
   font-family: "harmonia cond bold";
+  animation: fade-in-right-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #faq-3 .paragraph p {
@@ -9326,6 +9421,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
   padding-top: 5vh;
   text-transform: uppercase;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
   #faq-6 .title {
@@ -9350,6 +9446,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #faq-6 .list {
   opacity: 0;
   padding: 20px 0;
+  animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 399px) {
   #faq-6 .list {
