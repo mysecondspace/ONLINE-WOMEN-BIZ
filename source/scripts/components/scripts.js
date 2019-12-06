@@ -255,7 +255,7 @@ $(document).ready(function() {
             // only for desktop version
             if (window.innerWidth > 768) {
               function timeout() {
-                $('.paragraph p:first-of-type span').addClass('parallax');
+                $('#nina-mua-2 .paragraph p:first-of-type span').addClass('parallax');
               };
 
               setTimeout(timeout, 2000);
@@ -516,7 +516,7 @@ $(document).ready(function() {
             // only for desktop version
             if (window.innerWidth > 768) {
               function timeout() {
-                $('.slogan').addClass('parallax');
+                $('#courses-4 .slogan').addClass('parallax');
               };
 
               setTimeout(timeout, 2000);

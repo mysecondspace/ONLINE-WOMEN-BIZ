@@ -9685,3 +9685,86 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   color: #022329;
   background-color: #fff;
 }
+
+@keyframes layer {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#preloader {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  position: fixed;
+  background: #fff;
+  align-items: center;
+  display: flex;
+}
+#preloader div {
+  width: 250px;
+  margin: 0 auto;
+}
+
+#b-cont-1 {
+  stroke-width: 80;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: layer 2s linear forwards;
+}
+
+#b-cont-2 {
+  stroke-width: 80;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: layer 2s linear forwards .75s;
+}
+
+#b-cont-3 {
+  stroke-width: 80;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: layer 2s linear forwards 1.1s;
+}
+
+#b-cont-4 {
+  stroke-width: 80;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: layer 2s linear forwards 1.1s;
+}
+
+#stick-cont {
+  stroke-width: 80;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: layer 2s linear forwards;
+}
+
+#point-cont {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: layer 2s linear forwards .75s;
+}
+
+#z-cont-1 {
+  stroke-width: 80;
+  stroke-dasharray: 598;
+  stroke-dashoffset: 598;
+  animation: layer 2s linear forwards;
+}
+
+#z-cont-2 {
+  stroke-width: 80;
+  stroke-dasharray: 598;
+  stroke-dashoffset: 598;
+  animation: layer 2s linear forwards .75s;
+}
+
+#z-cont-3 {
+  stroke-width: 80;
+  stroke-dasharray: 598;
+  stroke-dashoffset: 598;
+  animation: layer 2s linear forwards;
+}

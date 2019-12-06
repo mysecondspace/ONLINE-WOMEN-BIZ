@@ -27,35 +27,35 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "6d1ef4fca087c3f829a8589a677985e7"
+    "revision": "3d5b7fed04e706ef68c3cf20fae2dfaa"
   },
   {
     "url": "about.html",
-    "revision": "5dcf1f9465ce0ab5e0cfebede33f9484"
+    "revision": "e798ecba9d51b95a4e9709c85e2381ee"
   },
   {
     "url": "blog.html",
-    "revision": "8172bf51ccada13a30e094c20cd4f429"
+    "revision": "445cabced315cdd8e42ea5943a765237"
   },
   {
     "url": "courses.html",
-    "revision": "f8296ef125c94ea6b4bc331018ca87e3"
+    "revision": "43275c063db0fab3d38d7ddd22a9694d"
   },
   {
     "url": "entrepreneur-1.html",
-    "revision": "4bce1c489e66c17c5a3500aaf05c83be"
+    "revision": "bbc0d5acf67e8c4bd5589abb47a1425a"
   },
   {
     "url": "entrepreneur-2.html",
-    "revision": "dea4e2ff64d224ee801c23909349874e"
+    "revision": "4ff476425d0b476a4c528e5f213bb205"
   },
   {
     "url": "events.html",
-    "revision": "c5aeaf6931b04daa7d818d0fab5d87d6"
+    "revision": "2c4ae62e9e0304d90159c0efeee27b5e"
   },
   {
     "url": "faq.html",
-    "revision": "10e76deeefaf15eda1b9b00f8932338d"
+    "revision": "b4aeda003dc0103a0fa37dbfd6079414"
   },
   {
     "url": "fonts/harmonia-bold.otf",
@@ -287,7 +287,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-light.png",
-    "revision": "756e1005c77b17ec41c0549e70376a4f"
+    "revision": "1038c5865dacc71684e5faee1d0c1934"
   },
   {
     "url": "images/mouse-dark.svg",
@@ -355,15 +355,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f81851e0ae50a8fcbb4eeaeb8d386ef1"
+    "revision": "c071bcf025797f8bc823a8b09ec8e497"
   },
   {
     "url": "nina-mua.html",
-    "revision": "1fdeba6f7b7ae021ffd0222416eb371e"
+    "revision": "47e16fda2aaa2be61a0b3ed19a601dfe"
   },
   {
     "url": "post.html",
-    "revision": "88db33b453f557e49f47e41664ab0fd4"
+    "revision": "dddaad8e0accffb93ec6e52c89c3cb04"
   },
   {
     "url": "scripts/hover.min.js",
@@ -375,7 +375,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "4db08403ad672d8a61d32ef887af9ab7"
+    "revision": "eec60336d53c8c365e82882e7f83b320"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -387,11 +387,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "45ef2ae00b72c23e96c20922b147914c"
+    "revision": "8a9b9ed7c7e1bb67367962f086450e66"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "82532b164de8855fbb9cf3a8adc9f203"
+    "revision": "bd0f57856b66c0875969bc01cff037a9"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

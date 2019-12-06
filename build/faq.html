@@ -28,6 +28,39 @@
   <body id="faq">
 
     <!-- navigation -->
+    <!-- preloader -->
+    <div id="preloader">
+      <div class="d">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 275.9 146.5">
+          <g style="clip-path:url(#clip-path-3)">
+            <path id="b-cont-4" d="M718.5,492.5l38,1c12.7,11.5,18.3,24.1,16,38-6.4,8.6-18.2,14.8-32,20h-27" transform="translate(-689 -418)" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:34px"/>
+            <line id="b-cont-3" x1="71" y1="61" x2="20" y2="62" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:14px"/>
+            <path id="b-cont-2" d="M718.5,433.5h19l18,5c7.1,6.1,9.7,13.1,8,21l-13,20" transform="translate(-689 -418)" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:31px"/>
+            <line id="b-cont-1" x1="15.5" y1="141.5" x2="15.5" y2="4.8" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:31px"/>
+          </g>
+          <path id="b-2" data-name="b" d="M692.9,422.9h37.8c28.2,0,47.2,11.4,47.2,34.4,0,15.2-11,25.4-24.4,28.6v.4c20.8,2.8,31.6,17.6,31.6,33.8,0,25.2-20.4,39.2-47.6,39.2H692.9Zm36.4,21.4h-9.4v33h10.4c13.4,0,19.4-6.6,19.4-17.2S742.1,444.3,729.3,444.3Zm4.2,54H719.9v39.4h14.8c14,0,21.6-7.4,21.6-20S748.1,498.3,733.5,498.3Z" transform="translate(-689 -418)" style="fill:none;stroke:#;stroke-miterlimit:10"/>
+          <g style="clip-path:url(#clip-path)">
+            <line id="z-cont-3" x1="165.9" y1="130.2" x2="274.5" y2="130.2" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:28px"/>
+            <path id="z-cont-2" d="M953,436l-8.1,9.8-1.4,1.7c-9,7.5-43.5,53.6-70,86l-9,4-4,1-2,1" transform="translate(-689 -418)" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:28px"/><line id="z-cont-1" x1="169.3" y1="16" x2="271.3" y2="16" style="fill:none;stroke:#;stroke-miterlimit:10;stroke-width:26.85px"/>
+            <line id="z-cont-1" x1="169.3" y1="15.9" x2="271.3" y2="15.9" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:26.85px"/>
+          </g>
+          <path id="z-2" data-name="z" d="M858.3,422.9h102v23.4l-69.6,88.2h72.8v24.8H854.9V536.1l69.4-88.4h-66Z" transform="translate(-689 -418)" style="fill:none;stroke:#;stroke-miterlimit:10;stroke-width:0.25px"/>
+          <g style="clip-path:url(#clip-path-2)"><line id="point-cont" x1="130.7" y1="115.4" x2="130.7" y2="141.2" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:28px"/>
+            <line id="stick-cont" x1="130.7" y1="4.8" x2="130.5" y2="99.5" style="fill:none;stroke:#fd959e;stroke-miterlimit:10;stroke-width:30px"/>
+          </g>
+          <clipPath id="clip-path" transform="translate(-689 -418)">
+            <path id="z" d="M858.3,422.9h102v23.4l-69.6,88.2h72.8v24.8H854.9V536.1l69.4-88.4h-66Z" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.25px"/>
+          </clipPath>
+          <clipPath id="clip-path-2" transform="translate(-689 -418)">
+            <path id="l" d="M834.5,422.9l-2.8,94.2h-24l-2.8-94.2Zm-29,110.6h28.4v25.8H805.5Z" style="fill:none"/>
+          </clipPath>
+          <clipPath id="clip-path-3" transform="translate(-689 -418)">
+            <path id="b" d="M692.9,422.9h37.8c28.2,0,47.2,11.4,47.2,34.4,0,15.2-11,25.4-24.4,28.6v.4c20.8,2.8,31.6,17.6,31.6,33.8,0,25.2-20.4,39.2-47.6,39.2H692.9Zm36.4,21.4h-9.4v33h10.4c13.4,0,19.4-6.6,19.4-17.2S742.1,444.3,729.3,444.3Zm4.2,54H719.9v39.4h14.8c14,0,21.6-7.4,21.6-20S748.1,498.3,733.5,498.3Z" style="fill:none;stroke:#000;stroke-miterlimit:10"/>
+          </clipPath>
+        </svg>
+      </div>
+    </div>
+    
     <!-- the cursor elements -->
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
@@ -66,6 +99,13 @@
         </li>
       </ul>
     </nav>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#preloader').delay(1500).fadeOut('slow');
+      });
+    </script>
 
     <!-- wrapper-->
     <main id="main">
