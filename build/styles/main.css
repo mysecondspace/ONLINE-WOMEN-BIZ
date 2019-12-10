@@ -3484,6 +3484,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #about-5 .block .paragraph a {
   color: #fff;
   display: block;
+  margin-top: 5vh;
   font-size: 1.5625em;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
@@ -3492,6 +3493,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   #about-5 .block .paragraph a {
     text-align: right;
     font-size: 1.25em;
+  }
+  #about-5 .block .paragraph a:last-of-type {
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3502,9 +3506,6 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   #about-5 .block .paragraph a:not(:first-of-type) {
     margin-left: 50px;
   }
-}
-#about-5 .block .paragraph a:not(:last-of-type) {
-  margin-top: 5vh;
 }
 #about-5 .block .paragraph a span {
   color: #022329;

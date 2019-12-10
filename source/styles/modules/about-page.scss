@@ -918,6 +918,7 @@
       a {
         color: $light;
         display: block;
+        margin-top: 5vh;
         font-size: em(25);
         font-family: $cond-bold;
         text-transform: uppercase;
@@ -925,6 +926,10 @@
         @include media(phone) {
           text-align: right;
           font-size: em(20);
+
+          &:last-of-type {
+            margin-top: 0;
+          }
         }
 
         @include media(tablet) {
@@ -934,10 +939,6 @@
           &:not(:first-of-type) {
             margin-left: 50px;
           }
-        }
-
-        &:not(:last-of-type) {
-          margin-top: 5vh;
         }
 
         span {
