@@ -335,8 +335,13 @@
     font-family: $cond-normal;
 
     a {
-      color: $primary;
+      @include transition($time-fast);
       font-family: $cond-bold;
+      color: $primary;
+
+      &:hover {
+        color: $light;
+      }
     }
   }
 
@@ -1409,6 +1414,10 @@ body {
 
         a {
           color: $dark;
+
+          &:hover {
+            color: $primary;
+          }
         }
       }
 
