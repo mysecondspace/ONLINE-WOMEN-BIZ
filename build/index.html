@@ -27,7 +27,6 @@
   </head>
   <body id="index">
 
-    <!-- navigation -->
     <!-- preloader -->
     <div id="preloader">
       <div class="d">
@@ -60,7 +59,14 @@
         </svg>
       </div>
     </div>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#preloader').delay(1500).fadeOut('slow');
+      });
+    </script>
+
+    <!-- navigation -->
     <!-- the cursor elements -->
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
@@ -99,13 +105,6 @@
         </li>
       </ul>
     </nav>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>
-      $(window).load(function() {
-        $('#preloader').delay(1500).fadeOut('slow');
-      });
-    </script>
 
     <!-- wrapper-->
     <main id="main">

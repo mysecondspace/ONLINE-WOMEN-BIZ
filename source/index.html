@@ -6,6 +6,15 @@
   </head>
   <body id="index">
 
+    <!-- preloader -->
+    //= templates/preloader.html
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#preloader').delay(1500).fadeOut('slow');
+      });
+    </script>
+
     <!-- navigation -->
     //= templates/nav.html
 

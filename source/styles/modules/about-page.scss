@@ -72,6 +72,7 @@
 
   .paragraph {
     z-index: 1;
+    font-size: inherit;
     position: absolute;
 
     @include media(phone) {
@@ -694,8 +695,8 @@
   }
 
   &.animate {
-    .title,
-    .block .paragraph > * {
+    .block .paragraph > *,
+    .block .paragraph .title {
       animation: fade-in $time-slow forwards;
     }
 
@@ -917,7 +918,6 @@
       a {
         color: $light;
         display: block;
-        margin-top: 5vh;
         font-size: em(25);
         font-family: $cond-bold;
         text-transform: uppercase;
@@ -925,6 +925,19 @@
         @include media(phone) {
           text-align: right;
           font-size: em(20);
+        }
+
+        @include media(tablet) {
+          width: fit-content;
+          float: left;
+
+          &:not(:first-of-type) {
+            margin-left: 50px;
+          }
+        }
+
+        &:not(:last-of-type) {
+          margin-top: 5vh;
         }
 
         span {

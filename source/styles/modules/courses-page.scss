@@ -583,13 +583,13 @@
     animation: fade-in-up-reverse $time-slow;
 
     @include media(phone) {
-      font-size: em(34);
       margin-top: 7.5vh;
+      font-size: em(39);
     }
 
     @include media(smallest) {
-      font-size: em(24);
-      margin-top: 10vh;
+      font-size: em(30);
+      margin-top: 5vh;
     }
 
     @include media(tablet) {
@@ -1413,10 +1413,6 @@
 
   .info {
     @include media(phone) {
-      margin-bottom: 50vh;
-    }
-
-    @include media(smallest) {
       margin-bottom: 20vh;
     }
 

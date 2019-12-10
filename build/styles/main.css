@@ -1252,13 +1252,17 @@ html button {
   }
 }
 .text > p,
-.text > h2 {
+.text > h1,
+.text > h2,
+.text > h3 {
   opacity: 0;
   color: #022329;
   animation: fade-in-up-reverse 2s;
 }
 .text > p.title,
-.text > h2.title {
+.text > h1.title,
+.text > h2.title,
+.text > h3.title {
   line-height: 1;
   position: relative;
   font-family: "harmonia cond bold";
@@ -1266,35 +1270,47 @@ html button {
 }
 @media only screen and (max-width: 767px) {
   .text > p.title,
-  .text > h2.title {
+  .text > h1.title,
+  .text > h2.title,
+  .text > h3.title {
     font-size: 1.625em;
   }
 }
 @media only screen and (max-width: 399px) {
   .text > p.title,
-  .text > h2.title {
+  .text > h1.title,
+  .text > h2.title,
+  .text > h3.title {
     font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 768px) {
   .text > p.title,
-  .text > h2.title {
+  .text > h1.title,
+  .text > h2.title,
+  .text > h3.title {
     font-size: 3.4375em;
   }
 }
 @media only screen and (min-width: 1920px) {
   .text > p.title,
-  .text > h2.title {
+  .text > h1.title,
+  .text > h2.title,
+  .text > h3.title {
     font-size: 5em;
   }
 }
 .text > p.title:not(:first-of-type),
-.text > h2.title:not(:first-of-type) {
+.text > h1.title:not(:first-of-type),
+.text > h2.title:not(:first-of-type),
+.text > h3.title:not(:first-of-type) {
   padding-top: 10vh;
 }
 @media only screen and (max-width: 767px) {
   .text > p.title:not(:first-of-type),
-  .text > h2.title:not(:first-of-type) {
+  .text > h1.title:not(:first-of-type),
+  .text > h2.title:not(:first-of-type),
+  .text > h3.title:not(:first-of-type) {
     padding-top: 5vh;
   }
 }
@@ -1358,7 +1374,7 @@ html button {
 @media only screen and (max-width: 767px) {
   .link {
     background-color: #fd959e;
-    padding: 4px 12px 2px;
+    padding: 6px 14px 4px;
     font-family: "harmonia bold";
     color: #022329;
   }
@@ -1830,7 +1846,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (max-width: 767px) {
   #index-2 .title {
-    font-size: 3.4375em;
+    font-size: 4.0625em;
   }
 }
 @media only screen and (max-width: 399px) {
@@ -1914,8 +1930,8 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (max-width: 767px) {
   #index-2 .paragraph a {
-    font-size: 1.125em;
-    margin-top: 5vh;
+    margin-top: 7.5vh;
+    font-size: 1.625em;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -2582,6 +2598,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #about-1 .paragraph {
   z-index: 1;
+  font-size: inherit;
   position: absolute;
 }
 @media only screen and (max-width: 767px) {
@@ -3243,8 +3260,8 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     padding-top: 10vh;
   }
 }
-#about-5.animate .title,
-#about-5.animate .block .paragraph > * {
+#about-5.animate .block .paragraph > *,
+#about-5.animate .block .paragraph .title {
   animation: fade-in 2s forwards;
 }
 #about-5.animate .block .absolute > * {
@@ -3467,7 +3484,6 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #about-5 .block .paragraph a {
   color: #fff;
   display: block;
-  margin-top: 5vh;
   font-size: 1.5625em;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
@@ -3477,6 +3493,18 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     text-align: right;
     font-size: 1.25em;
   }
+}
+@media only screen and (min-width: 768px) {
+  #about-5 .block .paragraph a {
+    width: fit-content;
+    float: left;
+  }
+  #about-5 .block .paragraph a:not(:first-of-type) {
+    margin-left: 50px;
+  }
+}
+#about-5 .block .paragraph a:not(:last-of-type) {
+  margin-top: 5vh;
 }
 #about-5 .block .paragraph a span {
   color: #022329;
@@ -5144,14 +5172,14 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (max-width: 767px) {
   #courses-4 .slogan {
-    font-size: 2.125em;
     margin-top: 7.5vh;
+    font-size: 2.4375em;
   }
 }
 @media only screen and (max-width: 399px) {
   #courses-4 .slogan {
-    font-size: 1.5em;
-    margin-top: 10vh;
+    font-size: 1.875em;
+    margin-top: 5vh;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -6015,11 +6043,6 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (max-width: 767px) {
   #courses-9 .info {
-    margin-bottom: 50vh;
-  }
-}
-@media only screen and (max-width: 399px) {
-  #courses-9 .info {
     margin-bottom: 20vh;
   }
 }
@@ -6875,8 +6898,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (max-width: 767px) {
   #events-1 .paragraph {
     left: 15px;
-    bottom: 30vh;
-    width: 60%;
+    bottom: 25vh;
   }
 }
 @media only screen and (max-width: 399px) {
@@ -6886,17 +6908,19 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 768px) {
   #events-1 .paragraph {
-    right: 12.5%;
+    width: 50%;
+    right: 5%;
     top: 30vh;
   }
 }
 @media only screen and (min-width: 1920px) {
   #events-1 .paragraph {
-    right: 35%;
-    top: 25vh;
+    width: 32.5%;
+    top: 15vh;
   }
 }
-#events-1 .paragraph p {
+#events-1 .paragraph p,
+#events-1 .paragraph h1 {
   opacity: 0;
   line-height: 1;
   animation-delay: .1s;
@@ -6904,18 +6928,21 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-in-right 2s forwards;
 }
 @media only screen and (max-width: 767px) {
-  #events-1 .paragraph p {
-    font-size: 5em;
+  #events-1 .paragraph p,
+  #events-1 .paragraph h1 {
+    font-size: 3.125em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #events-1 .paragraph p {
-    font-size: 7.5em;
+  #events-1 .paragraph p,
+  #events-1 .paragraph h1 {
+    font-size: 5em;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #events-1 .paragraph p {
-    font-size: 10em;
+  #events-1 .paragraph p,
+  #events-1 .paragraph h1 {
+    font-size: 7.5em;
   }
 }
 
@@ -8423,11 +8450,13 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #post-2.animate .text p,
-#post-2.animate .text ul li {
+#post-2.animate .text ul li,
+#post-2.animate .text .title {
   animation: fade-in-up 2s forwards;
 }
 #post-2.animate .text p:last-of-type,
-#post-2.animate .text ul li:last-of-type {
+#post-2.animate .text ul li:last-of-type,
+#post-2.animate .text .title:last-of-type {
   animation-delay: .1s;
 }
 #post-2.animate .text ul li:nth-of-type(1) {
@@ -8669,27 +8698,27 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #post-4.animate .text p:nth-of-type(1),
-#post-4.animate .text h2:nth-of-type(1) {
+#post-4.animate .text .title:nth-of-type(1) {
   animation: fade-in-up 2s 0.5s forwards;
 }
 #post-4.animate .text p:nth-of-type(2),
-#post-4.animate .text h2:nth-of-type(2) {
+#post-4.animate .text .title:nth-of-type(2) {
   animation: fade-in-up 2s 1s forwards;
 }
 #post-4.animate .text p:nth-of-type(3),
-#post-4.animate .text h2:nth-of-type(3) {
+#post-4.animate .text .title:nth-of-type(3) {
   animation: fade-in-up 2s 1.5s forwards;
 }
 #post-4.animate .text p:nth-of-type(4),
-#post-4.animate .text h2:nth-of-type(4) {
+#post-4.animate .text .title:nth-of-type(4) {
   animation: fade-in-up 2s 2s forwards;
 }
 #post-4.animate .text p:nth-of-type(5),
-#post-4.animate .text h2:nth-of-type(5) {
+#post-4.animate .text .title:nth-of-type(5) {
   animation: fade-in-up 2s 2.5s forwards;
 }
 #post-4.animate .text p:nth-of-type(6),
-#post-4.animate .text h2:nth-of-type(6) {
+#post-4.animate .text .title:nth-of-type(6) {
   animation: fade-in-up 2s 3s forwards;
 }
 
@@ -8761,19 +8790,19 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: 1.8s;
 }
 #post-6.animate .text p:nth-of-type(1),
-#post-6.animate .text h2:nth-of-type(1) {
+#post-6.animate .text .title:nth-of-type(1) {
   animation: fade-in-up 2s 0.5s forwards;
 }
 #post-6.animate .text p:nth-of-type(2),
-#post-6.animate .text h2:nth-of-type(2) {
+#post-6.animate .text .title:nth-of-type(2) {
   animation: fade-in-up 2s 1s forwards;
 }
 #post-6.animate .text p:nth-of-type(3),
-#post-6.animate .text h2:nth-of-type(3) {
+#post-6.animate .text .title:nth-of-type(3) {
   animation: fade-in-up 2s 1.5s forwards;
 }
 #post-6.animate .text p:nth-of-type(4),
-#post-6.animate .text h2:nth-of-type(4) {
+#post-6.animate .text .title:nth-of-type(4) {
   animation: fade-in-up 2s 2s forwards;
 }
 
@@ -9145,29 +9174,34 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-family: "harmonia cond bold";
   line-height: 1;
 }
-#faq-1 .paragraph p {
+#faq-1 .paragraph p,
+#faq-1 .paragraph h1 {
   opacity: 0;
   color: #022329;
   margin-bottom: 1%;
   animation: fade-in-up 2s forwards;
 }
 @media only screen and (max-width: 767px) {
-  #faq-1 .paragraph p {
+  #faq-1 .paragraph p,
+  #faq-1 .paragraph h1 {
     font-size: 6.25em;
   }
 }
 @media only screen and (max-width: 399px) {
-  #faq-1 .paragraph p {
+  #faq-1 .paragraph p,
+  #faq-1 .paragraph h1 {
     font-size: 5em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #faq-1 .paragraph p {
+  #faq-1 .paragraph p,
+  #faq-1 .paragraph h1 {
     font-size: 9.375em;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #faq-1 .paragraph p {
+  #faq-1 .paragraph p,
+  #faq-1 .paragraph h1 {
     font-size: 12.5em;
   }
 }

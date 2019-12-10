@@ -51,8 +51,7 @@
 
     @include media(phone) {
       left: $indent-phone;
-      bottom: 30vh;
-      width: 60%;
+      bottom: 25vh;
     }
 
     @include media(smallest) {
@@ -60,16 +59,18 @@
     }
 
     @include media(tablet) {
-      right: 12.5%;
+      width: 50%;
+      right: 5%;
       top: 30vh;
     }
 
     @include media(biggest) {
-      right: 35%;
-      top: 25vh;
+      width: 32.5%;
+      top: 15vh;
     }
 
-    p {
+    p,
+    h1 {
       opacity: 0;
       line-height: 1;
       animation-delay: .1s;
@@ -77,15 +78,15 @@
       animation: fade-in-right $time-slow forwards;
 
       @include media(phone) {
-        font-size: em(80);
+        font-size: em(50);
       }
 
       @include media(tablet) {
-        font-size: em(120);
+        font-size: em(80);
       }
 
       @include media(biggest) {
-        font-size: em(160);
+        font-size: em(120);
       }
     }
   }

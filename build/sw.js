@@ -27,35 +27,35 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "3d5b7fed04e706ef68c3cf20fae2dfaa"
+    "revision": "6d1ef4fca087c3f829a8589a677985e7"
   },
   {
     "url": "about.html",
-    "revision": "e798ecba9d51b95a4e9709c85e2381ee"
+    "revision": "5a9a38dd3b36ed43ca732768955b5f60"
   },
   {
     "url": "blog.html",
-    "revision": "445cabced315cdd8e42ea5943a765237"
+    "revision": "8172bf51ccada13a30e094c20cd4f429"
   },
   {
     "url": "courses.html",
-    "revision": "43275c063db0fab3d38d7ddd22a9694d"
+    "revision": "f8296ef125c94ea6b4bc331018ca87e3"
   },
   {
     "url": "entrepreneur-1.html",
-    "revision": "bbc0d5acf67e8c4bd5589abb47a1425a"
+    "revision": "4bce1c489e66c17c5a3500aaf05c83be"
   },
   {
     "url": "entrepreneur-2.html",
-    "revision": "4ff476425d0b476a4c528e5f213bb205"
+    "revision": "dea4e2ff64d224ee801c23909349874e"
   },
   {
     "url": "events.html",
-    "revision": "2c4ae62e9e0304d90159c0efeee27b5e"
+    "revision": "6f274be175afac94c430c403f05a8c03"
   },
   {
     "url": "faq.html",
-    "revision": "b4aeda003dc0103a0fa37dbfd6079414"
+    "revision": "ba534aa8f119d66d6a73ea1aa138ae41"
   },
   {
     "url": "fonts/harmonia-bold.otf",
@@ -355,15 +355,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "c071bcf025797f8bc823a8b09ec8e497"
+    "revision": "39b3ad5385d66d730d69a1b1c5d2d40f"
   },
   {
     "url": "nina-mua.html",
-    "revision": "47e16fda2aaa2be61a0b3ed19a601dfe"
+    "revision": "1fdeba6f7b7ae021ffd0222416eb371e"
   },
   {
     "url": "post.html",
-    "revision": "dddaad8e0accffb93ec6e52c89c3cb04"
+    "revision": "97988dee1a48fe435bfc9b5a2be4efa4"
   },
   {
     "url": "scripts/hover.min.js",
@@ -375,7 +375,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "eec60336d53c8c365e82882e7f83b320"
+    "revision": "3e02e0beaf03dddd66f34dee64891522"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -387,11 +387,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "8a9b9ed7c7e1bb67367962f086450e66"
+    "revision": "f2bf74d519c1d80984e242bd963de376"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "bd0f57856b66c0875969bc01cff037a9"
+    "revision": "7227b5bbc85be9dbb5b109bc920b9727"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

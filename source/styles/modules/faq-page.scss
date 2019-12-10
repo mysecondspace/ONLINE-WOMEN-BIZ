@@ -133,7 +133,8 @@
       line-height: 1;
     }
 
-    p {
+    p,
+    h1 {
       opacity: 0;
       color: $dark;
       margin-bottom: 1%;

@@ -170,7 +170,8 @@
   &.animate {
     .text {
       p,
-      ul li {
+      ul li,
+      .title {
         animation: fade-in-up $time-slow forwards;
 
         &:last-of-type {
@@ -414,7 +415,7 @@
     @for $i from 1 through $text {
       .text {
         p,
-        h2 {
+        .title {
           &:nth-of-type(#{$i}) {
             animation: fade-in-up $time-slow .5s * $i forwards;
           }
@@ -486,7 +487,7 @@
     @for $i from 1 through $text {
       .text {
         p,
-        h2 {
+        .title {
           &:nth-of-type(#{$i}) {
             animation: fade-in-up $time-slow .5s * $i forwards;
           }

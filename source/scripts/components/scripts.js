@@ -15,6 +15,10 @@ $(document).ready(function() {
     elements_selector: '.lazy'
   });
 
+  // initialize sharing buttons
+  $('.share a:contains("facebook")').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + $(location).attr("href") + '');
+  $('.share a:contains("twitter")').attr('href', 'https://twitter.com/share?url=' + $(location).attr("href") + '');
+
   // plese turn your devide
   $(window).resize(function() {
     if (window.innerWidth > 768 && window.matchMedia("(orientation: portrait)").matches) {

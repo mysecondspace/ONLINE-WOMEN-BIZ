@@ -991,7 +991,9 @@
   }
 
   > p,
-  > h2 {
+  > h1,
+  > h2,
+  > h3 {
     opacity: 0;
     color: $dark;
     animation: fade-in-up-reverse $time-slow;
@@ -1085,7 +1087,7 @@
 .link {
   @include media(phone) {
     background-color: $primary;
-    padding: 4px 12px 2px;
+    padding: 6px 14px 4px;
     font-family: $bold;
     color: $secondary;
   }

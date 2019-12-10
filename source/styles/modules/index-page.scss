@@ -169,7 +169,7 @@
     font-family: $cond-bold;
 
     @include media(phone) {
-      font-size: em(55);
+      font-size: em(65);
     }
 
     @include media(smallest) {
@@ -245,8 +245,8 @@
       float: right;
 
       @include media(phone) {
-        font-size: em(18);
-        margin-top: 5vh;
+        margin-top: 7.5vh;
+        font-size: em(26);
       }
 
       @include media(tablet) {
