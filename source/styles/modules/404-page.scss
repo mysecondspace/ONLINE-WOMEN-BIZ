@@ -2,7 +2,7 @@
   background-color: $light;
 
   .background {
-    background-color: $primary;
+    background-color: $black;
     position: absolute;
     height: 100%;
     z-index: 1;
@@ -37,7 +37,6 @@
     p {
       color: $light;
       line-height: 1;
-      animation-delay: .1s;
       font-family: $cond-bold;
       animation: fade-in-right $time-slow .1s forwards;
 
@@ -46,11 +45,11 @@
       }
 
       @include media(tablet) {
-        font-size: em(300);
+        font-size: em(200);
       }
 
       @include media(biggest) {
-        font-size: em(350);
+        font-size: em(300);
       }
     }
 
@@ -66,7 +65,7 @@
       }
 
       @include media(tablet) {
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
         font-size: em(30);
       }
 
@@ -79,11 +78,11 @@
       @include transition($time-fast);
       animation: fade-in-right $time-slow .3s forwards;
       font-family: $cond-light;
-      background-color: $dark;
+      background-color: $light;
       padding: 10px 20px 5px;
       display: block;
       margin: 0 auto;
-      color: $light;
+      color: $black;
       opacity: 0;
 
       @include media(phone) {
@@ -98,8 +97,24 @@
 
       &:focus,
       &:hover {
-        color: $dark;
-        background-color: $light;
+        background-color: $primary;
+      }
+    }
+
+    img {
+      animation: fade-in $time-slow 1.5s forwards;
+      margin-bottom: 5vh;
+
+      @include media(phone) {
+        width: 300px;
+      }
+
+      @include media(tablet) {
+        width: 400px;
+      }
+
+      @include media(biggest) {
+        width: 600px;
       }
     }
   }

@@ -9661,7 +9661,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   background-color: #fff;
 }
 #error .background {
-  background-color: #fd959e;
+  background-color: #000;
   position: absolute;
   height: 100%;
   z-index: 1;
@@ -9697,7 +9697,6 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #error .paragraph p {
   color: #fff;
   line-height: 1;
-  animation-delay: .1s;
   font-family: "harmonia cond bold";
   animation: fade-in-right 2s 0.1s forwards;
 }
@@ -9708,12 +9707,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 768px) {
   #error .paragraph p {
-    font-size: 18.75em;
+    font-size: 12.5em;
   }
 }
 @media only screen and (min-width: 1920px) {
   #error .paragraph p {
-    font-size: 21.875em;
+    font-size: 18.75em;
   }
 }
 #error .paragraph span {
@@ -9730,7 +9729,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 768px) {
   #error .paragraph span {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     font-size: 1.875em;
   }
 }
@@ -9746,11 +9745,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   transition: 0.15s;
   animation: fade-in-right 2s 0.3s forwards;
   font-family: "harmonia cond light";
-  background-color: #022329;
+  background-color: #fff;
   padding: 10px 20px 5px;
   display: block;
   margin: 0 auto;
-  color: #fff;
+  color: #000;
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -9766,8 +9765,26 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #error .paragraph a:focus, #error .paragraph a:hover {
-  color: #022329;
-  background-color: #fff;
+  background-color: #fd959e;
+}
+#error .paragraph img {
+  animation: fade-in 2s 1.5s forwards;
+  margin-bottom: 5vh;
+}
+@media only screen and (max-width: 767px) {
+  #error .paragraph img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #error .paragraph img {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #error .paragraph img {
+    width: 600px;
+  }
 }
 
 @keyframes layer {
