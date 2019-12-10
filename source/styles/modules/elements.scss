@@ -819,6 +819,7 @@
   }
 }
 
+.video-wrapper,
 .youtube-player {
   animation: fade-in-up-reverse $time-slow;
   position: relative;
@@ -835,6 +836,16 @@
 
   @include media(biggest) {
     width: calc(100% - #{$padding-biggest});
+  }
+
+  video {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+
+    &.has-media-controls-hidden::-webkit-media-controls {
+      display: none;
+    }
   }
 
   img {
@@ -879,6 +890,23 @@
       transition: opacity $time-fast ease;
       text-decoration: none;
       content: '';
+    }
+  }
+
+  .video-overlay-play-button {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, .75));
+    padding: 10px calc(50% - 50px);
+    transition: opacity 150ms;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    &.is-hidden {
+      display: none;
     }
   }
 }

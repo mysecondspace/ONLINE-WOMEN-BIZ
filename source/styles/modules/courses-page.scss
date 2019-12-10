@@ -129,6 +129,7 @@
   &.animate {
     .text p,
     .info p,
+    .video-wrapper,
     .youtube-player {
       animation: fade-in-up $time-slow forwards;
     }
@@ -139,6 +140,7 @@
       }
     }
 
+    .video-wrapper,
     .youtube-player {
       animation-delay: .2s;
     }

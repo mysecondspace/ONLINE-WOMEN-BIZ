@@ -20,3 +20,6 @@
 
 // overflow library for fullPage plugin
 //= components/fullPage.min.js
+
+// video player
+//= components/video.js

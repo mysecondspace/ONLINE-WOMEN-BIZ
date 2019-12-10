@@ -1029,10 +1029,12 @@
 
   &.animate {
     .slogan,
+    .video-wrapper,
     .youtube-player {
       animation: fade-in-up $time-slow forwards;
     }
 
+    .video-wrapper,
     .youtube-player {
       animation-delay: .1s;
     }

@@ -31,7 +31,7 @@ self.__precacheManifest = [
   },
   {
     "url": "about.html",
-    "revision": "5a9a38dd3b36ed43ca732768955b5f60"
+    "revision": "03062829595a2350c5317ba08c89a9f9"
   },
   {
     "url": "blog.html",
@@ -363,7 +363,7 @@ self.__precacheManifest = [
   },
   {
     "url": "post.html",
-    "revision": "97988dee1a48fe435bfc9b5a2be4efa4"
+    "revision": "a709f9e6a8aa9c872149643440bd0f11"
   },
   {
     "url": "scripts/hover.min.js",
@@ -375,7 +375,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "3e02e0beaf03dddd66f34dee64891522"
+    "revision": "f734f74b0ae315e0c8fe1ffd3793c676"
   },
   {
     "url": "scripts/scripts.min.js",
@@ -387,11 +387,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "ddceca7c043b183e5cab694a6068d2a9"
+    "revision": "b1cf27f72d44409127982112f17b0793"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "8e0ca5f2fe976e6fd7550732d885ea6a"
+    "revision": "a655bf931e2280a0db008a0eb9db1cf6"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

@@ -1043,33 +1043,50 @@ html button {
   left: 0;
 }
 
+.video-wrapper,
 .youtube-player {
   animation: fade-in-up-reverse 2s;
   position: relative;
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
+  .video-wrapper,
   .youtube-player {
     margin-left: -15px;
     width: calc(100% + 15px * 2);
   }
 }
 @media only screen and (min-width: 768px) {
+  .video-wrapper,
   .youtube-player {
     width: calc(100% - calc(45px + var(--logotype-width)));
   }
 }
 @media only screen and (min-width: 1920px) {
+  .video-wrapper,
   .youtube-player {
     width: calc(100% - calc(90px + var(--logotype-width)));
   }
 }
+.video-wrapper video,
+.youtube-player video {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.video-wrapper video.has-media-controls-hidden::-webkit-media-controls,
+.youtube-player video.has-media-controls-hidden::-webkit-media-controls {
+  display: none;
+}
+.video-wrapper img,
 .youtube-player img {
   width: 100%;
 }
+.video-wrapper.pristine:hover::after,
 .youtube-player.pristine:hover::after {
   opacity: 1;
 }
+.video-wrapper.pristine:before,
 .youtube-player.pristine:before {
   height: 0;
   width: 0;
@@ -1084,6 +1101,7 @@ html button {
   border-bottom: 20px solid transparent;
   transform: translate(-50%, -50%);
 }
+.video-wrapper.pristine:after,
 .youtube-player.pristine:after {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -1108,6 +1126,23 @@ html button {
   transition: opacity 0.15s ease;
   text-decoration: none;
   content: '';
+}
+.video-wrapper .video-overlay-play-button,
+.youtube-player .video-overlay-play-button {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+  padding: 10px calc(50% - 50px);
+  transition: opacity 150ms;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.video-wrapper .video-overlay-play-button.is-hidden,
+.youtube-player .video-overlay-play-button.is-hidden {
+  display: none;
 }
 
 #faq-2 .paragraph p:last-of-type,
@@ -3595,9 +3630,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #about-6.animate .slogan,
+#about-6.animate .video-wrapper,
 #about-6.animate .youtube-player {
   animation: fade-in-up 2s forwards;
 }
+#about-6.animate .video-wrapper,
 #about-6.animate .youtube-player {
   animation-delay: .1s;
 }
@@ -4722,12 +4759,14 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-2.animate .text p,
 #courses-2.animate .info p,
+#courses-2.animate .video-wrapper,
 #courses-2.animate .youtube-player {
   animation: fade-in-up 2s forwards;
 }
 #courses-2.animate .text .title + p {
   animation-delay: .1s;
 }
+#courses-2.animate .video-wrapper,
 #courses-2.animate .youtube-player {
   animation-delay: .2s;
 }
