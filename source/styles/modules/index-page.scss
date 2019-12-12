@@ -188,6 +188,7 @@
 
     @include media(biggest) {
       font-size: em(195);
+      width: 55%;
     }
 
     span {

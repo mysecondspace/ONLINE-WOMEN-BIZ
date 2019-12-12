@@ -1,0 +1,113 @@
+#sitemap {
+  background-color: $light;
+
+  .background {
+    background-color: $primary;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+
+    @include media(phone) {
+      animation: fade-in $time-slow forwards;
+      height: 100%;
+      width: 100%;
+      left: 0;
+    }
+
+    @include media(tablet) {
+      animation: fade-in-right $time-slow forwards;
+      width: calc(100% - #{$padding-normal});
+    }
+
+    @include media(biggest) {
+      width: calc(100% - #{$padding-biggest});
+    }
+  }
+
+  .paragraph {
+    z-index: 1;
+    position: relative;
+
+    @include media(phone) {
+      margin-top: 10vh;
+    }
+
+    p,
+    h1 {
+      opacity: 0;
+      color: $light;
+      line-height: 1;
+      text-align: center;
+      font-family: $cond-bold;
+      text-transform: uppercase;
+      animation: fade-in-right $time-slow .1s forwards;
+
+      @include media(phone) {
+        font-size: em(75);
+      }
+
+      @include media(tablet) {
+        font-size: em(200);
+      }
+
+      @include media(biggest) {
+        font-size: em(300);
+      }
+    }
+
+    ul {
+      @include media(phone) {
+        margin-left: $indent-phone;
+      }
+
+      @include media(tablet) {
+        margin-left: $indent-normal;
+      }
+
+      @include media(biggest) {
+        margin-left: $indent-biggest;
+      }
+
+      li {
+        opacity: 0;
+        color: $light;
+        font-family: $cond-light;
+        animation: fade-in-right $time-slow .2s forwards;
+
+        @include media(phone) {
+          margin-top: 5px;
+        }
+
+        @include media(tablet) {
+          margin-top: 10px;
+        }
+
+        $list: 6;
+        @for $i from 1 through $list {
+          &:nth-of-type(#{$i}) {
+            animation-delay: .2s * $i;
+          }
+        }
+
+        a {
+          @include transition($time-fast);
+          text-transform: uppercase;
+          color: $light;
+
+          @include media(phone) {
+            font-size: em(14);
+          }
+
+          @include media(tablet) {
+            font-size: em(25);
+          }
+
+          @include media(biggest) {
+            font-size: em(40);
+          }
+        }
+      }
+    }
+  }
+}

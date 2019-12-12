@@ -231,7 +231,7 @@ html button {
 #logo.animate-out-down {
   animation: fade-out 0.15s forwards;
 }
-@media (max-device-pixel-ratio: 1), (max-resolution: 1dppx) {
+@media (max-device-pixel-ratio: 2), (max-resolution: 2dppx) {
   #logo.big {
     background-size: contain;
     width: 151px !important;
@@ -383,12 +383,12 @@ html button {
 }
 @media only screen and (min-width: 768px) {
   #menu {
-    top: calc(50% - var(--menu-height) / 3);
+    top: calc(60% - var(--menu-height) / 3);
   }
 }
 @media only screen and (min-width: 1440px) {
   #menu {
-    top: calc(50% - var(--menu-height) / 2);
+    top: calc(60% - var(--menu-height) / 2);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1342,17 +1342,17 @@ html button {
     font-size: 5em;
   }
 }
-.text > p.title:not(:first-of-type),
-.text > h1.title:not(:first-of-type),
-.text > h2.title:not(:first-of-type),
-.text > h3.title:not(:first-of-type) {
+.text > p.title:not(:first-child),
+.text > h1.title:not(:first-child),
+.text > h2.title:not(:first-child),
+.text > h3.title:not(:first-child) {
   padding-top: 10vh;
 }
 @media only screen and (max-width: 767px) {
-  .text > p.title:not(:first-of-type),
-  .text > h1.title:not(:first-of-type),
-  .text > h2.title:not(:first-of-type),
-  .text > h3.title:not(:first-of-type) {
+  .text > p.title:not(:first-child),
+  .text > h1.title:not(:first-child),
+  .text > h2.title:not(:first-child),
+  .text > h3.title:not(:first-child) {
     padding-top: 5vh;
   }
 }
@@ -1914,6 +1914,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 1920px) {
   #index-2 .title {
     font-size: 12.1875em;
+    width: 55%;
   }
 }
 #index-2 .title span {
@@ -4641,6 +4642,145 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #entrepreneurs table tr td:last-of-type a:hover {
   color: #fff;
+}
+
+#sitemap {
+  background-color: #fff;
+}
+#sitemap .background {
+  background-color: #fd959e;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) {
+  #sitemap .background {
+    animation: fade-in 2s forwards;
+    height: 100%;
+    width: 100%;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #sitemap .background {
+    animation: fade-in-right 2s forwards;
+    width: calc(100% - calc(45px + var(--logotype-width)));
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #sitemap .background {
+    width: calc(100% - calc(90px + var(--logotype-width)));
+  }
+}
+#sitemap .paragraph {
+  z-index: 1;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  #sitemap .paragraph {
+    margin-top: 10vh;
+  }
+}
+#sitemap .paragraph p,
+#sitemap .paragraph h1 {
+  opacity: 0;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+  font-family: "harmonia cond bold";
+  text-transform: uppercase;
+  animation: fade-in-right 2s 0.1s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #sitemap .paragraph p,
+  #sitemap .paragraph h1 {
+    font-size: 4.6875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #sitemap .paragraph p,
+  #sitemap .paragraph h1 {
+    font-size: 12.5em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #sitemap .paragraph p,
+  #sitemap .paragraph h1 {
+    font-size: 18.75em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #sitemap .paragraph ul {
+    margin-left: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #sitemap .paragraph ul {
+    margin-left: 45px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #sitemap .paragraph ul {
+    margin-left: 90px;
+  }
+}
+#sitemap .paragraph ul li {
+  opacity: 0;
+  color: #fff;
+  font-family: "harmonia cond light";
+  animation: fade-in-right 2s 0.2s forwards;
+}
+@media only screen and (max-width: 767px) {
+  #sitemap .paragraph ul li {
+    margin-top: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #sitemap .paragraph ul li {
+    margin-top: 10px;
+  }
+}
+#sitemap .paragraph ul li:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+#sitemap .paragraph ul li:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+#sitemap .paragraph ul li:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+#sitemap .paragraph ul li:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+#sitemap .paragraph ul li:nth-of-type(5) {
+  animation-delay: 1s;
+}
+#sitemap .paragraph ul li:nth-of-type(6) {
+  animation-delay: 1.2s;
+}
+#sitemap .paragraph ul li a {
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  #sitemap .paragraph ul li a {
+    font-size: 0.875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #sitemap .paragraph ul li a {
+    font-size: 1.5625em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #sitemap .paragraph ul li a {
+    font-size: 2.5em;
+  }
 }
 
 #courses-1 {

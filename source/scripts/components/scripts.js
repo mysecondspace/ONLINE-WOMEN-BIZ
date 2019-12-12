@@ -1,7 +1,11 @@
+// register service worker
+if (navigator.serviceWorker) navigator.serviceWorker.register('/sw.js');
+
 $(document).ready(function() {
   var error = $('#error'),
       index = $('#index'),
       about = $('#about'),
+      sitemap = $('#sitemap'),
       ninaMua = $('#nina-mua'),
       entrepreneurs = $('#entrepreneurs'),
       courses = $('#courses'),
@@ -18,6 +22,22 @@ $(document).ready(function() {
   // initialize sharing buttons
   $('.share a:contains("facebook")').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + $(location).attr("href") + '');
   $('.share a:contains("twitter")').attr('href', 'https://twitter.com/share?url=' + $(location).attr("href") + '');
+
+  // randomize .gif animation on 404 page
+  $(function() {
+      var image = new Array();
+
+      image[0] = "data/404-1.gif";
+      image[1] = "data/404-2.gif";
+      image[2] = "data/404-3.gif";
+      image[3] = "data/404-4.gif";
+      image[4] = "data/404-5.gif";
+
+      var size = image.length
+      var x = Math.floor(size * Math.random())
+
+      $('#error .paragraph').prepend('<img src="' + image[x] + '" alt="Animoji girl" title="Animoji girl animation ' + ++x + '">');
+  });
 
   // plese turn your devide
   $(window).resize(function() {
@@ -998,6 +1018,35 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#error').addClass('animate');
+            $('#menu').addClass('light');
+            $('#nav').addClass('light');
+
+            // only for desktop version
+            if (window.innerWidth > 768) {
+              $('#logo').addClass('big dark');
+            } else {
+              $('#logo').addClass('small light');
+            };
+
+            break;
+        }
+      }
+    });
+  } else if (sitemap.length > 0) {
+
+    // initialize scroll on the courses page
+    $('#main').fullpage({
+
+      // options here
+      fitToSection: false,
+      licenseKey: 'C1599FD0-FAEF44AD-B21B7C8B-4D21D8FB',
+      afterLoad: function(origin, destination, direction) {
+        $('#logo, #menu, #nav').removeClass().addClass('animate-in');
+
+        // sections
+        switch(destination.index) {
+          case 0:
+            $('#sitemap').addClass('animate');
             $('#menu').addClass('light');
             $('#nav').addClass('light');
 

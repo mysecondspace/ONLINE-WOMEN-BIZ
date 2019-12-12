@@ -27,35 +27,35 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "2a6267de5b5878d3e7faa69a2fc51e63"
+    "revision": "13f80523d99035bbf3a94cf1c1885505"
   },
   {
     "url": "about.html",
-    "revision": "5f3a5f785930763de5cbaaf82b987402"
+    "revision": "bf66be9be3584e0084c44cd38700473d"
   },
   {
     "url": "blog.html",
-    "revision": "8172bf51ccada13a30e094c20cd4f429"
+    "revision": "d07a56fd388d7820f4452b1453a31d74"
   },
   {
     "url": "courses.html",
-    "revision": "f8296ef125c94ea6b4bc331018ca87e3"
+    "revision": "216fe147d9d23d58ff6531b00b463774"
   },
   {
     "url": "entrepreneur-1.html",
-    "revision": "4bce1c489e66c17c5a3500aaf05c83be"
+    "revision": "db276376355cc97ffe775ef8c4899c34"
   },
   {
     "url": "entrepreneur-2.html",
-    "revision": "dea4e2ff64d224ee801c23909349874e"
+    "revision": "a919720ff98714eee9b1c6a524d3046a"
   },
   {
     "url": "events.html",
-    "revision": "6f274be175afac94c430c403f05a8c03"
+    "revision": "5ae540f0d47b9c5e2a1063ebf61335d8"
   },
   {
     "url": "faq.html",
-    "revision": "ba534aa8f119d66d6a73ea1aa138ae41"
+    "revision": "08adec21726f676048c7caa206aa343e"
   },
   {
     "url": "fonts/harmonia-bold.otf",
@@ -283,11 +283,11 @@ self.__precacheManifest = [
   },
   {
     "url": "images/logo-small-light-2x.png",
-    "revision": "87bab3a410a6e244406ef1a9baaf919d"
+    "revision": "4584d0753b5908195e23787e74c4f978"
   },
   {
     "url": "images/logo-small-light.png",
-    "revision": "1038c5865dacc71684e5faee1d0c1934"
+    "revision": "756e1005c77b17ec41c0549e70376a4f"
   },
   {
     "url": "images/mouse-dark.svg",
@@ -355,15 +355,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "39b3ad5385d66d730d69a1b1c5d2d40f"
+    "revision": "21de0a90780a2f6d4421b9dc43ea7cd2"
   },
   {
     "url": "nina-mua.html",
-    "revision": "1fdeba6f7b7ae021ffd0222416eb371e"
+    "revision": "d6a3699713b2a352e07801d4cf967e17"
   },
   {
     "url": "post.html",
-    "revision": "a709f9e6a8aa9c872149643440bd0f11"
+    "revision": "688d3c7d567682ab69ba66bc81ec0433"
   },
   {
     "url": "scripts/hover.min.js",
@@ -375,11 +375,15 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "f734f74b0ae315e0c8fe1ffd3793c676"
+    "revision": "4ae1f8a72b700e5ef351fe2258e5ed48"
   },
   {
     "url": "scripts/scripts.min.js",
     "revision": "c977c28865aa3580c7cd480ea3fd45f1"
+  },
+  {
+    "url": "sitemap.html",
+    "revision": "ff3879e1f45dbc5fc6a722e4bfad14e4"
   },
   {
     "url": "styles/libs.min.css",
@@ -387,11 +391,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "bd11730045fe02a0a4b60f8ffb95f51d"
+    "revision": "90735896f4827562f2f9397918a694f3"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "d8e39e5d8054bef2f00ce54193039c4e"
+    "revision": "2fbc22a2cb4be5f8574d58da992fd786"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

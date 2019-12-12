@@ -35,7 +35,7 @@
   }
 
   &.big {
-    @media (max-device-pixel-ratio: 1), (max-resolution: 1dppx) {
+    @media (max-device-pixel-ratio: 2), (max-resolution: 2dppx) {
       background-size: contain;
       width: 151px !important;
     }
@@ -173,11 +173,11 @@
   }
 
   @include media(tablet) {
-    top: calc(50% - var(--menu-height) / 3);
+    top: calc(60% - var(--menu-height) / 3);
   }
 
   @include media(desktop) {
-    top: calc(50% - var(--menu-height) / 2);
+    top: calc(60% - var(--menu-height) / 2);
   }
 
   &.animate-in {
@@ -1053,7 +1053,7 @@
         font-size: em(80);
       }
 
-      &:not(:first-of-type) {
+      &:not(:first-child) {
         padding-top: 10vh;
 
         @include media(phone) {
