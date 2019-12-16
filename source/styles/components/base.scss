@@ -8,6 +8,14 @@ $time-slow: 2s;
 
 :root {
   --menu-height: 280px;
+
+	--pink: #fd959e;
+	--dark: #022329;
+	--black: #000;
+	--light: #fff;
+  --gray: #b9c2c3;
+	--blue: #1970c8;
+	// --main: #fdaeb5;
 }
 
 // indent
@@ -21,15 +29,7 @@ $padding-normal: calc(#{$indent-normal} + var(--logotype-width));
 $padding-biggest: calc(#{$indent-biggest} + var(--logotype-width));
 
 // colors
-$black: #000;
-$light: #fff;
-$dark: #022329;
-$blue: #1970c8;
-$gray: #b9c2c3;
-$primary: #fd959e;
-$secondary: $dark;
 $highlight: rgba(0, 0, 0, 0);
-$primary-lighten: lighten($primary, 5%);
 
 // media queries
 $phone: 768px;

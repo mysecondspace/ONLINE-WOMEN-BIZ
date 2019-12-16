@@ -1,9 +1,9 @@
 #post-1 {
-  background-color: $light;
+  background-color: var(--light);
 
   .circle {
     p {
-      color: $dark;
+      color: var(--dark);
     }
 
     a {
@@ -40,7 +40,7 @@
 
     + div {
       animation: fade-in-up $time-slow 1s forwards;
-      background-color: $primary;
+      background-color: var(--pink);
       position: absolute;
       opacity: 0;
       z-index: 0;
@@ -107,7 +107,7 @@
     }
 
     h1 {
-      color: $dark;
+      color: var(--dark);
       margin-bottom: 1%;
       animation-delay: .1s;
       font-family: $cond-bold;
@@ -143,7 +143,7 @@
         }
 
         + span {
-          color: $primary;
+          color: var(--pink);
           font-size: em(20);
           animation-delay: .3s;
 
@@ -193,7 +193,7 @@
 }
 
 #post-3 {
-  background-color: $secondary;
+  background-color: var(--dark);
 
   @include media(phone) {
     padding-bottom: 5vh;
@@ -252,7 +252,7 @@
 
   .title {
     opacity: 0;
-    color: $light;
+    color: var(--light);
     font-family: $cond-bold;
     text-transform: uppercase;
     animation: fade-out $time-slow;
@@ -314,7 +314,7 @@
       }
 
       div {
-        background-color: $primary;
+        background-color: var(--pink);
         position: absolute;
         z-index: 0;
       }
@@ -363,7 +363,7 @@
       }
 
       p {
-        color: $primary;
+        color: var(--pink);
         font-family: $cond-light;
 
         @include media(phone) {
@@ -396,12 +396,12 @@
 
         @include media(tablet) {
           margin-top: 5vh;
-          color: $primary;
+          color: var(--pink);
           float: right;
         }
 
         &:hover {
-          color: $light;
+          color: var(--light);
         }
       }
     }
@@ -426,7 +426,7 @@
 }
 
 #post-5 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(phone) {
     padding: 0;
@@ -448,22 +448,22 @@
   }
 
   table tr {
-    border-top: 1px solid $dark;
+    border-top: 1px solid var(--dark);
 
     &:last-of-type {
-      border-bottom: 1px solid $dark;
+      border-bottom: 1px solid var(--dark);
     }
 
     td:last-of-type a {
-      color: $dark;
+      color: var(--dark);
 
       @include media(phone) {
-        background-color: $secondary;
-        color: $primary;
+        background-color: var(--dark);
+        color: var(--pink);
       }
 
       &:hover {
-        color: $light;
+        color: var(--light);
       }
     }
   }
@@ -545,7 +545,7 @@
     }
 
     p {
-      color: $dark;
+      color: var(--dark);
 
       @include media(phone) {
         font-size: em(80);
@@ -569,7 +569,7 @@
     a {
       @include transition($time-fast);
       border-bottom: 4px solid transparent;
-      color: $blue;
+      color: var(--blue);
 
       @include media(phone) {
         font-size: em(50);
@@ -593,7 +593,7 @@
 
       &:focus,
       &:hover {
-        border-color: $blue
+        border-color: var(--blue);
       }
     }
   }
@@ -617,10 +617,10 @@
 
     a {
       @include transition($time-fast);
-      text-shadow: -1px 0 $gray, 0 1px $gray, 1px 0 $gray, 0 -1px $gray;
+      text-shadow: -1px 0 var(--gray), 0 1px var(--gray), 1px 0 var(--gray), 0 -1px var(--gray);
       text-transform: uppercase;
       font-family: $cond-bold;
-      color: $light;
+      color: var(--light);
 
       @include media(phone) {
         font-size: em(60);
@@ -646,7 +646,7 @@
 
       &:focus,
       &:hover {
-        color: $primary;
+        color: var(--pink);
         text-shadow: none;
       }
     }
@@ -667,7 +667,7 @@
       text-transform: uppercase;
       font-family: $cond-bold;
       font-size: em(25);
-      color: $light;
+      color: var(--light);
 
       @include media(smallest) {
         font-size: em(20);
@@ -678,17 +678,17 @@
       }
 
       &:not(.current) {
-        text-shadow: -1px 0 $gray, 0 1px $gray, 1px 0 $gray, 0 -1px $gray;
+        text-shadow: -1px 0 var(--gray), 0 1px var(--gray), 1px 0 var(--gray), 0 -1px var(--gray);
       }
 
       &:focus,
       &:hover {
-        color: $primary;
+        color: var(--pink);
         text-shadow: none;
       }
 
       &.current {
-        color: $primary;
+        color: var(--pink);
 
         @include media(phone) {
           margin-left: 10vw;

@@ -1,5 +1,5 @@
 #blog section {
-  background-color: $secondary;
+  background-color: var(--dark);
 
   &.animate {
     .title,
@@ -76,7 +76,7 @@
       }
 
       div {
-        background-color: $primary;
+        background-color: var(--pink);
         position: absolute;
         z-index: 0;
       }
@@ -93,7 +93,7 @@
       }
 
       p {
-        color: $primary;
+        color: var(--pink);
         font-family: $cond-light;
       }
     }
@@ -107,7 +107,7 @@
 
   .circle {
     p {
-      color: $light;
+      color: var(--light);
     }
 
     a {
@@ -120,7 +120,7 @@
     top: 15vh;
     opacity: 0;
     z-index: 1;
-    color: $primary;
+    color: var(--pink);
     position: absolute;
     font-family: $cond-bold;
 
@@ -228,12 +228,12 @@
 
         @include media(tablet) {
           margin-top: 5vh;
-          color: $primary;
+          color: var(--pink);
           float: left;
         }
 
         &:hover {
-          color: $light;
+          color: var(--light);
         }
       }
     }
@@ -347,12 +347,12 @@
 
       @include media(tablet) {
         margin-top: 5vh;
-        color: $primary;
+        color: var(--pink);
         float: left;
       }
 
       &:hover {
-        color: $light;
+        color: var(--light);
       }
     }
   }

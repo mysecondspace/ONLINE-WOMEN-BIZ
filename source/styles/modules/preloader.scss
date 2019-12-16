@@ -11,7 +11,7 @@
   bottom: 0;
   z-index: 999;
   position: fixed;
-  background: $light;
+  background: var(--light);
   align-items: center;
   display: flex;
 

@@ -1,8 +1,8 @@
 #sitemap {
-  background-color: $light;
+  background-color: var(--light);
 
   .background {
-    background-color: $primary;
+    background-color: var(--pink);
     position: absolute;
     height: 100%;
     z-index: 1;
@@ -36,7 +36,7 @@
     p,
     h1 {
       opacity: 0;
-      color: $light;
+      color: var(--light);
       line-height: 1;
       text-align: center;
       font-family: $cond-bold;
@@ -71,7 +71,7 @@
 
       li {
         opacity: 0;
-        color: $light;
+        color: var(--light);
         font-family: $cond-light;
         animation: fade-in-right $time-slow .2s forwards;
 
@@ -93,7 +93,7 @@
         a {
           @include transition($time-fast);
           text-transform: uppercase;
-          color: $light;
+          color: var(--light);
 
           @include media(phone) {
             font-size: em(14);
@@ -105,6 +105,10 @@
 
           @include media(biggest) {
             font-size: em(40);
+          }
+
+          &:hover {
+            color: var(--dark);
           }
         }
       }

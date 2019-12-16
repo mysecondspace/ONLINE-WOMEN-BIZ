@@ -221,11 +221,11 @@
           <span>Sign up with your email address to receive updates on our events</span>
 
           <!-- form -->
-          <form action="#">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="Email Address">
-            <button type="submit" value="submit" name="submit">Sign up</button>
+          <form class="gform" data-email="example@gmail.com" action="#">
+            <input type="text" name="name" placeholder="First Name">
+            <input type="text" name="surname" placeholder="Last Name">
+            <input type="email" name="email" placeholder="Email Address">
+            <button class="subscribe" type="submit" value="submit" name="submit">Sign up</button>
           </form>
         </div>
       </section>
@@ -233,6 +233,9 @@
       <!-- footer -->
       //= templates/footer.html
     </main>
+
+    <!-- modal -->
+    //= templates/modal.html
 
     <!-- script -->
     //= templates/script.html

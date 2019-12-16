@@ -5,12 +5,12 @@ html {
     margin: 0;
     opacity: 0;
     height: 100%;
-    color: $dark;
+    color: var(--dark);
     min-width: 320px;
     overflow-x: hidden;
     font-family: $normal;
     letter-spacing: $spacing;
-    background-color: $light;
+    background-color: var(--light);
     animation: fade-in $time-slow forwards;
     -webkit-tap-highlight-color: $highlight;
     -webkit-font-smoothing: antialiased;

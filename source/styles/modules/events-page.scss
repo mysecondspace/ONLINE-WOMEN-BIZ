@@ -1,9 +1,9 @@
 #events-1 {
-  background-color: $light;
+  background-color: var(--light);
 
   .circle {
     p {
-      color: $dark;
+      color: var(--dark);
     }
 
     a {
@@ -93,7 +93,7 @@
 }
 
 #events-2 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(phone) {
     padding-bottom: 10vh;
@@ -174,7 +174,7 @@
     }
 
     span {
-      color: $light;
+      color: var(--light);
     }
   }
 
@@ -235,7 +235,7 @@
       }
 
       span {
-        color: $light;
+        color: var(--light);
         display: initial;
         font-size: inherit;
       }
@@ -321,13 +321,13 @@
     }
 
     span {
-      color: $primary;
+      color: var(--pink);
     }
   }
 
   .title {
     opacity: 0;
-    color: $primary;
+    color: var(--pink);
     margin-top: 7.5vh;
     font-family: $cond-bold;
     text-transform: uppercase;
@@ -352,7 +352,7 @@
 }
 
 #events-5 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(tablet) {
     padding-right: $indent-normal;
@@ -426,7 +426,7 @@
 
     + span {
       opacity: 0;
-      color: $light;
+      color: var(--light);
       display: block;
       font-family: $cond-bold;
       text-transform: uppercase;
@@ -530,7 +530,7 @@
     }
 
     div {
-      background-color: $dark;
+      background-color: var(--dark);
       position: absolute;
       height: 80%;
       right: -5%;
@@ -553,7 +553,7 @@
 }
 
 #events-6 {
-  background-color: $secondary;
+  background-color: var(--dark);
 
   &.animate {
     $list: 4;
@@ -602,7 +602,7 @@
       animation: fade-in-up-reverse $time-slow;
 
       &.title {
-        color: $light;
+        color: var(--light);
         line-height: 1;
         position: relative;
 
@@ -616,7 +616,7 @@
 
         + p,
         + ul li {
-          color: $primary;
+          color: var(--pink);
           line-height: 1.48;
           font-family: $cond-normal;
 
@@ -631,7 +631,7 @@
           }
 
           span {
-            color: $light;
+            color: var(--light);
           }
         }
 
@@ -742,7 +742,7 @@
     margin: 0;
 
     p {
-      color: $light;
+      color: var(--light);
     }
   }
 }
@@ -774,7 +774,7 @@
   }
 
   .title {
-    color: $light;
+    color: var(--light);
     align-items: baseline;
     font-family: $cond-bold;
 

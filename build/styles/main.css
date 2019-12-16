@@ -1,5 +1,11 @@
 :root {
   --menu-height: 280px;
+  --pink: #fd959e;
+  --dark: #022329;
+  --black: #000;
+  --light: #fff;
+  --gray: #b9c2c3;
+  --blue: #1970c8;
 }
 
 @font-face {
@@ -159,12 +165,12 @@ html body {
   margin: 0;
   opacity: 0;
   height: 100%;
-  color: #022329;
+  color: var(--dark);
   min-width: 320px;
   overflow-x: hidden;
   font-family: "harmonia normal";
   letter-spacing: 0.5px;
-  background-color: #fff;
+  background-color: var(--light);
   animation: fade-in 2s forwards;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
@@ -198,11 +204,12 @@ html button {
 
 * {
   --logotype-width: 175px;
+  --circle-diameter: 48px;
 }
 
 ::selection {
-  background: #fd959e;
-  color: #fff;
+  background: var(--pink);
+  color: var(--light);
 }
 
 #logo {
@@ -237,14 +244,14 @@ html button {
     width: 151px !important;
   }
 }
-#logo.big.primary {
+#logo.big.pink {
   background-image: url(../images/logo-big-primary.png);
   height: 368px;
   width: 302px;
   background-repeat: no-repeat;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  #logo.big.primary {
+  #logo.big.pink {
     background-size: 151px 184px;
     background-image: url(../images/logo-big-primary-2x.png);
   }
@@ -323,19 +330,19 @@ html button {
   z-index: 3;
 }
 #nav.light div, #nav.light::after, #nav.light::before {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #nav.dark {
   z-index: 3;
 }
 #nav.dark div, #nav.dark::after, #nav.dark::before {
-  background-color: #022329;
+  background-color: var(--dark);
 }
-#nav.primary {
+#nav.pink {
   z-index: 3;
 }
-#nav.primary div, #nav.primary::after, #nav.primary::before {
-  background-color: #fd959e;
+#nav.pink div, #nav.pink::after, #nav.pink::before {
+  background-color: var(--pink);
 }
 #nav.click div {
   transform: scale(0);
@@ -405,37 +412,37 @@ html button {
   animation: fade-in-left-reverse 0.15s forwards;
 }
 @media only screen and (max-width: 767px) {
-  #menu.primary {
-    background: #fd959e;
+  #menu.pink {
+    background: var(--pink);
   }
 }
-#menu.primary a {
-  color: #fff;
+#menu.pink a {
+  color: var(--light);
 }
-#menu.primary a:hover, #menu.primary a.active {
-  color: #022329;
+#menu.pink a:hover, #menu.pink a.active {
+  color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
-  #menu.secondary {
-    background: #022329;
+  #menu.dark {
+    background: var(--dark);
   }
 }
-#menu.secondary a {
-  color: #fff;
+#menu.dark a {
+  color: var(--light);
 }
-#menu.secondary a:hover, #menu.secondary a.active {
-  color: #fd959e;
+#menu.dark a:hover, #menu.dark a.active {
+  color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #menu.light {
-    background: #fff;
+    background: var(--light);
   }
 }
 #menu.light a {
-  color: #022329;
+  color: var(--dark);
 }
 #menu.light a:hover, #menu.light a.active {
-  color: #fd959e;
+  color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #menu ul {
@@ -490,10 +497,59 @@ html button {
   }
 }
 
+#change {
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  animation: fade-in 2s forwards;
+  border: 2px solid var(--light);
+  height: var(--circle-diameter);
+  width: var(--circle-diameter);
+  position: absolute;
+  z-index: 9;
+}
+@media only screen and (max-width: 767px) {
+  #change {
+    right: 15px;
+    top: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #change {
+    right: 45px;
+    top: 45px;
+  }
+}
+#change::after, #change::before {
+  content: '';
+  width: calc(var(--circle-diameter) / 2);
+  height: var(--circle-diameter);
+}
+#change::after {
+  float: right;
+  border-top-right-radius: calc(var(--circle-diameter) / 2);
+  border-bottom-right-radius: calc(var(--circle-diameter) / 2);
+  background: var(--dark);
+}
+#change::before {
+  float: left;
+  border-top-left-radius: calc(var(--circle-diameter) / 2);
+  border-bottom-left-radius: calc(var(--circle-diameter) / 2);
+  background: var(--pink);
+}
+#change:hover {
+  transform: rotate(-180deg);
+}
+
 #footer {
   justify-content: space-between;
-  border-top: 1px solid #fd959e;
-  background-color: #022329;
+  transition: background-color 0.15s;
+  border-top: 1px solid var(--pink);
+  background-color: var(--dark);
   align-items: center;
   display: flex;
 }
@@ -535,7 +591,7 @@ html button {
   }
 }
 #footer p {
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia cond normal";
 }
 #footer p a {
@@ -544,10 +600,10 @@ html button {
   -webkit-transition: 0.15s;
   transition: 0.15s;
   font-family: "harmonia cond bold";
-  color: #fd959e;
+  color: var(--pink);
 }
 #footer p a:hover {
-  color: #fff;
+  color: var(--light);
 }
 #footer > div {
   display: flex;
@@ -562,7 +618,7 @@ html button {
 }
 
 #events-3, #events-7, #post-8 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 .animate#events-3 span, .animate#events-7 span, .animate#post-8 span,
 .animate#events-3 form,
@@ -603,13 +659,13 @@ html button {
 #events-3 form input, #events-7 form input, #post-8 form input {
   border: 0;
   width: 100%;
-  color: #fff;
+  color: var(--light);
   outline: none;
   border-radius: 0;
   margin-bottom: 10vh;
   font-family: "harmonia cond light";
   background-color: transparent;
-  border-bottom: 1px solid #fd959e;
+  border-bottom: 1px solid var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #events-3 form input, #events-7 form input, #post-8 form input {
@@ -631,12 +687,12 @@ html button {
   -o-transition: 0.15s;
   -webkit-transition: 0.15s;
   transition: 0.15s;
-  background-color: #fd959e;
+  background-color: var(--pink);
   text-transform: uppercase;
   font-family: "harmonia cond bold";
   padding: 10px 20px 5px;
   font-family: "harmonia bold";
-  color: #022329;
+  color: var(--dark);
   outline: none;
   border: 0;
 }
@@ -655,12 +711,12 @@ html button {
   }
 }
 #events-3 form button:focus, #events-7 form button:focus, #post-8 form button:focus, #events-3 form button:hover, #events-7 form button:hover, #post-8 form button:hover {
-  color: #fd959e;
-  background-color: #fff;
+  color: var(--pink);
+  background-color: var(--light);
 }
 #events-3 span, #events-7 span, #post-8 span {
   opacity: 0;
-  color: #fff;
+  color: var(--light);
   display: block;
   font-family: "harmonia cond light";
   animation: fade-in-up-reverse 2s;
@@ -689,7 +745,7 @@ html button {
   animation: fade-out 2s;
   text-transform: uppercase;
   font-family: "harmonia cond light";
-  color: #fd959e;
+  color: var(--pink);
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -718,9 +774,181 @@ html button {
   }
 }
 
+.modal {
+  animation: fade-out 0.15s forwards;
+  background-color: var(--light);
+  align-items: center;
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+.modal > div {
+  margin: 0 auto;
+}
+.modal > div p {
+  font-family: "harmonia bold";
+}
+@media only screen and (max-width: 767px) {
+  .modal > div p {
+    font-size: 2.1875em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal > div p {
+    font-size: 6.25em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .modal > div p {
+    font-size: 12.5em;
+  }
+}
+.modal > div p.awesome::after {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  content: '';
+}
+@media only screen and (max-width: 767px) {
+  .modal > div p.awesome::after {
+    height: 90px;
+    width: 64px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal > div p.awesome::after {
+    height: 180px;
+    width: 128px;
+  }
+}
+.modal > div p.awesome--1::after {
+  background: url("../images/girl-1.png") center no-repeat;
+  background-size: cover;
+}
+.modal > div p.awesome--2::after {
+  background: url("../images/girl-2.png") center no-repeat;
+  background-size: cover;
+}
+.modal > div p.awesome--3::after {
+  background: url("../images/girl-3.png") center no-repeat;
+  background-size: cover;
+}
+.modal > div > div {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--dark);
+}
+@media only screen and (max-width: 767px) {
+  .modal > div > div {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal > div > div {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .modal > div > div {
+    padding-bottom: 75px;
+    margin-bottom: 75px;
+  }
+}
+.modal > div > div div {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  margin-right: 50px;
+  background: var(--dark);
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  .modal > div > div div {
+    width: 160px;
+    height: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal > div > div div {
+    width: 600px;
+    height: 10px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .modal > div > div div {
+    width: 900px;
+  }
+}
+.modal > div > span {
+  font-family: "harmonia cond bold";
+}
+@media only screen and (max-width: 767px) {
+  .modal > div > span {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal > div > span {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .modal > div > span {
+    font-size: 2.5em;
+  }
+}
+.modal > div .close {
+  transition: 0.15s;
+  background-color: var(--dark);
+  position: absolute;
+  cursor: pointer;
+  height: 64px;
+  right: 15px;
+  width: 64px;
+  top: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .modal > div .close {
+    right: 10px;
+    top: 10px;
+  }
+}
+.modal > div .close:hover {
+  background-color: var(--pink);
+}
+.modal > div .close:hover::after, .modal > div .close:hover::before {
+  background-color: var(--dark);
+}
+.modal > div .close::after, .modal > div .close::before {
+  background-color: var(--light);
+  position: absolute;
+  content: '';
+  height: 64px;
+  width: 2px;
+  left: 31px;
+}
+.modal > div .close::after {
+  transform: rotate(-45deg);
+}
+.modal > div .close::before {
+  transform: rotate(45deg);
+}
+.modal.opened {
+  animation: fade-in 0.15s forwards;
+}
+
 .turn {
   background: url("../images/turn.png") center no-repeat;
-  background-color: #022329;
+  background-color: var(--dark);
   background-size: cover;
   position: fixed;
   display: none;
@@ -885,7 +1113,7 @@ html button {
   background: url("../images/arrow-dark.png") center repeat;
   background-size: cover;
 }
-.arrow.primary span {
+.arrow.pink span {
   background: url("../images/arrow-primary.png") center repeat;
   background-size: cover;
 }
@@ -1006,7 +1234,7 @@ html button {
   }
 }
 .item p:focus, .item p:hover, .item p.selected {
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (min-width: 768px) {
   .item p.small {
@@ -1103,7 +1331,7 @@ html button {
   content: '';
   margin-left: 4px;
   position: absolute;
-  border-left: 35px solid #022329;
+  border-left: 35px solid var(--dark);
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   transform: translate(-50%, -50%);
@@ -1157,7 +1385,7 @@ html button {
   font-family: "harmonia cond bold";
   line-height: 1.48;
   margin-top: 5vh;
-  color: #022329;
+  color: var(--dark);
 }
 @media only screen and (max-width: 399px) {
   #faq-2 .paragraph p:last-of-type,
@@ -1238,13 +1466,13 @@ html button {
   -webkit-border-radius: 100%;
   border-radius: 100%;
   animation: fade-out 2s;
-  background-color: #022329;
+  background-color: var(--dark);
   font-family: "harmonia cond bold";
   display: inline-grid;
   align-items: center;
   text-align: center;
   position: absolute;
-  color: #fd959e;
+  color: var(--pink);
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -1298,7 +1526,7 @@ html button {
 .text > h2,
 .text > h3 {
   opacity: 0;
-  color: #022329;
+  color: var(--dark);
   animation: fade-in-up-reverse 2s;
 }
 .text > p.title,
@@ -1360,7 +1588,7 @@ html button {
 .text p:not(.title) {
   animation: fade-in-up-reverse 2s;
   line-height: 1.48;
-  color: #022329;
+  color: var(--dark);
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -1401,24 +1629,24 @@ html button {
 .text ul li::before {
   position: absolute;
   content: '\2022';
-  color: #fd959e;
+  color: var(--pink);
   left: 0;
 }
 .text--light > p,
 .text--light > h2 {
-  color: #fff;
+  color: var(--light);
 }
 .text--light > p.title,
 .text--light > h2.title {
-  color: #fd959e;
+  color: var(--pink);
 }
 
 @media only screen and (max-width: 767px) {
   .link {
-    background-color: #fd959e;
+    background-color: var(--pink);
     padding: 6px 14px 4px;
     font-family: "harmonia bold";
-    color: #022329;
+    color: var(--dark);
   }
 }
 
@@ -1439,7 +1667,7 @@ html button {
   top: -2.5px;
   left: -2.5px;
   z-index: 11000;
-  background: #fff;
+  background: var(--light);
   border-radius: 50%;
   height: 5px;
   width: 5px;
@@ -1553,13 +1781,13 @@ html button {
 }
 
 .swiper-pagination-bullet {
-  background: #fd959e;
+  background: var(--pink);
   height: 12px;
   width: 12px;
   opacity: 1;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active, .swiper-pagination-bullet.swiper-pagination-bullet-active-prev, .swiper-pagination-bullet.swiper-pagination-bullet-active-next, .swiper-pagination-bullet.swiper-pagination-bullet-active-prev-prev, .swiper-pagination-bullet.swiper-pagination-bullet-active-next-next {
-  background: #fd959e;
+  background: var(--pink);
 }
 
 table {
@@ -1662,6 +1890,7 @@ table tr td:last-of-type a {
 }
 
 section {
+  transition: background-color 0.15s;
   position: relative;
 }
 @media only screen and (max-width: 767px) {
@@ -1706,23 +1935,23 @@ body:not(#index) #footer {
 }
 body#faq #footer, body#post #footer, body#events #footer, body#reviews #footer, body#courses #footer {
   border-top: 0;
-  background-color: #fff;
+  background-color: var(--light);
 }
 body#faq #footer p, body#post #footer p, body#events #footer p, body#reviews #footer p, body#courses #footer p {
-  color: #022329;
+  color: var(--dark);
 }
 body#faq #footer p a, body#post #footer p a, body#events #footer p a, body#reviews #footer p a, body#courses #footer p a {
-  color: #022329;
+  color: var(--dark);
 }
 body#faq #footer p a:hover, body#post #footer p a:hover, body#events #footer p a:hover, body#reviews #footer p a:hover, body#courses #footer p a:hover {
-  color: #fd959e;
+  color: var(--pink);
 }
 body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a, body#reviews #footer > div a, body#courses #footer > div a {
   background: url("../images/logo-dark.svg") no-repeat;
 }
 
 #index-1 {
-  background-color: #fdaeb5;
+  background-color: var(--pink);
 }
 #index-1 .circle {
   animation-delay: 2s;
@@ -1757,7 +1986,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #index-1 .circle p {
-  color: #fff;
+  color: var(--light);
 }
 #index-1 .circle a {
   background: url("../images/mouse-light.svg") center no-repeat;
@@ -1799,13 +2028,13 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1920px) {
   #index-1 .letter {
-    background-size: 1400px;
+    background-size: 2085px;
   }
 }
 #index-1 .slogan {
   animation: fade-in 2s 2s forwards;
   position: absolute;
-  color: #fff;
+  color: var(--light);
   opacity: 0;
   z-index: 2;
 }
@@ -1838,13 +2067,13 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1920px) {
   #index-1 .slogan {
-    font-size: 1.5em;
-    right: 110px;
-    top: 565px;
+    font-size: 2.0625em;
+    right: 170px;
+    top: 880px;
   }
 }
 #index-1 .slogan span {
-  color: #022329;
+  color: var(--dark);
   line-height: 0;
 }
 @media only screen and (min-width: 768px) {
@@ -1854,12 +2083,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1920px) {
   #index-1 .slogan span {
-    padding: 0 8px;
+    padding: 0 20px;
   }
 }
 
 #index-2 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 #index-2.animate .title span span {
   transition: transform 1s cubic-bezier(0, 0, 0.2, 1), opacity 1s cubic-bezier(0, 0, 0.2, 1);
@@ -1886,7 +2115,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #index-2 .title {
   line-height: 1;
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia cond bold";
 }
 @media only screen and (max-width: 767px) {
@@ -1947,7 +2176,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
 }
 #index-2 .paragraph p {
-  color: #fd959e;
+  color: var(--pink);
   line-height: 1.48;
 }
 @media only screen and (max-width: 767px) {
@@ -1984,15 +2213,15 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   #index-2 .paragraph a {
     font-size: 1.5em;
     margin-top: 10vh;
-    color: #fd959e;
+    color: var(--pink);
   }
 }
 #index-2 .paragraph a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 #index-3 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #index-3.animate .absolute canvas,
 #index-3.animate .absolute div {
@@ -2004,9 +2233,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #index-3.animate .paragraph > * {
   animation: fade-in-up 2s forwards;
 }
+#index-3.animate .paragraph h2,
 #index-3.animate .paragraph p:first-of-type {
   animation-delay: .1s;
 }
+#index-3.animate .paragraph h2 + p,
 #index-3.animate .paragraph p:first-of-type + p {
   animation-delay: .2s;
 }
@@ -2056,7 +2287,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
 }
 #index-3 .absolute div {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   z-index: 0;
 }
@@ -2120,54 +2351,54 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #index-3 .paragraph > * {
   opacity: 0;
-  color: #022329;
+  color: var(--dark);
 }
-#index-3 .paragraph p:first-of-type {
+#index-3 .paragraph h2 {
   font-family: "harmonia cond normal";
 }
 @media only screen and (max-width: 767px) {
-  #index-3 .paragraph p:first-of-type {
+  #index-3 .paragraph h2 {
     font-size: 1.75em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #index-3 .paragraph p:first-of-type {
+  #index-3 .paragraph h2 {
     font-size: 3.125em;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #index-3 .paragraph p:first-of-type {
+  #index-3 .paragraph h2 {
     font-size: 4.0625em;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #index-3 .paragraph p:first-of-type {
+  #index-3 .paragraph h2 {
     font-size: 5.625em;
   }
 }
-#index-3 .paragraph p:first-of-type + p {
+#index-3 .paragraph h2 + p {
   line-height: 1.48;
 }
 @media only screen and (max-width: 767px) {
-  #index-3 .paragraph p:first-of-type + p {
+  #index-3 .paragraph h2 + p {
     margin-top: 2.5vh;
     font-size: 0.875em;
   }
 }
 @media only screen and (max-width: 399px) {
-  #index-3 .paragraph p:first-of-type + p {
+  #index-3 .paragraph h2 + p {
     font-size: 0.6875em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #index-3 .paragraph p:first-of-type + p {
+  #index-3 .paragraph h2 + p {
     font-size: 1em;
     margin-left: 25%;
     margin-top: 5vh;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #index-3 .paragraph p:first-of-type + p {
+  #index-3 .paragraph h2 + p {
     margin-left: 15%;
   }
 }
@@ -2191,7 +2422,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     float: left;
   }
   #index-3 .paragraph a:hover {
-    color: #fd959e;
+    color: var(--pink);
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -2201,7 +2432,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #index-4 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #index-4 {
@@ -2219,23 +2450,23 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .2s;
 }
 #index-4 table tr {
-  border-top: 1px solid #022329;
+  border-top: 1px solid var(--dark);
 }
 #index-4 table tr:last-of-type {
-  border-bottom: 1px solid #022329;
+  border-bottom: 1px solid var(--dark);
 }
 #index-4 table tr td:last-of-type a {
-  color: #022329;
+  color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #index-4 table tr td:last-of-type a {
-    background-color: #022329;
-    color: #fd959e;
+    background-color: var(--dark);
+    color: var(--pink);
   }
 }
 
 #index-5 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #index-5 {
@@ -2292,7 +2523,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #index-5 .title {
   opacity: 0;
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia cond light";
 }
 @media only screen and (max-width: 767px) {
@@ -2332,7 +2563,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
 }
 #index-5 .block .absolute div {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   z-index: 0;
 }
@@ -2485,7 +2716,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
 }
 #index-5 .block .paragraph p {
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia cond light";
 }
 @media only screen and (max-width: 767px) {
@@ -2525,12 +2756,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 768px) {
   #index-5 .block .paragraph a {
     margin-top: 5vh;
-    color: #fd959e;
+    color: var(--pink);
     float: left;
   }
 }
 #index-5 .block .paragraph a:hover {
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (min-width: 768px) {
   #index-5 .block .paragraph--1 {
@@ -2580,7 +2811,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #about-1 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #about-1.animate .paragraph span span {
   transition: transform 1s cubic-bezier(0, 0, 0.2, 1), opacity 1s cubic-bezier(0, 0, 0.2, 1);
@@ -2597,7 +2828,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   transition-delay: .6s;
 }
 #about-1 .circle p {
-  color: #022329;
+  color: var(--dark);
 }
 #about-1 .circle a {
   background: url("../images/mouse-dark.svg") center no-repeat;
@@ -2674,8 +2905,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-family: "harmonia cond bold";
   line-height: 1;
 }
+#about-1 .paragraph h1 {
+  font-size: inherit;
+  font-weight: normal;
+}
 #about-1 .paragraph span {
-  color: #022329;
+  color: var(--dark);
   display: flex;
   overflow: hidden;
 }
@@ -2736,7 +2971,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #about-2 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (min-width: 768px) {
   #about-2 {
@@ -2789,7 +3024,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 768px) {
   #about-2 .slogan {
     font-size: 6.25em;
-    width: 50vw;
+    width: 52vw;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -2890,7 +3125,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   width: 100%;
 }
 #about-2 .absolute div {
-  background-color: #022329;
+  background-color: var(--dark);
   position: absolute;
   height: 80%;
   width: 80%;
@@ -3234,7 +3469,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   width: 100%;
 }
 #about-4 .absolute div {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   height: 80%;
   right: -15%;
@@ -3292,7 +3527,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #about-5 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #about-5 {
@@ -3443,7 +3678,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   width: 100%;
 }
 #about-5 .block .absolute div {
-  background-color: #022329;
+  background-color: var(--dark);
   position: absolute;
   height: 50%;
   right: -10%;
@@ -3528,7 +3763,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #about-5 .block .paragraph a {
-  color: #fff;
+  color: var(--light);
   display: block;
   margin-top: 5vh;
   font-size: 1.5625em;
@@ -3554,7 +3789,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #about-5 .block .paragraph a span {
-  color: #022329;
+  color: var(--dark);
 }
 #about-5 .block .paragraph .title {
   opacity: 0;
@@ -3626,7 +3861,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #about-6 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #about-6 {
@@ -3651,7 +3886,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #about-6 .slogan {
   opacity: 0;
-  color: #fd959e;
+  color: var(--pink);
   margin-bottom: 1vh;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
@@ -3674,7 +3909,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #about-7 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #about-7 {
@@ -3692,29 +3927,29 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .2s;
 }
 #about-7 table tr {
-  border-top: 1px solid #022329;
+  border-top: 1px solid var(--dark);
 }
 #about-7 table tr:last-of-type {
-  border-bottom: 1px solid #022329;
+  border-bottom: 1px solid var(--dark);
 }
 #about-7 table tr td:last-of-type a {
-  color: #022329;
+  color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #about-7 table tr td:last-of-type a {
-    background-color: #022329;
-    color: #fd959e;
+    background-color: var(--dark);
+    color: var(--pink);
   }
 }
 #about-7 table tr td:last-of-type a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 #nina-mua-1 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #nina-mua-1 .circle p {
-  color: #fd959e;
+  color: var(--pink);
 }
 #nina-mua-1 .circle a {
   background: url("../images/mouse-primary.svg") center no-repeat;
@@ -3782,65 +4017,65 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #nina-mua-1 .paragraph > * {
   opacity: 0;
-  color: #fd959e;
+  color: var(--pink);
   animation: fade-in-right 2s forwards;
 }
-#nina-mua-1 .paragraph p:first-of-type {
+#nina-mua-1 .paragraph h1 {
   line-height: 1;
   animation-delay: .1s;
   font-family: "harmonia cond bold";
 }
 @media only screen and (max-width: 767px) {
-  #nina-mua-1 .paragraph p:first-of-type {
+  #nina-mua-1 .paragraph h1 {
     font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #nina-mua-1 .paragraph p:first-of-type {
+  #nina-mua-1 .paragraph h1 {
     font-size: 5em;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #nina-mua-1 .paragraph p:first-of-type {
+  #nina-mua-1 .paragraph h1 {
     font-size: 6.875em;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #nina-mua-1 .paragraph p:first-of-type {
+  #nina-mua-1 .paragraph h1 {
     font-size: 10em;
   }
 }
-#nina-mua-1 .paragraph p:first-of-type + p {
+#nina-mua-1 .paragraph h1 + p {
   margin-top: 5%;
   line-height: 1.48;
   animation-delay: .2s;
   font-family: "harmonia cond normal";
 }
 @media only screen and (max-width: 767px) {
-  #nina-mua-1 .paragraph p:first-of-type + p {
+  #nina-mua-1 .paragraph h1 + p {
     font-size: 0.875em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #nina-mua-1 .paragraph p:first-of-type + p {
+  #nina-mua-1 .paragraph h1 + p {
     font-size: 1em;
     margin-left: 25%;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #nina-mua-1 .paragraph p:first-of-type + p {
+  #nina-mua-1 .paragraph h1 + p {
     font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #nina-mua-1 .paragraph p:first-of-type + p {
+  #nina-mua-1 .paragraph h1 + p {
     font-size: 1.375em;
     margin-left: 15%;
   }
 }
 
 #nina-mua-2 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #nina-mua-2 {
@@ -3895,11 +4130,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #nina-mua-2 .paragraph p:first-of-type {
   opacity: 0;
   line-height: 1;
-  color: #fd959e;
+  color: var(--pink);
   position: relative;
   animation-delay: .1s;
   font-family: "harmonia cond bold";
-  text-shadow: -1px 0 #022329, 0 1px #022329, 1px 0 #022329, 0 -1px #022329;
+  text-shadow: -1px 0 var(--dark), 0 1px var(--dark), 1px 0 var(--dark), 0 -1px var(--dark);
   animation: fade-in-up-reverse 2s;
 }
 @media only screen and (max-width: 767px) {
@@ -3925,7 +4160,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #nina-mua-2 .paragraph p:first-of-type span {
   animation: fade-in-up-reverse 2s;
   position: absolute;
-  color: #022329;
+  color: var(--dark);
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -3952,7 +4187,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #nina-mua-2 .paragraph p:first-of-type + p {
   opacity: 0;
-  color: #fff;
+  color: var(--light);
   font-size: 1.25em;
   line-height: 1.48;
   font-family: "harmonia cond normal";
@@ -3977,7 +4212,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #nina-mua-2 .paragraph p:first-of-type + p span {
-  color: #022329;
+  color: var(--dark);
 }
 #nina-mua-2 .absolute {
   bottom: 0;
@@ -4032,7 +4267,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #nina-mua-3 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 @media only screen and (max-width: 767px) {
   #nina-mua-3 {
@@ -4090,7 +4325,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #nina-mua-3 .title {
   opacity: 0;
-  color: #022329;
+  color: var(--dark);
   font-family: "harmonia cond bold";
   animation: fade-in-down-reverse 2s;
 }
@@ -4130,7 +4365,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   border-radius: 50%;
   font-weight: bold;
   margin: 0 auto;
-  color: #022329;
+  color: var(--dark);
   text-align: center;
   font-family: "harmonia cond normal";
   animation: spin 20s linear infinite;
@@ -4175,7 +4410,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #nina-mua-3 .circle > span {
   opacity: 0;
-  color: #022329;
+  color: var(--dark);
   position: absolute;
   width: fit-content;
   animation: fade-out 2s;
@@ -4293,7 +4528,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #nina-mua-3 .block .paragraph > * {
-  color: #022329;
+  color: var(--dark);
 }
 #nina-mua-3 .block .paragraph p:first-of-type {
   opacity: 0;
@@ -4322,7 +4557,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #nina-mua-3 .block .paragraph p:first-of-type span {
-  color: #fd959e;
+  color: var(--pink);
 }
 #nina-mua-3 .block .paragraph p:first-of-type + p {
   opacity: 0;
@@ -4369,7 +4604,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #nina-mua-3 .block .paragraph p:first-of-type + p + p span {
-  color: #022329;
+  color: var(--dark);
 }
 #nina-mua-3 .block .absolute {
   position: relative;
@@ -4528,7 +4763,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #nina-mua-3 .block .absolute img + div {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   opacity: 0;
 }
@@ -4549,7 +4784,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #nina-mua-4 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 #nina-mua-4.animate .sup,
 #nina-mua-4.animate .title-above-table {
@@ -4568,27 +4803,27 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .3s;
 }
 #nina-mua-4 table tr {
-  border-top: 1px solid #fd959e;
+  border-top: 1px solid var(--pink);
 }
 #nina-mua-4 table tr:last-of-type {
-  border-bottom: 1px solid #fd959e;
+  border-bottom: 1px solid var(--pink);
 }
 #nina-mua-4 table tr td {
-  color: #fd959e;
+  color: var(--pink);
 }
 #nina-mua-4 table tr td:last-of-type a {
-  color: #fd959e;
+  color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #nina-mua-4 table tr td:last-of-type a {
-    color: #022329;
+    color: var(--dark);
   }
 }
 #nina-mua-4 table tr td:last-of-type a:hover {
-  color: #fff;
+  color: var(--light);
 }
 #nina-mua-4 > * {
-  color: #fd959e;
+  color: var(--pink);
 }
 #nina-mua-4 .sup {
   animation: fade-in-up-reverse 2s;
@@ -4608,7 +4843,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #entrepreneurs {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #entrepreneurs {
@@ -4626,29 +4861,29 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .2s;
 }
 #entrepreneurs table tr {
-  border-top: 1px solid #022329;
+  border-top: 1px solid var(--dark);
 }
 #entrepreneurs table tr:last-of-type {
-  border-bottom: 1px solid #022329;
+  border-bottom: 1px solid var(--dark);
 }
 #entrepreneurs table tr td:last-of-type a {
-  color: #022329;
+  color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #entrepreneurs table tr td:last-of-type a {
-    background-color: #022329;
-    color: #fd959e;
+    background-color: var(--dark);
+    color: var(--pink);
   }
 }
 #entrepreneurs table tr td:last-of-type a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 #sitemap {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #sitemap .background {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   height: 100%;
   z-index: 1;
@@ -4685,7 +4920,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #sitemap .paragraph p,
 #sitemap .paragraph h1 {
   opacity: 0;
-  color: #fff;
+  color: var(--light);
   line-height: 1;
   text-align: center;
   font-family: "harmonia cond bold";
@@ -4727,7 +4962,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #sitemap .paragraph ul li {
   opacity: 0;
-  color: #fff;
+  color: var(--light);
   font-family: "harmonia cond light";
   animation: fade-in-right 2s 0.2s forwards;
 }
@@ -4765,7 +5000,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   -webkit-transition: 0.15s;
   transition: 0.15s;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (max-width: 767px) {
   #sitemap .paragraph ul li a {
@@ -4782,9 +5017,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     font-size: 2.5em;
   }
 }
+#sitemap .paragraph ul li a:hover {
+  color: var(--dark);
+}
 
 #courses-1 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #courses-1.foundation .photo {
   background: url("../images/woman-entrepreneur-life-business-success.jpg") no-repeat;
@@ -4808,11 +5046,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-1 .circle p {
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (min-width: 1920px) {
   #courses-1 .circle p {
-    color: #fd959e;
+    color: var(--pink);
   }
 }
 #courses-1 .circle a {
@@ -4821,7 +5059,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1920px) {
   #courses-1 .circle a {
-    background: url("../images/mouse-primary.svg") center no-repeat;
+    background: url("../images/mouse-pink.svg") center no-repeat;
     background-size: 30%;
   }
 }
@@ -4880,32 +5118,36 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
     bottom: 30vh;
   }
 }
-#courses-1 .paragraph p {
+#courses-1 .paragraph p,
+#courses-1 .paragraph h1 {
   opacity: 0;
   line-height: 1;
-  color: #fd959e;
+  color: var(--pink);
   animation-delay: .1s;
   font-family: "harmonia cond bold";
   animation: fade-in-right 2s forwards;
 }
 @media only screen and (max-width: 767px) {
-  #courses-1 .paragraph p {
+  #courses-1 .paragraph p,
+  #courses-1 .paragraph h1 {
     font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #courses-1 .paragraph p {
+  #courses-1 .paragraph p,
+  #courses-1 .paragraph h1 {
     font-size: 5.625em;
   }
 }
 @media only screen and (min-width: 1920px) {
-  #courses-1 .paragraph p {
+  #courses-1 .paragraph p,
+  #courses-1 .paragraph h1 {
     font-size: 10em;
   }
 }
 
 #courses-2 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 #courses-2.animate .text p,
 #courses-2.animate .info p,
@@ -4942,7 +5184,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-2 .text p:not(.title) {
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (max-width: 767px) {
   #courses-2 .info {
@@ -4966,7 +5208,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-2 .info p.title {
   text-transform: uppercase;
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (max-width: 767px) {
   #courses-2 .info p.title {
@@ -4985,7 +5227,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-2 .info p.title + p {
   line-height: 1;
-  color: #fd959e;
+  color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #courses-2 .info p.title + p {
@@ -5023,7 +5265,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-family: "harmonia cond light";
   padding-bottom: 10vh;
   line-height: 1.48;
-  color: #fd959e;
+  color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #courses-2 .info div + p {
@@ -5049,12 +5291,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-2 .info div + p span {
-  color: #fff;
+  color: var(--light);
   font-family: "harmonia cond bold";
 }
 #courses-2 .info div p {
   opacity: 1;
-  color: #fff;
+  color: var(--light);
   animation: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -5229,7 +5471,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   overflow: hidden;
 }
 #courses-3 .title span:first-child span {
-  color: #fd959e;
+  color: var(--pink);
 }
 #courses-3 .title span span {
   transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
@@ -5282,7 +5524,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #courses-4 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #courses-4 {
@@ -5469,13 +5711,13 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-4 .paragraph > span span {
-  color: #fff;
+  color: var(--light);
   display: initial;
   font-size: inherit;
 }
 
 #courses-5 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 @media only screen and (min-width: 768px) {
   #courses-5 {
@@ -5516,7 +5758,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #courses-5 .slogan {
   opacity: 0;
   z-index: 1;
-  color: #fff;
+  color: var(--light);
   line-height: 1;
   margin-bottom: 5vh;
   font-family: "harmonia cond bold";
@@ -5549,10 +5791,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-5 .component p {
-  color: #fd959e;
+  color: var(--pink);
 }
 #courses-5 .component span {
-  color: #fff;
+  color: var(--light);
 }
 
 @media only screen and (max-width: 767px) {
@@ -5606,7 +5848,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   text-transform: uppercase;
   animation: fade-in-down-reverse 2s 0.2s;
   width: fit-content;
-  color: #fd959e;
+  color: var(--pink);
   margin: 0 auto;
   right: 0;
   left: 0;
@@ -5641,7 +5883,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #courses-7 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #courses-7 {
@@ -5794,7 +6036,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   width: 100%;
 }
 #courses-7 .block .absolute div {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   height: 90%;
   right: -10%;
@@ -5828,7 +6070,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-out 2s;
 }
 #courses-7 .block .paragraph > span {
-  color: #fff;
+  color: var(--light);
   font-family: "harmonia cond light";
 }
 @media only screen and (min-width: 768px) {
@@ -5842,7 +6084,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-7 .block .paragraph p {
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia cond bold";
   text-transform: uppercase;
 }
@@ -5867,7 +6109,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-7 .block .paragraph p span {
-  color: #fff;
+  color: var(--light);
   line-height: 1;
 }
 @media only screen and (max-width: 767px) {
@@ -5890,7 +6132,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-7 .block .paragraph ul li {
   opacity: 0;
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia bold";
   animation: fade-in-up-reverse 2s;
 }
@@ -6010,7 +6252,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-8 .info > p {
   opacity: 0;
-  color: #022329;
+  color: var(--dark);
   animation: fade-in-up-reverse 2s;
 }
 #courses-8 .info > p.title {
@@ -6118,7 +6360,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-8 .info > p.title--color {
-  color: #fd959e;
+  color: var(--pink);
 }
 @media only screen and (min-width: 768px) {
   #courses-8 .info > p.title--color {
@@ -6174,7 +6416,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #courses-9 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #courses-9 {
@@ -6249,7 +6491,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-9 .info > p {
   opacity: 0;
-  color: #022329;
+  color: var(--dark);
   animation: fade-in-up-reverse 2s;
 }
 #courses-9 .info > p.title {
@@ -6257,7 +6499,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   position: relative;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
-  color: #fd959e;
+  color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #courses-9 .info > p.title {
@@ -6289,7 +6531,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-9 .info > p.title + p {
-  color: #fd959e;
+  color: var(--pink);
   margin-top: 3.5vh;
   line-height: 1.48;
   font-family: "harmonia cond light";
@@ -6334,11 +6576,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   margin: 0;
 }
 #courses-9 .horizontal-list p {
-  color: #fff;
+  color: var(--light);
 }
 
 #courses-10 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 #courses-10.foundation.animate .circle {
   animation: fade-in 2s forwards;
@@ -6365,7 +6607,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   border-radius: 50%;
   font-weight: bold;
   margin: 0 auto;
-  color: #fff;
+  color: var(--light);
   text-align: center;
   font-family: "harmonia cond normal";
   animation: spin 20s linear infinite;
@@ -6410,7 +6652,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-10.foundation .circle > span {
   opacity: 0;
-  color: #fff;
+  color: var(--light);
   position: absolute;
   width: fit-content;
   animation: fade-out 2s;
@@ -6809,9 +7051,9 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-11 .paragraph p:nth-of-type(1) ~ p {
-  color: #fff;
+  color: var(--light);
   margin-left: 5vw;
-  text-shadow: -1px 0 #022329, 0 1px #022329, 1px 0 #022329, 0 -1px #022329;
+  text-shadow: -1px 0 var(--dark), 0 1px var(--dark), 1px 0 var(--dark), 0 -1px var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #courses-11 .paragraph p:nth-of-type(1) ~ p {
@@ -6841,7 +7083,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #courses-12 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 #courses-12.animate .paragraph p:nth-of-type(1) {
   animation: fade-in-up 2s 0.5s forwards;
@@ -6875,7 +7117,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #courses-12 .paragraph p:nth-of-type(1) {
   font-family: "harmonia cond bold";
-  color: #fd959e;
+  color: var(--pink);
   line-height: 1;
 }
 @media only screen and (max-width: 767px) {
@@ -6925,7 +7167,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-12 .paragraph p:nth-of-type(2) {
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (max-width: 767px) {
   #courses-12 .paragraph p:nth-of-type(2) {
@@ -6949,7 +7191,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-family: "harmonia cond bold";
 }
 #courses-12 .paragraph p:nth-of-type(3) {
-  color: #fd959e;
+  color: var(--pink);
   line-height: 1.48;
 }
 @media only screen and (min-width: 768px) {
@@ -6970,8 +7212,8 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   -webkit-transition: 0.15s;
   transition: 0.15s;
   animation: fade-in-up-reverse 2s;
-  border-right: 1px solid #022329;
-  background-color: #fd959e;
+  border-right: 1px solid var(--dark);
+  background-color: var(--pink);
   text-transform: uppercase;
   font-family: "harmonia cond bold";
   padding: 14px 20px 10px;
@@ -6979,7 +7221,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   font-size: 1.375em;
   margin-top: 5vh;
   float: right;
-  color: #022329;
+  color: var(--dark);
   opacity: 0;
 }
 #courses-12 .paragraph .purchase::after {
@@ -6998,7 +7240,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fd959e;
+  background-color: var(--pink);
   align-items: center;
   position: absolute;
   display: flex;
@@ -7029,18 +7271,18 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-12 .paragraph .purchase:hover {
-  color: #022329;
-  background-color: #fff;
+  color: var(--dark);
+  background-color: var(--light);
 }
 #courses-12 .paragraph .purchase:hover::after {
-  background-color: #fff;
+  background-color: var(--light);
 }
 
 #events-1 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #events-1 .circle p {
-  color: #022329;
+  color: var(--dark);
 }
 #events-1 .circle a {
   background: url("../images/mouse-dark.svg") center no-repeat;
@@ -7137,7 +7379,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #events-2 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #events-2 {
@@ -7223,7 +7465,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #events-2 .slogan span {
-  color: #fff;
+  color: var(--light);
 }
 #events-2 .paragraph {
   width: 100%;
@@ -7288,7 +7530,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #events-2 .paragraph span span {
-  color: #fff;
+  color: var(--light);
   display: initial;
   font-size: inherit;
 }
@@ -7370,11 +7612,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #events-4 .slogan span {
-  color: #fd959e;
+  color: var(--pink);
 }
 #events-4 .title {
   opacity: 0;
-  color: #fd959e;
+  color: var(--pink);
   margin-top: 7.5vh;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
@@ -7402,7 +7644,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #events-5 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (min-width: 768px) {
   #events-5 {
@@ -7475,7 +7717,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #events-5 .slogan + span {
   opacity: 0;
-  color: #fff;
+  color: var(--light);
   display: block;
   font-family: "harmonia cond bold";
   text-transform: uppercase;
@@ -7586,7 +7828,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   width: 100%;
 }
 #events-5 .absolute div {
-  background-color: #022329;
+  background-color: var(--dark);
   position: absolute;
   height: 80%;
   right: -5%;
@@ -7610,7 +7852,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #events-6 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 #events-6.animate .info p,
 #events-6.animate .horizontal-list p {
@@ -7670,7 +7912,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-in-up-reverse 2s;
 }
 #events-6 .info > p.title {
-  color: #fff;
+  color: var(--light);
   line-height: 1;
   position: relative;
 }
@@ -7684,7 +7926,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #events-6 .info > p.title + p,
 #events-6 .info > p.title + ul li {
-  color: #fd959e;
+  color: var(--pink);
   line-height: 1.48;
   font-family: "harmonia cond normal";
 }
@@ -7704,7 +7946,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #events-6 .info > p.title + p span,
 #events-6 .info > p.title + ul li span {
-  color: #fff;
+  color: var(--light);
 }
 #events-6 .info > p.title--big {
   font-family: "harmonia cond bold";
@@ -7822,7 +8064,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   margin: 0;
 }
 #events-6 .horizontal-list p {
-  color: #fff;
+  color: var(--light);
 }
 
 #events-7.animate .title + span {
@@ -7848,7 +8090,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #events-7 .title {
-  color: #fff;
+  color: var(--light);
   align-items: baseline;
   font-family: "harmonia cond bold";
 }
@@ -7867,7 +8109,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #blog section {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 #blog section.animate .title,
 #blog section.animate .block .paragraph > * {
@@ -7943,7 +8185,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-in-up-reverse 2s;
 }
 #blog section .block .absolute div {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   z-index: 0;
 }
@@ -7957,7 +8199,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-out 2s;
 }
 #blog section .block .paragraph p {
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia cond light";
 }
 
@@ -7967,7 +8209,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #blog-1 .circle p {
-  color: #fff;
+  color: var(--light);
 }
 #blog-1 .circle a {
   background: url("../images/mouse-light.svg") center no-repeat;
@@ -7977,7 +8219,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   top: 15vh;
   opacity: 0;
   z-index: 1;
-  color: #fd959e;
+  color: var(--pink);
   position: absolute;
   font-family: "harmonia cond bold";
 }
@@ -8102,12 +8344,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 768px) {
   #blog-1 .block .paragraph a {
     margin-top: 5vh;
-    color: #fd959e;
+    color: var(--pink);
     float: left;
   }
 }
 #blog-1 .block .paragraph a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 @media only screen and (max-width: 767px) {
@@ -8260,14 +8502,14 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   #blog-3 .paragraph a,
   #blog-4 .paragraph a {
     margin-top: 5vh;
-    color: #fd959e;
+    color: var(--pink);
     float: left;
   }
 }
 #blog-2 .paragraph a:hover,
 #blog-3 .paragraph a:hover,
 #blog-4 .paragraph a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 @media only screen and (min-width: 1920px) {
@@ -8465,10 +8707,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #post-1 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #post-1 .circle p {
-  color: #022329;
+  color: var(--dark);
 }
 #post-1 .circle a {
   background: url("../images/mouse-dark.svg") center no-repeat;
@@ -8505,7 +8747,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #post-1 img + div {
   animation: fade-in-up 2s 1s forwards;
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   opacity: 0;
   z-index: 0;
@@ -8577,7 +8819,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
 }
 #post-1 .paragraph h1 {
-  color: #022329;
+  color: var(--dark);
   margin-bottom: 1%;
   animation-delay: .1s;
   font-family: "harmonia cond bold";
@@ -8619,7 +8861,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #post-1 .paragraph h1 + span + span {
-  color: #fd959e;
+  color: var(--pink);
   font-size: 1.25em;
   animation-delay: .3s;
 }
@@ -8660,7 +8902,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #post-3 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #post-3 {
@@ -8719,7 +8961,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #post-3 .title {
   opacity: 0;
-  color: #fff;
+  color: var(--light);
   font-family: "harmonia cond bold";
   text-transform: uppercase;
   animation: fade-out 2s;
@@ -8788,7 +9030,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-in-up-reverse 2s;
 }
 #post-3 .block .absolute div {
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   z-index: 0;
 }
@@ -8834,7 +9076,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-out 2s;
 }
 #post-3 .block .paragraph p {
-  color: #fd959e;
+  color: var(--pink);
   font-family: "harmonia cond light";
 }
 @media only screen and (max-width: 767px) {
@@ -8879,12 +9121,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 768px) {
   #post-3 .block .paragraph a {
     margin-top: 5vh;
-    color: #fd959e;
+    color: var(--pink);
     float: right;
   }
 }
 #post-3 .block .paragraph a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 #post-4.animate .text p:nth-of-type(1),
@@ -8913,7 +9155,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #post-5 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #post-5 {
@@ -8931,22 +9173,22 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .2s;
 }
 #post-5 table tr {
-  border-top: 1px solid #022329;
+  border-top: 1px solid var(--dark);
 }
 #post-5 table tr:last-of-type {
-  border-bottom: 1px solid #022329;
+  border-bottom: 1px solid var(--dark);
 }
 #post-5 table tr td:last-of-type a {
-  color: #022329;
+  color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #post-5 table tr td:last-of-type a {
-    background-color: #022329;
-    color: #fd959e;
+    background-color: var(--dark);
+    color: var(--pink);
   }
 }
 #post-5 table tr td:last-of-type a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 #post-6.animate ul li {
@@ -9039,7 +9281,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   text-transform: uppercase;
 }
 #post-7 .share p {
-  color: #022329;
+  color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #post-7 .share p {
@@ -9069,7 +9311,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   -webkit-transition: 0.15s;
   transition: 0.15s;
   border-bottom: 4px solid transparent;
-  color: #1970c8;
+  color: var(--blue);
 }
 @media only screen and (max-width: 767px) {
   #post-7 .share a {
@@ -9095,7 +9337,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   margin-right: 5vw;
 }
 #post-7 .share a:focus, #post-7 .share a:hover {
-  border-color: #1970c8;
+  border-color: var(--blue);
 }
 #post-7 .hashtags {
   opacity: 0;
@@ -9122,10 +9364,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   -o-transition: 0.15s;
   -webkit-transition: 0.15s;
   transition: 0.15s;
-  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
+  text-shadow: -1px 0 var(--gray), 0 1px var(--gray), 1px 0 var(--gray), 0 -1px var(--gray);
   text-transform: uppercase;
   font-family: "harmonia cond bold";
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (max-width: 767px) {
   #post-7 .hashtags a {
@@ -9155,7 +9397,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #post-7 .hashtags a:focus, #post-7 .hashtags a:hover {
-  color: #fd959e;
+  color: var(--pink);
   text-shadow: none;
 }
 #post-7 .breadcrumbs {
@@ -9177,7 +9419,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   text-transform: uppercase;
   font-family: "harmonia cond bold";
   font-size: 1.5625em;
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (max-width: 399px) {
   #post-7 .breadcrumbs a {
@@ -9190,14 +9432,14 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #post-7 .breadcrumbs a:not(.current) {
-  text-shadow: -1px 0 #b9c2c3, 0 1px #b9c2c3, 1px 0 #b9c2c3, 0 -1px #b9c2c3;
+  text-shadow: -1px 0 var(--gray), 0 1px var(--gray), 1px 0 var(--gray), 0 -1px var(--gray);
 }
 #post-7 .breadcrumbs a:focus, #post-7 .breadcrumbs a:hover {
-  color: #fd959e;
+  color: var(--pink);
   text-shadow: none;
 }
 #post-7 .breadcrumbs a.current {
-  color: #fd959e;
+  color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #post-7 .breadcrumbs a.current {
@@ -9231,7 +9473,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #faq-1 {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #faq-1.animate .paragraph span span {
   transition: transform 1s cubic-bezier(0, 0, 0.2, 1), opacity 1s cubic-bezier(0, 0, 0.2, 1);
@@ -9248,11 +9490,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   transition-delay: .6s;
 }
 #faq-1 .circle p {
-  color: #fff;
+  color: var(--light);
 }
 @media only screen and (min-width: 1920px) {
   #faq-1 .circle p {
-    color: #022329;
+    color: var(--dark);
   }
 }
 #faq-1 .circle a {
@@ -9301,7 +9543,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #faq-1 .photo + div {
   animation: fade-in-up 2s 1s forwards;
-  background-color: #fd959e;
+  background-color: var(--pink);
   position: absolute;
   opacity: 0;
   z-index: 0;
@@ -9367,7 +9609,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #faq-1 .paragraph p,
 #faq-1 .paragraph h1 {
   opacity: 0;
-  color: #022329;
+  color: var(--dark);
   margin-bottom: 1%;
   animation: fade-in-up 2s forwards;
 }
@@ -9396,7 +9638,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #faq-1 .paragraph span {
-  color: #022329;
+  color: var(--dark);
   display: flex;
   overflow: hidden;
   margin-left: 1.5vw;
@@ -9456,7 +9698,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 #faq-2 .paragraph p:first-of-type {
   font-family: "harmonia cond bold";
   position: relative;
-  color: #022329;
+  color: var(--dark);
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -9486,7 +9728,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #faq-2 .paragraph p:first-of-type span {
-  color: #fd959e;
+  color: var(--pink);
   text-transform: uppercase;
 }
 
@@ -9507,7 +9749,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #faq-3 .paragraph p {
   opacity: 0;
-  color: #fd959e;
+  color: var(--pink);
   position: relative;
   font-family: "harmonia cond bold";
   animation: fade-in-right-reverse 2s;
@@ -9538,12 +9780,12 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #faq-3 .paragraph p span {
-  color: #022329;
+  color: var(--dark);
   text-transform: uppercase;
 }
 
 #faq-4 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 #faq-4.animate .item:nth-of-type(1) {
   animation: fade-in-up 2s 0.1s forwards;
@@ -9576,11 +9818,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-in-up 2s 1s forwards;
 }
 #faq-4 .item:not(:last-of-type) {
-  border-bottom-color: #022329;
+  border-bottom-color: var(--dark);
 }
 
 #faq-5 {
-  background-color: #022329;
+  background-color: var(--dark);
 }
 #faq-5.animate .item:nth-of-type(1) {
   animation: fade-in-up 2s 0.1s forwards;
@@ -9607,17 +9849,17 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation: fade-in-up 2s 0.8s forwards;
 }
 #faq-5 .item:not(:last-of-type) {
-  border-bottom-color: #fd959e;
+  border-bottom-color: var(--pink);
 }
 #faq-5 .item div,
 #faq-5 .item ul li::before {
-  color: #fff;
+  color: var(--light);
 }
 #faq-5 .item p {
-  color: #fd959e;
+  color: var(--pink);
 }
 #faq-5 .item p:focus, #faq-5 .item p:hover, #faq-5 .item p.selected {
-  color: #fff;
+  color: var(--light);
 }
 
 #faq-6.animate .title {
@@ -9754,14 +9996,14 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   -o-transition: 0.15s;
   -webkit-transition: 0.15s;
   transition: 0.15s;
-  color: #022329;
+  color: var(--dark);
 }
 #faq-6 .list span a:focus, #faq-6 .list span a:hover {
-  color: #fd959e;
+  color: var(--pink);
 }
 
 #faq-7 {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
   #faq-7 {
@@ -9779,29 +10021,29 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   animation-delay: .2s;
 }
 #faq-7 table tr {
-  border-top: 1px solid #022329;
+  border-top: 1px solid var(--dark);
 }
 #faq-7 table tr:last-of-type {
-  border-bottom: 1px solid #022329;
+  border-bottom: 1px solid var(--dark);
 }
 #faq-7 table tr td:last-of-type a {
-  color: #022329;
+  color: var(--dark);
 }
 @media only screen and (max-width: 767px) {
   #faq-7 table tr td:last-of-type a {
-    background-color: #022329;
-    color: #fd959e;
+    background-color: var(--dark);
+    color: var(--pink);
   }
 }
 #faq-7 table tr td:last-of-type a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 #error {
-  background-color: #fff;
+  background-color: var(--light);
 }
 #error .background {
-  background-color: #000;
+  background-color: var(--black);
   position: absolute;
   height: 100%;
   z-index: 1;
@@ -9835,7 +10077,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   opacity: 0;
 }
 #error .paragraph p {
-  color: #fff;
+  color: var(--light);
   line-height: 1;
   font-family: "harmonia cond bold";
   animation: fade-in-right 2s 0.1s forwards;
@@ -9856,7 +10098,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #error .paragraph span {
-  color: #fff;
+  color: var(--light);
   display: block;
   font-family: "harmonia cond light";
   animation: fade-in-right 2s 0.2s forwards;
@@ -9885,11 +10127,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   transition: 0.15s;
   animation: fade-in-right 2s 0.3s forwards;
   font-family: "harmonia cond light";
-  background-color: #fff;
+  background-color: var(--light);
   padding: 10px 20px 5px;
   display: block;
   margin: 0 auto;
-  color: #000;
+  color: var(--black);
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -9905,7 +10147,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #error .paragraph a:focus, #error .paragraph a:hover {
-  background-color: #fd959e;
+  background-color: var(--pink);
 }
 #error .paragraph img {
   animation: fade-in 2s 1.5s forwards;
@@ -9939,7 +10181,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   bottom: 0;
   z-index: 999;
   position: fixed;
-  background: #fff;
+  background: var(--light);
   align-items: center;
   display: flex;
 }

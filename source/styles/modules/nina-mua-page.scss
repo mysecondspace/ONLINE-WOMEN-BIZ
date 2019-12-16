@@ -1,9 +1,9 @@
 #nina-mua-1 {
-  background-color: $light;
+  background-color: var(--light);
 
   .circle {
     p {
-      color: $primary;
+      color: var(--pink);
     }
 
     a {
@@ -68,11 +68,11 @@
 
     > * {
       opacity: 0;
-      color: $primary;
+      color: var(--pink);
       animation: fade-in-right $time-slow forwards;
     }
 
-    p:first-of-type {
+    h1 {
       line-height: 1;
       animation-delay: .1s;
       font-family: $cond-bold;
@@ -122,7 +122,7 @@
 }
 
 #nina-mua-2 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(phone) {
     padding-bottom: 300px;
@@ -178,11 +178,11 @@
     p:first-of-type {
       opacity: 0;
       line-height: 1;
-      color: $primary;
+      color: var(--pink);
       position: relative;
       animation-delay: .1s;
       font-family: $cond-bold;
-      text-shadow: -1px 0 $dark, 0 1px $dark, 1px 0 $dark, 0 -1px $dark;
+      text-shadow: -1px 0 var(--dark), 0 1px var(--dark), 1px 0 var(--dark), 0 -1px var(--dark);
       animation: fade-in-up-reverse $time-slow;
 
       @include media(phone) {
@@ -204,7 +204,7 @@
       span {
         animation: fade-in-up-reverse $time-slow;
         position: absolute;
-        color: $dark;
+        color: var(--dark);
         opacity: 0;
 
         @include media(phone) {
@@ -228,7 +228,7 @@
 
       + p {
         opacity: 0;
-        color: $light;
+        color: var(--light);
         font-size: em(20);
         line-height: 1.48;
         font-family: $cond-normal;
@@ -250,7 +250,7 @@
         }
 
         span {
-          color: $dark;
+          color: var(--dark);
         }
       }
     }
@@ -306,7 +306,7 @@
 }
 
 #nina-mua-3 {
-  background-color: $light;
+  background-color: var(--light);
 
   @include media(phone) {
     padding-bottom: 5vh;
@@ -386,7 +386,7 @@
 
   .title {
     opacity: 0;
-    color: $dark;
+    color: var(--dark);
     font-family: $cond-bold;
     animation: fade-in-down-reverse $time-slow;
 
@@ -420,7 +420,7 @@
       @include border-radius(50%);
       font-weight: bold;
       margin: 0 auto;
-      color: $dark;
+      color: var(--dark);
       text-align: center;
       font-family: $cond-normal;
       animation: spin 20s linear infinite;
@@ -459,7 +459,7 @@
 
     > span {
       opacity: 0;
-      color: $dark;
+      color: var(--dark);
       position: absolute;
       width: fit-content;
       animation: fade-out $time-slow;
@@ -566,7 +566,7 @@
       }
 
       > * {
-        color: $dark;
+        color: var(--dark);
       }
 
       p:first-of-type {
@@ -592,7 +592,7 @@
         }
 
         span {
-          color: $primary;
+          color: var(--pink);
         }
 
         + p {
@@ -634,7 +634,7 @@
             }
 
             span {
-              color: $dark;
+              color: var(--dark);
             }
           }
         }
@@ -787,7 +787,7 @@
         }
 
         + div {
-          background-color: $primary;
+          background-color: var(--pink);
           position: absolute;
           opacity: 0;
 
@@ -811,7 +811,7 @@
 }
 
 #nina-mua-4 {
-  background-color: $secondary;
+  background-color: var(--dark);
 
   &.animate {
     .sup,
@@ -837,31 +837,31 @@
   }
 
   table tr {
-    border-top: 1px solid $primary;
+    border-top: 1px solid var(--pink);
 
     &:last-of-type {
-      border-bottom: 1px solid $primary;
+      border-bottom: 1px solid var(--pink);
     }
 
     td {
-      color: $primary;
+      color: var(--pink);
 
       &:last-of-type a {
-        color: $primary;
+        color: var(--pink);
 
         @include media(phone) {
-          color: $secondary;
+          color: var(--dark);
         }
 
         &:hover {
-          color: $light;
+          color: var(--light);
         }
       }
     }
   }
 
   > * {
-    color: $primary;
+    color: var(--pink);
   }
 
   .sup {

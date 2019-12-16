@@ -23,3 +23,6 @@
 
 // video player
 //= components/video.js
+
+// form sendEmail
+//= components/form.js

@@ -1,5 +1,5 @@
 #about-1 {
-  background-color: $light;
+  background-color: var(--light);
 
   &.animate {
     .paragraph span {
@@ -25,7 +25,7 @@
 
   .circle {
     p {
-      color: $dark;
+      color: var(--dark);
     }
 
     a {
@@ -100,8 +100,13 @@
       line-height: 1;
     }
 
+    h1 {
+      font-size: inherit;
+      font-weight: normal;
+    }
+
     span {
-      color: $dark;
+      color: var(--dark);
       display: flex;
       overflow: hidden;
 
@@ -158,7 +163,7 @@
 }
 
 #about-2 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(tablet) {
     padding-right: $indent-normal;
@@ -213,7 +218,7 @@
 
     @include media(tablet) {
       font-size: em(100);
-      width: 50vw;
+      width: 52vw;
     }
 
     @include media(desktop) {
@@ -307,7 +312,7 @@
     }
 
     div {
-      background-color: $dark;
+      background-color: var(--dark);
       position: absolute;
       height: 80%;
       width: 80%;
@@ -628,7 +633,7 @@
     }
 
     div {
-      background-color: $primary;
+      background-color: var(--pink);
       position: absolute;
       height: 80%;
       right: -15%;
@@ -682,7 +687,7 @@
 }
 
 #about-5 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(phone) {
     padding-bottom: 5vh;
@@ -838,7 +843,7 @@
       }
 
       div {
-        background-color: $dark;
+        background-color: var(--dark);
         position: absolute;
         height: 50%;
         right: -10%;
@@ -916,7 +921,7 @@
       }
 
       a {
-        color: $light;
+        color: var(--light);
         display: block;
         margin-top: 5vh;
         font-size: em(25);
@@ -942,7 +947,7 @@
         }
 
         span {
-          color: $dark;
+          color: var(--dark);
         }
       }
 
@@ -1015,7 +1020,7 @@
 }
 
 #about-6 {
-  background-color: $secondary;
+  background-color: var(--dark);
 
   @include media(phone) {
     padding-bottom: 5vh;
@@ -1042,7 +1047,7 @@
 
   .slogan {
     opacity: 0;
-    color: $primary;
+    color: var(--pink);
     margin-bottom: 1vh;
     font-family: $cond-bold;
     text-transform: uppercase;
@@ -1063,7 +1068,7 @@
 }
 
 #about-7 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(phone) {
     padding: 0;
@@ -1085,22 +1090,22 @@
   }
 
   table tr {
-    border-top: 1px solid $dark;
+    border-top: 1px solid var(--dark);
 
     &:last-of-type {
-      border-bottom: 1px solid $dark;
+      border-bottom: 1px solid var(--dark);
     }
 
     td:last-of-type a {
-      color: $dark;
+      color: var(--dark);
 
       @include media(phone) {
-        background-color: $secondary;
-        color: $primary;
+        background-color: var(--dark);
+        color: var(--pink);
       }
 
       &:hover {
-        color: $light;
+        color: var(--light);
       }
     }
   }

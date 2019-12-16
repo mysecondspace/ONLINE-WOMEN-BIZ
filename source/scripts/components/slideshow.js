@@ -3,18 +3,41 @@ var slideshow = $('#slideshow'),
     images = null;
 
 images = [];
-images.push( $('<img/>', {
-  src: 'images/slide-2.png'
-}));
-images.push( $('<img/>', {
-  src: 'images/slide-3.png'
-}));
-images.push( $('<img/>', {
-  src: 'images/slide-4.png'
-}));
-images.push( $('<img/>', {
-  src: 'images/slide-5.png'
-}));
+isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+if (isChrome) {
+  images.push( $('<img/>', {
+    src: 'images/slide-2.webp'
+  }));
+
+  images.push( $('<img/>', {
+    src: 'images/slide-3.webp'
+  }));
+
+  images.push( $('<img/>', {
+    src: 'images/slide-4.webp'
+  }));
+
+  images.push( $('<img/>', {
+    src: 'images/slide-5.webp'
+  }));
+} else {
+  images.push( $('<img/>', {
+    src: 'images/slide-2.png'
+  }));
+
+  images.push( $('<img/>', {
+    src: 'images/slide-3.png'
+  }));
+
+  images.push( $('<img/>', {
+    src: 'images/slide-4.png'
+  }));
+
+  images.push( $('<img/>', {
+    src: 'images/slide-5.png'
+  }));
+};
 
 slideshow.eq(0).append(images);
 

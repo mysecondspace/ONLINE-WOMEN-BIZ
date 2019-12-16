@@ -1,8 +1,8 @@
 #error {
-  background-color: $light;
+  background-color: var(--light);
 
   .background {
-    background-color: $black;
+    background-color: var(--black);
     position: absolute;
     height: 100%;
     z-index: 1;
@@ -35,7 +35,7 @@
     }
 
     p {
-      color: $light;
+      color: var(--light);
       line-height: 1;
       font-family: $cond-bold;
       animation: fade-in-right $time-slow .1s forwards;
@@ -54,7 +54,7 @@
     }
 
     span {
-      color: $light;
+      color: var(--light);
       display: block;
       font-family: $cond-light;
       animation: fade-in-right $time-slow .2s forwards;
@@ -78,11 +78,11 @@
       @include transition($time-fast);
       animation: fade-in-right $time-slow .3s forwards;
       font-family: $cond-light;
-      background-color: $light;
+      background-color: var(--light);
       padding: 10px 20px 5px;
       display: block;
       margin: 0 auto;
-      color: $black;
+      color: var(--black);
       opacity: 0;
 
       @include media(phone) {
@@ -97,7 +97,7 @@
 
       &:focus,
       &:hover {
-        background-color: $primary;
+        background-color: var(--pink);
       }
     }
 

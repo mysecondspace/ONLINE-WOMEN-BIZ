@@ -66,6 +66,9 @@
         </li>
       </ul>
     </nav>
+    
+    <!-- change color -->
+    <div id="change"></div>
 
     <!-- wrapper-->
     <main id="main">
@@ -279,11 +282,11 @@
           <span>Sign up with your email address to receive updates on our events</span>
 
           <!-- form -->
-          <form action="#">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="Email Address">
-            <button type="submit" value="submit" name="submit">Sign up</button>
+          <form class="gform" data-email="example@gmail.com" action="#">
+            <input type="text" name="name" placeholder="First Name">
+            <input type="text" name="surname" placeholder="Last Name">
+            <input type="email" name="email" placeholder="Email Address">
+            <button class="subscribe" type="submit" value="submit" name="submit">Sign up</button>
           </form>
         </div>
       </section>
@@ -297,6 +300,27 @@
         </div>
       </footer>
     </main>
+
+    <!-- modal -->
+    <!-- <div id="register" class="modal"> -->
+    <div id="subscribe" class="modal">
+    	<div>
+    		<a href="#" class="close"></a>
+    		<!-- <p class="awesome awesome--3">Awesome, </p> -->
+    		<!-- <p class="awesome awesome--2">Awesome, </p> -->
+    		<p class="awesome awesome--1">Awesome, </p>
+    		<div>
+    			<div></div>
+    			<p>you're in!</p>
+    		</div>
+    		<span>Thank you for signing up for the Online<br>
+    			Women Biz updates! You've taken your<br>
+    			first step towards success.<br><br>
+    
+    			Stay tuned and check your email for the new<br>
+    			Online Women Biz events.</span>
+    	</div>
+    </div>
 
     <!-- script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>

@@ -1,5 +1,5 @@
 #entrepreneurs {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(phone) {
     padding: 0;
@@ -21,22 +21,22 @@
   }
 
   table tr {
-    border-top: 1px solid $dark;
+    border-top: 1px solid var(--dark);
 
     &:last-of-type {
-      border-bottom: 1px solid $dark;
+      border-bottom: 1px solid var(--dark);
     }
 
     td:last-of-type a {
-      color: $dark;
+      color: var(--dark);
 
       @include media(phone) {
-        background-color: $secondary;
-        color: $primary;
+        background-color: var(--dark);
+        color: var(--pink);
       }
 
       &:hover {
-        color: $light;
+        color: var(--light);
       }
     }
   }

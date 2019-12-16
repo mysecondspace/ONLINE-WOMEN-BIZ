@@ -19,6 +19,48 @@ $(document).ready(function() {
     elements_selector: '.lazy'
   });
 
+  // change color theme
+  function toggleAB() {
+    var el = this;
+
+    return [
+
+      // normal state
+      function() {
+        document.documentElement.style.setProperty('--pink', '#fd959e');
+        document.documentElement.style.setProperty('--dark', '#022329');
+        document.documentElement.style.setProperty('--light', '#fff');
+      },
+
+      // inverse state
+      function() {
+        document.documentElement.style.setProperty('--pink', '#fff');
+        document.documentElement.style.setProperty('--dark', '#fd959e');
+        document.documentElement.style.setProperty('--light', '#022329');
+      }
+    ][el.tog^=1]();
+  }
+
+  $('#change').click(toggleAB);
+
+  // open subscribe modal window
+  $(document).on('click', '.subscribe', function(event) {
+    $('#subscribe').addClass('opened').css('display', 'flex').hide().fadeIn(200);
+    $('html, body').css('overflow', 'hidden');
+  });
+
+  // open subscribe modal window
+  $(document).on('click', '.register', function(event) {
+    $('#register').addClass('opened').css('display', 'flex').hide().fadeIn(200);
+    $('html, body').css('overflow', 'hidden');
+  });
+
+  // close modal window
+  $(document).on('click', '.close', function(event) {
+    $(this).closest('.modal').removeClass('opened').delay(200).fadeOut(200);
+    $('html, body').css('overflow', 'auto');
+  });
+
   // initialize sharing buttons
   $('.share a:contains("facebook")').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + $(location).attr("href") + '');
   $('.share a:contains("twitter")').attr('href', 'https://twitter.com/share?url=' + $(location).attr("href") + '');
@@ -165,14 +207,14 @@ $(document).ready(function() {
           case 0:
             $('#index-1').addClass('animate');
             $('#logo').addClass('big light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
           case 1:
             $('#index-2').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -186,14 +228,14 @@ $(document).ready(function() {
           case 3:
             $('#index-4').addClass('animate');
             $('#logo').addClass('small dark');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('dark');
 
             break;
           case 4:
             $('#index-5').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -265,15 +307,15 @@ $(document).ready(function() {
         // sections
         switch(destination.index) {
           case 0:
-            $('#logo').addClass('big primary');
+            $('#logo').addClass('big pink');
             $('#menu').addClass('light');
-            $('#nav').addClass('primary');
+            $('#nav').addClass('pink');
 
             break;
           case 1:
             $('#nina-mua-2').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             // only for desktop version
@@ -296,7 +338,7 @@ $(document).ready(function() {
           case 3:
             $('#nina-mua-4').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -368,7 +410,7 @@ $(document).ready(function() {
           case 1:
             $('#about-2').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
@@ -395,21 +437,21 @@ $(document).ready(function() {
           case 4:
             $('#about-5').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
           case 5:
             $('#about-6').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
           case 6:
             $('#about-7').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
@@ -494,15 +536,15 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#courses-1').addClass('animate');
-            $('#logo').addClass('big primary');
+            $('#logo').addClass('big pink');
             $('#menu').addClass('light');
-            $('#nav').addClass('primary');
+            $('#nav').addClass('pink');
 
             break;
           case 1:
             $('#courses-2').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             // scroll menu and parallax
@@ -534,7 +576,7 @@ $(document).ready(function() {
           case 3:
             $('#courses-4').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             // only for desktop version
@@ -550,7 +592,7 @@ $(document).ready(function() {
           case 4:
             $('#courses-5').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -564,7 +606,7 @@ $(document).ready(function() {
           case 6:
             $('#courses-7').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -578,14 +620,14 @@ $(document).ready(function() {
           case 8:
             $('#courses-9').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
           case 9:
             $('#courses-10').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
@@ -599,7 +641,7 @@ $(document).ready(function() {
           case 11:
             $('#courses-12').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -672,14 +714,14 @@ $(document).ready(function() {
           case 1:
             $('#events-2').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
           case 2:
             $('#events-3').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -693,21 +735,21 @@ $(document).ready(function() {
           case 4:
             $('#events-5').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
           case 5:
             $('#events-6').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
           case 6:
             $('#events-7').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -754,7 +796,7 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#blog-1').addClass('animate');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             // only for desktop version
@@ -768,21 +810,21 @@ $(document).ready(function() {
           case 1:
             $('#blog-2').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
           case 2:
             $('#blog-3').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
           case 3:
             $('#blog-4').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -859,7 +901,7 @@ $(document).ready(function() {
           case 2:
             $('#post-3').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -873,7 +915,7 @@ $(document).ready(function() {
           case 4:
             $('#post-5').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
@@ -894,7 +936,7 @@ $(document).ready(function() {
           case 7:
             $('#post-8').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -975,14 +1017,14 @@ $(document).ready(function() {
           case 3:
             $('#faq-4').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
           case 4:
             $('#faq-5').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('secondary');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             break;
@@ -996,7 +1038,7 @@ $(document).ready(function() {
           case 6:
             $('#faq-7').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
             break;
@@ -1078,7 +1120,7 @@ $(document).ready(function() {
           case 0:
             $('#entrepreneurs').addClass('animate');
             $('#logo').addClass('small dark');
-            $('#menu').addClass('primary');
+            $('#menu').addClass('pink');
             $('#nav').addClass('dark');
 
             break;

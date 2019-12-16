@@ -1,5 +1,5 @@
 #index-1 {
-  background-color: $primary-lighten;
+  background-color: var(--pink);
 
   .circle {
     animation-delay: 2s;
@@ -29,7 +29,7 @@
     }
 
     p {
-      color: $light;
+      color: var(--light);
     }
 
     a {
@@ -69,14 +69,14 @@
     }
 
     @include media(biggest) {
-      background-size: 1400px;
+      background-size: 2085px;
     }
   }
 
   .slogan {
     animation: fade-in $time-slow 2s forwards;
     position: absolute;
-    color: $light;
+    color: var(--light);
     opacity: 0;
     z-index: 2;
 
@@ -104,13 +104,13 @@
     }
 
     @include media(biggest) {
-      font-size: em(24);
-      right: 110px;
-      top: 565px;
+      font-size: em(33);
+      right: 170px;
+      top: 880px;
     }
 
     span {
-      color: $dark;
+      color: var(--dark);
       line-height: 0;
 
       @include media(tablet) {
@@ -118,14 +118,14 @@
       }
 
       @include media(biggest) {
-        padding: 0 8px;
+        padding: 0 20px;
       }
     }
   }
 }
 
 #index-2 {
-  background-color: $secondary;
+  background-color: var(--dark);
 
   &.animate {
     .title span {
@@ -165,7 +165,7 @@
 
   .title {
     line-height: 1;
-    color: $primary;
+    color: var(--pink);
     font-family: $cond-bold;
 
     @include media(phone) {
@@ -223,7 +223,7 @@
     }
 
     p {
-      color: $primary;
+      color: var(--pink);
       line-height: 1.48;
 
       @include media(phone) {
@@ -253,18 +253,18 @@
       @include media(tablet) {
         font-size: em(24);
         margin-top: 10vh;
-        color: $primary;
+        color: var(--pink);
       }
 
       &:hover {
-        color: $light;
+        color: var(--light);
       }
     }
   }
 }
 
 #index-3 {
-  background-color: $light;
+  background-color: var(--light);
 
   &.animate {
     .absolute {
@@ -283,6 +283,7 @@
         animation: fade-in-up $time-slow forwards;
       }
 
+      h2,
       p:first-of-type {
         animation-delay: .1s;
 
@@ -336,7 +337,7 @@
     }
 
     div {
-      background-color: $primary;
+      background-color: var(--pink);
       position: absolute;
       z-index: 0;
 
@@ -394,10 +395,10 @@
 
     > * {
       opacity: 0;
-      color: $dark;
+      color: var(--dark);
     }
 
-    p:first-of-type {
+    h2 {
       font-family: $cond-normal;
 
       @include media(phone) {
@@ -455,7 +456,7 @@
         float: left;
 
         &:hover {
-          color: $primary;
+          color: var(--pink);
         }
       }
 
@@ -467,7 +468,7 @@
 }
 
 #index-4 {
-  background-color: $primary;
+  background-color: var(--pink);
 
   @include media(phone) {
     padding: 0;
@@ -489,25 +490,25 @@
   }
 
   table tr {
-    border-top: 1px solid $dark;
+    border-top: 1px solid var(--dark);
 
     &:last-of-type {
-      border-bottom: 1px solid $dark;
+      border-bottom: 1px solid var(--dark);
     }
 
     td:last-of-type a {
-      color: $dark;
+      color: var(--dark);
 
       @include media(phone) {
-        background-color: $secondary;
-        color: $primary;
+        background-color: var(--dark);
+        color: var(--pink);
       }
     }
   }
 }
 
 #index-5 {
-  background-color: $secondary;
+  background-color: var(--dark);
 
   @include media(phone) {
     padding-top: 12.5vh;
@@ -562,7 +563,7 @@
 
   .title {
     opacity: 0;
-    color: $primary;
+    color: var(--pink);
     font-family: $cond-light;
 
     @include media(phone) {
@@ -599,7 +600,7 @@
       }
 
       div {
-        background-color: $primary;
+        background-color: var(--pink);
         position: absolute;
         z-index: 0;
       }
@@ -745,7 +746,7 @@
       }
 
       p {
-        color: $primary;
+        color: var(--pink);
         font-family: $cond-light;
 
         @include media(phone) {
@@ -774,12 +775,12 @@
 
         @include media(tablet) {
           margin-top: 5vh;
-          color: $primary;
+          color: var(--pink);
           float: left;
         }
 
         &:hover {
-          color: $light;
+          color: var(--light);
         }
       }
 
