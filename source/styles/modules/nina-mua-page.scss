@@ -53,7 +53,7 @@
     }
 
     @include media(smallest) {
-      width: calc(100% - #{$indent-phone});
+      width: calc(85% - #{$indent-phone});
     }
 
     @include media(tablet) {

@@ -6,6 +6,9 @@
   --light: #fff;
   --gray: #b9c2c3;
   --blue: #1970c8;
+  --background: #fd959e;
+  --slogan: #fff;
+  --circle: #fff;
 }
 
 @font-face {
@@ -204,7 +207,21 @@ html button {
 
 * {
   --logotype-width: 175px;
-  --circle-diameter: 48px;
+}
+@media only screen and (max-width: 767px) {
+  * {
+    --circle-diameter: 35px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  * {
+    --circle-diameter: 25px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  * {
+    --circle-diameter: 40px;
+  }
 }
 
 ::selection {
@@ -280,6 +297,18 @@ html button {
     background-image: url(../images/logo-big-dark-2x.png);
   }
 }
+#logo.small.pink {
+  background-image: url(../images/logo-small-primary.png);
+  height: 66px;
+  width: 77px;
+  background-repeat: no-repeat;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  #logo.small.pink {
+    background-size: 65.5px 56px;
+    background-image: url(../images/logo-small-primary-2x.png);
+  }
+}
 #logo.small.light {
   background-image: url(../images/logo-small-light.png);
   height: 66px;
@@ -332,17 +361,26 @@ html button {
 #nav.light div, #nav.light::after, #nav.light::before {
   background-color: var(--light);
 }
+#nav.light--inverse div, #nav.light--inverse::after, #nav.light--inverse::before {
+  background-color: #fff;
+}
 #nav.dark {
   z-index: 3;
 }
 #nav.dark div, #nav.dark::after, #nav.dark::before {
   background-color: var(--dark);
 }
+#nav.dark--inverse div, #nav.dark--inverse::after, #nav.dark--inverse::before {
+  background-color: #022329;
+}
 #nav.pink {
   z-index: 3;
 }
 #nav.pink div, #nav.pink::after, #nav.pink::before {
   background-color: var(--pink);
+}
+#nav.pink--inverse div, #nav.pink--inverse::after, #nav.pink--inverse::before {
+  background-color: #fd959e;
 }
 #nav.click div {
   transform: scale(0);
@@ -445,6 +483,17 @@ html button {
   color: var(--pink);
 }
 @media only screen and (max-width: 767px) {
+  #menu.light--inverse {
+    background: var(--dark);
+  }
+}
+#menu.light--inverse a {
+  color: #fff;
+}
+#menu.light--inverse a:hover, #menu.light--inverse a.active {
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
   #menu ul {
     margin: 0 auto 12.5vh;
   }
@@ -514,8 +563,8 @@ html button {
 }
 @media only screen and (max-width: 767px) {
   #change {
+    bottom: 15px;
     right: 15px;
-    top: 15px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -659,9 +708,9 @@ html button {
 #events-3 form input, #events-7 form input, #post-8 form input {
   border: 0;
   width: 100%;
-  color: var(--light);
   outline: none;
   border-radius: 0;
+  color: var(--light);
   margin-bottom: 10vh;
   font-family: "harmonia cond light";
   background-color: transparent;
@@ -681,6 +730,9 @@ html button {
   #events-3 form input, #events-7 form input, #post-8 form input {
     font-size: 1.5625em;
   }
+}
+#events-3 form input::placeholder, #events-7 form input::placeholder, #post-8 form input::placeholder {
+  color: var(--light);
 }
 #events-3 form button, #events-7 form button, #post-8 form button {
   -moz-transition: 0.15s;
@@ -1331,7 +1383,7 @@ html button {
   content: '';
   margin-left: 4px;
   position: absolute;
-  border-left: 35px solid var(--dark);
+  border-left: 35px solid #022329;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   transform: translate(-50%, -50%);
@@ -1951,7 +2003,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 
 #index-1 {
-  background-color: var(--pink);
+  background-color: var(--background);
 }
 #index-1 .circle {
   animation-delay: 2s;
@@ -1986,7 +2038,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #index-1 .circle p {
-  color: var(--light);
+  color: var(--circle);
 }
 #index-1 .circle a {
   background: url("../images/mouse-light.svg") center no-repeat;
@@ -2005,7 +2057,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (max-width: 767px) {
   #index-1 .letter {
     animation: fade-in 2s forwards;
-    background-position: 45% 20vh;
+    background-position: 47.5% 20vh;
     background-size: 190vw;
     height: 100%;
   }
@@ -2033,8 +2085,8 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 #index-1 .slogan {
   animation: fade-in 2s 2s forwards;
+  color: var(--slogan);
   position: absolute;
-  color: var(--light);
   opacity: 0;
   z-index: 2;
 }
@@ -2069,7 +2121,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   #index-1 .slogan {
     font-size: 2.0625em;
     right: 170px;
-    top: 880px;
+    top: 890px;
   }
 }
 #index-1 .slogan span {
@@ -2828,10 +2880,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   transition-delay: .6s;
 }
 #about-1 .circle p {
-  color: var(--dark);
+  color: var(--pink);
 }
 #about-1 .circle a {
-  background: url("../images/mouse-dark.svg") center no-repeat;
+  background: url("../images/mouse-primary.svg") center no-repeat;
   background-size: 30%;
 }
 #about-1 .photo {
@@ -4000,7 +4052,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (max-width: 399px) {
   #nina-mua-1 .paragraph {
-    width: calc(100% - 15px);
+    width: calc(85% - 15px);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -5046,7 +5098,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #courses-1 .circle p {
-  color: var(--light);
+  color: var(--circle);
 }
 @media only screen and (min-width: 1920px) {
   #courses-1 .circle p {
@@ -5059,7 +5111,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1920px) {
   #courses-1 .circle a {
-    background: url("../images/mouse-pink.svg") center no-repeat;
+    background: url("../images/mouse-primary.svg") center no-repeat;
     background-size: 30%;
   }
 }
@@ -7282,10 +7334,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   background-color: var(--light);
 }
 #events-1 .circle p {
-  color: var(--dark);
+  color: var(--pink);
 }
 #events-1 .circle a {
-  background: url("../images/mouse-dark.svg") center no-repeat;
+  background: url("../images/mouse-primary.svg") center no-repeat;
   background-size: 30%;
 }
 #events-1 .photo {
@@ -8209,7 +8261,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   }
 }
 #blog-1 .circle p {
-  color: var(--light);
+  color: var(--circle);
 }
 #blog-1 .circle a {
   background: url("../images/mouse-light.svg") center no-repeat;
@@ -8710,10 +8762,10 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   background-color: var(--light);
 }
 #post-1 .circle p {
-  color: var(--dark);
+  color: var(--pink);
 }
 #post-1 .circle a {
-  background: url("../images/mouse-dark.svg") center no-repeat;
+  background: url("../images/mouse-primary.svg") center no-repeat;
   background-size: 30%;
 }
 #post-1 img {
@@ -9490,11 +9542,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   transition-delay: .6s;
 }
 #faq-1 .circle p {
-  color: var(--light);
+  color: var(--circle);
 }
 @media only screen and (min-width: 1920px) {
   #faq-1 .circle p {
-    color: var(--dark);
+    color: var(--pink);
   }
 }
 #faq-1 .circle a {
@@ -9503,7 +9555,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1920px) {
   #faq-1 .circle a {
-    background: url("../images/mouse-dark.svg") center no-repeat;
+    background: url("../images/mouse-primary.svg") center no-repeat;
     background-size: 30%;
   }
 }

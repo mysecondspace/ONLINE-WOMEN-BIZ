@@ -27,16 +27,32 @@ $(document).ready(function() {
 
       // normal state
       function() {
+        $('#change').removeClass().addClass('normal');
+
+        // global variables
         document.documentElement.style.setProperty('--pink', '#fd959e');
         document.documentElement.style.setProperty('--dark', '#022329');
         document.documentElement.style.setProperty('--light', '#fff');
+
+        // only for main page with letter
+        document.documentElement.style.setProperty('--background', '#fd959e');
+        document.documentElement.style.setProperty('--slogan', '#fff');
+        document.documentElement.style.setProperty('--circle', '#fff');
       },
 
       // inverse state
       function() {
+        $('#change').removeClass().addClass('inverse');
+
+        // global variables
         document.documentElement.style.setProperty('--pink', '#fff');
         document.documentElement.style.setProperty('--dark', '#fd959e');
         document.documentElement.style.setProperty('--light', '#022329');
+
+        // only for main page with letter
+        document.documentElement.style.setProperty('--background', '#022329');
+        document.documentElement.style.setProperty('--slogan', '#fff');
+        document.documentElement.style.setProperty('--circle', '#fff');
       }
     ][el.tog^=1]();
   }
@@ -207,36 +223,64 @@ $(document).ready(function() {
           case 0:
             $('#index-1').addClass('animate');
             $('#logo').addClass('big light');
-            $('#menu').addClass('pink');
-            $('#nav').addClass('light');
+            $('#nav').addClass('light light--inverse');
+            $('#menu').addClass('light light--inverse');
 
             break;
           case 1:
             $('#index-2').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 2:
             $('#index-3').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 3:
             $('#index-4').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
-            $('#nav').addClass('dark');
+            $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 4:
             $('#index-5').addClass('animate');
-            $('#logo').addClass('small light');
-            $('#menu').addClass('dark');
+            $('#logo').addClass('small');
             $('#nav').addClass('light');
+            $('#menu').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
         }
@@ -309,12 +353,12 @@ $(document).ready(function() {
           case 0:
             $('#logo').addClass('big pink');
             $('#menu').addClass('light');
-            $('#nav').addClass('pink');
+            $('#nav').addClass('pink pink--inverse');
 
             break;
           case 1:
             $('#nina-mua-2').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
@@ -325,21 +369,42 @@ $(document).ready(function() {
               };
 
               setTimeout(timeout, 2000);
-            }
+            };
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 2:
             $('#nina-mua-3').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 3:
             $('#nina-mua-4').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
         }
@@ -397,62 +462,102 @@ $(document).ready(function() {
           case 0:
             $('#about-1').addClass('animate');
             $('#menu').addClass('light');
-            $('#nav').addClass('dark');
+            $('#nav').addClass('pink pink--inverse');
 
             // only for desktop version
             if (window.innerWidth > 768) {
-              $('#logo').addClass('big dark');
+              $('#logo').addClass('big pink');
             } else {
-              $('#logo').addClass('small dark');
+              $('#logo').addClass('small pink');
             };
 
             break;
           case 1:
             $('#about-2').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 2:
             $('#about-3').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 3:
             $('#about-4').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
-
 
             // only for mobile version
             if (window.innerWidth < 768) {
               $('marquee').replaceWith('<p class="slogan">We help women to get balance</p>');
             }
 
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
+
             break;
           case 4:
             $('#about-5').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 5:
             $('#about-6').addClass('animate');
-            $('#logo').addClass('small light');
-            $('#menu').addClass('dark');
+            $('#logo').addClass('small');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 6:
             $('#about-7').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
         }
@@ -538,14 +643,21 @@ $(document).ready(function() {
             $('#courses-1').addClass('animate');
             $('#logo').addClass('big pink');
             $('#menu').addClass('light');
-            $('#nav').addClass('pink');
+            $('#nav').addClass('pink pink--inverse');
 
             break;
           case 1:
             $('#courses-2').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             // scroll menu and parallax
             $(window).scroll(function() {
@@ -568,14 +680,21 @@ $(document).ready(function() {
             break;
           case 2:
             $('#courses-3').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 3:
             $('#courses-4').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
 
@@ -588,61 +707,124 @@ $(document).ready(function() {
               setTimeout(timeout, 2000);
             }
 
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
+
             break;
           case 4:
             $('#courses-5').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 5:
             $('#courses-6').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 6:
             $('#courses-7').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 7:
             $('#courses-8').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 8:
             $('#courses-9').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 9:
             $('#courses-10').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 10:
             $('#courses-11').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 11:
             $('#courses-12').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
         }
@@ -701,56 +883,98 @@ $(document).ready(function() {
           case 0:
             $('#events-1').addClass('animate');
             $('#menu').addClass('light');
-            $('#nav').addClass('dark');
+            $('#nav').addClass('pink pink--inverse');
 
             // only for desktop version
             if (window.innerWidth > 768) {
-              $('#logo').addClass('big dark');
+              $('#logo').addClass('big pink');
             } else {
-              $('#logo').addClass('small dark');
+              $('#logo').addClass('small pink');
             };
 
             break;
           case 1:
             $('#events-2').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 2:
             $('#events-3').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 3:
             $('#events-4').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 4:
             $('#events-5').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 5:
             $('#events-6').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 6:
             $('#events-7').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
         }
@@ -796,8 +1020,8 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#blog-1').addClass('animate');
-            $('#menu').addClass('dark');
-            $('#nav').addClass('light');
+            $('#menu').addClass('light--inverse');
+            $('#nav').addClass('light light--inverse');
 
             // only for desktop version
             if (window.innerWidth > 768) {
@@ -810,22 +1034,22 @@ $(document).ready(function() {
           case 1:
             $('#blog-2').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('dark');
-            $('#nav').addClass('light');
+            $('#menu').addClass('light light--inverse');
+            $('#nav').addClass('light light--inverse');
 
             break;
           case 2:
             $('#blog-3').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('dark');
-            $('#nav').addClass('light');
+            $('#menu').addClass('light light--inverse');
+            $('#nav').addClass('light light--inverse');
 
             break;
           case 3:
             $('#blog-4').addClass('animate');
             $('#logo').addClass('small light');
-            $('#menu').addClass('dark');
-            $('#nav').addClass('light');
+            $('#menu').addClass('light light--inverse');
+            $('#nav').addClass('light light--inverse');
 
             break;
         }
@@ -886,58 +1110,107 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#post-1').addClass('animate');
-            $('#logo').addClass('big dark');
+            $('#logo').addClass('big pink');
             $('#menu').addClass('light');
-            $('#nav').addClass('dark');
+            $('#nav').addClass('pink pink--inverse');
 
             break;
           case 1:
             $('#post-2').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 2:
             $('#post-3').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 3:
             $('#post-4').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 4:
             $('#post-5').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 5:
             $('#post-6').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 6:
             $('#post-7').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 7:
             $('#post-8').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
         }
@@ -995,51 +1268,93 @@ $(document).ready(function() {
         switch(destination.index) {
           case 0:
             $('#faq-1').addClass('animate');
-            $('#logo').addClass('big dark');
+            $('#logo').addClass('big pink');
             $('#menu').addClass('light');
-            $('#nav').addClass('dark');
+            $('#nav').addClass('pink pink--inverse');
 
             break;
           case 1:
             $('#faq-2').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
-            $('#nav').addClass('light');
+            $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 2:
             $('#faq-3').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
-            $('#nav').addClass('light');
+            $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 3:
             $('#faq-4').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 4:
             $('#faq-5').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('dark');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
           case 5:
             $('#faq-6').addClass('animate');
-            $('#logo').addClass('small dark');
+            $('#logo').addClass('small');
             $('#menu').addClass('light');
             $('#nav').addClass('dark');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('dark');
+            } else {
+              $('#logo').addClass('pink');
+            };
 
             break;
           case 6:
             $('#faq-7').addClass('animate');
-            $('#logo').addClass('small light');
+            $('#logo').addClass('small');
             $('#menu').addClass('pink');
             $('#nav').addClass('light');
+
+            // check theme
+            if ($('.normal').length > 0) {
+              $('#logo').addClass('light');
+            } else {
+              $('#logo').addClass('dark');
+            };
 
             break;
         }
@@ -1121,7 +1436,7 @@ $(document).ready(function() {
             $('#entrepreneurs').addClass('animate');
             $('#logo').addClass('small dark');
             $('#menu').addClass('pink');
-            $('#nav').addClass('dark');
+            $('#nav').addClass('dark dark--inverse');
 
             break;
         }

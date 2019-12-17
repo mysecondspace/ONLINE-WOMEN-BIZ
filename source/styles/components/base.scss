@@ -9,14 +9,24 @@ $time-slow: 2s;
 :root {
   --menu-height: 280px;
 
+	// colors
 	--pink: #fd959e;
 	--dark: #022329;
 	--black: #000;
 	--light: #fff;
   --gray: #b9c2c3;
 	--blue: #1970c8;
-	// --main: #fdaeb5;
+
+  // only for main page with letter
+	--background: #fd959e;
+	--slogan: #fff;
+	--circle: #fff;
 }
+
+// colors
+$light: #fff;
+$dark: #022329;
+$pink: #fd959e;
 
 // indent
 $indent-normal: 45px;

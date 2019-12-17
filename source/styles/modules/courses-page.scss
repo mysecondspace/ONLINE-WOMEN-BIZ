@@ -33,7 +33,7 @@
 
   .circle {
     p {
-      color: var(--light);
+      color: var(--circle);
 
       @include media(biggest) {
         color: var(--pink);
@@ -45,7 +45,7 @@
       background-size: 30%;
 
       @include media(biggest) {
-        background: url('/../images/mouse-pink.svg') center no-repeat;
+        background: url('/../images/mouse-primary.svg') center no-repeat;
         background-size: 30%;
       }
     }

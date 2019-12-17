@@ -1,6 +1,17 @@
 * {
   --logotype-width: 175px;
-  --circle-diameter: 48px;
+
+  @include media(phone) {
+    --circle-diameter: 35px;
+  }
+
+  @include media(smallest) {
+    --circle-diameter: 25px;
+  }
+
+  @include media(tablet) {
+    --circle-diameter: 40px;
+  }
 }
 
 ::selection {
@@ -55,6 +66,10 @@
   }
 
   &.small {
+    &.pink {
+      @include image-retina('/../images/logo-small-primary.png', '/../images/logo-small-primary-2x.png');
+    }
+
     &.light {
       @include image-retina('/../images/logo-small-light.png', '/../images/logo-small-light-2x.png');
     }
@@ -96,6 +111,14 @@
     &::before {
       background-color: var(--light);
     }
+
+    &--inverse {
+      div,
+      &::after,
+      &::before {
+        background-color: $light;
+      }
+    }
   }
 
   &.dark {
@@ -106,6 +129,14 @@
     &::before {
       background-color: var(--dark);
     }
+
+    &--inverse {
+      div,
+      &::after,
+      &::before {
+        background-color: $dark;
+      }
+    }
   }
 
   &.pink {
@@ -115,6 +146,14 @@
     &::after,
     &::before {
       background-color: var(--pink);
+    }
+
+    &--inverse {
+      div,
+      &::after,
+      &::before {
+        background-color: $pink;
+      }
     }
   }
 
@@ -239,6 +278,21 @@
         color: var(--pink);
       }
     }
+
+    &--inverse {
+      @include media(phone) {
+        background: var(--dark);
+      }
+
+      a {
+        color: $light;
+
+        &:hover,
+        &.active {
+          color: $light;
+        }
+      }
+    }
   }
 
   ul {
@@ -302,8 +356,8 @@
   z-index: 9;
 
   @include media(phone) {
+    bottom: $indent-phone;
     right: $indent-phone;
-    top: $indent-phone;
   }
 
   @include media(tablet) {
@@ -447,9 +501,9 @@
     input {
       border: 0;
       width: 100%;
-      color: var(--light);
       outline: none;
       border-radius: 0;
+      color: var(--light);
       margin-bottom: 10vh;
       font-family: $cond-light;
       background-color: transparent;
@@ -465,6 +519,10 @@
 
       @include media(biggest) {
         font-size: em(25);
+      }
+
+      &::placeholder {
+        color: var(--light);
       }
     }
 
@@ -1090,7 +1148,7 @@
       content: '';
       margin-left: 4px;
       position: absolute;
-      border-left: 35px solid var(--dark);
+      border-left: 35px solid $dark;
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       transform: translate(-50%, -50%);
