@@ -38,6 +38,9 @@ $(document).ready(function() {
         document.documentElement.style.setProperty('--background', '#fd959e');
         document.documentElement.style.setProperty('--slogan', '#fff');
         document.documentElement.style.setProperty('--circle', '#fff');
+
+        // manipulations with footer
+        $('#faq #footer, #post #footer, #events #footer, #reviews #footer, #courses #footer').removeClass('light');
       },
 
       // inverse state
@@ -53,28 +56,51 @@ $(document).ready(function() {
         document.documentElement.style.setProperty('--background', '#022329');
         document.documentElement.style.setProperty('--slogan', '#fff');
         document.documentElement.style.setProperty('--circle', '#fff');
+
+        // manipulations with footer
+        $('#faq #footer, #post #footer, #events #footer, #reviews #footer, #courses #footer').addClass('light');
       }
     ][el.tog^=1]();
   }
 
   $('#change').click(toggleAB);
 
+  // check and open modal window
+  $(document).on('click', 'a[href="#modal"]', function(event) {
+    $('#' + $(this).data('name')).addClass('opened').fadeIn(200);
+    $('html, body').css('overflow', 'hidden');
+    $('video').get(0).play();
+  });
+
   // open subscribe modal window
   $(document).on('click', '.subscribe', function(event) {
-    $('#subscribe').addClass('opened').css('display', 'flex').hide().fadeIn(200);
-    $('html, body').css('overflow', 'hidden');
+    $(this).parent().find('input').each(function() {
+      if (!$(this).val()) {
+        return false;
+      } else {
+        $('#subscribe').addClass('opened').css('display', 'flex').hide().fadeIn(200);
+        $('html, body').css('overflow', 'hidden');
+      };
+    });
   });
 
   // open subscribe modal window
   $(document).on('click', '.register', function(event) {
-    $('#register').addClass('opened').css('display', 'flex').hide().fadeIn(200);
-    $('html, body').css('overflow', 'hidden');
+    $(this).parent().find('input').each(function() {
+      if (!$(this).val()) {
+        return false;
+      } else {
+        $('#register').addClass('opened').css('display', 'flex').hide().fadeIn(200);
+        $('html, body').css('overflow', 'hidden');
+      };
+    });
   });
 
   // close modal window
   $(document).on('click', '.close', function(event) {
     $(this).closest('.modal').removeClass('opened').delay(200).fadeOut(200);
     $('html, body').css('overflow', 'auto');
+    $('video').get(0).pause();
   });
 
   // initialize sharing buttons
@@ -108,33 +134,33 @@ $(document).ready(function() {
   });
 
   // video button
-  var players = document.querySelectorAll('.youtube-player')
-  var loadPlayer = function (event) {
-    var target = event.currentTarget
-    var iframe = document.createElement('iframe')
+  // var players = document.querySelectorAll('.youtube-player')
+  // var loadPlayer = function (event) {
+  //   var target = event.currentTarget
+  //   var iframe = document.createElement('iframe')
 
-    iframe.height = target.clientHeight
-    iframe.width = target.clientWidth
-    iframe.src = "https://www.youtube.com/embed/" + target.dataset.videoId + "?autoplay=1&amp;rel=0&amp;showinfo=0"
-    iframe.setAttribute("frameborder", 0)
-    iframe.setAttribute("frameborder", 0)
+  //   iframe.height = target.clientHeight
+  //   iframe.width = target.clientWidth
+  //   iframe.src = "https://www.youtube.com/embed/" + target.dataset.videoId + "?autoplay=1&amp;rel=0&amp;showinfo=0"
+  //   iframe.setAttribute("frameborder", 0)
+  //   iframe.setAttribute("frameborder", 0)
 
-    target.classList.remove("pristine")
+  //   target.classList.remove("pristine")
 
-    if (target.children.length) {
-      target.replaceChild(iframe, target.firstElementChild)
-    } else {
-      target.appendChild(iframe)
-    }
-  }
+  //   if (target.children.length) {
+  //     target.replaceChild(iframe, target.firstElementChild)
+  //   } else {
+  //     target.appendChild(iframe)
+  //   }
+  // }
 
-  var config = {
-    once: true
-  }
+  // var config = {
+  //   once: true
+  // }
 
-  Array.from(players).forEach(function (player) {
-    player.addEventListener('click', loadPlayer, config)
-  })
+  // Array.from(players).forEach(function (player) {
+  //   player.addEventListener('click', loadPlayer, config)
+  // })
 
   // toggle list
   var elem = $(".item p"),
@@ -536,6 +562,7 @@ $(document).ready(function() {
           case 5:
             $('#about-6').addClass('animate');
             $('#logo').addClass('small');
+            $('#menu').addClass('dark');
             $('#nav').addClass('light');
 
             // check theme

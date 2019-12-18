@@ -154,15 +154,18 @@
         <!-- slogan -->
         <p class="slogan">About</p>
 
-        <!-- youtube player -->
-        <div class="youtube-player pristine" data-video-id="HYAX28oaTxA">
+        <!-- youtube player (uncomment script) or custom video player -->
+        <a href="#modal" data-name="video" class="youtube-player pristine">
           <img data-src="images/about-3.jpg" alt="About" title="About poster" class="lazy">
-        </div>
+        </a>
 
-        <!-- or custome video player -->
-        <!-- <div class="video-wrapper">
-          <video src="#" poster="images/about-3.jpg"></video>
-        </div> -->
+        <!-- modal -->
+        <div id="video" class="modal">
+          <div>
+            <span class="close"></span>
+            <video src="data/about.mp4" controls></video>
+          </div>
+        </div>
       </section>
 
       <!-- section -->

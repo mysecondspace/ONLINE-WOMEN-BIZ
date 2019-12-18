@@ -65,7 +65,7 @@
     }
 
     @include media(desktop) {
-      background-size: 1190px;
+      background-size: 1250px;
     }
 
     @include media(biggest) {
@@ -99,8 +99,8 @@
 
     @include media(desktop) {
       font-size: em(20);
-      right: 95px;
-      top: 490px;
+      right: 98px;
+      top: 515px;
     }
 
     @include media(biggest) {
@@ -115,6 +115,10 @@
 
       @include media(tablet) {
         padding: 0 7px;
+      }
+
+      @include media(desktop) {
+        padding: 0 12px;
       }
 
       @include media(biggest) {
@@ -183,7 +187,7 @@
 
     @include media(desktop) {
       font-size: em(125);
-      width: 60%;
+      width: 57%;
     }
 
     @include media(biggest) {

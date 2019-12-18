@@ -626,6 +626,15 @@
   > div {
     margin: 0 auto;
 
+    video {
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+    }
+
     p {
       font-family: $bold;
 
@@ -740,6 +749,7 @@
       height: 64px;
       right: 15px;
       width: 64px;
+      z-index: 1;
       top: 15px;
 
       @include media(phone) {
@@ -1105,6 +1115,7 @@
 .youtube-player {
   animation: fade-in-up-reverse $time-slow;
   position: relative;
+  display: block;
   opacity: 0;
 
   @include media(phone) {
@@ -1195,10 +1206,10 @@
 
 %horizontal-list,
 .horizontal-list {
+  color: var(--dark);
   font-family: $cond-bold;
   line-height: 1.48;
   margin-top: 5vh;
-  color: var(--dark);
 
   @include media(smallest) {
     font-size: em(14);
@@ -1701,6 +1712,10 @@ body {
 
       > div a {
         background: url('../images/logo-dark.svg') no-repeat;
+      }
+
+      &.light > div a {
+        background: url('../images/logo-light.svg') no-repeat;
       }
     }
   }

@@ -842,6 +842,14 @@ html button {
 .modal > div {
   margin: 0 auto;
 }
+.modal > div video {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
 .modal > div p {
   font-family: "harmonia bold";
 }
@@ -966,6 +974,7 @@ html button {
   height: 64px;
   right: 15px;
   width: 64px;
+  z-index: 1;
   top: 15px;
 }
 @media only screen and (max-width: 767px) {
@@ -1334,6 +1343,7 @@ html button {
 .youtube-player {
   animation: fade-in-up-reverse 2s;
   position: relative;
+  display: block;
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -1434,10 +1444,10 @@ html button {
 
 #faq-2 .paragraph p:last-of-type,
 .horizontal-list {
+  color: var(--dark);
   font-family: "harmonia cond bold";
   line-height: 1.48;
   margin-top: 5vh;
-  color: var(--dark);
 }
 @media only screen and (max-width: 399px) {
   #faq-2 .paragraph p:last-of-type,
@@ -1476,8 +1486,8 @@ html button {
   *zoom: 1;
   *display: inline;
   background-image: url(../images/arrow-small.png);
-  height: 11px;
-  width: 25px;
+  height: 18px;
+  width: 40px;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 5px;
@@ -1485,7 +1495,7 @@ html button {
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #faq-2 .paragraph p:last-of-type span,
   .horizontal-list span {
-    background-size: 25px 10.5px;
+    background-size: 40px 17.5px;
     background-image: url(../images/arrow-small-2x.png);
   }
 }
@@ -2001,6 +2011,9 @@ body#faq #footer p a:hover, body#post #footer p a:hover, body#events #footer p a
 body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a, body#reviews #footer > div a, body#courses #footer > div a {
   background: url("../images/logo-dark.svg") no-repeat;
 }
+body#faq #footer.light > div a, body#post #footer.light > div a, body#events #footer.light > div a, body#reviews #footer.light > div a, body#courses #footer.light > div a {
+  background: url("../images/logo-light.svg") no-repeat;
+}
 
 #index-1 {
   background-color: var(--background);
@@ -2075,7 +2088,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media only screen and (min-width: 1440px) {
   #index-1 .letter {
-    background-size: 1190px;
+    background-size: 1250px;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -2113,8 +2126,8 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 1440px) {
   #index-1 .slogan {
     font-size: 1.25em;
-    right: 95px;
-    top: 490px;
+    right: 98px;
+    top: 515px;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -2131,6 +2144,11 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 768px) {
   #index-1 .slogan span {
     padding: 0 7px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #index-1 .slogan span {
+    padding: 0 12px;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -2189,7 +2207,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 @media only screen and (min-width: 1440px) {
   #index-2 .title {
     font-size: 7.8125em;
-    width: 60%;
+    width: 57%;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -6970,8 +6988,8 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   *zoom: 1;
   *display: inline;
   background-image: url(../images/arrow-small.png);
-  height: 11px;
-  width: 25px;
+  height: 18px;
+  width: 40px;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -6981,7 +6999,7 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #courses-11 .info ul li::before {
-    background-size: 25px 10.5px;
+    background-size: 40px 17.5px;
     background-image: url(../images/arrow-small-2x.png);
   }
 }
@@ -9506,15 +9524,15 @@ body#faq #footer > div a, body#post #footer > div a, body#events #footer > div a
   *zoom: 1;
   *display: inline;
   background-image: url(../images/arrow-small.png);
-  height: 11px;
-  width: 25px;
+  height: 18px;
+  width: 40px;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 10px 7.5px;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #post-7 .breadcrumbs span {
-    background-size: 25px 10.5px;
+    background-size: 40px 17.5px;
     background-image: url(../images/arrow-small-2x.png);
   }
 }
