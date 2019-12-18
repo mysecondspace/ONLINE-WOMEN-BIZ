@@ -74,33 +74,34 @@ $(document).ready(function() {
 
   // open subscribe modal window
   $(document).on('click', '.subscribe', function(event) {
-    $(this).parent().find('input').each(function() {
-      if (!$(this).val()) {
-        return false;
-      } else {
-        $('#subscribe').addClass('opened').css('display', 'flex').hide().fadeIn(200);
-        $('html, body').css('overflow', 'hidden');
-      };
-    });
+    if (!$.trim($(this).parent().find('input:nth-of-type(1)').val()) == '' &&
+      !$.trim($(this).parent().find('input:nth-of-type(2)').val()) == '' &&
+      !$.trim($(this).parent().find('input:nth-of-type(3)').val()) == '' &&
+      $.trim($(this).parent().find('input:nth-of-type(3)').val()).indexOf('@') >= 0) {
+      $('#subscribe').addClass('opened').css('display', 'flex').hide().fadeIn(200);
+      $('html, body').css('overflow', 'hidden');
+    };
   });
 
   // open subscribe modal window
   $(document).on('click', '.register', function(event) {
-    $(this).parent().find('input').each(function() {
-      if (!$(this).val()) {
-        return false;
-      } else {
-        $('#register').addClass('opened').css('display', 'flex').hide().fadeIn(200);
-        $('html, body').css('overflow', 'hidden');
-      };
-    });
+    if (!$.trim($(this).parent().find('input:nth-of-type(1)').val()) == '' &&
+      !$.trim($(this).parent().find('input:nth-of-type(2)').val()) == '' &&
+      !$.trim($(this).parent().find('input:nth-of-type(3)').val()) == '' &&
+      $.trim($(this).parent().find('input:nth-of-type(3)').val()).indexOf('@') >= 0) {
+      $('#register').addClass('opened').css('display', 'flex').hide().fadeIn(200);
+      $('html, body').css('overflow', 'hidden');
+    };
   });
 
   // close modal window
   $(document).on('click', '.close', function(event) {
     $(this).closest('.modal').removeClass('opened').delay(200).fadeOut(200);
     $('html, body').css('overflow', 'auto');
-    $('video').get(0).pause();
+
+    if ($('video').length > 0) {
+      $('video').get(0).pause();
+    };
   });
 
   // initialize sharing buttons
@@ -111,11 +112,11 @@ $(document).ready(function() {
   $(function() {
       var image = new Array();
 
-      image[0] = "data/404-1.gif";
-      image[1] = "data/404-2.gif";
-      image[2] = "data/404-3.gif";
-      image[3] = "data/404-4.gif";
-      image[4] = "data/404-5.gif";
+      image[0] = "https://www.onlinewomenbiz.com/data/404-1.gif";
+      image[1] = "https://www.onlinewomenbiz.com/data/404-2.gif";
+      image[2] = "https://www.onlinewomenbiz.com/data/404-3.gif";
+      image[3] = "https://www.onlinewomenbiz.com/data/404-4.gif";
+      image[4] = "https://www.onlinewomenbiz.com/data/404-5.gif";
 
       var size = image.length
       var x = Math.floor(size * Math.random())
