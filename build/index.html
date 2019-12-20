@@ -7,8 +7,10 @@
     <meta charset="utf-8">
     
     <!-- styles -->
-    <link rel="stylesheet" href="styles/main.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="styles/main.min.css"></noscript>
-    <link rel="stylesheet" href="styles/libs.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="styles/libs.min.css"></noscript>
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/libs.min.css">
+    <!-- <link rel="stylesheet" href="styles/main.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="styles/main.min.css"></noscript> -->
+    <!-- <link rel="stylesheet" href="styles/libs.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="styles/libs.min.css"></noscript> -->
     
     <!-- favicon block -->
     <link rel="manifest" href="/manifest.json">
@@ -59,6 +61,12 @@
         </svg>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#preloader').delay(1500).fadeOut('slow');
+      });
+    </script>
 
     <!-- navigation -->
     <!-- the cursor elements -->
@@ -270,11 +278,5 @@
     <script src="scripts/image.min.js" defer="defer"></script>
     <script src="scripts/main.min.js" defer="defer"></script>
     <script src="scripts/scripts.min.js" defer="defer"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>
-      $(window).load(function() {
-        $('#preloader').delay(1500).fadeOut('slow');
-      });
-    </script>
   </body>
 </html>
